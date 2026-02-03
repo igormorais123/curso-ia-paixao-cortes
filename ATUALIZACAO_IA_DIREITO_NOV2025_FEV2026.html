@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualização - IA no Direito (Nov/2025 - Fev/2026)</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #1a2530;
+            color: white;
+            padding: 40px;
+            border-bottom: 4px solid #e74c3c;
+        }
+        .header h1 { font-size: 1.8em; margin-bottom: 10px; font-weight: 600; }
+        .header .subtitle { font-size: 1em; opacity: 0.9; }
+        .header .tag {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 4px 14px;
+            border-radius: 3px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-top: 12px;
+        }
+        .meta-info {
+            background: #ecf0f1;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.9em;
+        }
+        .content { padding: 40px; }
+        .section { margin-bottom: 35px; }
+        .section-title {
+            font-size: 1.4em;
+            color: #1a2530;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e74c3c;
+        }
+        .highlight-box {
+            background: #fef9f0;
+            border-left: 4px solid #e74c3c;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .highlight-box h3 { color: #1a2530; margin-bottom: 8px; }
+        .info-box {
+            background: #fff9e6;
+            border-left: 4px solid #f39c12;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 0.95em;
+        }
+        .success-box {
+            background: #e8f5e9;
+            border-left: 4px solid #27ae60;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 0.95em;
+        }
+        .danger-box {
+            background: #fdecea;
+            border-left: 4px solid #c0392b;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 0.95em;
+        }
+        .card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        .card-title {
+            font-size: 1.1em;
+            color: #1a2530;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .card-subtitle { font-size: 0.9em; color: #666; margin-bottom: 10px; }
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .stat-card {
+            background: #f8f9fa;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            border-top: 3px solid #e74c3c;
+        }
+        .stat-number { font-size: 2em; font-weight: 700; color: #e74c3c; }
+        .stat-label { font-size: 0.85em; color: #666; margin-top: 5px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        table th {
+            background: #34495e;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+        table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            font-size: 0.9em;
+        }
+        table tr:nth-child(even) { background: #f8f9fa; }
+        .timeline-item {
+            padding: 15px 0;
+            border-left: 3px solid #e74c3c;
+            padding-left: 20px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: #e74c3c;
+            border-radius: 50%;
+            position: absolute;
+            left: -7.5px;
+            top: 18px;
+        }
+        .timeline-item h4 { color: #1a2530; margin-bottom: 5px; }
+        .timeline-item p { color: #555; font-size: 0.95em; }
+        .tool-badge {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            margin: 2px;
+        }
+        .tool-badge.br { background: #27ae60; }
+        .tool-badge.global { background: #8e44ad; }
+        .tool-badge.novo { background: #e74c3c; }
+        ul { margin-left: 20px; }
+        ul li { margin: 6px 0; }
+        .footer {
+            background: #1a2530;
+            color: white;
+            padding: 25px 40px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        .source-list { font-size: 0.85em; color: #666; }
+        .source-list a { color: #3498db; text-decoration: none; }
+        .source-list a:hover { text-decoration: underline; }
+        @media (max-width: 768px) {
+            .container { margin: 0; }
+            .content { padding: 20px; }
+            .stat-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>PANORAMA ATUALIZADO: IA NO DIREITO</h1>
+            <div class="subtitle">Novidades, Regulamentacao, Ferramentas e Tendencias — Novembro/2025 a Fevereiro/2026</div>
+            <div class="tag">MATERIAL COMPLEMENTAR AO CURSO</div>
+        </div>
+
+        <div class="meta-info">
+            <div><strong>Compilado em:</strong> 03/02/2026</div>
+            <div><strong>Autor:</strong> Igor Morais Vasconcelos</div>
+            <div><strong>Versao:</strong> 1.0</div>
+        </div>
+
+        <div class="content">
+
+            <!-- RESUMO EXECUTIVO -->
+            <div class="section">
+                <h2 class="section-title">RESUMO EXECUTIVO</h2>
+                <div class="highlight-box">
+                    <h3>O que mudou nos ultimos 3 meses?</h3>
+                    <p style="margin-top: 10px;">O periodo de novembro/2025 a fevereiro/2026 consolidou a transicao da IA juridica de <strong>ferramenta experimental</strong> para <strong>infraestrutura operacional</strong>. Quatro marcos definem este momento:</p>
+                    <ul style="margin-top: 10px;">
+                        <li><strong>Regulacao brasileira avancou:</strong> Resolucao CNJ 615/2025 em vigor, PL 2.338/2023 previsto para votacao na Camara em fevereiro/2026</li>
+                        <li><strong>IA agente (agentica) chegou ao Direito:</strong> Sistemas que executam tarefas complexas de forma autonoma, nao apenas respondem perguntas</li>
+                        <li><strong>Mercado explodiu:</strong> US$ 3 bilhoes em 2025, investimentos recordes de US$ 2,4 bi so ate o Q3</li>
+                        <li><strong>Alucinacoes continuam sendo risco real:</strong> Stanford confirmou 17-33% de erro mesmo em ferramentas especializadas</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- NUMEROS-CHAVE -->
+            <div class="section">
+                <h2 class="section-title">1. NUMEROS QUE IMPORTAM</h2>
+
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">US$ 3 bi</div>
+                        <div class="stat-label">Mercado global de IA juridica em 2025 (dobrou em 1 ano)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">47%</div>
+                        <div class="stat-label">Escritorios "Mais Admirados" do Brasil ja usam IA</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">50 mi</div>
+                        <div class="stat-label">Brasileiros que ja usam alguma ferramenta de IA</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">17-33%</div>
+                        <div class="stat-label">Taxa de erro em ferramentas juridicas de IA (Stanford)</div>
+                    </div>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metrica</th>
+                            <th>Dado</th>
+                            <th>Fonte</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Economia media por advogado/dia</td>
+                            <td><strong>2,5 horas</strong> (equivalente a ~R$ 500/dia a R$ 200/hora)</td>
+                            <td>Juridigital 2025</td>
+                        </tr>
+                        <tr>
+                            <td>Potencial de automacao (McKinsey)</td>
+                            <td><strong>44%</strong> das tarefas juridicas sao tecnicamente automaveis</td>
+                            <td>McKinsey 2025</td>
+                        </tr>
+                        <tr>
+                            <td>Reducao de tempo em contratos</td>
+                            <td><strong>40-50%</strong> com IA no ciclo de vida contratual</td>
+                            <td>Gartner 2025</td>
+                        </tr>
+                        <tr>
+                            <td>Departamentos juridicos usando IA</td>
+                            <td><strong>52%</strong> (saltou de 23% em 2024)</td>
+                            <td>ACC/Everlaw Survey</td>
+                        </tr>
+                        <tr>
+                            <td>Dependencia de escritorios externos</td>
+                            <td><strong>64%</strong> dos in-house esperam depender MENOS</td>
+                            <td>ACC/Everlaw Survey</td>
+                        </tr>
+                        <tr>
+                            <td>Lawtechs/Legaltechs no Brasil</td>
+                            <td><strong>600+</strong> empresas (era 20 ha poucos anos)</td>
+                            <td>AB2L</td>
+                        </tr>
+                        <tr>
+                            <td>Capacitacao IA pelo CNJ</td>
+                            <td><strong>82 mil</strong> participantes treinados</td>
+                            <td>Portal CNJ</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- REGULACAO BRASIL -->
+            <div class="section">
+                <h2 class="section-title">2. REGULACAO NO BRASIL — O QUE MUDOU</h2>
+
+                <div class="card">
+                    <div class="card-title">Resolucao CNJ n. 615/2025 — Marco Regulatorio do Judiciario</div>
+                    <div class="card-subtitle">Aprovada em 18/02/2025, publicada em 11/03/2025</div>
+                    <p>A norma mais importante sobre IA no Judiciario brasileiro. Substitui a Resolucao 332/2020 (que tinha 5 anos). Pontos centrais:</p>
+                    <ul style="margin-top: 10px;">
+                        <li><strong>Supervisao humana obrigatoria</strong> — nenhuma decisao pode ser tomada exclusivamente por maquina</li>
+                        <li><strong>Classificacao por nivel de risco</strong> (baixo e alto) para sistemas de IA</li>
+                        <li><strong>Auditorias regulares obrigatorias</strong> — auditabilidade e rastreabilidade</li>
+                        <li><strong>Comite Nacional de IA do Judiciario</strong> criado (14 membros titulares)</li>
+                        <li><strong>Prazo de 12 meses</strong> para tribunais se adequarem</li>
+                        <li><strong>Adocao explicita</strong> de ferramentas de mercado (ChatGPT, Gemini, Claude) como alternativa a solucoes proprias</li>
+                        <li><strong>Ferramenta BERNA</strong> (Busca Eletronica Recursiva) para deteccao de litigancia abusiva ja disponivel</li>
+                    </ul>
+                    <div class="info-box" style="margin-top: 15px;">
+                        <strong>Impacto para advogados:</strong> O Judiciario esta usando IA. Escritorios que nao se adaptarem estarao em desvantagem tanto em eficiencia quanto na compreensao de como os tribunais processam suas pecas.
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Recomendacao OAB n. 001/2024 — Diretrizes para Advocacia</div>
+                    <div class="card-subtitle">Aprovada pelo Conselho Federal da OAB</div>
+                    <p>Quatro pilares que todo advogado precisa conhecer:</p>
+                    <ol style="margin-top: 10px; margin-left: 20px;">
+                        <li><strong>Legislacao Aplicavel:</strong> Uso em conformidade com Estatuto da Advocacia, Codigo de Etica, LGPD</li>
+                        <li><strong>Confidencialidade:</strong> Sigilo profissional nao pode ser comprometido — evitar inserir dados sensiveis sem garantias</li>
+                        <li><strong>Pratica Etica:</strong> Decisao final DEVE ser humana. IA sugere, advogado decide</li>
+                        <li><strong>Transparencia:</strong> Advogados devem informar clientes sobre uso de IA, obter consentimento por escrito</li>
+                    </ol>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">PL 2.338/2023 — Marco Legal da IA no Brasil</div>
+                    <div class="card-subtitle">Status: Aguardando votacao na Camara (prevista para fevereiro/2026)</div>
+                    <p>Aprovado no Senado, o projeto segue em comissao especial na Camara. Foi adiado do final de 2025 para fevereiro/2026 por falta de acordo sobre direitos autorais. Pontos-chave:</p>
+                    <ul style="margin-top: 10px;">
+                        <li><strong>ANPD</strong> como autoridade reguladora de IA</li>
+                        <li><strong>Classificacao por risco</strong> (do baixo ao excessivo)</li>
+                        <li><strong>Direitos autorais:</strong> Empresas deverao informar conteudos protegidos usados no treinamento; autores poderao vetar uso de suas obras</li>
+                        <li><strong>Sistema Nacional de IA (SIA)</strong> proposto pelo governo</li>
+                    </ul>
+                    <div class="danger-box" style="margin-top: 15px;">
+                        <strong>Atencao:</strong> A questao dos direitos autorais e o ponto mais controverso e pode impactar diretamente como ferramentas de IA juridica operam no Brasil.
+                    </div>
+                </div>
+            </div>
+
+            <!-- IA AGENTICA -->
+            <div class="section">
+                <h2 class="section-title">3. A GRANDE NOVIDADE: IA AGENTICA NO DIREITO</h2>
+
+                <div class="highlight-box">
+                    <h3>O que e IA Agentica?</h3>
+                    <p style="margin-top: 10px;">Diferente da IA generativa que responde a um prompt por vez, a <strong>IA agentica</strong> interpreta instrucoes e executa tarefas de multiplas etapas de forma autonoma — planejando pesquisas, cruzando fontes, refinando resultados sem intervencao humana constante.</p>
+                    <p style="margin-top: 8px;"><strong>Analogia:</strong> A IA generativa e como um estagiario que responde perguntas. A IA agentica e como um associado junior que recebe um caso e executa varias tarefas sozinho, pedindo orientacao quando necessario.</p>
+                </div>
+
+                <p style="margin: 15px 0;">O Gartner preve que <strong>40% das aplicacoes empresariais</strong> terao agentes de IA ate 2026 (era menos de 5% em 2025). No Direito, os principais movimentos sao:</p>
+
+                <div class="card">
+                    <div class="card-title">Harvey AI <span class="tool-badge global">Global</span> <span class="tool-badge novo">Novidade</span></div>
+                    <div class="card-subtitle">Avaliada em US$ 8 bilhoes (dez/2025) — Maior legaltech do mundo</div>
+                    <ul>
+                        <li>Lancou <strong>AI Agents</strong> que guiam usuarios por etapas de tarefas complexas</li>
+                        <li>Mais de <strong>30 workflows prontos</strong> (revisao de contratos, timelines, sumarios de alteracoes)</li>
+                        <li>Parceria com <strong>A&O Shearman</strong>: agentes para analise antitruste, ciberseguranca, fundos, emprestimos</li>
+                        <li>Arrecadou <strong>US$ 760 milhoes so em 2025</strong></li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">CoCounsel / Westlaw Advantage <span class="tool-badge global">Global</span> <span class="tool-badge novo">Novidade</span></div>
+                    <div class="card-subtitle">Thomson Reuters — Lancamento de workflows agenticos no inicio de 2026</div>
+                    <ul>
+                        <li><strong>"Deep Research"</strong> — gera planos de pesquisa, explica logica, entrega relatorios estruturados</li>
+                        <li>Workflows para: elaboracao de pecas, politicas de emprego, analise de deposicoes, avaliacoes de compliance</li>
+                        <li>Integra aquisicao da Materia para capacidades agenticas</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Eve <span class="tool-badge global">Global</span> <span class="tool-badge novo">Novidade</span></div>
+                    <div class="card-subtitle">Avaliada em US$ 1 bilhao — Unicornio focado em litigios</div>
+                    <ul>
+                        <li>IA para <strong>escritorios de contencioso</strong>: avaliar casos, redigir demandas, gerar cronologias medicas, gerenciar discovery</li>
+                        <li>Usado por <strong>450+ escritorios</strong></li>
+                        <li>Captou US$ 164 milhoes no total</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <strong>Para o curso:</strong> O conceito de "agentes de IA" do Modulo 4 da proposta ganha relevancia enorme. Em 2026, nao se trata mais de teoria — e de ferramentas operacionais que grandes escritorios ja usam.
+                </div>
+            </div>
+
+            <!-- FERRAMENTAS -->
+            <div class="section">
+                <h2 class="section-title">4. FERRAMENTAS — MAPA ATUALIZADO</h2>
+
+                <h3 style="margin: 15px 0 10px; color: #27ae60;">Ferramentas Brasileiras</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ferramenta</th>
+                            <th>Foco</th>
+                            <th>Destaque</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Juridico AI</strong></td>
+                            <td>Peticoes, contratos, recursos</td>
+                            <td>Treinada em legislacao e jurisprudencia brasileira. Conformidade LGPD</td>
+                        </tr>
+                        <tr>
+                            <td><strong>GPTuri (Turivius)</strong></td>
+                            <td>Tributario, Trabalhista, Empresarial</td>
+                            <td>Usa RAG para precisao. Especializada por area</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bits AI</strong></td>
+                            <td>Automacao juridica</td>
+                            <td>Nao armazena documentos dos clientes. Foco etico</td>
+                        </tr>
+                        <tr>
+                            <td><strong>JUIT</strong></td>
+                            <td>Peticoes, estrategia processual</td>
+                            <td>Analisa precedentes e sugere estrategias</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AdvTechPro.ai</strong></td>
+                            <td>Documentos juridicos complexos</td>
+                            <td>Criada por advogado. Respeita formatos forenses nacionais</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ChatADV</strong></td>
+                            <td>Assistente juridico geral</td>
+                            <td>Conformidade LGPD</td>
+                        </tr>
+                        <tr>
+                            <td><strong>TOTVS JuriTIs</strong></td>
+                            <td>Gestao juridica completa</td>
+                            <td>180+ empresas. Foco em automacao de workflows</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Eficienc.IA</strong></td>
+                            <td>Escritorios de advocacia</td>
+                            <td>Premio Analise DNA+</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Justto</strong></td>
+                            <td>Predicao de acordos trabalhistas</td>
+                            <td>94% de acerto na previsao de valores</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin: 20px 0 10px; color: #8e44ad;">Ferramentas Globais Relevantes</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ferramenta</th>
+                            <th>Foco</th>
+                            <th>Novidade 2025-2026</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Harvey AI</strong></td>
+                            <td>Full-stack juridico</td>
+                            <td>Agentes autonomos, US$ 8 bi de avaliacao</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CoCounsel (Casetext/TR)</strong></td>
+                            <td>Pesquisa + Workflows</td>
+                            <td>Workflows agenticos lancando em 2026</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lexis+ AI</strong></td>
+                            <td>Pesquisa juridica</td>
+                            <td>Integrado ao ecossistema LexisNexis</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Spellbook</strong></td>
+                            <td>Contratos (integrado ao Word)</td>
+                            <td>Revisao e redacao direto no Word</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Eve</strong></td>
+                            <td>Contencioso / litigios</td>
+                            <td>Unicornio (US$ 1 bi), 450+ escritorios</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Microsoft Copilot</strong></td>
+                            <td>Produtividade geral</td>
+                            <td>Integrado a Word, Outlook, Teams, SharePoint</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin: 20px 0 10px; color: #2c3e50;">IAs Generalistas — Comparativo Atualizado</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>IA</th>
+                            <th>Ponto Forte no Direito</th>
+                            <th>Novidade Recente</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>ChatGPT (OpenAI)</strong></td>
+                            <td>Pesquisas exploratorias, brainstorming, simulacao de contra-argumentos</td>
+                            <td>GPT-4o com visao e audio; GPTs customizados mais robustos</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Claude (Anthropic)</strong></td>
+                            <td>Textos precisos e contextualizados; pareceres tecnicos; documentos extensos</td>
+                            <td>Claude Opus 4.5 (jan/2026); janela de contexto expandida</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gemini (Google)</strong></td>
+                            <td>Integracao com ecossistema corporativo Google</td>
+                            <td>Gemini 2.0 com capacidades agenticas</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Perplexity</strong></td>
+                            <td>Pesquisa com fontes citadas em tempo real</td>
+                            <td>Busca profunda com citacoes verificaveis</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ALUCINACOES -->
+            <div class="section">
+                <h2 class="section-title">5. ALUCINACOES DE IA — O RISCO QUE NAO DIMINUIU</h2>
+
+                <div class="danger-box">
+                    <strong>Dado critico:</strong> O estudo da Stanford HAI (2025) testou as ferramentas juridicas mais sofisticadas do mercado e encontrou que <strong>mesmo com RAG (Retrieval-Augmented Generation), ferramentas como Lexis+ AI e Westlaw AI erram entre 17% e 33% do tempo</strong>. Chatbots genericos erram 58-82% em consultas juridicas.
+                </div>
+
+                <h3 style="margin: 15px 0 10px;">Casos reais de sancoes a advogados (2025-2026)</h3>
+
+                <div class="timeline-item">
+                    <h4>MyPillow / Mike Lindell (EUA, jul/2025)</h4>
+                    <p>Dois advogados multados em US$ 3.000 cada por peticao com mais de 24 erros e citacoes de casos inexistentes gerados por IA. Nao foram transparentes quando questionados sobre uso de IA.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>Morgan & Morgan (EUA, 2025)</h4>
+                    <p>O maior escritorio de danos pessoais dos EUA foi sancionado. Um advogado usou a plataforma de IA interna do proprio escritorio, que gerou citacoes falsas.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>Caso Noland v. Land of the Free (California, set/2025)</h4>
+                    <p>Sancao de US$ 10.000. Inovacao: o tribunal tambem criticou o advogado adversario por <strong>nao ter detectado</strong> as citacoes falsas. Possivel precedente sobre dever de identificar alucinacoes do oponente.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>Pennsylvania (2025-2026)</h4>
+                    <p>Pelo menos 13 casos com alucinacoes de IA confirmadas ou suspeitas em filings judiciais.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>Ko v Li (Canada, 2025)</h4>
+                    <p>Advogado enfrentou sancoes por desacato ao tribunal por apresentar e se basear em casos que nao existiam.</p>
+                </div>
+
+                <div class="info-box" style="margin-top: 20px;">
+                    <strong>Total global:</strong> Ate meados de 2025, pesquisadores identificaram <strong>206 casos</strong> em tribunais de todo o mundo envolvendo alucinacoes de IA. Pelo menos <strong>66 decisoes</strong> resultaram em sancoes formais a advogados.
+                </div>
+
+                <div class="success-box" style="margin-top: 15px;">
+                    <strong>Regra de ouro para o curso:</strong> TODA saida de IA deve ser verificada pelo advogado. Sem excecao. A responsabilidade profissional nao e delegavel a uma maquina. Isso nao e teoria — e realidade processual.
+                </div>
+
+                <h3 style="margin: 20px 0 10px;">Novidade regulatoria (EUA)</h3>
+                <p>A <strong>Proposed Federal Rule of Evidence 707</strong> (comentario publico aberto ate 16/02/2026) propoe aplicar padroes de admissibilidade de peritos a evidencias geradas por IA apresentadas sem perito. Se aprovada, cria precedente global sobre como tratar outputs de IA em tribunais.</p>
+            </div>
+
+            <!-- ESCRITORIOS IA-NATIVOS -->
+            <div class="section">
+                <h2 class="section-title">6. ESCRITORIOS "IA-NATIVOS" — NOVA CONCORRENCIA</h2>
+
+                <div class="highlight-box">
+                    <h3>A Y Combinator pediu: "Monte um escritorio de advocacia com IA"</h3>
+                    <p style="margin-top: 10px;">A maior aceleradora de startups do mundo incluiu em seu Request for Startups 2025: <em>"Funde seu proprio escritorio de advocacia, contrate agentes de IA, e concorra com escritorios existentes."</em> Isso nao e ficcao — ja esta acontecendo:</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Garfield AI <span class="tool-badge novo">Novo</span></div>
+                    <p>Primeiro escritorio <strong>totalmente operado por IA</strong> autorizado pela SRA (regulador do Reino Unido). Foco em cobranca de dividas e pequenas causas.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Crosby <span class="tool-badge novo">Novo</span></div>
+                    <p>Escritorio "agentico" que combina software proprio com advogados internos para revisao de contratos. Captou US$ 5,8 mi em seed.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Avantia <span class="tool-badge novo">Novo</span></div>
+                    <p>Une pratica tradicional de direito empresarial com automacao via plataforma propria "Ava".</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Eudia <span class="tool-badge novo">Novo</span></div>
+                    <p>Captou US$ 105 mi. Abriu servico juridico regulado com IA no Arizona (EUA). O modelo: servico juridico aumentado por IA a custo menor.</p>
+                </div>
+
+                <div class="danger-box" style="margin-top: 15px;">
+                    <strong>Reflexao para o escritorio:</strong> Escritorios IA-nativos sao uma realidade global. No Brasil ainda nao ha equivalente direto, mas a tendencia e de tempo. Escritorios que dominarem IA agora terao vantagem competitiva significativa.
+                </div>
+            </div>
+
+            <!-- BIG LAW E TREINAMENTO -->
+            <div class="section">
+                <h2 class="section-title">7. COMO OS GRANDES ESCRITORIOS ESTAO TREINANDO</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Escritorio</th>
+                            <th>Iniciativa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Latham & Watkins</strong></td>
+                            <td>Trouxe todos os 400 associados de 1o ano para treinamento obrigatorio em "AI Academy"</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ropes & Gray</strong></td>
+                            <td>Permite que associados gastem ate <strong>400 horas (20% da meta de faturamento)</strong> em experimentacao com IA</td>
+                        </tr>
+                        <tr>
+                            <td><strong>A&O Shearman</strong></td>
+                            <td>Parceria com Harvey AI para agentes especializados em antitruste, ciber, fundos e emprestimos</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box">
+                    <strong>Pesquisa Wolters Kluwer:</strong> 62% dos profissionais juridicos concordam que o <strong>uso eficaz de IA generativa vai separar organizacoes bem-sucedidas das malsucedidas</strong> nos proximos 5 anos.
+                </div>
+            </div>
+
+            <!-- TENDENCIAS 2026 -->
+            <div class="section">
+                <h2 class="section-title">8. TENDENCIAS CONSOLIDADAS PARA 2026</h2>
+
+                <div class="card">
+                    <div class="card-title">1. De ferramenta a infraestrutura</div>
+                    <p>2026 e o ano em que IA deixa de ser "um tool a mais" e se torna a base operacional. Escritorios que nao a adotarem estarao operando com desvantagem estrutural, nao apenas tecnologica.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">2. IA hiperespecializada vai vencer a generica</div>
+                    <p>O mercado esta se fragmentando em 20+ ferramentas verticais — uma para patentes, outra para M&A, outra para trabalhista. Plataformas "faz tudo" perderao espaco para especialistas com dados melhores.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">3. Automacao de workflows completos</div>
+                    <p>Onboarding de clientes, gestao de procuracoes, controle de prazos, diligencias — tudo isso sera automatizado. TOTVS JuriTIs e outros ja caminham nessa direcao no Brasil.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">4. Jurimetria como vantagem competitiva</div>
+                    <p>Uso de dados para mapear padroes de risco, medir desempenho de estrategias e monitorar resultados. Justto ja preve valores de acordos com 94% de acerto.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">5. Departamentos juridicos in-house acelerando</div>
+                    <p>52% ja usam IA (dobrou em 1 ano). 64% esperam depender menos de escritorios externos. Isso pressiona escritorios a oferecerem mais valor agregado.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">6. Governanca e compliance de IA</div>
+                    <p>Nao basta usar IA — e preciso demonstrar governanca, validacao e responsabilidade. A Resolucao 615 do CNJ e a Recomendacao da OAB criam obrigacoes reais.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">7. Novo perfil profissional: advogado multidisciplinar</div>
+                    <p>O profissional juridico de 2026 precisa entender dados, tecnologia e gestao. Nao para programar, mas para tomar decisoes informadas sobre ferramentas e processos.</p>
+                </div>
+            </div>
+
+            <!-- IMPACTO NO CURSO -->
+            <div class="section">
+                <h2 class="section-title">9. IMPACTO DESSAS NOVIDADES NO CURSO</h2>
+
+                <p style="margin-bottom: 15px;">Com base nessas atualizacoes, os seguintes pontos devem ser incorporados ou enfatizados nos modulos:</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Modulo</th>
+                            <th>Atualizacao Sugerida</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Modulo 1</strong><br>Fundamentos</td>
+                            <td>
+                                <ul style="margin-left: 0; list-style: disc;">
+                                    <li>Incluir Resolucao CNJ 615/2025 e Recomendacao OAB 001/2024 como conteudo obrigatorio</li>
+                                    <li>Atualizar dados de mercado: 47% dos escritorios brasileiros ja usam IA</li>
+                                    <li>Mencionar PL 2.338/2023 e status da votacao</li>
+                                    <li>Apresentar casos reais de sancoes por alucinacoes (MyPillow, Morgan & Morgan)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Modulo 2</strong><br>Aplicacoes</td>
+                            <td>
+                                <ul style="margin-left: 0; list-style: disc;">
+                                    <li>Incluir ferramentas brasileiras (Juridico AI, GPTuri, Bits AI, JUIT) no comparativo</li>
+                                    <li>Demonstrar benchmark Stanford: 17-33% de erro mesmo com RAG</li>
+                                    <li>Enfatizar protocolo de verificacao como obrigacao etica (nao apenas boa pratica)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Modulo 3</strong><br>Prompts</td>
+                            <td>
+                                <ul style="margin-left: 0; list-style: disc;">
+                                    <li>Atualizar comparativo com Claude Opus 4.5, GPT-4o, Gemini 2.0</li>
+                                    <li>Incluir Perplexity como ferramenta de pesquisa com citacoes</li>
+                                    <li>Adicionar Microsoft Copilot no ecossistema de produtividade</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Modulo 4</strong><br>Avancado</td>
+                            <td>
+                                <ul style="margin-left: 0; list-style: disc;">
+                                    <li><strong>Expandir secao de agentes de IA</strong> — nao e mais conceito futuro, e realidade (Harvey, CoCounsel)</li>
+                                    <li>Incluir caso dos escritorios IA-nativos (Garfield, Crosby, Eudia)</li>
+                                    <li>Apresentar tendencia de departamentos in-house acelerando (64% querem menos escritorios externos)</li>
+                                    <li>Adicionar governanca de IA como topico (Resolucao 615, politicas internas)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- FONTES -->
+            <div class="section">
+                <h2 class="section-title">FONTES E REFERENCIAS</h2>
+
+                <div class="source-list">
+                    <h4 style="margin-bottom: 10px; color: #2c3e50;">Regulacao Brasil</h4>
+                    <ul>
+                        <li><a href="https://atos.cnj.jus.br/atos/detalhar/6001" target="_blank">Resolucao CNJ n. 615/2025</a></li>
+                        <li><a href="http://www.oab.org.br/noticia/62704/oab-aprova-recomendacoes-para-uso-de-ia-na-pratica-juridica" target="_blank">OAB — Recomendacao 001/2024 para uso de IA</a></li>
+                        <li><a href="https://teletime.com.br/16/12/2025/pl-de-inteligencia-artificial-fica-para-fevereiro-de-2026/" target="_blank">PL 2.338/2023 — Adiado para fevereiro/2026</a></li>
+                        <li><a href="https://jornaldobras.com.br/noticia/91875/inteligencia-artificial-na-advocacia-o-que-muda-com-as-novas-regras-da-oab-e-do-cnj-em-2025-2026" target="_blank">Novas regras OAB e CNJ 2025-2026</a></li>
+                        <li><a href="https://www.cnj.jus.br/inteligencia-artificial-que-identifica-litigancia-abusiva-ja-esta-disponivel-para-tribunais-brasileiros/" target="_blank">CNJ — Ferramenta BERNA para litigancia abusiva</a></li>
+                    </ul>
+
+                    <h4 style="margin: 15px 0 10px; color: #2c3e50;">Tendencias e Mercado</h4>
+                    <ul>
+                        <li><a href="https://www.totvs.com/blog/gestao-juridica/tendencias-juridico/" target="_blank">TOTVS — Tendencias do setor juridico para 2026</a></li>
+                        <li><a href="https://docmanagement.com.br/02/02/2026/quais-tendencias-tecnologicas-vao-impactar-o-setor-juridico-em-2026/" target="_blank">Tendencias tecnologicas para o setor juridico em 2026</a></li>
+                        <li><a href="https://natlawreview.com/article/85-predictions-ai-and-law-2026" target="_blank">85 Predictions for AI and the Law in 2026</a></li>
+                        <li><a href="https://www.attorneyatwork.com/lega-ai-tools-2026-how-firms-are-really-using-ai-today/" target="_blank">Legal AI Tools 2026: How Firms Are Really Using AI</a></li>
+                        <li><a href="https://pro.bloomberglaw.com/insights/technology/bloomberg-law-2026-key-legal-ai-trends/" target="_blank">Bloomberg Law — Key Legal AI Trends 2026</a></li>
+                        <li><a href="https://www.lupl.com/blog/10-ai-law-firms-to-watch-in-2026/" target="_blank">10 AI Law Firms to Watch in 2026</a></li>
+                        <li><a href="https://infiniteglobal.com/our-insights/the-multi-billion-dollar-story-of-legaltech-in-2025/" target="_blank">The Multi-Billion Dollar Story of Legaltech in 2025</a></li>
+                    </ul>
+
+                    <h4 style="margin: 15px 0 10px; color: #2c3e50;">Ferramentas e Plataformas</h4>
+                    <ul>
+                        <li><a href="https://www.juridigital.com.br/melhores-ferramentas-de-ia-advocacia/" target="_blank">25+ Ferramentas de IA para Advogados (2025)</a></li>
+                        <li><a href="https://turivius.com/portal/qual-a-melhor-ia-para-advogados/" target="_blank">Turivius — Melhor IA para advogados</a></li>
+                        <li><a href="https://juridico.ai/" target="_blank">Juridico AI — Plataforma brasileira</a></li>
+                        <li><a href="https://www.harvey.ai/" target="_blank">Harvey AI</a></li>
+                        <li><a href="https://agenciaevolux.com.br/ias-para-advogados/" target="_blank">10 IAs para Advogados e Escritorios em 2026</a></li>
+                    </ul>
+
+                    <h4 style="margin: 15px 0 10px; color: #2c3e50;">Alucinacoes e Riscos</h4>
+                    <ul>
+                        <li><a href="https://law.stanford.edu/publications/hallucination-free-assessing-the-reliability-of-leading-ai-legal-research-tools/" target="_blank">Stanford HAI — Hallucination-Free? (2025)</a></li>
+                        <li><a href="https://hai.stanford.edu/news/ai-trial-legal-models-hallucinate-1-out-6-or-more-benchmarking-queries" target="_blank">Stanford HAI — AI on Trial: 1 in 6 Hallucinations</a></li>
+                        <li><a href="https://www.damiencharlotin.com/hallucinations/" target="_blank">AI Hallucination Cases Database (206 casos)</a></li>
+                        <li><a href="https://www.npr.org/2025/07/10/nx-s1-5463512/ai-courts-lawyers-mypillow-fines" target="_blank">NPR — MyPillow AI Hallucination Case</a></li>
+                        <li><a href="https://www.spotlightpa.org/news/2026/01/pennsylvania-commonwealth-court-ai-hallucinations-allegations-justice-system/" target="_blank">Pennsylvania — AI Hallucinations in Court Cases (jan/2026)</a></li>
+                    </ul>
+
+                    <h4 style="margin: 15px 0 10px; color: #2c3e50;">Adocao no Brasil</h4>
+                    <ul>
+                        <li><a href="https://analise.com/noticias/ia-ja-e-usada-por-47-dos-escritorios-mais-admirados-do-pais" target="_blank">Analise — 47% dos escritorios Mais Admirados usam IA</a></li>
+                        <li><a href="https://blog.advtechpro.ai/guia-2025-para-uso-de-ia-na-advocacia-como-escritorios-estao-se-adaptando/" target="_blank">Guia 2025 — Como escritorios estao se adaptando</a></li>
+                        <li><a href="https://magis.agej.com.br/governanca-de-inteligencia-artificial-em-escritorios-de-advocacia-entre-a-recomendacao-da-oab-a-resolucao-615-2025-do-cnj-e-os-padroes-internacionais-de-regulacao-ex-ante/" target="_blank">Governanca de IA em escritorios — OAB e CNJ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <strong>Material Complementar — Curso IA para Paixao Cortes Advogados</strong><br>
+            Compilado por Igor Morais Vasconcelos | Fevereiro 2026<br>
+            Dados coletados de fontes publicas entre novembro/2025 e fevereiro/2026
+        </div>
+    </div>
+</body>
+</html>
