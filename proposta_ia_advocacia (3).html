@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta Técnica - Implementação IA Jurídica</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 40px;
+            border-bottom: 4px solid #3498db;
+        }
+        
+        .header h1 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .header .subtitle {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+        
+        .meta-info {
+            background: #ecf0f1;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.9em;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section-title {
+            font-size: 1.4em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .intro-box {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .modulo {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        
+        .modulo-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .modulo-title {
+            font-size: 1.15em;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        .modulo-duracao {
+            background: #3498db;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 3px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+        
+        .modulo-publico {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .modulo-content ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+        
+        .modulo-content li {
+            padding: 6px 0 6px 20px;
+            position: relative;
+            line-height: 1.5;
+        }
+        
+        .modulo-content li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .oficina {
+            background: #e8f5e9;
+            border-left: 3px solid #27ae60;
+            padding: 12px;
+            margin-top: 12px;
+            font-size: 0.95em;
+        }
+        
+        .oficina-title {
+            color: #27ae60;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .timeline {
+            margin: 20px 0;
+        }
+        
+        .timeline-item {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+        
+        .timeline-item h4 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-size: 1em;
+        }
+        
+        .timeline-item p {
+            color: #666;
+            font-size: 0.95em;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table th {
+            background: #34495e;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+        
+        table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            font-size: 0.95em;
+        }
+        
+        .price-value {
+            font-weight: 700;
+            color: #27ae60;
+            font-size: 1.1em;
+        }
+        
+        .package-row {
+            background: #f0f8f5;
+            font-weight: 600;
+        }
+        
+        .instructor-section {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            gap: 25px;
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 5px;
+            align-items: start;
+        }
+        
+        .instructor-photo {
+            text-align: center;
+        }
+        
+        .instructor-photo img {
+            width: 160px;
+            height: 160px;
+            border-radius: 5px;
+            object-fit: cover;
+            border: 2px solid #3498db;
+        }
+        
+        .instructor-info h3 {
+            color: #2c3e50;
+            font-size: 1.3em;
+            margin-bottom: 8px;
+        }
+        
+        .instructor-info .title {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+        
+        .credentials-box {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        
+        .credentials-box h4 {
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 1em;
+        }
+        
+        .credentials-box ul {
+            margin-left: 20px;
+            font-size: 0.9em;
+        }
+        
+        .credentials-box li {
+            margin: 5px 0;
+        }
+        
+        .contact-bar {
+            background: #34495e;
+            color: white;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+        
+        .contact-bar a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .info-box {
+            background: #fff9e6;
+            border-left: 4px solid #f39c12;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+        
+        .benefit-list {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        
+        .benefit-list h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .benefit-list ul {
+            margin-left: 20px;
+        }
+        
+        .benefit-list li {
+            margin: 8px 0;
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 25px 40px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+            }
+            .content {
+                padding: 20px;
+            }
+            .instructor-section {
+                grid-template-columns: 1fr;
+            }
+            .meta-info {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>PROPOSTA TÉCNICA</h1>
+            <div class="subtitle">Programa de Capacitação e Implementação de Inteligência Artificial para Escritórios Jurídicos</div>
+        </div>
+        
+        <div class="meta-info">
+            <div><strong>Data de Emissão:</strong> Outubro/2025</div>
+            <div><strong>Validade:</strong> 30 dias</div>
+            <div><strong>Versão:</strong> 1.0</div>
+        </div>
+        
+        <div class="content">
+            
+            <div class="intro-box">
+                <h3 style="margin-bottom: 10px; color: #2c3e50;">Sobre Este Programa</h3>
+                <p>Este programa foi desenvolvido para capacitar advogados e equipes jurídicas na utilização estratégica de Inteligência Artificial, combinando fundamentação técnica sólida com aplicações práticas imediatas. A abordagem integra curso presencial estruturado com mentoria de implementação, garantindo não apenas conhecimento teórico, mas transformação efetiva dos processos de trabalho.</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">1. OBJETIVO E ESCOPO</h2>
+                
+                <p>O programa visa proporcionar aos profissionais jurídicos:</p>
+                
+                <ul style="margin: 15px 0 15px 20px;">
+                    <li style="margin: 8px 0;">Compreensão técnica fundamentada sobre funcionamento de IA</li>
+                    <li style="margin: 8px 0;">Domínio prático de ferramentas aplicáveis ao contexto jurídico</li>
+                    <li style="margin: 8px 0;">Capacidade de implementar soluções customizadas</li>
+                    <li style="margin: 8px 0;">Redução mensurável de tempo em tarefas operacionais</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>Estimativa conservadora de ganho:</strong> Entre 3 a 5 horas semanais por profissional em tarefas operacionais (pesquisa, resumos, análise preliminar, estruturação de peças). Equivalente a 150-250 horas anuais por advogado, considerando uso moderado e curva de aprendizado.
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">2. ESTRUTURA DO CURSO PRESENCIAL</h2>
+                
+                <p style="margin-bottom: 15px;"><strong>Carga horária total:</strong> 16 horas presenciais divididas em 4 módulos semanais de 4 horas cada.</p>
+                
+                <div class="modulo">
+                    <div class="modulo-header">
+                        <div class="modulo-title">Módulo 1: Fundamentos e Segurança</div>
+                        <div class="modulo-duracao">4h • Semana 1</div>
+                    </div>
+                    <div class="modulo-publico">Público-alvo: Todos os profissionais (advogados e equipe de apoio)</div>
+                    <div class="modulo-content">
+                        <ul>
+                            <li>Sensibilização: impacto da IA no mercado jurídico atual</li>
+                            <li>Como funcionam modelos de linguagem (sem jargão técnico)</li>
+                            <li>Segurança de dados e LGPD: limites éticos e profissionais</li>
+                            <li>Sigilo profissional: onde usar e onde não usar IA</li>
+                            <li>Os 7 erros críticos que comprometem resultados</li>
+                            <li>Produtividade imediata: aplicações de baixa complexidade</li>
+                            <li>Qualidade jurídica: quando confiar, quando verificar</li>
+                        </ul>
+                        <div class="oficina">
+                            <div class="oficina-title">Oficina Prática</div>
+                            <div>Gestão de resistências: estratégias para lidar com objeções comuns e demonstração hands-on de casos de uso simples</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modulo">
+                    <div class="modulo-header">
+                        <div class="modulo-title">Módulo 2: Aplicações Jurídicas Fundamentais</div>
+                        <div class="modulo-duracao">4h • Semana 2</div>
+                    </div>
+                    <div class="modulo-publico">Público-alvo: Advogados e profissionais de produção jurídica</div>
+                    <div class="modulo-content">
+                        <ul>
+                            <li>Pesquisas jurídicas otimizadas: doutrina, investigação, jurisprudência</li>
+                            <li>Técnicas de resumo inteligente: prompts, limitações, markdown</li>
+                            <li>NotebookLM: ferramenta para síntese de múltiplos documentos</li>
+                            <li>Análise crítica com IA: GPT-4, Claude (modo Thinking), simulações</li>
+                            <li>Escrita jurídica assistida: estrutura, cuidados, metodologia passo a passo</li>
+                            <li>Mimetização de modelos: adaptação de estilo e padrões</li>
+                            <li>Limitações técnicas: alucinações, vieses, contextos inadequados</li>
+                        </ul>
+                        <div class="oficina">
+                            <div class="oficina-title">Oficina Prática</div>
+                            <div>Construção completa de uma peça jurídica com IA: da pesquisa inicial até revisão final, incluindo verificação de qualidade</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modulo">
+                    <div class="modulo-header">
+                        <div class="modulo-title">Módulo 3: Engenharia de Prompts e Contexto</div>
+                        <div class="modulo-duracao">4h • Semana 3</div>
+                    </div>
+                    <div class="modulo-publico">Público-alvo: Profissionais que buscam domínio técnico avançado</div>
+                    <div class="modulo-content">
+                        <ul>
+                            <li>Engenharia de prompts: estrutura, clareza, especificidade</li>
+                            <li>Engenharia de contexto: fornecimento eficiente de informações</li>
+                            <li>Comparativo técnico: GPT-4, Claude, Gemini, Perplexity</li>
+                            <li>Critérios de escolha: quando usar cada ferramenta</li>
+                            <li>GPTs personalizados: configuração e casos de uso</li>
+                            <li>Ferramentas auxiliares para criação de prompts</li>
+                            <li>Boas práticas: workflows reproduzíveis e documentação</li>
+                        </ul>
+                        <div class="oficina">
+                            <div class="oficina-title">Oficina Prática</div>
+                            <div>Desenvolvimento de biblioteca de prompts customizados por área de atuação do escritório</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modulo">
+                    <div class="modulo-header">
+                        <div class="modulo-title">Módulo 4: Aplicações Avançadas</div>
+                        <div class="modulo-duracao">4h • Semana 4</div>
+                    </div>
+                    <div class="modulo-publico">Público-alvo: Líderes, sócios e profissionais de inovação</div>
+                    <div class="modulo-content">
+                        <ul>
+                            <li>Hiperpersonalização: adaptação por magistrado, tribunal, cliente</li>
+                            <li>Análise de padrões decisórios: identificação de tendências</li>
+                            <li>Replicação de estilo autoral do escritório</li>
+                            <li>Agentes de IA especializados: conceito e aplicações</li>
+                            <li>Otimização para sistemas automatizados (IA-para-IA)</li>
+                            <li>Simulação digital: testes de hipóteses jurídicas</li>
+                            <li>Jurismetria e visual law: aplicações práticas</li>
+                        </ul>
+                        <div class="oficina">
+                            <div class="oficina-title">Oficina Prática</div>
+                            <div>Construção de agente especializado para demanda recorrente do escritório</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="benefit-list">
+                    <h4>Materiais Inclusos no Curso:</h4>
+                    <ul>
+                        <li>Apostila digital completa (PDF)</li>
+                        <li>Biblioteca de 50+ prompts jurídicos testados</li>
+                        <li>Templates de estruturas de peças</li>
+                        <li>Guia de referência rápida</li>
+                        <li>Acesso a gravações das aulas (30 dias)</li>
+                        <li>Certificado de participação (mínimo 75% presença)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">3. MENTORIA SETORIAL IMPLEMENTADA</h2>
+                
+                <p style="margin-bottom: 15px;"><strong>Carga horária:</strong> 32 horas mínimas distribuídas em 8 etapas estruturadas</p>
+                
+                <p>A mentoria foca na implementação prática de soluções de IA em uma área crítica escolhida pelo escritório, seguindo metodologia de problem solving orientada ao design:</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>Etapa 1: Mapeamento Completo (4h)</h4>
+                        <p>Levantamento de processos, tarefas, gargalos, tempo alocado por atividade</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h4>Etapa 2: Priorização 80/20 (2h)</h4>
+                        <p>Identificação dos 20% de problemas responsáveis por 80% do impacto negativo</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h4>Etapa 3: Diagnóstico Profundo (4h)</h4>
+                        <p>Análise das causas raiz utilizando frameworks estruturados</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h4>Etapa 4: Design da Solução (2h)</h4>
+                        <p>Especificação de ferramentas e estratégias adequadas ao contexto</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h4>Etapa 5: Personalização (4h)</h4>
+                        <p>Configuração, customização e adaptação às especificidades do escritório</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h4>Etapa 6: Treinamento Específico (4h)</h4>
+                        <p>Capacitação hands-on da equipe envolvida nas soluções implementadas</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h4>Etapa 7: Acompanhamento (8h ao longo de 30 dias)</h4>
+                        <p>Monitoramento semanal (2h/semana), ajustes, resolução de dúvidas, acompanhamento de indicadores</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h4>Etapa 8: Avaliação e Melhoria Contínua (4h)</h4>
+                        <p>Análise de resultados, feedback estruturado, documentação de aprendizados, planejamento de expansão</p>
+                    </div>
+                </div>
+
+                <div class="benefit-list" style="margin-top: 20px;">
+                    <h4>Bônus Inclusos na Mentoria:</h4>
+                    <ul>
+                        <li>Vídeos técnicos específicos para cada ferramenta implementada</li>
+                        <li>Tutoriais passo a passo para replicação interna</li>
+                        <li>Atualizações sobre novas funcionalidades (durante vigência)</li>
+                        <li>Documentação completa de processos implementados</li>
+                        <li>Suporte assíncrono via canal dedicado</li>
+                    </ul>
+                </div>
+
+                <div class="info-box" style="margin-top: 20px;">
+                    <strong>Observação:</strong> A mentoria pode ser aplicada a áreas adicionais. Cada nova área de implementação requer contratação separada de 32h mínimas.
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">4. INVESTIMENTO</h2>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Descrição</th>
+                            <th style="text-align: center;">Carga Horária</th>
+                            <th style="text-align: right;">Valor (R$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Curso Presencial Completo</strong><br>
+                            <span style="font-size: 0.9em; color: #666;">4 módulos + 4 oficinas + materiais</span></td>
+                            <td style="text-align: center;">16 horas</td>
+                            <td style="text-align: right;" class="price-value">6.000,00</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mentoria Setorial</strong><br>
+                            <span style="font-size: 0.9em; color: #666;">Implementação em 1 área + acompanhamento</span></td>
+                            <td style="text-align: center;">32 horas mínimas</td>
+                            <td style="text-align: right;" class="price-value">12.000,00</td>
+                        </tr>
+                        <tr class="package-row">
+                            <td><strong>Pacote Completo</strong><br>
+                            <span style="font-size: 0.9em;">Curso + Mentoria (1 área)</span></td>
+                            <td style="text-align: center;">48 horas</td>
+                            <td style="text-align: right;" class="price-value" style="font-size: 1.3em;">15.000,00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="text-align: center; background: #fff9e6; padding: 12px;">
+                                <strong>Economia de R$ 3.000 no pacote completo</strong>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; margin-top: 20px;">
+                    <h4 style="margin-bottom: 10px;">Opções Adicionais:</h4>
+                    <ul style="margin-left: 20px; font-size: 0.95em;">
+                        <li>Mentorias adicionais: R$ 12.000 por área implementada</li>
+                        <li>Filmagem profissional: Sob consulta</li>
+                        <li>Assessoria para aquisição de ferramentas: Sob consulta</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">5. CRONOGRAMA SUGERIDO</h2>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Período</th>
+                            <th>Atividade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Semana 1</td>
+                            <td>Módulo 1: Fundamentos e Segurança</td>
+                        </tr>
+                        <tr>
+                            <td>Semana 2</td>
+                            <td>Módulo 2: Aplicações Jurídicas Fundamentais</td>
+                        </tr>
+                        <tr>
+                            <td>Semana 3</td>
+                            <td>Módulo 3: Engenharia de Prompts e Contexto</td>
+                        </tr>
+                        <tr>
+                            <td>Semana 4</td>
+                            <td>Módulo 4: Aplicações Avançadas</td>
+                        </tr>
+                        <tr>
+                            <td>Semanas 5-6</td>
+                            <td>Mentoria: Etapas 1-5 (Mapeamento até Personalização)</td>
+                        </tr>
+                        <tr>
+                            <td>Semana 7</td>
+                            <td>Mentoria: Etapa 6 (Treinamento Específico)</td>
+                        </tr>
+                        <tr>
+                            <td>Semanas 8-11</td>
+                            <td>Mentoria: Etapa 7 (Acompanhamento - 30 dias)</td>
+                        </tr>
+                        <tr>
+                            <td>Semana 12</td>
+                            <td>Mentoria: Etapa 8 (Avaliação Final)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p style="margin-top: 15px; font-size: 0.95em; color: #666;">
+                    <strong>Duração total estimada:</strong> 12 semanas (3 meses) para conclusão do programa completo.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">6. INSTRUTOR</h2>
+                
+                <div class="instructor-section">
+                    <div class="instructor-photo">
+                        <img src="https://i.ibb.co/1fJgxD6/igor-photo.jpg" alt="Dr. Igor Morais Vasconcelos" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27160%27 height=%27160%27%3E%3Crect fill=%27%232c3e50%27 width=%27160%27 height=%27160%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-size=%2748%27 fill=%27white%27 font-family=%27Arial%27%3EIV%3C/text%3E%3C/svg%3E'">
+                        <div style="margin-top: 8px; font-size: 0.85em; color: #666;">OAB 35.376</div>
+                    </div>
+                    <div class="instructor-info">
+                        <h3>Dr. Igor Morais Vasconcelos</h3>
+                        <div class="title">Doutorando em IA | Mestre em Gestão Pública | Advogado</div>
+                        
+                        <p style="font-size: 0.95em; line-height: 1.6; margin-bottom: 15px;">
+                            Especialista em aplicações de Inteligência Artificial no setor público e jurídico. Professor Assistente de IA no Doutorado em Administração Pública (IDP). Mais de 15 anos de experiência em gestão de projetos de transformação digital.
+                        </p>
+                        
+                        <div class="credentials-box">
+                            <h4>Formação Acadêmica</h4>
+                            <ul>
+                                <li>Doutorando em Administração Pública - IDP (IA aplicada, conclusão 2026)</li>
+                                <li>Mestre em Administração Pública - IDP (2021)</li>
+                                <li>Pós-Graduação em Direito, Estado e Constituição</li>
+                                <li>Bacharel em Direito - UDF</li>
+                                <li>Graduação em Ciências Econômicas - UnB</li>
+                            </ul>
+                        </div>
+
+                        <div class="credentials-box" style="margin-top: 15px;">
+                            <h4>Certificações em IA</h4>
+                            <ul>
+                                <li>Prompt Engineering - IBM EdX (2024)</li>
+                                <li>Inteligência Artificial - USP (2024)</li>
+                                <li>Master Coach Trainer (MC) e Business Executive Coach (BEC)</li>
+                            </ul>
+                        </div>
+
+                        <div class="credentials-box" style="margin-top: 15px;">
+                            <h4>Experiência Profissional Relevante</h4>
+                            <ul>
+                                <li>Assessor Especial e Professor de IA - Secretaria de Educação/DF (2023-atual)</li>
+                                <li>Ex-Chefe de Gabinete - Secretaria de Saúde/DF (2016-2018)</li>
+                                <li>Criador do Laboratório de Inovação - SES/DF</li>
+                                <li>Múltiplas funções de gestão - TERRACAP (2007-2021)</li>
+                            </ul>
+                        </div>
+
+                        <div class="credentials-box" style="margin-top: 15px;">
+                            <h4>Publicações</h4>
+                            <ul>
+                                <li>"O Gênio Artificial: Implicações Jurídicas dos Direitos Autorais na Era da IA" - Revista Justiça em Foco (2024)</li>
+                                <li>Coautor: "Inovação e Políticas Públicas: Superando o Mito da Ideia" - IPEA (2019)</li>
+                            </ul>
+                        </div>
+
+                        <div class="contact-bar">
+                            <strong>Contato:</strong><br>
+                            Email: igormorais123@gmail.com<br>
+                            Telefone: (61) 98115-7120<br>
+                            LinkedIn: <a href="https://linkedin.com/in/igor-vasconcelos-115a5032" target="_blank">linkedin.com/in/igor-vasconcelos-115a5032</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">7. CONDIÇÕES COMERCIAIS</h2>
+                
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 5px; margin-bottom: 15px;">
+                    <h4 style="margin-bottom: 10px;">Formas de Pagamento</h4>
+                    <ul style="margin-left: 20px;">
+                        <li>PIX, transferência bancária ou boleto bancário</li>
+                        <li><strong>Curso isolado:</strong> 50% na contratação + 50% no início</li>
+                        <li><strong>Mentoria isolada:</strong> 50% na contratação + 50% no início da implementação</li>
+                        <li><strong>Pacote completo:</strong> 30% na contratação + 40% no início do curso + 30% no início da mentoria</li>
+                        <li>Condições especiais de parcelamento: consultar</li>
+                    </ul>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 5px; margin-bottom: 15px;">
+                    <h4 style="margin-bottom: 10px;">Outras Condições</h4>
+                    <ul style="margin-left: 20px;">
+                        <li>Validade da proposta: 30 dias corridos</li>
+                        <li>Local de realização: Instalações do contratante (Brasília-DF) ou local indicado</li>
+                        <li>Materiais: Fornecidos em formato digital</li>
+                        <li>Certificados: Emitidos para participantes com mínimo 75% de presença</li>
+                        <li>Valores fixos durante vigência contratual</li>
+                    </ul>
+                </div>
+
+                <div style="background: #e8f5e9; padding: 20px; border-radius: 5px; border-left: 4px solid #27ae60;">
+                    <h4 style="margin-bottom: 10px; color: #27ae60;">Compromisso de Qualidade</h4>
+                    <p style="font-size: 0.95em;">Todo conteúdo programático especificado será integralmente entregue. A mentoria inclui acompanhamento efetivo durante os 30 dias estabelecidos, com sessões semanais garantidas conforme cronograma.</p>
+                </div>
+            </div>
+
+            <div style="background: #34495e; color: white; padding: 30px; border-radius: 5px; text-align: center; margin: 30px 0;">
+                <h3 style="margin-bottom: 15px;">Dúvidas ou Esclarecimentos?</h3>
+                <p style="margin-bottom: 20px;">Entre em contato para discutirmos esta proposta e ajustes necessários.</p>
+                <div style="font-size: 1.1em;">
+                    <strong>Dr. Igor Morais Vasconcelos</strong><br>
+                    <span style="font-size: 0.95em;">igormorais123@gmail.com | (61) 98115-7120</span>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="footer">
+            <strong>Dr. Igor Morais Vasconcelos</strong><br>
+            Especialista em Inteligência Artificial Aplicada<br>
+            CPF: 000.283.911-36 | OAB: 35.376<br>
+            Brasília-DF | 2025
+        </div>
+    </div>
+</body>
+</html>
