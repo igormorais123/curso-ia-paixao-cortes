@@ -1,82 +1,81 @@
 # Contexto Ativo - Curso IA para Paixao Cortes Advogados
 
 **Ultima atualizacao**: 2026-02-04
-**Status**: Roteiro v2 completo (pos-avaliacao consultores)
+**Status**: Roteiro v3 completo (revisao critica ONIR)
 **Branch**: master
-**Tipo**: Documentacao / Material Didatico
 
 ## Estado Atual
-- Projeto inicializado com sistema de memoria
-- Materiais base ja existentes (propostas, pesquisas, cartas)
-- Documento de atualizacao criado (ATUALIZACAO_IA_DIREITO_NOV2025_FEV2026.html)
-- **OBSOLETO**: Roteiro v1 (ROTEIRO_CURSO_6H_IA_ADVOCACIA.md) - 85-90 slides, 50 cartas
-- **ATUAL**: Roteiro v2 (ROTEIRO_CURSO_6H_IA_ADVOCACIA_v2.md) - 25-30 slides, 12 cartas
+- **ATUAL**: Roteiro v3 (ROTEIRO_CURSO_6H_IA_ADVOCACIA_v3.md)
+- **OBSOLETO**: v1 e v2
 
-## Criado/Atualizado em 04/02/2026
+## Evolucao do Roteiro
 
-### Avaliacao por Consultores Lendarios
-5 consultores avaliaram o roteiro v1:
-1. **Steve Jobs**: "Competente nao muda vidas" - cortar escopo, menos slides
-2. **Simon Sinek**: "Comeca pelo lado de fora do circulo" - falta proposito
-3. **Demis Hassabis**: "Defasado em agentes" - atualizar para 2026
-4. **Dale Carnegie**: "Trata resistencia como inimigo" - mais participacao
-5. **Satya Nadella**: "Vende medo, nao proposito" - growth mindset
+| Versao | Slides | Cartas | Pratica | Problemas |
+|--------|--------|--------|---------|-----------|
+| v1 | 85 | 50 | 11% | Excesso de conteudo |
+| v2 | 28 | 12 | 63% | Timing sobreposto, Perplexity contradito |
+| v3 | 20 | 12 CLEAR | 67% | Corrigido |
 
-### Consolidacao OMEGA
-OMEGA (CL100) consolidou as avaliacoes em:
-- **7 Mandamentos** do curso redesenhado
-- Inversao: 60% pratica, 40% instrucao (antes era 11% pratica)
-- Reducao: 25-30 slides (antes 85-90)
-- Reducao: 12 cartas curadas (antes 50)
-- Zero mencoes a "substituicao" ou "medo"
+## Correcoes v2 → v3
 
-### Arquivos Atuais
+1. **Timing corrigido** - Blocos nao sobrepoem mais
+2. **Perplexity removido** - Demonstra-se que falha, nao faz sentido listar como essencial
+3. **12 cartas reescritas** - Agora usam framework CLEAR de verdade
+4. **Exercicio 5 simplificado** - De 6 etapas/40min para 3 etapas/45min
+5. **3 casos ficticios incluidos** - Dispensa discriminatoria, horas extras, acidente
+6. **Recursos reais** - AB2L, Legal Hackers, FGV (nao placeholders)
+7. **Tarefa entre dias** - "Use IA em algo real"
+8. **Buffer aumentado** - De 25 para 40 minutos totais
 
-| Arquivo | Status | Descricao |
-|---------|--------|-----------|
-| ROTEIRO_CURSO_6H_IA_ADVOCACIA_v2.md | ATUAL | Roteiro pos-consultores |
-| pagina_12_cartas_curadas.html | ATUAL | 12 prompts curados |
-| ROTEIRO_CURSO_6H_IA_ADVOCACIA.md | OBSOLETO | Roteiro v1 original |
-| JOGO_DESAFIO_IA_50_CARTAS.md | OBSOLETO | 50 cartas (reduzido para 12) |
-| pagina_desafio_ia.html | OBSOLETO | Substituido por 12 cartas |
-| pagina_perfis_resistentes.html | MANTER | 27 perfis (usar com cuidado) |
+## Arquivos Atuais
 
-### Estrutura do Roteiro v2
+| Arquivo | Status |
+|---------|--------|
+| ROTEIRO_CURSO_6H_IA_ADVOCACIA_v3.md | ATUAL |
+| pagina_12_cartas_v3.html | ATUAL |
+| ROTEIRO_CURSO_6H_IA_ADVOCACIA_v2.md | OBSOLETO |
+| pagina_12_cartas_curadas.html | OBSOLETO |
+| ROTEIRO_CURSO_6H_IA_ADVOCACIA.md | OBSOLETO |
+
+## Estrutura Final (v3)
 
 **DIA 1 - SEXTA (3h):**
-- Bloco 1 (50 min): ESPANTO - Demo WOW primeiro, exercicio pratico
-- Bloco 2 (50 min): PERIGO - Descobrir alucinacao na pratica
-- Bloco 3 (60 min): FERRAMENTAS - 3 essenciais + 2 avancadas
+- Bloco 1 (45 min): ESPANTO - Demo WOW, primeiro exercicio
+- Bloco 2 (50 min): PERIGO - Descobrir alucinacao, framework
+- Intervalo (10 min)
+- Bloco 3 (55 min): FERRAMENTAS - ChatGPT/Claude, CLEAR, cartas
+- Buffer (20 min)
 
 **DIA 2 - SABADO (3h):**
-- Bloco 4 (75 min): DOMINIO - Fluxo completo, agentes
-- Bloco 5 (30 min): SEGURANCA - Protocolo real
-- Bloco 6 (20 min): HORIZONTES - Jurimetria/Visual Law como mencao
-- Bloco 7 (30 min): COMPROMISSO - Promessa pessoal, nao certificado
+- Bloco 4 (70 min): DOMINIO - Aquecimento + fluxo completo
+- Intervalo (10 min)
+- Bloco 5 (35 min): SEGURANCA - Casos reais + anonimizacao
+- Bloco 6 (15 min): HORIZONTES - Mencoes + recursos
+- Bloco 7 (30 min): COMPROMISSO - Reflexao + promessa
+- Buffer (20 min)
 
-### Metricas de Transformacao
+## Metricas Finais
 
-| Metrica | v1 | v2 |
-|---------|----|----|
-| Tempo instrucao | 160 min (89%) | 110 min (37%) |
-| Tempo pratica | 20 min (11%) | 190 min (63%) |
-| Slides | 85-90 | 25-30 |
-| Cartas | 50 | 12 |
-| Exercicios com IA | 2-3 | 8 |
+| Metrica | v3 |
+|---------|-----|
+| Instrucao | 100 min (33%) |
+| Pratica | 200 min (67%) |
+| Slides | 20 |
+| Cartas | 12 (CLEAR) |
+| Casos ficticios | 3 |
+| Exercicios | 7 |
+| Buffer | 40 min |
 
 ## Proximos Passos
-1. [ ] Criar slides minimalistas (25-30)
-2. [ ] Imprimir 12 cartas em formato baralho
-3. [ ] Preparar casos ficticios para exercicios
-4. [ ] Testar demonstracao WOW (peticao em 90s)
-5. [ ] Definir protocolo de verificacao (1 pagina)
-6. [ ] Gravar video backup da demo
-7. [ ] Hospedar pagina 12 cartas em inteia.com.br
+1. [ ] Criar slides minimalistas (20)
+2. [ ] Imprimir 12 cartas CLEAR
+3. [ ] Imprimir casos ficticios
+4. [ ] Preparar demo WOW
+5. [ ] Gravar video backup
+6. [ ] Hospedar pagina v3
 
-## Decisoes Tomadas
-- Formato: 6h (3h sexta + 3h sabado) - mantido
-- Filosofia: "Nao convencer, converter" - NOVO
-- DNA: "IA gera, advogado verifica" - ENFATIZADO
-- Jurimetria e Visual Law: apenas mencao de 2 min (antes eram blocos de 45 min cada)
-- Cartas reduzidas de 50 para 12 curadas
-- Perfis resistentes: usar com cuidado, reformular como "sabedorias diferentes"
+## Consultores que Avaliaram (v1→v2)
+Steve Jobs, Simon Sinek, Demis Hassabis, Dale Carnegie, Satya Nadella + OMEGA
+
+## Revisao Critica (v2→v3)
+ONIR identificou 9 problemas e corrigiu todos na v3.

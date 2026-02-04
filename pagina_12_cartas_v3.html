@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 Cartas CLEAR | Curso IA Advocacia v3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 100%);
+            min-height: 100vh;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            background: linear-gradient(90deg, #00d4ff, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        .clear-badge {
+            display: inline-block;
+            background: linear-gradient(90deg, #00d4ff, #7c3aed);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .instructions {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+
+        .instructions h2 {
+            color: #00d4ff;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+
+        .clear-framework {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .clear-item {
+            text-align: center;
+            padding: 10px 5px;
+            background: rgba(124, 58, 237, 0.2);
+            border-radius: 8px;
+        }
+
+        .clear-item strong {
+            display: block;
+            font-size: 1.5rem;
+            color: #7c3aed;
+        }
+
+        .clear-item span {
+            font-size: 0.7rem;
+            color: #aaa;
+        }
+
+        .btn-draw {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 30px auto;
+            background: linear-gradient(135deg, #7c3aed, #00d4ff);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-draw:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
+        }
+
+        .card-display {
+            display: none;
+            margin: 30px 0;
+        }
+
+        .card-display.active {
+            display: block;
+        }
+
+        .drawn-card {
+            background: #1e1e3f;
+            border-radius: 16px;
+            padding: 25px;
+            border: 2px solid;
+            animation: cardIn 0.4s ease-out;
+        }
+
+        @keyframes cardIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .card-category {
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .card-number {
+            font-size: 1.5rem;
+            font-weight: 800;
+            opacity: 0.4;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+
+        .prompt-section {
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 12px;
+            font-family: 'Consolas', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            border-left: 3px solid;
+        }
+
+        .prompt-label {
+            color: #00d4ff;
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* Category colors */
+        .cat-elaboracao { border-color: #10b981; }
+        .cat-elaboracao .card-category { background: #10b981; }
+        .cat-elaboracao .prompt-section { border-color: #10b981; }
+
+        .cat-analise { border-color: #f59e0b; }
+        .cat-analise .card-category { background: #f59e0b; color: #000; }
+        .cat-analise .prompt-section { border-color: #f59e0b; }
+
+        .cat-comunicacao { border-color: #8b5cf6; }
+        .cat-comunicacao .card-category { background: #8b5cf6; }
+        .cat-comunicacao .prompt-section { border-color: #8b5cf6; }
+
+        .cat-produtividade { border-color: #ef4444; }
+        .cat-produtividade .card-category { background: #ef4444; }
+        .cat-produtividade .prompt-section { border-color: #ef4444; }
+
+        .copy-btn {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            width: 100%;
+            transition: all 0.3s;
+        }
+
+        .copy-btn:hover { background: rgba(255,255,255,0.2); }
+        .copy-btn.copied { background: #10b981; }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .mini-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid;
+            border-radius: 12px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .mini-card:hover {
+            transform: translateY(-3px);
+            background: rgba(255,255,255,0.06);
+        }
+
+        .mini-card .card-category {
+            font-size: 0.65rem;
+            padding: 3px 8px;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+
+        .mini-card .card-title {
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+
+        .warning {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 8px;
+            padding: 12px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+        }
+
+        .warning strong { color: #ef4444; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            .clear-framework { grid-template-columns: repeat(3, 1fr); }
+            .card-title { font-size: 1.2rem; }
+            .prompt-section { font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>12 Cartas de Prompts Juridicos</h1>
+            <p class="subtitle">Usando o Framework CLEAR</p>
+            <span class="clear-badge">Curso IA Advocacia v3</span>
+        </header>
+
+        <div class="instructions">
+            <h2>Framework CLEAR</h2>
+            <p>Cada carta usa a estrutura CLEAR para prompts eficazes:</p>
+            <div class="clear-framework">
+                <div class="clear-item"><strong>C</strong><span>Contexto</span></div>
+                <div class="clear-item"><strong>L</strong><span>Limite</span></div>
+                <div class="clear-item"><strong>E</strong><span>Exemplo</span></div>
+                <div class="clear-item"><strong>A</strong><span>Audiencia</span></div>
+                <div class="clear-item"><strong>R</strong><span>Role</span></div>
+            </div>
+        </div>
+
+        <div class="warning">
+            <strong>LEMBRE-SE:</strong> IA gera, advogado verifica. NUNCA use citacoes de jurisprudencia sem verificar na fonte primaria.
+        </div>
+
+        <button class="btn-draw" onclick="drawCard()">Sortear Carta</button>
+
+        <div class="card-display" id="cardDisplay">
+            <div class="drawn-card" id="drawnCard"></div>
+        </div>
+
+        <h2 style="text-align:center; margin-top:40px; color:#888; font-size:1rem;">Todas as Cartas</h2>
+        <div class="cards-grid" id="cardsGrid"></div>
+
+        <footer>
+            <p>Curso IA na Advocacia | Paixao Cortes Advogados</p>
+            <p>IA gera, advogado verifica.</p>
+        </footer>
+    </div>
+
+    <script>
+        const cards = [
+            {
+                id: 1,
+                category: "elaboracao",
+                title: "Peticao Inicial",
+                prompt: `CONTEXTO: Sou advogado trabalhista elaborando peticao inicial de reclamacao trabalhista. O reclamante trabalhou como [cargo] de [data] a [data] e foi dispensado sem justa causa.
+
+LIMITE: Nao cite jurisprudencia especifica (vou verificar depois). Nao invente nomes de testemunhas.
+
+EXEMPLO: Estrutura desejada: 1) Qualificacao, 2) Fatos, 3) Fundamentos, 4) Pedidos numerados, 5) Valor da causa.
+
+AUDIENCIA: Juiz do trabalho de vara de [cidade].
+
+ROLE: Atue como advogado trabalhista experiente, com linguagem tecnica mas objetiva.
+
+FATOS DO CASO: [inserir fatos]`
+            },
+            {
+                id: 2,
+                category: "elaboracao",
+                title: "Contestacao",
+                prompt: `CONTEXTO: Sou advogado da reclamada em acao trabalhista. Preciso contestar os pedidos do reclamante.
+
+LIMITE: Nao admita fatos prejudiciais. Nao cite jurisprudencia especifica. Foque em impugnar ponto a ponto.
+
+EXEMPLO: Para cada pedido: a) Impugnacao dos fatos, b) Impugnacao do direito, c) Pedido de improcedencia.
+
+AUDIENCIA: Juiz do trabalho.
+
+ROLE: Advogado empresarial experiente, tecnico e preciso.
+
+PEDIDOS A CONTESTAR: [inserir pedidos da inicial]`
+            },
+            {
+                id: 3,
+                category: "elaboracao",
+                title: "Recurso Ordinario",
+                prompt: `CONTEXTO: Fui condenado em primeira instancia e preciso recorrer. A sentenca [deferiu/indeferiu] [pedidos].
+
+LIMITE: Nao cite acordaos especificos (verificarei depois). Foque nos fundamentos para reforma.
+
+EXEMPLO: Estrutura: 1) Tempestividade, 2) Sintese da sentenca, 3) Razoes de reforma por pedido, 4) Pedido de provimento.
+
+AUDIENCIA: Desembargadores do TRT.
+
+ROLE: Advogado recursal experiente.
+
+PONTOS A ATACAR: [inserir fundamentos da sentenca]`
+            },
+            {
+                id: 4,
+                category: "elaboracao",
+                title: "Contrato de Trabalho",
+                prompt: `CONTEXTO: Preciso elaborar contrato de trabalho para [cargo] em regime [CLT/PJ/temporario].
+
+LIMITE: Usar legislacao vigente. Nao incluir clausulas abusivas ou inconstitucionais.
+
+EXEMPLO: Clausulas essenciais: identificacao, funcao, jornada, remuneracao, beneficios, confidencialidade, rescisao.
+
+AUDIENCIA: RH e juridico da empresa, e o colaborador.
+
+ROLE: Advogado trabalhista empresarial.
+
+CONDICOES: [inserir condicoes acordadas]`
+            },
+            {
+                id: 5,
+                category: "analise",
+                title: "Analise de Risco",
+                prompt: `CONTEXTO: Cliente quer demitir funcionario que [situacao]. Preciso analisar riscos.
+
+LIMITE: Nao afirme certeza sobre decisoes judiciais. Apresente cenarios.
+
+EXEMPLO: Formato: 1) Situacao, 2) Riscos identificados com probabilidade (alto/medio/baixo), 3) Recomendacoes, 4) Alternativas.
+
+AUDIENCIA: Diretor de RH sem formacao juridica.
+
+ROLE: Consultor trabalhista preventivo.
+
+SITUACAO: [inserir detalhes]`
+            },
+            {
+                id: 6,
+                category: "analise",
+                title: "Revisao de Peca",
+                prompt: `CONTEXTO: Redigi esta [tipo de peca] e preciso de revisao critica.
+
+LIMITE: Nao reescreva tudo. Aponte problemas especificos com sugestoes de correcao.
+
+EXEMPLO: Formato: 1) Pontos fortes, 2) Problemas de fundamentacao, 3) Oportunidades perdidas, 4) Sugestoes de melhoria linha a linha.
+
+AUDIENCIA: Eu mesmo, para aprendizado.
+
+ROLE: Revisor juridico senior, exigente mas construtivo.
+
+PECA: [colar peca]`
+            },
+            {
+                id: 7,
+                category: "analise",
+                title: "Parecer Juridico",
+                prompt: `CONTEXTO: Cliente pergunta se pode [situacao]. Preciso de parecer fundamentado.
+
+LIMITE: Seja honesto sobre incertezas. Nao prometa resultados.
+
+EXEMPLO: Formato: 1) Consulta, 2) Fundamentacao legal, 3) Analise do caso concreto, 4) Riscos, 5) Conclusao e recomendacao.
+
+AUDIENCIA: Cliente empresario sem formacao juridica.
+
+ROLE: Parecerista experiente, claro e objetivo.
+
+CONSULTA: [inserir pergunta do cliente]`
+            },
+            {
+                id: 8,
+                category: "analise",
+                title: "Estrategia de Caso",
+                prompt: `CONTEXTO: Assumi caso [tipo] com as seguintes caracteristicas [resumo]. Preciso definir estrategia.
+
+LIMITE: Nao sugira taticas antieticas. Considere custo-beneficio.
+
+EXEMPLO: Formato: 1) Diagnostico, 2) Teses possiveis (forte/media/fraca), 3) Provas necessarias, 4) Cronograma, 5) Acordo vs litigio.
+
+AUDIENCIA: Minha equipe interna.
+
+ROLE: Advogado estrategista experiente.
+
+CASO: [inserir fatos]`
+            },
+            {
+                id: 9,
+                category: "comunicacao",
+                title: "Resumo para Cliente",
+                prompt: `CONTEXTO: Recebi [decisao/parecer/citacao] e preciso explicar ao cliente leigo.
+
+LIMITE: Maximo 3 paragrafos. Zero jargao juridico. Foque no impacto pratico.
+
+EXEMPLO: Formato: 1) O que aconteceu (1 frase), 2) O que significa para voce (1 paragrafo), 3) Proximos passos (lista simples).
+
+AUDIENCIA: Cliente [perfil] sem formacao juridica.
+
+ROLE: Advogado que explica com clareza e empatia.
+
+DOCUMENTO: [colar ou resumir]`
+            },
+            {
+                id: 10,
+                category: "comunicacao",
+                title: "E-mail Profissional",
+                prompt: `CONTEXTO: Preciso enviar e-mail para [destinatario] sobre [assunto].
+
+LIMITE: Tom [formal/cordial]. Maximo [X] paragrafos. Sem juridiques desnecessario.
+
+EXEMPLO: Estrutura: saudacao, contexto em 1 frase, conteudo principal, call-to-action claro, despedida.
+
+AUDIENCIA: [descrever destinatario e relacao].
+
+ROLE: Profissional assertivo e respeitoso.
+
+PONTOS A INCLUIR: [listar]`
+            },
+            {
+                id: 11,
+                category: "produtividade",
+                title: "Resumo de Processo",
+                prompt: `CONTEXTO: Preciso entender rapidamente este processo de [X] paginas que assumi.
+
+LIMITE: Foque em: partes, pedidos, status, proximos prazos, pontos criticos.
+
+EXEMPLO: Formato: 1) Partes e representantes, 2) Objeto, 3) Historico processual (linha do tempo), 4) Situacao atual, 5) Riscos e oportunidades.
+
+AUDIENCIA: Eu mesmo, para assumir o caso.
+
+ROLE: Assistente juridico eficiente.
+
+DOCUMENTOS: [colar pecas principais ou resumo]`
+            },
+            {
+                id: 12,
+                category: "produtividade",
+                title: "Checklist de Audiencia",
+                prompt: `CONTEXTO: Tenho audiencia [tipo] no processo [resumo] em [data].
+
+LIMITE: Seja pratico. Foque no que posso esquecer.
+
+EXEMPLO: Formato: 1) Documentos para levar, 2) Perguntas para testemunhas, 3) Pontos para destacar, 4) Objecoes provaveis da outra parte, 5) Acordos possiveis.
+
+AUDIENCIA: Eu mesmo, como lembrete.
+
+ROLE: Advogado experiente me preparando.
+
+DETALHES DO CASO: [inserir]`
+            }
+        ];
+
+        const categoryNames = {
+            elaboracao: "Elaboracao",
+            analise: "Analise",
+            comunicacao: "Comunicacao",
+            produtividade: "Produtividade"
+        };
+
+        function drawCard() {
+            const randomIndex = Math.floor(Math.random() * cards.length);
+            displayCard(cards[randomIndex]);
+        }
+
+        function displayCard(card) {
+            const display = document.getElementById('cardDisplay');
+            const cardElement = document.getElementById('drawnCard');
+
+            cardElement.className = `drawn-card cat-${card.category}`;
+            cardElement.innerHTML = `
+                <div class="card-header">
+                    <span class="card-category">${categoryNames[card.category]}</span>
+                    <span class="card-number">#${card.id}</span>
+                </div>
+                <h3 class="card-title">${card.title}</h3>
+                <div class="prompt-section">${card.prompt}</div>
+                <button class="copy-btn" onclick="copyPrompt(${card.id - 1})">Copiar Prompt Completo</button>
+            `;
+
+            display.classList.add('active');
+            display.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function copyPrompt(index) {
+            const text = cards[index].prompt;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                btn.textContent = 'Copiado!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Copiar Prompt Completo';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        function renderAllCards() {
+            const grid = document.getElementById('cardsGrid');
+            grid.innerHTML = cards.map((card, i) => `
+                <div class="mini-card cat-${card.category}" onclick="displayCard(cards[${i}])">
+                    <span class="card-category">${categoryNames[card.category]}</span>
+                    <h4 class="card-title">#${card.id} ${card.title}</h4>
+                </div>
+            `).join('');
+        }
+
+        renderAllCards();
+    </script>
+</body>
+</html>
