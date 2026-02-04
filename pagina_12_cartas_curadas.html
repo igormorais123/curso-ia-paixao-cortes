@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 Cartas de Prompts Jurídicos | Curso IA Advocacia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #f39c12, #e74c3c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #888;
+            margin-bottom: 30px;
+        }
+
+        .instructions {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .instructions h2 {
+            color: #f39c12;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .instructions ol {
+            padding-left: 25px;
+            line-height: 1.8;
+        }
+
+        .draw-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .btn-draw {
+            background: linear-gradient(135deg, #f39c12 0%, #e74c3c 100%);
+            color: white;
+            border: none;
+            padding: 20px 50px;
+            font-size: 1.3rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(243, 156, 18, 0.3);
+        }
+
+        .btn-draw:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(243, 156, 18, 0.4);
+        }
+
+        .card-display {
+            display: none;
+            margin-bottom: 40px;
+        }
+
+        .card-display.active {
+            display: block;
+        }
+
+        .drawn-card {
+            background: linear-gradient(145deg, #2d3436 0%, #1e272e 100%);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 700px;
+            margin: 0 auto;
+            border: 3px solid;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            animation: cardAppear 0.5s ease-out;
+        }
+
+        @keyframes cardAppear {
+            from {
+                opacity: 0;
+                transform: scale(0.8) rotateY(90deg);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) rotateY(0);
+            }
+        }
+
+        .card-category {
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .card-number {
+            font-size: 3rem;
+            font-weight: 800;
+            opacity: 0.3;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            line-height: 1.3;
+        }
+
+        .card-prompt {
+            background: rgba(0,0,0,0.3);
+            padding: 25px;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-family: 'Courier New', monospace;
+            border-left: 4px solid;
+        }
+
+        .card-tip {
+            font-size: 0.95rem;
+            color: #aaa;
+            font-style: italic;
+        }
+
+        /* Category Colors */
+        .cat-pesquisa { border-color: #3498db; }
+        .cat-pesquisa .card-category { background: #3498db; }
+        .cat-pesquisa .card-prompt { border-color: #3498db; }
+
+        .cat-elaboracao { border-color: #27ae60; }
+        .cat-elaboracao .card-category { background: #27ae60; }
+        .cat-elaboracao .card-prompt { border-color: #27ae60; }
+
+        .cat-analise { border-color: #e67e22; }
+        .cat-analise .card-category { background: #e67e22; }
+        .cat-analise .card-prompt { border-color: #e67e22; }
+
+        .cat-comunicacao { border-color: #9b59b6; }
+        .cat-comunicacao .card-category { background: #9b59b6; }
+        .cat-comunicacao .card-prompt { border-color: #9b59b6; }
+
+        .all-cards {
+            margin-top: 50px;
+        }
+
+        .all-cards h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #f39c12;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .mini-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 20px;
+            border: 2px solid;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .mini-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .mini-card .card-number {
+            position: static;
+            font-size: 1.5rem;
+            opacity: 0.5;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .mini-card .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: inline;
+        }
+
+        .mini-card .card-category {
+            font-size: 0.7rem;
+            padding: 4px 12px;
+            margin-bottom: 10px;
+        }
+
+        .copy-btn {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .copy-btn:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .copy-btn.copied {
+            background: #27ae60;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .drawn-card { padding: 25px; }
+            .card-title { font-size: 1.4rem; }
+            .card-prompt { font-size: 1rem; padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>12 Cartas de Prompts Juridicos</h1>
+            <p class="subtitle">Prompts curados para advogados | Curso IA Advocacia</p>
+        </header>
+
+        <div class="instructions">
+            <h2>Como Usar</h2>
+            <ol>
+                <li>Clique em "Sortear Carta" para receber um prompt aleatorio</li>
+                <li>Adapte o prompt para seu caso real (substitua os [campos])</li>
+                <li>Cole no ChatGPT, Claude ou sua ferramenta preferida</li>
+                <li>SEMPRE verifique o resultado - especialmente citacoes e jurisprudencia</li>
+            </ol>
+        </div>
+
+        <div class="draw-section">
+            <button class="btn-draw" onclick="drawCard()">Sortear Carta</button>
+        </div>
+
+        <div class="card-display" id="cardDisplay">
+            <div class="drawn-card" id="drawnCard">
+                <!-- Card content will be inserted here -->
+            </div>
+        </div>
+
+        <div class="all-cards">
+            <h2>Todas as 12 Cartas</h2>
+            <div class="cards-grid" id="cardsGrid">
+                <!-- All cards will be inserted here -->
+            </div>
+        </div>
+
+        <footer>
+            <p>Curso IA na Advocacia | Paixao Cortes Advogados</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">Lembre-se: IA gera, advogado verifica</p>
+        </footer>
+    </div>
+
+    <script>
+        const cards = [
+            {
+                id: 1,
+                category: "pesquisa",
+                title: "Busca de Precedentes",
+                prompt: "Encontre jurisprudencia do [tribunal] sobre [tema] nos ultimos 2 anos. Liste numero do processo, data e ementa resumida.",
+                tip: "Substitua [tribunal] por TRT, TJ, STJ, STF etc. SEMPRE verifique as decisoes no site oficial do tribunal."
+            },
+            {
+                id: 2,
+                category: "pesquisa",
+                title: "Analise de Tese",
+                prompt: "Analise os argumentos a favor e contra [tese juridica]. Cite fundamentos legais e doutrinarios.",
+                tip: "Util para preparar estrategia processual. Verifique a vigencia das leis citadas."
+            },
+            {
+                id: 3,
+                category: "pesquisa",
+                title: "Comparativo de Entendimentos",
+                prompt: "Compare o entendimento do STF e STJ sobre [tema]. Identifique convergencias e divergencias.",
+                tip: "Excelente para recursos repetitivos. Confirme os numeros de processo citados."
+            },
+            {
+                id: 4,
+                category: "elaboracao",
+                title: "Peticao Inicial",
+                prompt: "Elabore peticao inicial de [tipo] com os seguintes fatos: [fatos]. Inclua fundamentos juridicos e pedidos.",
+                tip: "Use como rascunho inicial. Revise toda a fundamentacao e adapte ao seu estilo."
+            },
+            {
+                id: 5,
+                category: "elaboracao",
+                title: "Contestacao",
+                prompt: "Elabore contestacao para [tipo de acao]. Os argumentos da parte contraria sao: [resumo]. Refute cada ponto.",
+                tip: "Foque nos pontos vulneraveis. A IA pode sugerir teses que voce nao considerou."
+            },
+            {
+                id: 6,
+                category: "elaboracao",
+                title: "Recurso",
+                prompt: "Elabore [tipo de recurso] contra decisao que [resumo]. Fundamente com jurisprudencia atualizada.",
+                tip: "Especifique o tipo: apelacao, agravo, RE, REsp. Verifique prazos e requisitos."
+            },
+            {
+                id: 7,
+                category: "elaboracao",
+                title: "Contrato",
+                prompt: "Elabore minuta de [tipo de contrato] entre [partes] com as seguintes condicoes: [condicoes].",
+                tip: "Inclua clausulas especificas do seu caso. Revise conforme legislacao aplicavel."
+            },
+            {
+                id: 8,
+                category: "analise",
+                title: "Parecer Juridico",
+                prompt: "Analise a viabilidade juridica de [situacao]. Apresente riscos, oportunidades e recomendacao fundamentada.",
+                tip: "Util para consultas rapidas. Aprofunde a analise para casos complexos."
+            },
+            {
+                id: 9,
+                category: "analise",
+                title: "Revisao de Peca",
+                prompt: "Revise esta peca identificando: erros de fundamentacao, oportunidades perdidas, e sugestoes de melhoria.",
+                tip: "Cole sua peca junto com o prompt. A IA pode identificar pontos cegos."
+            },
+            {
+                id: 10,
+                category: "analise",
+                title: "Estrategia Processual",
+                prompt: "Dado o caso [resumo], proponha estrategia processual com cronograma, riscos e probabilidade de exito.",
+                tip: "Use para planejamento inicial. Ajuste com base em sua experiencia pratica."
+            },
+            {
+                id: 11,
+                category: "comunicacao",
+                title: "Resumo para Cliente",
+                prompt: "Resuma esta decisao judicial em linguagem simples para enviar ao cliente leigo. Maximo 3 paragrafos.",
+                tip: "Evite jargao juridico. O cliente precisa entender o impacto pratico."
+            },
+            {
+                id: 12,
+                category: "comunicacao",
+                title: "E-mail Profissional",
+                prompt: "Redija e-mail para [destinatario] sobre [assunto] com tom [formal/cordial]. Inclua: [pontos principais].",
+                tip: "Ajuste o tom conforme o destinatario. Revise antes de enviar."
+            }
+        ];
+
+        const categoryNames = {
+            pesquisa: "Pesquisa",
+            elaboracao: "Elaboracao",
+            analise: "Analise",
+            comunicacao: "Comunicacao"
+        };
+
+        function drawCard() {
+            const randomIndex = Math.floor(Math.random() * cards.length);
+            const card = cards[randomIndex];
+            displayCard(card);
+        }
+
+        function displayCard(card) {
+            const display = document.getElementById('cardDisplay');
+            const cardElement = document.getElementById('drawnCard');
+
+            cardElement.className = `drawn-card cat-${card.category}`;
+            cardElement.innerHTML = `
+                <span class="card-number">#${card.id}</span>
+                <span class="card-category">${categoryNames[card.category]}</span>
+                <h3 class="card-title">${card.title}</h3>
+                <div class="card-prompt">${card.prompt}</div>
+                <p class="card-tip">${card.tip}</p>
+                <button class="copy-btn" onclick="copyPrompt('${card.prompt.replace(/'/g, "\\'")}', this)">Copiar Prompt</button>
+            `;
+
+            display.classList.add('active');
+            display.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function copyPrompt(text, btn) {
+            navigator.clipboard.writeText(text).then(() => {
+                btn.textContent = 'Copiado!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Copiar Prompt';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        function renderAllCards() {
+            const grid = document.getElementById('cardsGrid');
+            grid.innerHTML = cards.map(card => `
+                <div class="mini-card cat-${card.category}" onclick="displayCard(cards[${card.id - 1}])">
+                    <span class="card-category">${categoryNames[card.category]}</span>
+                    <div>
+                        <span class="card-number">#${card.id}</span>
+                        <span class="card-title">${card.title}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Initialize
+        renderAllCards();
+    </script>
+</body>
+</html>

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfis de Advogados Resistentes a IA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #2c1810 0%, #1a0f0a 100%);
+            min-height: 100vh;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #d4a574 0%, #c9a076 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            color: #a08060;
+            font-size: 0.9rem;
+        }
+
+        .sort-button {
+            width: 100%;
+            padding: 20px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #1a0f0a;
+            background: linear-gradient(135deg, #d4a574 0%, #c9a076 100%);
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(212, 165, 116, 0.3);
+            margin-bottom: 20px;
+        }
+
+        .sort-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 165, 116, 0.4);
+        }
+
+        .sort-button.sorting {
+            animation: shuffle 0.6s ease-in-out;
+        }
+
+        @keyframes shuffle {
+            0% { transform: rotateY(0deg); }
+            50% { transform: rotateY(180deg); }
+            100% { transform: rotateY(360deg); }
+        }
+
+        .card {
+            background: linear-gradient(145deg, #3d2817 0%, #2a1a10 100%);
+            border: 3px solid #d4a574;
+            border-radius: 20px;
+            padding: 25px;
+            display: none;
+            animation: flipIn 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 1px solid rgba(212, 165, 116, 0.3);
+            border-radius: 15px;
+            pointer-events: none;
+        }
+
+        .card.show {
+            display: block;
+        }
+
+        @keyframes flipIn {
+            from {
+                opacity: 0;
+                transform: rotateY(-90deg);
+            }
+            to {
+                opacity: 1;
+                transform: rotateY(0deg);
+            }
+        }
+
+        .card-number {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 0.8rem;
+            color: #d4a574;
+            opacity: 0.7;
+        }
+
+        .card-emoji {
+            font-size: 4rem;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #d4a574;
+            font-weight: bold;
+        }
+
+        .card-section {
+            margin-bottom: 15px;
+        }
+
+        .card-section h3 {
+            font-size: 0.8rem;
+            color: #a08060;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .card-section p {
+            line-height: 1.6;
+            color: #e0d0c0;
+            font-size: 0.95rem;
+        }
+
+        .objecao-box {
+            background: rgba(212, 165, 116, 0.1);
+            border-left: 3px solid #d4a574;
+            padding: 12px 15px;
+            border-radius: 0 10px 10px 0;
+            margin: 15px 0;
+        }
+
+        .objecao-box p {
+            font-style: italic;
+            color: #d4a574;
+        }
+
+        .argumento-box {
+            background: rgba(100, 200, 100, 0.1);
+            border-left: 3px solid #64c864;
+            padding: 12px 15px;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .argumento-box h3 {
+            color: #64c864;
+        }
+
+        .argumento-box p {
+            color: #a0d0a0;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #d4a574 0%, #c9a076 100%);
+            color: #1a0f0a;
+            font-weight: bold;
+        }
+
+        .btn-secondary {
+            background: rgba(212, 165, 116, 0.1);
+            color: #d4a574;
+            border: 1px solid rgba(212, 165, 116, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #604030;
+            font-size: 0.75rem;
+        }
+
+        .instrucoes {
+            background: rgba(212, 165, 116, 0.1);
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+            color: #a08060;
+        }
+
+        .instrucoes h3 {
+            color: #d4a574;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .instrucoes ol {
+            padding-left: 20px;
+        }
+
+        .instrucoes li {
+            margin-bottom: 5px;
+        }
+
+        .contador {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.8rem;
+            color: #a08060;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>BARALHO DOS PERFIS RESISTENTES</h1>
+            <p>Conheca os 27 tipos de advogados que resistem a IA</p>
+        </div>
+
+        <div class="instrucoes">
+            <h3>Como funciona a atividade:</h3>
+            <ol>
+                <li>Sorteie uma carta com um perfil de advogado</li>
+                <li>Em dupla: um defende a resistencia, outro argumenta a favor da IA</li>
+                <li>Debatam por 2 minutos</li>
+                <li>Compartilhem insights com o grupo</li>
+            </ol>
+        </div>
+
+        <button class="sort-button" id="sortButton" onclick="sortearCarta()">
+            SORTEAR PERFIL
+        </button>
+
+        <div class="card" id="cardDisplay">
+            <span class="card-number" id="cardNumber">#1/27</span>
+
+            <div class="card-emoji" id="cardEmoji">👴</div>
+
+            <h2 class="card-title" id="cardTitle">O Tradicionalista</h2>
+
+            <div class="card-section">
+                <h3>Quem e</h3>
+                <p id="cardDescricao">Descricao do perfil...</p>
+            </div>
+
+            <div class="objecao-box">
+                <h3>Sua objecao</h3>
+                <p id="cardObjecao">"Objecao tipica..."</p>
+            </div>
+
+            <div class="argumento-box">
+                <h3>Como responder</h3>
+                <p id="cardArgumento">Argumento para convencer...</p>
+            </div>
+
+            <div class="card-actions">
+                <button class="btn btn-secondary" onclick="sortearCarta()">
+                    Sortear Outra
+                </button>
+            </div>
+
+            <div class="contador" id="contador">
+                Cartas vistas: 0 de 27
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Curso IA na Advocacia | Paixao Cortes Advogados</p>
+        </div>
+    </div>
+
+    <script>
+        // 27 perfis de advogados resistentes
+        const perfis = [
+            {
+                id: 1,
+                nome: "O Tradicionalista",
+                emoji: "👴",
+                descricao: "Advogado com 30+ anos de carreira que construiu reputacao fazendo tudo 'do jeito certo'. Acredita que o sucesso veio do trabalho arduo e metodos comprovados.",
+                objecao: "Se funcionou por 30 anos, por que mudar agora? Meus clientes confiam no meu trabalho, nao em maquinas.",
+                argumento: "Seu conhecimento e insubstituivel. A IA apenas libera tempo para voce fazer mais do que faz de melhor: estrategia e relacionamento com clientes."
+            },
+            {
+                id: 2,
+                nome: "O Perfeccionista",
+                emoji: "🔍",
+                descricao: "Revisa cada virgula 10 vezes. Nao confia em nada que nao tenha passado por seu crivo pessoal. Orgulho do trabalho impecavel.",
+                objecao: "IA comete erros. Prefiro fazer eu mesmo e ter certeza de que esta perfeito.",
+                argumento: "A IA gera rascunhos para voce revisar. Em vez de criar do zero, voce so aprimora. Seu padrao de qualidade continua sendo o filtro final."
+            },
+            {
+                id: 3,
+                nome: "O Cetico Tecnologico",
+                emoji: "🤨",
+                descricao: "Ja viu muitas 'revolucoes tecnologicas' que nao deram em nada. Desconfia de modismos e prefere esperar 'a poeira baixar'.",
+                objecao: "Ja vi isso antes. Daqui a 2 anos ninguem mais vai falar de IA. Prefiro esperar.",
+                argumento: "47% dos maiores escritorios do Brasil ja usam. Nao e modismo - e transformacao estrutural. Quem esperar demais vai correr atras."
+            },
+            {
+                id: 4,
+                nome: "O Guardiao do Sigilo",
+                emoji: "🔒",
+                descricao: "Preocupado legitimamente com confidencialidade. Nao quer expor dados de clientes a sistemas que nao controla.",
+                objecao: "Como vou colocar dados sigilosos de clientes numa IA? E a LGPD? E a etica profissional?",
+                argumento: "Preocupacao valida. Por isso existem protocolos: anonimizar dados, usar versoes pagas (mais seguras), e a OAB ja tem recomendacoes especificas."
+            },
+            {
+                id: 5,
+                nome: "O Artesao das Palavras",
+                emoji: "✒️",
+                descricao: "Considera a escrita juridica uma arte. Cada peticao e uma obra autoral. Orgulho do estilo unico e reconhecivel.",
+                objecao: "IA escreve texto generico. Minha escrita e minha marca registrada.",
+                argumento: "Use IA para estrutura e pesquisa. A arte final continua sendo sua. Picasso usava pinceis - voce nao deixa de ser artista por usar ferramentas."
+            },
+            {
+                id: 6,
+                nome: "O Sobrecarregado",
+                emoji: "😫",
+                descricao: "Trabalha 14h por dia, mal tem tempo de almocar. Acha que aprender IA e 'mais uma coisa' pra fazer.",
+                objecao: "Nao tenho tempo de aprender mais uma ferramenta. Mal dou conta do que ja tenho.",
+                argumento: "Justamente por isso. Em 1h de aprendizado, voce economiza 2,5h por dia. E investimento que se paga no primeiro uso."
+            },
+            {
+                id: 7,
+                nome: "O Advogado de Nicho",
+                emoji: "🎯",
+                descricao: "Atua em area muito especializada. Acredita que IA nao entende as nuances do seu campo.",
+                objecao: "Minha area e muito especifica. IA generalista nao vai entender direito tributario internacional de criptoativos.",
+                argumento: "Voce pode treinar a IA com seu conhecimento. GPTs personalizados e Projects do Claude permitem criar assistentes especializados na sua area."
+            },
+            {
+                id: 8,
+                nome: "O Competidor",
+                emoji: "🏆",
+                descricao: "Ve tecnologia como vantagem competitiva secreta. Se usar, nao quer que os outros saibam.",
+                objecao: "Se eu falar que uso IA, vao achar que nao sei fazer sozinho. Prefiro nao comentar.",
+                argumento: "Os maiores escritorios do mundo ja anunciam que usam IA. E sinal de modernidade, nao fraqueza. Quem esconde fica pra tras."
+            },
+            {
+                id: 9,
+                nome: "O Medo de Ficar Obsoleto",
+                emoji: "😰",
+                descricao: "No fundo, tem medo de que IA torne seu trabalho irrelevante. Resiste porque teme o futuro.",
+                objecao: "Se IA faz o que eu faco, para que vao me pagar? Melhor nao estimular isso.",
+                argumento: "IA substitui tarefas, nao advogados. Quem domina IA se torna mais valioso. O medo real e ficar pra tras enquanto outros avancam."
+            },
+            {
+                id: 10,
+                nome: "O Empirico",
+                emoji: "📊",
+                descricao: "So acredita vendo. Quer provas concretas de que funciona antes de investir tempo.",
+                objecao: "Me mostra casos reais. Dados concretos. ROI. Sem achismo.",
+                argumento: "Economia media de 2,5h/dia. ROI de 3:1 no primeiro ano. 40-50% reducao em tempo de contratos. Stanford, Gartner e ABA confirmam."
+            },
+            {
+                id: 11,
+                nome: "O Purista Etico",
+                emoji: "⚖️",
+                descricao: "Preocupado com implicacoes eticas do uso de IA na advocacia. Questiona se e correto.",
+                objecao: "E etico usar IA para escrever pecas? O cliente esta pagando pelo MEU trabalho, nao de uma maquina.",
+                argumento: "OAB ja tem recomendacao (001/2024). O etico e: supervisao humana, informar cliente, manter qualidade. IA e ferramenta, como calculadora."
+            },
+            {
+                id: 12,
+                nome: "O Delegador",
+                emoji: "👥",
+                descricao: "Prefere delegar tarefas para estagiarios e juniors. Acha que IA e so mais uma opcao de delegacao.",
+                objecao: "Tenho estagiarios pra fazer pesquisa. Pra que preciso de IA?",
+                argumento: "IA faz em 5 minutos o que estagiario faz em 5 horas. Libera o estagiario pra tarefas que precisam de julgamento humano."
+            },
+            {
+                id: 13,
+                nome: "O Custo-Beneficio",
+                emoji: "💰",
+                descricao: "Foca no custo imediato sem ver o retorno. Acha R$ 100/mes 'caro' sem calcular a economia de tempo.",
+                objecao: "R$ 100 por mes? Mais uma assinatura? Ja pago JusBrasil, Office, software de gestao...",
+                argumento: "R$ 100/mes = R$ 3,30/dia. Se economiza 1h/dia a R$ 200/hora, o retorno e 60x o investimento. Faca a conta."
+            },
+            {
+                id: 14,
+                nome: "O Experiencia Propria",
+                emoji: "🎓",
+                descricao: "Testou uma vez, nao gostou do resultado, e descartou. Nao sabe que melhorou muito ou que usou errado.",
+                objecao: "Ja testei ChatGPT. Me deu uma resposta errada e nunca mais usei.",
+                argumento: "IA evoluiu muito e requer tecnica. E como julgar um carro porque nao soube dirigir. Com o prompt certo, o resultado muda completamente."
+            },
+            {
+                id: 15,
+                nome: "O Cliente Primeiro",
+                emoji: "🤝",
+                descricao: "Preocupado com o que clientes vao pensar. Teme que pareça 'preguica' ou 'falta de dedicacao'.",
+                objecao: "Se meu cliente souber que usei IA, vai achar que nao me dediquei ao caso dele.",
+                argumento: "Clientes querem resultado, nao sofrimento. Se voce entrega mais rapido e melhor, eles agradecem. Muitos ja usam IA e esperam que voce use tambem."
+            },
+            {
+                id: 16,
+                nome: "O Solo Autonomo",
+                emoji: "🦸",
+                descricao: "Advoga sozinho há anos. Orgulho de fazer tudo. Acha que IA e para escritorios grandes.",
+                objecao: "Isso e pra escritorio grande com budget. Eu me viro bem sozinho.",
+                argumento: "Justamente o contrario. IA democratiza. O solo com IA compete com escritorio de 10 pessoas. E sua vantagem competitiva."
+            },
+            {
+                id: 17,
+                nome: "O Jovem Desconfiado",
+                emoji: "🧑‍💻",
+                descricao: "Surpreendentemente, alguns jovens resistem. Querem provar valor pelo conhecimento tecnico, nao por ferramentas.",
+                objecao: "Preciso mostrar que sei fazer sem ajuda. Se uso IA, como vou aprender de verdade?",
+                argumento: "IA e como ter um mentor disponivel 24h. Voce aprende mais rapido, nao menos. Os melhores profissionais usam as melhores ferramentas."
+            },
+            {
+                id: 18,
+                nome: "O Processo Proprio",
+                emoji: "📋",
+                descricao: "Criou seus proprios metodos ao longo dos anos. Funciona pra ele. Nao quer mudar sistema que funciona.",
+                objecao: "Tenho meu jeito de fazer as coisas. Funciona pra mim. Por que mudar?",
+                argumento: "Nao precisa mudar tudo. Adicione IA onde faz sentido. Seu processo + IA = processo ainda melhor."
+            },
+            {
+                id: 19,
+                nome: "O Relacionamento Humano",
+                emoji: "💬",
+                descricao: "Acredita que advocacia e sobre pessoas. Teme que tecnologia desumanize a profissao.",
+                objecao: "Advocacia e sobre relacoes humanas. Clientes querem atencao pessoal, nao robos.",
+                argumento: "Exatamente. IA libera seu tempo para o que importa: ouvir clientes, construir relacoes, fazer estrategia. Menos burocracia, mais humanidade."
+            },
+            {
+                id: 20,
+                nome: "O Advogado de Contencioso",
+                emoji: "⚔️",
+                descricao: "Vive de audiencias e sustentacoes. Acha que IA nao ajuda no 'olho no olho' do tribunal.",
+                objecao: "Na hora H, e eu na frente do juiz. IA nao vai sustentar por mim.",
+                argumento: "Nao, mas IA prepara seu memorial, analisa perfil do relator, organiza cronologia, simula contra-argumentos. Voce chega mais preparado."
+            },
+            {
+                id: 21,
+                nome: "O Advogado Consultivo",
+                emoji: "📝",
+                descricao: "Faz parecer atrás de parecer. Acha que já é eficiente e nao precisa de ajuda.",
+                objecao: "Ja sou rapido em escrever pareceres. Nao preciso de IA.",
+                argumento: "Ser rapido com IA e ser muito mais rapido. E nao e so velocidade - e pesquisa mais ampla, argumentos que voce nao pensou, revisao automatica."
+            },
+            {
+                id: 22,
+                nome: "O Advogado Publico",
+                emoji: "🏛️",
+                descricao: "Trabalha em orgao publico. Acha que mudancas demoram e nao vale a pena aprender algo que 'o sistema nao vai adotar'.",
+                objecao: "Meu orgao nao vai adotar isso tao cedo. Por que eu vou aprender?",
+                argumento: "CNJ ja tem resolucao (615/2025). Ferramenta BERNA ja existe. O setor publico esta se movendo mais rapido do que parece."
+            },
+            {
+                id: 23,
+                nome: "O Especialista em Processo",
+                emoji: "📚",
+                descricao: "Domina cada detalhe do CPC. Acha que IA nao entende as sutilezas processuais.",
+                objecao: "IA nao sabe a diferenca entre agravo e apelacao em caso de decisao interlocutoria de merito.",
+                argumento: "IA errava isso. Agora acerta. E mesmo que erre, voce corrige em segundos. Seu conhecimento processual + pesquisa da IA = combinacao poderosa."
+            },
+            {
+                id: 24,
+                nome: "O Advogado de Massa",
+                emoji: "📦",
+                descricao: "Atua com volume alto de processos similares. Acha que ja tem tudo automatizado do jeito dele.",
+                objecao: "Tenho modelos prontos pra tudo. Meu sistema ja e eficiente.",
+                argumento: "IA pode personalizar em massa. Cada peticao adaptada ao caso especifico, sem perder escala. Seus modelos viram ainda melhores."
+            },
+            {
+                id: 25,
+                nome: "O Mentor Resistente",
+                emoji: "👨‍🏫",
+                descricao: "Socio senior que influencia cultura do escritorio. Se ele nao usa, ninguem usa.",
+                objecao: "Na minha epoca, a gente aprendia fazendo na mao. E assim que se forma advogado de verdade.",
+                argumento: "Seu papel e formar bons advogados, nao copistas. Ensine a pensar juridicamente - e deixe IA fazer o trabalho mecanico."
+            },
+            {
+                id: 26,
+                nome: "O Receoso de Erros",
+                emoji: "⚠️",
+                descricao: "Ouviu sobre alucinacoes da IA e casos de sancoes. Tem medo legitimo de erro catastrofico.",
+                objecao: "Vi advogados sendo multados por usarem jurisprudencia inventada por IA. Muito arriscado.",
+                argumento: "Risco existe e e real. Por isso existe protocolo: IA gera, advogado verifica. Com checagem, o risco e menor que pesquisa manual apressada."
+            },
+            {
+                id: 27,
+                nome: "O Curioso Hesitante",
+                emoji: "🤔",
+                descricao: "Ate quer aprender, mas nao sabe por onde comecar. Paralisa diante de tantas opcoes.",
+                objecao: "Parece interessante, mas sao tantas ferramentas... ChatGPT, Claude, Gemini... Por onde comeco?",
+                argumento: "Comece com uma so. ChatGPT ou Claude. Uma tarefa por dia. Em uma semana voce ja esta confortavel. O resto vem naturalmente."
+            }
+        ];
+
+        let cartasVistas = new Set();
+
+        function sortearCarta() {
+            const button = document.getElementById('sortButton');
+            button.classList.add('sorting');
+
+            setTimeout(() => {
+                button.classList.remove('sorting');
+
+                // Sortear carta aleatoria
+                let indice;
+                if (cartasVistas.size >= perfis.length) {
+                    // Todas vistas, resetar
+                    cartasVistas.clear();
+                }
+
+                do {
+                    indice = Math.floor(Math.random() * perfis.length);
+                } while (cartasVistas.has(indice) && cartasVistas.size < perfis.length);
+
+                cartasVistas.add(indice);
+                const perfil = perfis[indice];
+
+                // Exibir carta
+                exibirCarta(perfil);
+            }, 600);
+        }
+
+        function exibirCarta(perfil) {
+            const cardDisplay = document.getElementById('cardDisplay');
+            const cardNumber = document.getElementById('cardNumber');
+            const cardEmoji = document.getElementById('cardEmoji');
+            const cardTitle = document.getElementById('cardTitle');
+            const cardDescricao = document.getElementById('cardDescricao');
+            const cardObjecao = document.getElementById('cardObjecao');
+            const cardArgumento = document.getElementById('cardArgumento');
+            const contador = document.getElementById('contador');
+
+            // Mostrar carta
+            cardDisplay.classList.add('show');
+
+            // Preencher dados
+            cardNumber.textContent = '#' + perfil.id + '/27';
+            cardEmoji.textContent = perfil.emoji;
+            cardTitle.textContent = perfil.nome;
+            cardDescricao.textContent = perfil.descricao;
+            cardObjecao.textContent = '"' + perfil.objecao + '"';
+            cardArgumento.textContent = perfil.argumento;
+            contador.textContent = 'Cartas vistas: ' + cartasVistas.size + ' de 27';
+        }
+    </script>
+</body>
+</html>
