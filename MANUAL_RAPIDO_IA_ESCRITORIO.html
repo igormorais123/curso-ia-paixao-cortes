@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Rapido de IA para o Escritorio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        @page {
+            size: A4;
+            margin: 15mm;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
+            color: #1a1a2e;
+            background: #fff;
+            font-size: 11pt;
+        }
+
+        .page {
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px 30px;
+            page-break-after: always;
+        }
+        .page:last-child { page-break-after: avoid; }
+
+        .cover {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+            text-align: center;
+        }
+
+        .cover h1 {
+            font-size: 2.2em;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .cover .subtitle {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .cover .tagline {
+            font-size: 1.4em;
+            color: #7c3aed;
+            font-weight: 600;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        .cover-meta {
+            color: #888;
+            font-size: 0.9em;
+            line-height: 1.8;
+        }
+
+        .cover-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #7c3aed, #3b82f6);
+            color: white;
+            padding: 8px 25px;
+            border-radius: 25px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 1.4em;
+            color: #1a1a2e;
+            margin: 25px 0 12px;
+            padding-bottom: 6px;
+            border-bottom: 3px solid #7c3aed;
+        }
+
+        h3 {
+            font-size: 1.1em;
+            color: #7c3aed;
+            margin: 18px 0 8px;
+        }
+
+        h4 {
+            font-size: 1em;
+            color: #1a1a2e;
+            margin: 12px 0 6px;
+        }
+
+        p { margin: 8px 0; }
+
+        .protocol-box {
+            background: #f0e6ff;
+            border: 2px solid #7c3aed;
+            border-radius: 10px;
+            padding: 18px;
+            margin: 15px 0;
+        }
+
+        .protocol-box h3 {
+            color: #5b21b6;
+            margin-top: 0;
+            font-size: 1.15em;
+        }
+
+        .protocol-steps {
+            list-style: none;
+            padding: 0;
+            counter-reset: step;
+        }
+
+        .protocol-steps li {
+            padding: 8px 0 8px 40px;
+            position: relative;
+            counter-increment: step;
+            border-bottom: 1px solid #e0d4f5;
+        }
+
+        .protocol-steps li:last-child { border-bottom: none; }
+
+        .protocol-steps li::before {
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 28px;
+            height: 28px;
+            background: #7c3aed;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85em;
+        }
+
+        .clear-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+        }
+
+        .clear-table th {
+            background: #7c3aed;
+            color: white;
+            padding: 10px 12px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        .clear-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 0.9em;
+            vertical-align: top;
+        }
+
+        .clear-table tr:nth-child(even) td {
+            background: #faf5ff;
+        }
+
+        .clear-letter {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: #7c3aed;
+            color: white;
+            border-radius: 6px;
+            text-align: center;
+            line-height: 30px;
+            font-weight: 700;
+            font-size: 1em;
+            margin-right: 5px;
+        }
+
+        .tool-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+            margin: 12px 0;
+        }
+
+        .tool-item {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .tool-item.essential {
+            border-color: #7c3aed;
+            background: #faf5ff;
+        }
+
+        .tool-item.bonus {
+            border-color: #f59e0b;
+            background: #fffbeb;
+        }
+
+        .tool-name {
+            font-weight: 700;
+            font-size: 1.05em;
+            margin-bottom: 3px;
+        }
+
+        .tool-tag {
+            display: inline-block;
+            font-size: 0.7em;
+            padding: 2px 8px;
+            border-radius: 8px;
+            color: white;
+            margin-bottom: 6px;
+        }
+
+        .tag-essential { background: #7c3aed; }
+        .tag-bonus { background: #f59e0b; }
+
+        .tool-use {
+            font-size: 0.85em;
+            color: #555;
+        }
+
+        .rule-box {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 12px 15px;
+            margin: 8px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .rule-box strong {
+            color: #dc2626;
+        }
+
+        .rule-example {
+            background: #fff;
+            border: 1px dashed #fca5a5;
+            padding: 8px 12px;
+            margin-top: 6px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .copy-box {
+            background: #1a1a2e;
+            color: #e2e8f0;
+            padding: 14px 18px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.88em;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .copy-label {
+            display: inline-block;
+            background: #7c3aed;
+            color: white;
+            font-size: 0.7em;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-bottom: 6px;
+            font-family: 'Segoe UI', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 10px 0;
+        }
+
+        .info-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 14px;
+        }
+
+        .info-card h4 {
+            margin-top: 0;
+            color: #7c3aed;
+            font-size: 0.95em;
+        }
+
+        .info-card ul {
+            margin-left: 16px;
+            font-size: 0.9em;
+        }
+
+        .info-card li { margin: 4px 0; }
+
+        .anon-example {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 8px;
+            align-items: center;
+            margin: 8px 0;
+            font-size: 0.9em;
+        }
+
+        .anon-before {
+            background: #fef2f2;
+            padding: 6px 10px;
+            border-radius: 5px;
+            text-decoration: line-through;
+            color: #dc2626;
+        }
+
+        .anon-arrow {
+            font-size: 1.2em;
+            color: #7c3aed;
+            font-weight: 700;
+        }
+
+        .anon-after {
+            background: #f0fdf4;
+            padding: 6px 10px;
+            border-radius: 5px;
+            color: #16a34a;
+            font-weight: 600;
+        }
+
+        .footer-note {
+            text-align: center;
+            color: #888;
+            font-size: 0.8em;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .regulation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: 0.9em;
+        }
+
+        .regulation-table th {
+            background: #1e293b;
+            color: white;
+            padding: 8px 10px;
+            text-align: left;
+        }
+
+        .regulation-table td {
+            padding: 8px 10px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .checklist-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin: 10px 0;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+            font-size: 0.9em;
+            padding: 4px 0;
+        }
+
+        .check-item::before {
+            content: "\2610";
+            font-size: 1.1em;
+            color: #7c3aed;
+            flex-shrink: 0;
+        }
+
+        .prompt-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 14px;
+            margin: 10px 0;
+        }
+
+        .prompt-card h4 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .prompt-num {
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            background: #7c3aed;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 22px;
+            font-size: 0.75em;
+            font-weight: 700;
+        }
+
+        .commitment-box {
+            border: 3px solid #7c3aed;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .commitment-box h3 {
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+
+        .commitment-line {
+            border-bottom: 2px solid #e5e7eb;
+            margin: 15px 30px;
+            height: 30px;
+        }
+
+        @media print {
+            body { font-size: 10pt; }
+            .page { padding: 0; max-width: 100%; }
+            .cover { min-height: 85vh; }
+            .no-print { display: none; }
+        }
+
+        .print-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 12px;
+            background: #7c3aed;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .print-btn:hover { background: #6d28d9; }
+    </style>
+</head>
+<body>
+
+<!-- PAGINA 1: CAPA -->
+<div class="page">
+    <div class="cover">
+        <div class="cover-badge">MATERIAL POS-CURSO</div>
+        <h1>Manual Rapido de IA<br>para o Escritorio</h1>
+        <p class="subtitle">Tudo que voce aprendeu no curso, em 8 paginas para consultar sempre.</p>
+        <p class="tagline">"IA funciona. Com metodo."</p>
+        <div class="cover-meta">
+            Curso IA na Advocacia<br>
+            Paixao Cortes Advogados<br>
+            Fevereiro 2026<br><br>
+            <strong>Dr. Igor Morais Vasconcelos</strong><br>
+            Doutorando em IA | Advogado | OAB 35.376
+        </div>
+    </div>
+</div>
+
+<!-- PAGINA 2: PROTOCOLO DE PESQUISA + FERRAMENTAS -->
+<div class="page">
+    <h2>1. Protocolo de Pesquisa Juridica com IA</h2>
+    <p>A regra de ouro: <strong>IA serve para jurisprudencia SIM — mas so com este metodo.</strong></p>
+
+    <div class="protocol-box">
+        <h3>Os 4 Passos Obrigatorios</h3>
+        <ol class="protocol-steps">
+            <li><strong>BUSCAR NA INTERNET</strong> — Sempre ativar busca web. ChatGPT: Deep Research. Perplexity: nativo. Claude: pedir para buscar. <em>Sem busca web = vai inventar.</em></li>
+            <li><strong>EXIGIR LINK</strong> — Toda citacao de jurisprudencia DEVE vir com link direto para o tribunal. <strong>Sem link = nao existe.</strong></li>
+            <li><strong>USAR THINKING MODE</strong> — Sempre ativar raciocinio estendido. ChatGPT: o1/o3. Claude: Extended Thinking. <em>Reduz alucinacoes drasticamente.</em></li>
+            <li><strong>PEDIR AUTOCHECAGEM</strong> — Usar a frase pronta abaixo ao final de toda pesquisa.</li>
+        </ol>
+    </div>
+
+    <div>
+        <span class="copy-label">Frase de Autochecagem — copie e cole</span>
+        <div class="copy-box">Agora revise todas as citacoes acima. Confirme que cada link funciona e cada numero de processo esta correto. Se tiver duvida sobre algum, sinalize com [VERIFICAR].</div>
+    </div>
+
+    <h2>2. Ferramentas Essenciais</h2>
+
+    <div class="tool-card">
+        <div class="tool-item essential">
+            <span class="tool-tag tag-essential">ESSENCIAL</span>
+            <div class="tool-name">ChatGPT</div>
+            <div class="tool-use">Pesquisa com Deep Research, rascunhos em massa, brainstorm de teses</div>
+        </div>
+        <div class="tool-item essential">
+            <span class="tool-tag tag-essential">ESSENCIAL</span>
+            <div class="tool-name">Claude</div>
+            <div class="tool-use">Analise profunda, pecas longas, revisao, contratos (Extended Thinking)</div>
+        </div>
+        <div class="tool-item bonus">
+            <span class="tool-tag tag-bonus">BONUS</span>
+            <div class="tool-name">Perplexity</div>
+            <div class="tool-use">Pesquisa com fontes nativas, verificacao rapida, links automaticos</div>
+        </div>
+    </div>
+
+    <h3>Fluxo Combinado (uso real no dia a dia)</h3>
+    <p><strong>Passo 1:</strong> Pesquisar jurisprudencia no <strong>ChatGPT (Deep Research)</strong> ou <strong>Perplexity</strong> — com links.<br>
+    <strong>Passo 2:</strong> Colar resultado no <strong>Claude (Extended Thinking)</strong> com prompt CLEAR — gerar peca.<br>
+    <em>Pesquisa numa ferramenta, producao na outra. Cada uma faz o que faz melhor.</em></p>
+
+    <div class="footer-note">Manual Rapido de IA — Paixao Cortes Advogados — p. 2</div>
+</div>
+
+<!-- PAGINA 3: FRAMEWORK CLEAR -->
+<div class="page">
+    <h2>3. Framework CLEAR</h2>
+    <p>A diferenca entre um resultado generico e um resultado profissional e o prompt. Use CLEAR em TUDO.</p>
+
+    <table class="clear-table">
+        <tr>
+            <th width="8%"></th>
+            <th width="18%">Letra</th>
+            <th width="74%">O que colocar + Exemplo</th>
+        </tr>
+        <tr>
+            <td><span class="clear-letter">C</span></td>
+            <td><strong>Contexto</strong></td>
+            <td>"Sou advogado de escritorio que defende grande banco em contencioso trabalhista de massa. Preciso de contestacao para reclamacao que pede horas extras. Volume: 300+ acoes similares."</td>
+        </tr>
+        <tr>
+            <td><span class="clear-letter">L</span></td>
+            <td><strong>Limite</strong></td>
+            <td>"Nao cite jurisprudencia sem buscar na internet com link. Foque em teses consolidadas. Estrutura replicavel para contencioso de massa."</td>
+        </tr>
+        <tr>
+            <td><span class="clear-letter">E</span></td>
+            <td><strong>Exemplo</strong></td>
+            <td>"Estrutura desejada: 1) Qualificacao, 2) Sintese da inicial, 3) Preliminares, 4) Impugnacao ponto a ponto, 5) Merito, 6) Pedidos."</td>
+        </tr>
+        <tr>
+            <td><span class="clear-letter">A</span></td>
+            <td><strong>Audiencia</strong></td>
+            <td>"Juiz do trabalho de vara de Brasilia" ou "Diretor juridico do banco, sem formacao juridica"</td>
+        </tr>
+        <tr>
+            <td><span class="clear-letter">R</span></td>
+            <td><strong>Role</strong></td>
+            <td>"Advogado empresarial experiente em contencioso bancario de massa, linguagem tecnica e objetiva"</td>
+        </tr>
+    </table>
+
+    <h3>Prompt CLEAR Completo — Contestacao em Massa</h3>
+    <div>
+        <span class="copy-label">Copie, preencha os campos entre [ ] e cole na IA</span>
+        <div class="copy-box">CONTEXTO: Sou advogado de escritorio que defende grande banco em contencioso trabalhista de massa. Preciso de contestacao para reclamacao trabalhista que pede [horas extras / equiparacao / dano moral]. Volume: temos [X]+ acoes similares.
+
+LIMITE: Nao cite jurisprudencia especifica sem buscar na internet com link. Foque em teses de defesa consolidadas. Estrutura replicavel.
+
+EXEMPLO: Estrutura: 1) Qualificacao da reclamada, 2) Sintese da inicial, 3) Preliminares, 4) Impugnacao ponto a ponto, 5) Merito (teses de defesa), 6) Pedidos, 7) Documentos.
+
+AUDIENCIA: Juiz do trabalho de vara de Brasilia.
+
+ROLE: Advogado empresarial experiente em contencioso bancario de massa, linguagem tecnica, objetiva, sem excesso.
+
+FATOS DO CASO: [inserir pedidos da inicial e fatos a impugnar]</div>
+    </div>
+
+    <div class="footer-note">Manual Rapido de IA — Paixao Cortes Advogados — p. 3</div>
+</div>
+
+<!-- PAGINA 4: MAIS PROMPTS CLEAR -->
+<div class="page">
+    <h2>4. Biblioteca de Prompts CLEAR</h2>
+    <p>5 prompts prontos para as tarefas mais comuns do escritorio. Copie, adapte e use.</p>
+
+    <div class="prompt-card">
+        <h4><span class="prompt-num">1</span> Pesquisa Jurisprudencial com Links</h4>
+        <div class="copy-box">Pesquise na internet jurisprudencia recente (2024-2026) do TST sobre [tema]. Traga apenas decisoes com link verificavel para o site do tribunal. Para cada decisao, inclua: numero do processo, relator, data, ementa resumida e link. Use modo de raciocinio estendido. Ao final, revise todos os links e sinalize duvidas com [VERIFICAR].</div>
+    </div>
+
+    <div class="prompt-card">
+        <h4><span class="prompt-num">2</span> Analise de Risco para Cliente Corporativo</h4>
+        <div class="copy-box">CONTEXTO: Cliente corporativo quer avaliar risco de [pratica]. LIMITE: Apresente cenarios com probabilidade, nao certezas. Considere volume de [X] acoes. EXEMPLO: 1) Pratica analisada, 2) Riscos por cenario com %, 3) Exposicao financeira unitaria e total, 4) Recomendacao. AUDIENCIA: Diretor juridico sem formacao juridica. ROLE: Consultor trabalhista preventivo.</div>
+    </div>
+
+    <div class="prompt-card">
+        <h4><span class="prompt-num">3</span> Relatorio Mensal para Banco</h4>
+        <div class="copy-box">CONTEXTO: Relatorio mensal do contencioso. [X] acoes ativas, [Y] encerradas, [Z] novas. LIMITE: Maximo 2 paginas, linguagem executiva, foco em numeros. EXEMPLO: 1) Dashboard, 2) Resultados, 3) Exposicao, 4) Tendencias, 5) Recomendacoes. AUDIENCIA: Diretor juridico de banco. ROLE: Advogado gestor de contencioso. DADOS: [numeros]</div>
+    </div>
+
+    <div class="prompt-card">
+        <h4><span class="prompt-num">4</span> Revisao de Peca (junior → senior)</h4>
+        <div class="copy-box">CONTEXTO: Advogado junior redigiu esta [peca] para contencioso bancario. LIMITE: Nao reescreva. Aponte problemas e sugira correcoes. EXEMPLO: 1) Pontos fortes, 2) Teses ausentes, 3) Problemas, 4) Oportunidades perdidas, 5) Sugestoes. AUDIENCIA: Junior, para aprendizado. ROLE: Revisor senior exigente mas construtivo. PECA: [colar]</div>
+    </div>
+
+    <div class="prompt-card">
+        <h4><span class="prompt-num">5</span> E-mail Executivo para Cliente</h4>
+        <div class="copy-box">Sou advogado de defesa de [banco/empresa]. Resultado de [audiencia/decisao]: [descrever]. Redija e-mail executivo para diretor juridico. Maximo 3 paragrafos. Tom formal-corporativo. Incluir: resultado, impacto financeiro, proximo passo recomendado.</div>
+    </div>
+
+    <div class="footer-note">Manual Rapido de IA — Paixao Cortes Advogados — p. 4</div>
+</div>
+
+<!-- PAGINA 5: SEGURANCA -->
+<div class="page">
+    <h2>5. Protocolo de Seguranca — 5 Regras Inegociaveis</h2>
+
+    <div class="rule-box">
+        <strong>REGRA 1: Anonimizar SEMPRE</strong>
+        <p>Nunca enviar para IA: nome do cliente, CPF, CNPJ, numero de processo real, valores exatos.</p>
+        <div class="anon-example">
+            <div class="anon-before">Banco do Brasil S.A.</div>
+            <div class="anon-arrow">&rarr;</div>
+            <div class="anon-after">Banco XYZ</div>
+        </div>
+        <div class="anon-example">
+            <div class="anon-before">Joao Silva, CPF 012.345.678-90</div>
+            <div class="anon-arrow">&rarr;</div>
+            <div class="anon-after">Empregado A</div>
+        </div>
+        <div class="anon-example">
+            <div class="anon-before">Proc. 0001234-56.2025.5.10.0001</div>
+            <div class="anon-arrow">&rarr;</div>
+            <div class="anon-after">Processo XXXXX</div>
+        </div>
+    </div>
+
+    <div class="rule-box">
+        <strong>REGRA 2: Verificar TODA citacao</strong>
+        <p>Clicar no link. Nao apenas ler — <strong>CLICAR</strong>. Se nao abrir a decisao citada, descartar.</p>
+    </div>
+
+    <div class="rule-box">
+        <strong>REGRA 3: Revisar TUDO</strong>
+        <p>Output de IA e rascunho, nao produto final. Em contencioso de massa: revisar amostra de 5 antes de replicar para 200.</p>
+    </div>
+
+    <div class="rule-box">
+        <strong>REGRA 4: Registrar uso</strong>
+        <p>Transparencia com tribunal quando exigido (CNJ 615/2025).</p>
+        <div class="rule-example">
+            <strong>Modelo de nota de rodape:</strong><br>
+            "Peca elaborada com auxilio de ferramenta de IA generativa, com revisao integral pelo advogado subscritor, nos termos da Resolucao CNJ 615/2025."
+        </div>
+    </div>
+
+    <div class="rule-box">
+        <strong>REGRA 5: Humano decide</strong>
+        <p>IA sugere, advogado assina. IA nao conhece o juiz da vara, a cultura do tribunal, o historico do cliente. Voce sim.</p>
+    </div>
+
+    <h2>6. Regulacao</h2>
+    <table class="regulation-table">
+        <tr>
+            <th>Norma</th>
+            <th>O que diz</th>
+            <th>Link</th>
+        </tr>
+        <tr>
+            <td><strong>CNJ 615/2025</strong></td>
+            <td>Diretrizes para uso de IA no Poder Judiciario</td>
+            <td>atos.cnj.jus.br/atos/detalhar/6001</td>
+        </tr>
+        <tr>
+            <td><strong>OAB Rec. 001/2024</strong></td>
+            <td>Recomendacoes para uso de IA na advocacia</td>
+            <td>oab.org.br/noticia/62704</td>
+        </tr>
+    </table>
+
+    <div class="footer-note">Manual Rapido de IA — Paixao Cortes Advogados — p. 5</div>
+</div>
+
+<!-- PAGINA 6: ONDE CLICAR -->
+<div class="page">
+    <h2>7. Onde Clicar em Cada Ferramenta</h2>
+
+    <div class="two-col">
+        <div class="info-card">
+            <h4>ChatGPT (chatgpt.com)</h4>
+            <ul>
+                <li><strong>Busca web:</strong> Clique no icone de lupa/globo no campo de texto</li>
+                <li><strong>Deep Research:</strong> Seletor de modelo > "Deep Research" (demora 2-5 min, e normal)</li>
+                <li><strong>Thinking:</strong> Seletor de modelo > o1 ou o3</li>
+                <li><strong>GPT customizado:</strong> Menu > "Explorar GPTs" > "Criar"</li>
+            </ul>
+        </div>
+        <div class="info-card">
+            <h4>Claude (claude.ai)</h4>
+            <ul>
+                <li><strong>Extended Thinking:</strong> Icone de cerebro/engrenagem abaixo do campo de texto</li>
+                <li><strong>Busca web:</strong> Escrever "Busque na internet..." (acesso limitado)</li>
+                <li><strong>Projetos:</strong> Menu lateral > "Projetos" > novo</li>
+                <li><strong>Documentos:</strong> Arraste PDF/arquivo para a conversa</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="info-card" style="margin-top: 12px;">
+        <h4>Perplexity (perplexity.ai)</h4>
+        <ul style="columns: 2;">
+            <li><strong>Busca:</strong> Automatica (nativo)</li>
+            <li><strong>Modo Pro:</strong> Ativar "Pro" no campo de pesquisa</li>
+            <li><strong>Fontes:</strong> Aparecem automaticamente</li>
+            <li><strong>Melhor para:</strong> Verificacao rapida de jurisprudencia com links</li>
+        </ul>
+    </div>
+
+    <h2>8. Pensando em Escala</h2>
+    <p>Voce nao faz 1 contestacao — faz 50. Como escalar?</p>
+
+    <div class="two-col">
+        <div class="info-card">
+            <h4>O que e FIXO no template</h4>
+            <ul>
+                <li>Estrutura da peca (qualificacao, preliminares, merito...)</li>
+                <li>Teses padrao de defesa</li>
+                <li>Jurisprudencia consolidada</li>
+                <li>Linguagem e tom</li>
+                <li>Pedidos finais</li>
+            </ul>
+        </div>
+        <div class="info-card">
+            <h4>O que MUDA (variaveis)</h4>
+            <ul>
+                <li>[NOME_RECLAMANTE]</li>
+                <li>[PEDIDOS_ESPECIFICOS]</li>
+                <li>[FATOS_DO_CASO]</li>
+                <li>[VALORES]</li>
+                <li>[DOCUMENTOS_JUNTADOS]</li>
+            </ul>
+        </div>
+    </div>
+
+    <p><strong>Metodo:</strong> Crie 1 contestacao perfeita com CLEAR. Substitua dados especificos por [VARIAVEIS]. Salve como template. Para cada novo caso: preencha as variaveis e rode.</p>
+
+    <div class="footer-note">Manual Rapido de IA — Paixao Cortes Advogados — p. 6</div>
+</div>
+
+<!-- PAGINA 7: CHECKLIST + RECURSOS -->
+<div class="page">
+    <h2>9. Checklist Diario — Antes de Usar IA</h2>
+
+    <div class="checklist-grid">
+        <div class="check-item">Dados anonimizados?</div>
+        <div class="check-item">Busca web ativada?</div>
+        <div class="check-item">Thinking mode ligado?</div>
+        <div class="check-item">Prompt usa CLEAR?</div>
+        <div class="check-item">Pedi links para toda citacao?</div>
+        <div class="check-item">Vou verificar CADA link?</div>
+        <div class="check-item">Vou pedir autochecagem?</div>
+        <div class="check-item">Vou revisar TUDO antes de usar?</div>
+    </div>
+
+    <h2>10. 3 Perguntas que Voce Vai Receber</h2>
+
+    <div class="info-card" style="margin: 8px 0;">
+        <h4>"Posso usar IA sem declarar ao juiz?"</h4>
+        <p>CNJ 615/2025: obrigatorio quando o juizo exigir. Na pratica: use, revise, seja transparente quando perguntado. Modelo de nota de rodape na pagina 5.</p>
+    </div>
+
+    <div class="info-card" style="margin: 8px 0;">
+        <h4>"Quanto custa?"</h4>
+        <p>ChatGPT Plus: US$ 20/mes. Claude Pro: US$ 20/mes. Perplexity Pro: US$ 20/mes. <strong>Invista R$ 100/mes, economize 20h/mes.</strong> Versoes gratuitas ja funcionam para comecar.</p>
+    </div>
+
+    <div class="info-card" style="margin: 8px 0;">
+        <h4>"E se o cliente descobrir que usei IA?"</h4>
+        <p>Voce usa Google, calculadora, modelos. IA e mais uma ferramenta. O que importa: <strong>qualidade do trabalho + verificacao humana</strong>.</p>
+    </div>
+
+    <h2>11. Recursos para Continuar Aprendendo</h2>
+
+    <table class="regulation-table">
+        <tr>
+            <th>Recurso</th>
+            <th>O que e</th>
+            <th>Onde encontrar</th>
+        </tr>
+        <tr>
+            <td><strong>AB2L</strong></td>
+            <td>Associacao de Lawtechs e Legaltechs</td>
+            <td>ab2l.org.br</td>
+        </tr>
+        <tr>
+            <td><strong>Podcast Direito Digital</strong></td>
+            <td>Episodios sobre direito e tecnologia</td>
+            <td>Spotify: "Direito Digital"</td>
+        </tr>
+        <tr>
+            <td><strong>FGV Regulacao da IA</strong></td>
+            <td>Curso online gratuito</td>
+            <td>educacao-executiva.fgv.br</td>
+        </tr>
+        <tr>
+            <td><strong>12 Cartas CLEAR</strong></td>
+            <td>Prompts do curso (digital)</td>
+            <td>igormorais123.github.io/curso-ia-paixao-cortes</td>
+        </tr>
+    </table>
+
+    <div class="footer-note">Manual Rapido de IA — Paixao Cortes Advogados — p. 7</div>
+</div>
+
+<!-- PAGINA 8: COMPROMISSO -->
+<div class="page">
+    <h2>12. Plano de Implementacao do Escritorio</h2>
+
+    <div class="info-card" style="margin: 15px 0;">
+        <h4>Campeao de IA do escritorio:</h4>
+        <div class="commitment-line"></div>
+        <p style="font-size: 0.85em; color: #888;">A pessoa que lidera a adocao, tira duvidas, mantem o padrao.</p>
+    </div>
+
+    <div class="info-card" style="margin: 15px 0;">
+        <h4>Primeiro processo a automatizar com IA:</h4>
+        <div class="commitment-line"></div>
+        <p style="font-size: 0.85em; color: #888;">O mais repetitivo, o que consome mais horas, o que tem mais volume.</p>
+    </div>
+
+    <div class="info-card" style="margin: 15px 0;">
+        <h4>Como medir resultado em 30 dias:</h4>
+        <div class="commitment-line"></div>
+        <p style="font-size: 0.85em; color: #888;">Sugestao: tempo medio de producao ANTES vs DEPOIS. Pecas por semana. Taxa de revisao.</p>
+    </div>
+
+    <div class="commitment-box">
+        <h3>Meu Compromisso</h3>
+        <p>Na segunda-feira, vou usar IA para:</p>
+        <div class="commitment-line"></div>
+        <div class="commitment-line"></div>
+        <div class="commitment-line"></div>
+        <p style="margin-top: 20px; font-size: 0.9em; color: #888;">
+            Nome: _________________________________ Data: ___/___/2026
+        </p>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px; padding: 20px; background: #f8fafc; border-radius: 10px;">
+        <p style="font-size: 1.1em; color: #7c3aed; font-weight: 600; font-style: italic;">
+            "Voce nao aprendeu uma ferramenta.<br>
+            Voce descobriu uma versao mais poderosa de voce."
+        </p>
+    </div>
+
+    <div class="footer-note">
+        <strong>Manual Rapido de IA para o Escritorio</strong><br>
+        Curso IA na Advocacia — Paixao Cortes Advogados<br>
+        Dr. Igor Morais Vasconcelos | igormorais123@gmail.com | (61) 98115-7120<br>
+        Fevereiro 2026 — v3.3
+    </div>
+</div>
+
+<button class="print-btn no-print" onclick="window.print()">Imprimir / Salvar como PDF</button>
+
+</body>
+</html>

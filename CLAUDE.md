@@ -17,9 +17,13 @@ projeto/
 │   ├── MEMORIA_LONGO_PRAZO.md
 │   ├── APRENDIZADOS.md
 │   └── sessoes/
+├── Apresentações e Palestras 2025+/  # 23 PPTXs de palestras/cursos (2025+)
+├── AI/                    # Materiais gerados por IA
 ├── Cartas perfis resistentes/   # Baralho didatico
 ├── Ideias exemplos acrescentar material base/
 ├── *.docx                 # Documentos do curso e propostas
+├── *.html                 # Paginas do curso (cartas, QR codes, index)
+├── *.md                   # Roteiros e checklists
 ├── CLAUDE.md              # Este arquivo
 └── .gitignore
 ```

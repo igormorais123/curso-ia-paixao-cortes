@@ -21,3 +21,6 @@ desktop.ini
 
 # Documentos sem titulo (rascunhos)
 Documento sem título*.docx
+
+# Artefato Windows
+nul
