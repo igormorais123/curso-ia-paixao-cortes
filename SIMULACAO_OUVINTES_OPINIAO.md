@@ -377,7 +377,7 @@ Cada participante da:
 
 3. **Micro-exercicio de comunicacao** — No buffer do Dia 1: "Redigam e-mail executivo ao banco sobre resultado de audiencia. 3 paragrafos. IA + CLEAR. 5 minutos. Go."
 
-4. **Dados de impacto com fonte** — Adicionar 1 slide no Bloco 1: "Thomson Reuters 2025: advogados que usam IA economizam em media 4,2h/semana. Stanford HAI: alucinacao cai de 33% para 8% com busca web + thinking mode."
+4. **Dados de impacto com fonte** — Adicionar 1 slide no Bloco 1: "Thomson Reuters 2025: advogados que usam IA economizam em media 4,2h/semana. Stanford HAI: 17-33% de erro mesmo com RAG; busca web + raciocinio reduzem, mas nao eliminam."
 
 ### Medias (proxima versao):
 

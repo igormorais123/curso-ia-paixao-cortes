@@ -71,7 +71,7 @@ Sala preparada. Musica ambiente baixa (opcional). Cartas CLEAR ja nos lugares. C
 |-----|-----------|---------|
 | 0-5 | Abertura silenciosa | Sala escura. Projetor mostrando Claude com Extended Thinking. Sem falar, digitar prompt de contestacao bancaria. Zero fala. **VIDEO BACKUP PRONTO caso IA falhe ao vivo.** |
 | 5-8 | Primeira frase | "90 segundos. Uma contestacao estruturada. Voces tem [NUMERO REAL] acoes na fila. Facam a conta." |
-| 8-10 | Contexto + Dados de impacto | "Isso e o presente." 1 slide com 3 dados: **Thomson Reuters 2025**: advogados com IA economizam 4h/semana. **Stanford HAI**: alucinacao cai de 33% para ~8% com busca web + thinking. **47% dos escritorios "Mais Admirados"** ja usam IA generativa. |
+| 8-10 | Contexto + Dados de impacto | "Isso e o presente." 1 slide com 3 dados: **Thomson Reuters 2025**: advogados com IA economizam 4h/semana. **Stanford HAI**: 17-33% de erro mesmo com RAG; busca web + raciocinio reduzem, mas nao eliminam. **47% dos escritorios "Mais Admirados" do Brasil** ja usam IA generativa. |
 | 10-13 | **Micro-CLEAR** | 1 slide: "3 regras pra IA funcionar: 1) DIGA QUEM VOCE E, 2) DIGA O QUE QUER, 3) DE CONTEXTO ESPECIFICO. Nao cole 8 paginas — resuma em 5 linhas." |
 | 13-15 | Prompt pronto na tela | Projetar o PROMPT PRONTO para copiar (ver abaixo). "Copiem isso. Mudem os dados para um caso de voces." |
 | 15-35 | **EXERCICIO 1** | Cada um abre ChatGPT/Claude (usando Card Onde Clicar), personaliza o prompt pronto, recebe analise de teses e riscos. Instrutor circula priorizando quem tem dificuldade. |

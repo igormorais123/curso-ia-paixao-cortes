@@ -164,11 +164,11 @@
 
 | Ferramenta | Forca | Usar para |
 |------------|-------|-----------|
-| **ChatGPT** | Deep Research, GPTs | Pesquisa com fontes, rascunhos em massa |
-| **Claude** | Extended Thinking, textos longos | Pareceres, analise de contratos |
+| **ChatGPT** (modo de raciocinio) | Deep Research, Thinking | Pesquisa com fontes, rascunhos em massa |
+| **Claude** (Opus linha atual) | Extended Thinking, textos longos | Pareceres, analise de contratos |
 | **Perplexity** | Fontes nativas | Jurisprudencia com citacao |
-| **NotebookLM** | Documentos longos | Processos volumosos |
-| **Gemini** | Multimodal | Documentos digitalizados |
+| **NotebookLM** | Documentos longos, 1M tokens | Processos volumosos |
+| **Gemini** (linha atual) | Multimodal | Documentos digitalizados |
 
 ---
 

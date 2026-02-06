@@ -18,8 +18,8 @@ Nao ha build, testes ou dependencias. Projeto e 100% documentacao e paginas HTML
 
 | Arquivo | Funcao |
 |---------|--------|
-| `ROTEIRO_CURSO_4H_HIBRIDO_v4.md` | Roteiro principal v4.1 — 7 Fases do Protocolo |
-| `ROTEIRO_CURSO_4H_IA_ADVOCACIA_v4.md` | Versao detalhada do roteiro |
+| `ROTEIRO_CURSO_4H_IA_ADVOCACIA_v4.md` | Roteiro principal v5.0 — 4 Fases + Protocolo Ativo (linguagem juridica) |
+| `ROTEIRO_CURSO_4H_HIBRIDO_v4.md` | Roteiro legado v4.1 — substituido pelo v5.0 |
 | `pagina_12_cartas_v3.html` | 12 cartas CLEAR (framework de prompts) — servido via GitHub Pages |
 | `qrcodes_curso.html` | QR codes com links para recursos — servido via GitHub Pages |
 | `index_curso.html` | Central de materiais do curso — servido via GitHub Pages |
@@ -36,10 +36,18 @@ Nao ha build, testes ou dependencias. Projeto e 100% documentacao e paginas HTML
 - `Apresentações e Palestras 2025+/`: 23 PPTXs de apoio
 - `Cartas perfis resistentes/`: baralho didatico legado
 
-### Narrativa do Curso (v4.1)
+### Narrativa do Curso (v5.0)
 
-7 Fases: BOOT → SCANNER → ARSENAL → FIREWALL → TESTE DE CAMPO → ANALYTICS → ATIVACAO COMPLETA.
-Igor ministra Fases 1-5 (3h). Jurimetria (Fase 6) e de outro professor. Fase 7 e encerramento.
+4 Fases: ABERTURA → INSTRUCAO → BLINDAGEM → PROVA DE FOGO + PROTOCOLO ATIVO.
+Igor ministra 3h: Qui 15h-17h (Fases 1-3) + Sex 10h-11h (Fase 4 + encerramento).
+Jurimetria: outro instrutor, Sex 11h-12h.
+
+### Antipadrao CRITICO: Linguagem
+- NUNCA termos de TI para advogados (Boot, Scanner, Firewall = ERRADO)
+- SEMPRE termos juridicos: Abertura, Instrucao, Blindagem, Prova de Fogo
+- "thinking mode" → "raciocinio aprofundado" (nome do produto entre parenteses)
+- "output" → "resultado" / "resposta da IA"
+- "alucinacao" → "erro de citacao"
 
 ## Convencoes
 

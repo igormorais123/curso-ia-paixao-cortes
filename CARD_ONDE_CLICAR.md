@@ -20,7 +20,7 @@
 
 ### Ativar Raciocinio (Thinking)
 - Clique no seletor de modelo
-- Selecione **o1** ou **o3** (modelos com raciocinio)
+- Selecione **modo de raciocinio (Reasoning/o1)** (modelo com raciocinio integrado)
 - OU use modelo padrao e peca: "Pense passo a passo antes de responder"
 
 ---
