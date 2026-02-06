@@ -1,646 +1,583 @@
-# SIMULACAO COMPLETA DO CURSO — Relatorio do Palestrante
+# SIMULACAO COMPLETA DO CURSO v5.0 — Relatorio do Palestrante
 
 ## "Voltei do Futuro para Contar o que Aconteceu"
 
 > **Palestrante**: Igor Morais Vasconcelos
-> **Publico simulado**: 12 advogados do escritorio Paixao Cortes Advogados
-> **Perfil**: Contencioso de massa, defesa bancaria/empresarial, Brasilia-DF
-> **Faixa etaria simulada**: 28-55 anos, maioria 30-40
-> **Experiencia previa com IA**: 3 ja usaram ChatGPT casualmente, 9 nunca usaram profissionalmente
-> **Local**: Sala de reunioes do escritorio, 15 cadeiras, projetor, Wi-Fi corporativo
-> **Data simulada**: Sexta e Sabado, fevereiro de 2026
+> **Publico simulado**: 18 advogados do escritorio Paixao Cortes Advogados
+> **Perfil**: Full-service, 6 areas (civil, trabalhista, consumidor, administrativo, tributario, comercial)
+> **Escritorio**: 60+ advogados, 30+ anos, Selo Leaders League
+> **Formato**: Hibrido — 8 presenciais em Brasilia + 5 online de Sao Paulo + 5 online de Goiania
+> **Faixa etaria simulada**: 27-55 anos, maioria 30-40
+> **Experiencia previa com IA**: 5 ja usaram ChatGPT casualmente, 13 nunca usaram profissionalmente
+> **Agenda**: Quinta 06/02 15h-17h (2h) + Sexta 07/02 10h-12h (1h instrutor + 1h jurimetria)
 
 ---
 
-# DIA 1 — SEXTA-FEIRA (3 horas)
+# DIA 1 — QUINTA-FEIRA 06/02 (15h - 17h)
 
-## Pre-Curso: O que acontece antes de comecar (14:00 - 14:05)
+## Pre-Curso (14:20 - 14:55)
 
-**O que fiz**: Cheguei 40 minutos antes. Testei projetor, Wi-Fi, ChatGPT e Claude no celular e notebook. Imprimi cartas e casos ficticios. Coloquei uma carta CLEAR em cada lugar da mesa.
+**O que fiz**: Cheguei 40 minutos antes na sala de Brasilia. Testei projetor, Wi-Fi, camera, microfone de sala, compartilhamento de tela no Zoom. Testei ChatGPT e Claude no celular e notebook. Entrei no Zoom e verifiquei audio/video com responsaveis tecnicos em Sao Paulo e Goiania. Coloquei Card "Onde Clicar" + post-its + caneta em cada lugar.
 
-**O que observei na sala**: 12 advogados entrando entre 14:00 e 14:10. Conversas paralelas. Expressoes variadas:
-- 4 curiosos (ja viram algo sobre IA, olhos abertos)
-- 5 neutros (vieram porque o socio mandou, corpo fechado)
-- 3 resistentes declarados (bracos cruzados, um deles falou "vamos ver se isso presta")
+**Checklist do hibrido**:
+- Camera enquadra instrutor + projetor ✅
+- Microfone de sala captando voz + perguntas ✅
+- Compartilhamento de tela ativo ✅
+- Chat monitorado (responsavel em BSB: eu / SP: Dra. Camila / GO: Dr. Paulo) ✅
+- Links de materiais HTML enviados no chat ✅
 
-**[PROBLEMA #1 — ATRASO INICIAL]**: 3 advogados chegaram 10 minutos atrasados. Isso come o Bloco 1 que ja e apertado. O cronograma previsto de 0-5 min para "abertura silenciosa" fica comprometido se comeco com a sala incompleta.
+**O que observei**: Advogados entrando entre 14:50 e 15:05.
+- Presencial BSB (8): 4 curiosos, 3 neutros, 1 resistente declarado
+- Online SP (5): cameras ligadas, 2 parecem engajados, 3 com cara de "obrigacao"
+- Online GO (5): cameras ligadas, mas postura distante
 
-**[CORRECAO NECESSARIA]**: Prever "colchao de entrada" de 5 minutos. A abertura silenciosa so funciona com sala cheia e porta fechada. Comecar pontualmente mesmo com ausentes desmonta o efeito WOW.
+**[OBSERVACAO — HIBRIDO]**: Os online de SP e GO estao em salas de reuniao dos escritorios locais, nao isolados em casa. Isso AJUDA — tem pressao social para prestar atencao. Se estivessem cada um em casa, a dispersao seria maior.
 
 ---
 
-## BLOCO 1: ESPANTO (14:05 - 14:50, previsto 45 min)
+## FASE 1: ABERTURA — Primeiro Contato (40 min)
+**Horario: 15:00 - 15:40**
 
-### Minuto 0-5: Abertura Silenciosa
+### Minuto 0-3: Abertura Hibrida
 
-**O que fiz**: Apaguei luzes. Projetei tela do Claude. Sem falar nada, comecei a digitar: "Voce e advogado de defesa de grande banco. Um ex-gerente de agencia entrou com reclamacao trabalhista pedindo horas extras, alegando jornada de 7h30 as 20h. Elabore contestacao estruturada." Ativei Extended Thinking.
+**O que falei**: "Boa tarde, BSB. Boa tarde, SP. Boa tarde, GO. Estamos em 3 cidades e online — isso ja e inovacao. Antes de comecar: SP, estao ouvindo bem? GO, a tela ta aparecendo? Perfeito."
 
-**Reacao da sala**:
-- Silencio tenso nos primeiros 30 segundos
-- Alguem sussurrou "ta escrevendo sozinho?"
-- Quando a IA comecou a gerar a contestacao com topicos (Qualificacao, Preliminares, Merito...), dois advogados se inclinaram para frente
-- Aos 90 segundos, contestacao de 2 paginas na tela. Pronta.
+**Reacao**:
+- BSB: Acenos, silencio respeitoso
+- SP: "Sim, tudo certo!" (Dra. Camila, animada)
+- GO: "Positivo." (Dr. Paulo, objetivo)
 
-**Impacto emocional observado**: ALTO. O silencio funcionou. A contestacao gerada era *reconhecivel* — parecia coisa do escritorio. Isso e fundamental. Se a IA gerasse algo generico ou de reclamante, o impacto seria zero.
+**[PONTO POSITIVO]**: Abrir confirmando audio/video para remotos e ESSENCIAL. Os online se sentem incluidos desde o primeiro momento. Se eu ignorasse e comecasse direto, SP e GO ficariam como "plateia passiva" o curso inteiro.
 
-**[PROBLEMA #2 — QUALIDADE DA DEMO]**: A contestacao gerada pelo Claude citou "jurisprudencia do TST" sem numeros reais de processo. Isso e exatamente o que o curso combate. Se um advogado atento perceber, perde credibilidade nos primeiros 2 minutos.
+### Minuto 3-8: Demo Silenciosa
 
-**[CORRECAO NECESSARIA]**: A demo WOW deve ser PRE-PREPARADA e gravada em video de backup. Jamais depender de IA ao vivo para a primeira impressao. Alternativa: preparar um prompt que instrua "NAO cite jurisprudencia especifica — foque em estrutura e teses". Ou usar um caso onde a contestacao nao precisa de jurisprudencia (so impugnacao de fatos).
+**O que fiz**: Compartilhei tela (Zoom). Sem falar nada, abri o Claude, ativei raciocinio aprofundado. Digitei prompt de parecer juridico sobre responsabilidade civil por dano moral — viabilidade de acao, teses aplicaveis, riscos. Instrui "NAO cite jurisprudencia especifica — foque em estrutura e argumentos." Resultado em 90 segundos. Parecer estruturado com 6 secoes.
 
-### Minuto 5-8: Primeira Frase
+**Reacao**:
+- BSB: Silencio tenso. Alguem sussurrou "ta vendo isso?". O Dr. Ricardo (55, socio senior, resistente) cruzou os bracos, mas os olhos estavam na tela.
+- SP: 2 se inclinaram para frente. Chat: "impressionante" (sem nome).
+- GO: Silencio. Uma advogada pegou o celular — pra gravar a tela? Ou ver WhatsApp? Impossivel saber remoto.
 
-**O que falei**: "90 segundos. Uma contestacao estruturada para defesa bancaria. Voces tem 200 acoes iguais na fila. Facam a conta."
+**Impacto emocional observado**: ALTO. O silencio funciona. O parecer era RECONHECIVEL — parecia coisa de escritorio de verdade. Estrutura profissional, linguagem tecnica.
 
-**Reacao**: Pausa. Silencio. O advogado mais velho (Sr. Ricardo, 55 anos, 25 anos de bancario) ergueu a sobrancelha. Uma advogada jovem (Dra. Camila, 29 anos) sorriu e pegou o celular.
+**[PONTO POSITIVO]**: Ter o video backup pronto deu seguranca. A IA funcionou ao vivo, mas saber que havia backup permitiu foco total na performance. Nao usei o backup, mas te-lo e como ter seguro — nao precisar dele e o melhor cenario.
 
-**[OBSERVACAO]**: A frase funciona melhor se eu souber o numero real de acoes do escritorio. "200 acoes" e generico. Se eu dissesse "Voces tem 347 contestacoes trabalhistas pendentes — eu vi no relatorio", o impacto seria DEVASTADOR.
+### Minuto 8-11: Primeira Frase
 
-**[CORRECAO NECESSARIA]**: No checklist do instrutor, adicionar: "Pedir ao escritorio o numero real de acoes pendentes antes do curso."
+**O que falei**: "90 segundos. Um parecer estruturado. 60 advogados, 6 areas, 3 cidades. Facam a conta."
 
-### Minuto 8-12: Contexto Minimo
+**Reacao**:
+- BSB: O socio mais novo (Dr. Marcos, 48) anotou algo. A Dra. Ana Paula (33, pareceres) sorriu.
+- SP: Chat: "quero aprender" (Dra. Isabela, 31).
+- GO: Dr. Paulo escreveu no chat: "funciona pra trabalhista tambem?"
 
-**O que falei**: "Isso nao e futuro. Isso e 2026. E voces vao fazer agora. Abram o celular."
+**[PONTO POSITIVO]**: "3 cidades" reforça a mensagem hibrida. Os remotos se sentiram enderecados. A pergunta do Dr. Paulo ("funciona pra trabalhista?") mostra que ja esta pensando na SUA pratica — sinal excelente.
 
-**Reacao**: 8 dos 12 abriram o celular. 2 abriram notebook. 2 ficaram parados.
+### Minuto 11-13: Contexto + Dados de Impacto
 
-**[PROBLEMA #3 — BARREIRA DE ACESSO]**: Dos 2 que ficaram parados:
-- Um nao tinha conta no ChatGPT nem no Claude
-- Outro tinha celular antigo e o ChatGPT travava
+**O que mostrei**: 1 slide com dados:
+- Thomson Reuters 2025: advogados com IA economizam 4h/semana
+- Stanford HAI: 17-33% de erro mesmo com RAG
+- 47% dos escritorios "Mais Admirados" ja usam IA generativa
 
-Isso TRAVOU o exercicio por 5 minutos enquanto ajudava a criar conta.
+**Reacao**: Interesse. "4 horas por semana" gerou reacao visivel. "17-33% de erro" gerou franzir de testa.
 
-**[CORRECAO NECESSARIA]**: **OBRIGATORIO no checklist pre-curso: enviar e-mail 48h antes pedindo que todos criem conta no ChatGPT E Claude. Incluir link direto e tutorial de 30 segundos. Ter 2 notebooks reserva na sala ja logados.**
+**[PONTO POSITIVO]**: O slide com dados ANTES do exercicio funciona. Na versao antiga (v3.1), os dados vinham depois. Aqui, os dados criam urgencia ("todos estao usando") E prudencia ("tem erro") simultaneamente. O participante entra no exercicio sabendo que existe potencial E risco.
 
-### Minuto 12-35: EXERCICIO 1 — Primeira Experiencia
+### Minuto 13-15: Micro-CLEAR
 
-**O que pedi**: "Descrevam um caso real de defesa que voces estao trabalhando. Anonimizem nomes. Colem no ChatGPT ou Claude. Pecam analise de teses e riscos. Tempo: 15 minutos."
+**O que projetei**: "3 regras pra IA funcionar: 1) DIGA QUEM VOCE E, 2) DIGA O QUE QUER, 3) DE CONTEXTO ESPECIFICO. Nao cole 8 paginas — resuma em 5 linhas."
 
-**O que aconteceu de fato**:
+**Reacao**: Acenos. Rapido, claro, memoravel.
+
+**[PONTO POSITIVO CRITICO]**: O Micro-CLEAR antes do Exercicio 1 e a MAIOR melhoria da v5.0 em relacao a v3.1. Na simulacao da v3.1, 30% da sala ficou travada no primeiro exercicio sem saber o que digitar (Problema #4 historico). Aqui, TODOS tem pelo menos um ponto de partida. A paralisia de primeiro uso foi ELIMINADA por este micro-bloco de 2 minutos.
+
+### Minuto 15-17: Prompt Pronto na Tela
+
+**O que projetei**: O PROMPT PRONTO universal:
+```
+Sou advogado de escritorio full-service com 30+ anos.
+Atuo na area de [civil / trabalhista / consumidor / administrativo / tributario / comercial].
+O caso: [descreva em 3-5 linhas].
+Quais sao as melhores teses? NAO cite jurisprudencia especifica.
+```
+
+**O que falei**: "Copiem isso. Mudem a area e descrevam um caso real — anonimizado."
+
+**Reacao**: 14 dos 18 copiaram imediatamente (celular ou notebook). Os outros 4 estavam lendo o Card "Onde Clicar" para entender onde digitar.
+
+### Minuto 17-32: EXERCICIO 1
+
+**O que aconteceu**:
 
 | Tempo | Evento | Impacto |
 |-------|--------|---------|
-| Min 12-14 | 4 nao sabiam o que digitar. Olhavam a tela em branco. | ALTO — paralisia de primeiro uso |
-| Min 14-18 | Comecei a circular e sugeri: "Copie os pedidos de uma inicial que voce tem no e-mail. Cole e pergunte: quais teses de defesa posso usar?" | Desbloqueou 3 dos 4 |
-| Min 18-22 | Uma advogada colou uma inicial de 8 paginas inteira. A IA deu resposta generica. Ela ficou decepcionada. | Faltou instrucao sobre COMO usar. Colar tudo nao funciona. |
-| Min 22-28 | 6 advogados ja tinham respostas. Expressoes de surpresa. "Nossa, isso e bom." "Essa tese eu nao tinha pensado." | SUCESSO para quem conseguiu |
-| Min 28-32 | O Sr. Ricardo (resistente) finalmente tentou. Descreveu caso de cabeca, sem colar documento. Recebeu analise de 5 teses de defesa. Ficou em silencio por 30 segundos, depois disse: "Isso aqui ta... razoavel." (Elogio maximo vindo dele.) | PONTO DE VIRADA |
-| Min 32-35 | 2 ainda nao tinham conseguido nada util. Frustracao visivel. | Nao posso perder esses 2 |
+| Min 17-19 | 14 ja estavam digitando. 4 precisaram de 1-2 min extra para abrir a ferramenta. | BOM — muito menos paralisia que v3.1 |
+| Min 19-22 | Os que usaram o prompt pronto comecaram a receber respostas. Expressoes de surpresa. | O prompt pronto FUNCIONA |
+| Min 22-25 | Uma advogada de SP (Dra. Isabela, consumidor) recebeu analise de teses para negativacao indevida e escreveu no chat: "isso e exatamente o que uso no dia a dia" | CONVERSAO em andamento |
+| Min 25-28 | Dr. Ricardo (BSB, resistente) personalizou para caso trabalhista bancario. Recebeu 5 teses de defesa. Ficou em silencio, relendo. | Processando — bom sinal |
+| Min 28-32 | 16 de 18 tinham resposta util. 2 de GO tiveram resultado generico — nao personalizaram o prompt o suficiente. Orientei pelo chat. | 89% de sucesso no primeiro exercicio |
 
-**[PROBLEMA #4 — PARALISIA DO PRIMEIRO USO]**: O roteiro assume que todo mundo sabe interagir com chatbot. NAO sabe. "Descreva um caso" e vago demais para quem nunca usou IA. Preciso de um prompt EXATO para copiar.
+**[COMPARACAO v3.1 vs v5.0]**: Na v3.1, so 70% conseguiram resultado util no Exercicio 1. Na v5.0, 89%. A diferenca: Micro-CLEAR + Prompt Pronto + Card "Onde Clicar". Tres acrescimos simples que eliminaram a paralisia.
 
-**[CORRECAO NECESSARIA]**: Projetar na tela um prompt pronto para copiar:
-```
-Sou advogado de escritorio que defende banco em acao trabalhista.
-O ex-funcionario pede: [horas extras / dano moral / equiparacao].
-Quais sao as melhores teses de defesa? Liste com fundamentacao.
-```
-Isso elimina a paralisia. Quem quiser personalizar, personaliza depois.
+**[OBSERVACAO — HIBRIDO]**: Os online foram MAIS rapidos que os presenciais. Motivo: ja estavam no computador, nao precisaram "pegar o celular". Presenciais que dependiam so do celular foram mais lentos (tela pequena, digitacao dificil).
 
-**[PROBLEMA #5 — "COLAR TUDO" NAO FUNCIONA]**: A advogada que colou 8 paginas recebeu lixo. Ninguem avisou que IA funciona melhor com instrucao clara + contexto focado. O framework CLEAR so vem no Bloco 3. Isso e TARDE DEMAIS.
+### Minuto 32-38: Compartilhamento
 
-**[CORRECAO NECESSARIA]**: Introduzir micro-versao do CLEAR antes do Exercicio 1: "3 regras de ouro: 1) Diga quem voce e, 2) Diga o que quer, 3) De contexto especifico. NAO cole 8 paginas — resuma em 5 linhas." Isso pode ser 1 slide rapido antes do exercicio.
+**Como fiz**: "1 SURPRESA e 1 DECEPCAO. BSB: quem quer comecar? Chat: escrevam la."
 
-### Minuto 35-45: Compartilhamento
+**Respostas**:
+- **Dra. Ana Paula (BSB, pareceres)**: "Surpresa: a estrutura do parecer ficou profissional. Decepcao: nenhuma, sinceramente."
+- **Dr. Paulo (GO, trabalhista, pelo chat)**: "Surpresa: as teses de defesa em caso trabalhista sao relevantes. Decepcao: citou artigos da CLT corretos mas sem mencionar sumulas especificas."
+- **Dra. Isabela (SP, consumidor, pelo chat)**: "Surpresa: entendeu CDC perfeitamente. Decepcao: nao diferenciou TJDFT de TJ-SP."
+- **Dr. Ricardo (BSB, resistente)**: "Razoavel. Mas falta jurisprudencia concreta."
 
-**O que pedi**: "O que surpreendeu? O que decepcionou?"
+**O que respondi ao Ricardo**: "Perfeita observacao. Na proxima fase, voce vai pesquisar jurisprudencia com metodo. E vai descobrir quando funciona e quando falha."
 
-**Respostas reais simuladas**:
-- **Dra. Camila (29, curiosa)**: "Surpreendeu a velocidade. Decepcionou que inventou um numero de processo que nao existe." — **PERFEITO. Essa fala e ouro. Ela descobriu a alucinacao sozinha. Isso prepara o Bloco 2.**
-- **Dr. Fernando (35, neutro)**: "Achei interessante mas superficial. Nao usaria como esta." — Reacao esperada. Ele vai mudar no Bloco 3 com CLEAR.
-- **Sr. Ricardo (55, resistente)**: "Razoavel. Mas um estagiario de 2 anos faz isso." — Resistencia classica. Nao confrontar. Anotar para revisitar no Bloco 4.
-- **Dra. Lucia (42, neutra)**: "Nao consegui fazer funcionar direito." — **ALERTA. Nao posso perder essa pessoa. Preciso ir ate ela no proximo exercicio.**
+### Minuto 38-40: Ponte
 
-**[PROBLEMA #6 — TEMPO DE COMPARTILHAMENTO]**: 10 minutos para 12 pessoas falarem. Na pratica, so 4-5 falaram. Os timidos ficaram calados. Perdi input valioso.
+**O que falei**: "Viram que algumas respostas citaram artigos de lei mas nao trouxeram jurisprudencia concreta? Isso e proposital no exercicio — pedi para NAO citar jurisprudencia sem busca. Agora vamos aprender COMO buscar com seguranca."
 
-**[CORRECAO NECESSARIA]**: Ao inves de compartilhamento oral aberto, usar POST-ITs: cada um escreve 1 surpresa e 1 decepcao. Colar no quadro. Leitura rapida pelo instrutor. Mais democratico, mais rapido, mais rico.
-
-**STATUS DO BLOCO 1**: Tempo real gasto: **50 minutos** (5 acima do previsto). A abertura silenciosa precisou de 5 min extra pelo atraso. O exercicio tomou 23 min ao inves de 20 pela paralisia de primeiro uso. Compartilhamento ok em 10 min.
-
-**[IMPACTO NO CRONOGRAMA]**: Perdi 5 minutos. Bloco 2 comeca atrasado.
+**STATUS DA FASE 1**: Tempo real: **40 minutos** (NO PREVISTO). Zero atraso. A Micro-CLEAR eliminou a paralisia e o compartilhamento hibrido (voz + chat) foi mais eficiente que so oral.
 
 ---
 
-## BLOCO 2: PESQUISA INTELIGENTE COM IA (14:50 - 15:40, previsto 50 min)
+## FASE 2: INSTRUCAO — Pesquisa + CLEAR (55 min)
+**Horario: 15:40 - 16:35**
 
-### Minuto 0-3: Setup
+### Minuto 0-5: Abertura + Orientacao Pratica
 
-**O que falei**: "Agora vem a parte que muda tudo. Voces vao pesquisar jurisprudencia com IA. E vai funcionar. Mas tem metodo."
+**O que falei**: "Agora vamos pesquisar jurisprudencia com IA. Funciona — mas tem metodo. E e esse metodo que separa resultado confiavel de achismo."
 
-**Reacao**: Ceticismo geral. O Sr. Ricardo: "Ja tentei. Inventa tudo." — **Perfeito. Era isso que eu queria.**
+**Orientacao**: "No ChatGPT: ativem a pesquisa aprofundada (Deep Research). No Perplexity: ja busca sozinho. No Claude: pecam para buscar na internet. No Card que voces receberam tem o passo a passo."
 
-### Minuto 3-18: EXERCICIO 2 — Pesquisa Jurisprudencial com IA
+**Reacao**: 6 olharam o Card "Onde Clicar". 3 ja sabiam. 9 precisaram de 20-30 segundos para achar a funcao.
 
-**O que pedi**: "Abram o ChatGPT. Ativem Deep Research ou busca na web. Pesquisem: jurisprudencia do TST sobre horas extras de gerente bancario — cargo de confianca. Pecam com LINK para o tribunal."
+**[PONTO POSITIVO]**: O Card "Onde Clicar" impresso (presencial) e PDF (online) RESOLVEU o Problema #7 historico ("participantes nao sabem ativar funcoes"). Na v3.1, perdi 3 minutos ensinando onde clicar. Aqui, o card fez o trabalho em 30 segundos.
 
-**O que aconteceu**:
+### Minuto 5-18: EXERCICIO 2 — Pesquisa Jurisprudencial
 
-| Tempo | Evento | Observacao |
-|-------|--------|-----------|
-| Min 3-5 | "Como ativo Deep Research?" 6 nao sabiam. | **PROBLEMA GRAVE** |
-| Min 5-8 | Projetei passo a passo na tela. Mostrei no meu celular. | Perdeu 3 minutos nao planejados |
-| Min 8-12 | Resultados comecando a aparecer. ChatGPT com Deep Research demorou 2-3 min para gerar. Alguns acharam que travou. | Ansiedade de espera |
-| Min 12-15 | Resultados: ChatGPT trouxe 5-8 decisoes com links para tst.jus.br | 70% dos links funcionavam |
-| Min 15-18 | Quem usou Claude sem web: recebeu jurisprudencia inventada | EXATAMENTE o contraste desejado |
+**O que pedi**: "Cada um escolhe tema da SUA area. Sugestao na tela: 'responsabilidade civil por dano moral — TJDFT' ou 'revisao de penalidade administrativa — TRF-1'. Metade usa ChatGPT Deep Research, outra metade Perplexity."
 
-**[PROBLEMA #7 — PARTICIPANTES NAO SABEM ATIVAR FUNCOES]**: "Deep Research", "Extended Thinking", "Busca na web" — sao funcoes com nomes diferentes em cada plataforma e interface que muda todo mes. O roteiro ASSUME que o participante sabe onde clicar. NAO sabe.
-
-**[CORRECAO NECESSARIA]**: Criar CARD RAPIDO impresso (ou slide permanente) com:
-```
-CHATGPT: Clique em "Pesquisar" ou use modelo o1/o3
-CLAUDE: Ative "Extended Thinking" no icone do cerebro
-PERPLEXITY: Ja busca automaticamente — so usar
-```
-Com screenshot atualizado. Entregar impresso junto com as cartas.
-
-**[PROBLEMA #8 — DEMORA DO DEEP RESEARCH]**: ChatGPT Deep Research leva 2-5 minutos para responder. Em sala com 12 pessoas esperando, isso vira silencio morto. Alguns acharam que a IA travou e recarregaram a pagina.
-
-**[CORRECAO NECESSARIA]**: Avisar ANTES: "Deep Research demora 2-5 minutos. E NORMAL. Enquanto esperam, abram o Perplexity e facam a MESMA pesquisa la. Vamos comparar resultados." Isso transforma espera morta em atividade paralela.
-
-### Minuto 18-30: EXERCICIO 3 — Verificacao de Links
-
-**O que pedi**: "Agora cliquem em CADA link que a IA retornou. Verifiquem se existe. Anotem a porcentagem de acerto."
+**Aviso que dei**: "Deep Research demora 2-5 minutos. E NORMAL. Enquanto espera, abra o Perplexity e faca a MESMA pesquisa la."
 
 **O que aconteceu**:
-- Media de acerto com ChatGPT (Deep Research): **65-75%** dos links funcionavam
-- Media de acerto com ChatGPT (sem Deep Research): **20-30%**
-- Media com Claude (sem web): **0-5%** (quase tudo inventado)
-- Media com Perplexity: **80-90%** (melhor resultado)
+
+| Grupo | Ferramenta | Resultado |
+|-------|-----------|-----------|
+| BSB (4) | ChatGPT Deep Research | 3-5 min de espera. Resultados com links reais do TJDFT e TRT-10. |
+| BSB (4) | Perplexity | Resultados imediatos com fontes. Links do STJ e TST. |
+| SP (5) | Mix ChatGPT/Perplexity | Resultados bons. 2 pesquisaram tema de consumidor no TJ-SP. |
+| GO (5) | Mix ChatGPT/Perplexity | Resultados razoaveis. 1 pesquisou no TRF-1 e encontrou acordaos reais. |
+
+**[PONTO POSITIVO]**: O aviso "Deep Research demora 2-5 min, enquanto espera use o Perplexity" ELIMINOU o Problema #8 historico (silencio morto enquanto espera). Os participantes ficaram OCUPADOS comparando as duas ferramentas ao inves de olhando para a tela vazia. Tempo produtivo.
+
+### Minuto 18-25: EXERCICIO 3 — Verificacao de Links
+
+**O que pedi**: "Cliquem em CADA link. Verifiquem se existe. Anotem a porcentagem de acerto. Presencial: facam em duplas. Online: individualmente."
+
+**Resultados**:
+- ChatGPT com Deep Research: **65-75%** dos links existem
+- Perplexity: **80-90%** dos links existem
+- Quem usou Claude sem busca web: **0-5%** (tudo inventado)
 
 **Reacoes**:
-- **"Caramba, 3 de 5 links funcionam com Deep Research!"** — Tom de surpresa positiva
-- **"Sem busca web, 0 de 5. ZERO."** — Choque
-- **Sr. Ricardo**: "Entao SIM da pra usar, mas com cuidado." — ELE MUDOU DE POSICAO. **MOMENTO CHAVE DO CURSO.**
+- **Dra. Camila (SP, chat)**: "Perplexity: 5 de 6 links reais! Melhor ferramenta pra pesquisa."
+- **Dr. Ricardo (BSB, presencial)**: "Entao SIM da pra usar, mas tem que verificar cada um." — **PONTO DE VIRADA DO RESISTENTE.**
+- **Dr. Fernando (BSB, presencial)**: "3 de 5 no ChatGPT. Melhor que eu esperava. Pior que eu gostaria."
+- **Advogada de GO (chat)**: "Sem busca web, ZERO de 5. ZERO. Agora entendi o protocolo."
 
-**[OBSERVACAO CRITICA]**: Este exercicio e O MAIS IMPORTANTE DO CURSO. E aqui que a resistencia quebra. O participante descobre SOZINHO que o metodo funciona. Nao ouve sobre isso — EXPERIMENTA. O Mandamento 2 ("Verificacao muscular") esta funcionando.
+**[ESTE E O MOMENTO MAIS IMPORTANTE DO CURSO]**: O participante descobre SOZINHO que o metodo funciona. Nao ouve palestra sobre isso — EXPERIMENTA. O Mandamento 2 ("Verificacao muscular") esta funcionando. Este exercicio e insubstituivel.
 
-**[PROBLEMA #9 — WI-FI]**: Verificar links exige abrir 5-10 URLs no navegador do celular. Com 12 pessoas fazendo isso simultaneamente no Wi-Fi corporativo, a conexao ficou LENTA. Paginas do TST (que ja sao lentas) demoraram 15-20 segundos para abrir.
+### Minuto 25-28: Momento de Clareza + Protocolo
 
-**[CORRECAO NECESSARIA]**: Testar Wi-Fi com carga real (12 dispositivos simultaneos). Se necessario, trazer roteador 4G extra. Ou: fazer a verificacao em duplas (metade dos acessos simultaneos).
+**O que falei**: "Quando a IA busca na internet e cita com link, funciona. Quando inventa de cabeca, falha. A diferenca e o metodo."
 
-### Minuto 30-35: Momento de Clareza
+**Projetei o Protocolo**: Busca → Link → Raciocinio → Checagem
 
-**O que falei**: "Viram? Quando a IA busca na internet e cita com link, funciona. Quando inventa de cabeca, falha. A diferenca e o METODO."
-
-**Reacao**: Acenos de cabeca. Momento de consolidacao. A Dra. Lucia (que nao tinha conseguido nada no Bloco 1) finalmente sorriu: "Agora eu entendi."
-
-### Minuto 35-42: Framework de Pesquisa
-
-**O que projetei**: **Busca → Link → Thinking → Checagem**
-
-**Expliquei cada passo**:
-1. BUSCAR NA INTERNET — Sempre ativar busca web
-2. EXIGIR LINK — Sem link = nao existe
-3. USAR THINKING MODE — Reduz alucinacoes
-4. PEDIR AUTOCHECAGEM — "Revise suas citacoes"
-
-**[PROBLEMA #10 — PROTOCOLO BOM, MAS ABSTRATO]**: Os 4 passos fazem sentido conceitual, mas na pratica o advogado nao sabe COMO pedir autochecagem. Precisa de frase pronta.
-
-**[CORRECAO NECESSARIA]**: Adicionar frase exata para copiar: "Agora revise todas as citacoes acima. Confirme que cada link funciona e cada numero de processo esta correto. Se tiver duvida sobre algum, sinalize com [VERIFICAR]."
-
-### Minuto 42-50: Regulacao
-
-**O que mostrei**: 1 slide com CNJ 615/2025 e OAB Recomendacao 001/2024. Caso do advogado americano sancionado (Mata vs Avianca — caso real de 2023).
-
-**Reacao**: Atencao total. Quando mostrei que o advogado americano foi sancionado por citar casos INVENTADOS pelo ChatGPT, a sala toda ficou seria.
-
-**[PROBLEMA #11 — CASO AMERICANO JA E VELHO]**: O caso Mata vs Avianca e de 2023. Para advogados de 2026, isso ja e "historia antiga". Precisamos de casos mais recentes, preferencialmente brasileiros.
-
-**[CORRECAO NECESSARIA]**: Pesquisar e incluir 1-2 casos brasileiros de 2025-2026 de advogados sancionados ou advertidos por uso inadequado de IA. Caso nao encontre caso brasileiro confirmado, usar o dado: "206 casos documentados de alucinacoes em tribunais" (que ja esta na proposta).
-
-**STATUS DO BLOCO 2**: Tempo real gasto: **53 minutos** (3 acima). Perda principal: ensinar a ativar funcoes (+3 min). Conteudo excelente. Este bloco e o coracao do curso.
-
----
-
-## INTERVALO (15:40 - 15:50, 10 min)
-
-**O que observei**: Nos corredores, 8 dos 12 estavam no celular... USANDO IA. Testando coisas. Um perguntou ao colega "como ativa aquele thinking mode?". Outro estava pesquisando jurisprudencia de um caso dele. **SINAL EXCELENTE** — a semente pegou.
-
-**Tarefa passada**: "Ate amanha, usem IA em algo real do escritorio. Qualquer coisa. Tragam a experiencia."
-
-**[PROBLEMA #12 — INTERVALO CURTO]**: 10 minutos para ir ao banheiro + tomar cafe + voltar. Pessoas voltaram com 3-5 min de atraso. Na pratica, intervalo precisa ser 15 min.
-
-**[CORRECAO NECESSARIA]**: Intervalo de 15 minutos, nao 10. Ajustar cronograma.
-
----
-
-## BLOCO 3: FERRAMENTAS (15:50 - 16:45, previsto 55 min)
-
-### Minuto 0-10: Mapa Honesto de Ferramentas
-
-**O que projetei**: Tabela com 5 ferramentas (ChatGPT, Claude, Perplexity, NotebookLM, Gemini) com Forca / Fraqueza / Usar para.
-
-**Reacao**: Interesse moderado. O formato tabela e bom mas denso. Muito texto na tela.
-
-**[PROBLEMA #13 — MAPA DE 5 FERRAMENTAS E DEMAIS]**: 5 ferramentas para quem acabou de descobrir a primeira. Sobrecarga cognitiva. Olhos vidrados. "Qual eu uso?" — ouvi 3 vezes.
-
-**[CORRECAO NECESSARIA]**: Reduzir para "2 essenciais + 1 bonus":
-- **ChatGPT** (para pesquisa com Deep Research)
-- **Claude** (para analise profunda e peças longas)
-- **Perplexity** (bonus: quando precisa de fontes rapidas)
-NotebookLM e Gemini podem ser MENCIONADOS em 1 frase, nao demonstrados. Sao material de Horizontes (Bloco 6).
-
-### Minuto 10-35: EXERCICIO 4 — Mesmo Caso em ChatGPT vs Claude
-
-**O que pedi**: "Peguem o mesmo caso do Exercicio 1. Coloquem no ChatGPT E no Claude. Comparem: qual da melhor contestacao?"
-
-**O que aconteceu**:
-- 8 advogados conseguiram fazer a comparacao
-- 4 ainda estavam terminando de explorar uma ferramenta so
-- Resultado geral: ChatGPT melhor para pesquisa com fontes, Claude melhor para texto longo e analise
-- **Momento WOW inesperado**: Uma advogada usou o Claude com Extended Thinking em contrato bancario e recebeu uma analise de risco de 3 paginas que ela chamou de "melhor do que eu faria em 2 horas"
-
-**[PROBLEMA #14 — EXERCICIO REPETITIVO]**: O Exercicio 4 pede basicamente a mesma coisa do Exercicio 1, so que comparando 2 ferramentas. Para quem ja fez bem o Exercicio 1, isso e redundante. Para quem nao fez bem, continua nao fazendo.
-
-**[CORRECAO NECESSARIA]**: Mudar o Exercicio 4 para algo diferente e progressivo. Sugestao: "Use ChatGPT para pesquisar jurisprudencia (Deep Research). Depois cole os resultados no Claude e peca analise critica + contestacao. FLUXO COMBINADO." Isso ensina a usar ferramentas em CADEIA, que e o uso real.
-
-### Minuto 35-45: Framework CLEAR
-
-**O que fiz**: Demonstrei CLEAR com exemplo real de contestacao bancaria:
-- **C**ontexto: "Sou advogado de escritorio que defende grande banco..."
-- **L**imite: "Nao cite jurisprudencia sem buscar..."
-- **E**xemplo: "Estrutura desejada: 1) Qualificacao, 2) Sintese..."
-- **A**udiencia: "Juiz do trabalho de vara de Brasilia"
-- **R**ole: "Advogado empresarial experiente em contencioso bancario"
-
-**Reacao**: **ESTE FOI O SEGUNDO MELHOR MOMENTO DO CURSO** (depois da verificacao de links). Quando mostrei a diferenca entre prompt vago ("faca uma contestacao") e prompt CLEAR, a resposta da IA melhorou dramaticamente. Olhos arregalados. "Aaah, ISSO que faltava!"
-
-**[PROBLEMA #15 — CLEAR VEIO TARDE]**: O framework CLEAR so aparece no minuto 35 do Bloco 3, ou seja, 2h30 de curso depois. Os exercicios 1 a 3 foram feitos SEM CLEAR. Resultado: qualidade inferior e frustracoes desnecessarias.
-
-**[CORRECAO CRITICA]**: **Mover CLEAR para ANTES do Exercicio 1.** Apresentar em 3 minutos como "a formula" e depois fazer o exercicio. O espanto vem da qualidade do resultado COM o framework, nao do resultado cru. Alternativa: mostrar um micro-CLEAR (3 regras) no Bloco 1 e o CLEAR completo no Bloco 3.
-
-### Minuto 45-55: As 12 Cartas
-
-**O que fiz**: Entreguei as cartas fisicas. Mostrei 3 exemplos (Carta 1: Contestacao em Massa, Carta 5: Analise de Risco, Carta 9: Relatorio Mensal).
-
-**Reacao**: Boa. As cartas sao bonitas e praticas. Vi advogados folheando e dizendo "essa aqui e pra mim" e "essa eu vou usar segunda-feira".
-
-**[PROBLEMA #16 — 12 CARTAS DE UMA VEZ]**: Entregar 12 cartas e mostrar 3 deixa 9 sem explicacao. Advogados folheiam rapido e nao absorvem. E material "para levar", nao "para usar agora".
-
-**[CORRECAO NECESSARIA]**: Entregar as cartas NO INICIO do Dia 2, quando elas serao usadas no Exercicio 5 (fluxo completo). No Bloco 3, mostrar 1 carta como exemplo de CLEAR aplicado, nao entregar o baralho todo.
-
-**STATUS DO BLOCO 3**: Tempo real gasto: **55 minutos** (no previsto). CLEAR foi o ponto alto. Mapa de ferramentas precisa simplificar. Exercicio 4 precisa reformular.
-
----
-
-## BUFFER DIA 1 (16:45 - 17:00, 15 min restantes)
-
-**O que fiz com o buffer**: Abri para perguntas. Recebi 7 perguntas. As 3 mais comuns:
-
-1. **"Posso usar IA em peticao sem avisar o juiz?"** — Expliquei CNJ 615/2025: obrigatorio declarar quando houver exigencia do juizo. Na pratica, usem e revisem. Transparencia e a regra.
-
-2. **"Quanto custa o ChatGPT pago?"** — US$ 20/mes o Plus, US$ 200/mes o Pro. Claude Pro: US$ 20/mes. Perplexity Pro: US$ 20/mes. "Invistam R$ 100/mes, economizem 20h/mes."
-
-3. **"E se o cliente descobrir que usei IA?"** — "Voce usa Google, calculadora, modelos. IA e mais uma ferramenta. O que importa e a QUALIDADE do trabalho e a VERIFICACAO humana."
-
-**[PROBLEMA #17 — PERGUNTAS IMPORTANTES SEM ESPACO]**: A pergunta sobre custo e a sobre declarar uso sao FUNDAMENTAIS e nao tem espaco dedicado no roteiro. Ficam no buffer, que e incerto.
-
-**[CORRECAO NECESSARIA]**: Incluir mini-bloco "3 Perguntas que Voce VAI Receber" (5 min) no final do Bloco 2 ou inicio do Bloco 3: custo, etica, declaracao de uso.
-
----
-
-## ENCERRAMENTO DIA 1 (17:00)
-
-**O que falei**: "Ate amanha. Usem IA em algo real do escritorio. Qualquer coisa. Um e-mail, uma pesquisa, um resumo. Nao importa o que — importa que tentem."
-
-**Reacao de saida**:
-- 4 sairam empolgados (convertidos)
-- 5 sairam curiosos (no caminho)
-- 2 sairam neutros (nao mudaram, mas nao pioraram)
-- 1 saiu resistente (Sr. Ricardo, mas ja cedeu um pouco)
-
-**TAXA DE CONVERSAO DIA 1**: 75% em territorio positivo. Meta era 80%. Bom, nao otimo.
-
----
-
-# NOITE ENTRE DIA 1 E DIA 2
-
-**O que aconteceu (simulacao baseada em padrao real)**:
-- 6 dos 12 tentaram algo com IA a noite ou de manha
-- 3 tiveram sucesso ("Usei pra resumir um contrato!")
-- 2 tiveram frustracoes ("Inventou jurisprudencia, nao segui o protocolo")
-- 1 esqueceu
-
-**[INSIGHT]**: Os que tiveram sucesso VEM CONVERTIDOS pro Dia 2. Os que frustraram sao os mais importantes — vou usar as frustracoes deles como material didatico.
-
----
-
-# DIA 2 — SABADO (3 horas)
-
-## BLOCO 4: AQUECIMENTO + DOMINIO (09:00 - 10:10, previsto 70 min)
-
-### Minuto 0-15: Aquecimento
-
-**O que pedi**: "O que tentaram ontem a noite? O que funcionou? O que falhou?"
-
-**Respostas simuladas**:
-- **Dra. Camila**: "Usei pra redigir e-mail pro cliente do banco. Ficou perfeito. Economizei 20 minutos." — Celebrar!
-- **Dr. Paulo**: "Tentei pesquisar jurisprudencia sem ativar busca web. Inventou tudo. Ai lembrei do protocolo e deu certo." — **MOMENTO DE OURO** — ele errou, lembrou, corrigiu. Aprendizado consolidado.
-- **Dra. Lucia**: "Nao tive tempo de tentar." — Ok, sem julgamento.
-- **Sr. Ricardo**: "Testei pra analisar risco de um caso meu. Resultado... impressionante. Nao vou admitir que estou impressionado." (risos) — **RESISTENTE CONVERTENDO.**
-
-**[PROBLEMA #18 — 15 MINUTOS E MUITO PARA AQUECIMENTO]**: Com 12 pessoas, se cada uma fala 2 minutos, sao 24 minutos. Se limito a 5 voluntarios, os outros 7 nao participam.
-
-**[CORRECAO NECESSARIA]**: Formato rapido: cada um escreve em 1 post-it "Tentei: ___" e "Resultado: ___". Colar no quadro. Ler os mais relevantes em 5 minutos. Economiza 10 minutos.
-
-### Minuto 15-60: EXERCICIO 5 — Fluxo Completo com Caso Ficticio 1
-
-**Caso**: Horas Extras de Gerente Bancario (Roberto Almeida Costa vs Banco Nacional S.A.)
-
-**Formacao**: Duplas (6 duplas).
-
-**O que pedi**: 3 etapas:
-1. **Pesquisa** (15 min): IA para pesquisar jurisprudencia de defesa + teses
-2. **Minuta** (20 min): Gerar contestacao com CLEAR
-3. **Verificacao** (10 min): Checar links, pedir autochecagem
-
-**O que aconteceu etapa por etapa**:
-
-**Etapa 1 — Pesquisa (15 min)**:
-- 4 duplas usaram ChatGPT com Deep Research corretamente. Resultados bons.
-- 1 dupla usou Perplexity. Resultado excelente com fontes.
-- 1 dupla usou Claude sem web. Resultados ruins. **Ainda nao internalizaram o Protocolo.** Circulei e corrigi.
-
-**[PROBLEMA #19 — 15 MINUTOS PARA PESQUISA E POUCO]**: Deep Research demora 3-5 minutos para responder. Com tempo de digitar o prompt + esperar + ler resultado, 15 minutos e apertado. Pelo menos 2 duplas nao terminaram a pesquisa no tempo.
-
-**[CORRECAO NECESSARIA]**: Aumentar etapa de pesquisa para 20 minutos. Reduzir etapa de minuta para 15 minutos (com CLEAR, a minuta sai rapido).
-
-**Etapa 2 — Minuta (20 min)**:
-- 5 duplas usaram CLEAR para gerar contestacao no Claude. Resultados SIGNIFICATIVAMENTE melhores que no Dia 1.
-- A evolucao de qualidade e visivel. Isso prova que o framework funciona.
-- **Momento WOW**: Uma dupla gerou contestacao de 4 paginas com estrutura impecavel em 8 minutos. O Sr. Ricardo (dupla dela): "Isso levaria 3 horas da minha equipe."
-
-**[PROBLEMA #20 — DUPLAS COM NIVEIS DIFERENTES]**: A dupla da Dra. Lucia (insegura) com o Dr. Paulo (medio) ficou atrasada. A dupla da Dra. Camila (avancada) com o Sr. Ricardo (resistente-convertendo) foi rapida. Desigualdade de ritmo.
-
-**[CORRECAO NECESSARIA]**: Formar duplas ESTRATEGICAMENTE: um avancado + um iniciante. O avancado ensina, o iniciante aprende. Nao deixar formacao livre.
-
-**Etapa 3 — Verificacao (10 min)**:
-- 4 duplas verificaram links. Media: 70% funcionando.
-- 2 duplas nao tiveram tempo de verificar (ainda estavam na minuta).
-
-**[PROBLEMA #21 — TEMPO TOTAL DO EXERCICIO 5]**: 45 minutos previstos. Na pratica, precisou de 55-60 minutos. Pesquisa + Minuta + Verificacao e um fluxo completo de advocacia — nao da pra comprimir tanto.
-
-**[CORRECAO NECESSARIA]**: Exercicio 5 precisa de 60 minutos, nao 45. Isso exige realocar tempo de outros blocos.
-
-### Minuto 60-70: Debrief
-
-**O que pedi**: "Onde a IA ajudou mais? Onde ela atrapalhou?"
-
-**Consenso da sala**:
-- **Ajudou mais**: Estruturacao de pecas (ninguem consegue montar estrutura de contestacao tao rapido), brainstorm de teses de defesa, pesquisa com protocolo
-- **Atrapalhou mais**: Quando nao usou busca web (jurisprudencia falsa), quando o prompt era vago (resultado generico)
-
-**[INSIGHT]**: A sala SOZINHA chegou as conclusoes que o curso queria ensinar. Isso e poderoso. Nao fui eu que disse "IA funciona com metodo" — ELES disseram.
-
----
-
-## INTERVALO DIA 2 (10:10 - 10:25, 15 min — corrigido)
-
-**O que observei**: TODOS no celular usando IA. Um grupo de 3 discutindo como montar biblioteca de prompts para o escritorio. **Conversao em andamento.**
-
----
-
-## BLOCO 5: SEGURANCA REAL (10:25 - 11:00, previsto 35 min)
-
-### Minuto 0-8: Casos Reais
-
-**O que mostrei**:
-1. Advogado americano sancionado (Mata vs Avianca, 2023)
-2. Vazamento de dados: escritorio que colou contrato com dados reais do cliente no ChatGPT
-3. Plagio: IA que gerou paragrafo identico a doutrina sem citar fonte
-
-**Reacao**: Seriedade. Ninguem mexeu no celular. Atencao total.
-
-**[PROBLEMA #22 — CASO DE VAZAMENTO E GENERICO]**: "Escritorio que colou dados reais" — sem nome, sem consequencia concreta. Parece lenda urbana. Advogados sao treinados para duvidar de afirmacoes sem fonte.
-
-**[CORRECAO NECESSARIA]**: Usar caso documentado e especifico. Se nao houver caso publico brasileiro, usar o caso Samsung (2023) — engenheiros colaram codigo-fonte proprietario no ChatGPT, empresa baniu a ferramenta. E real, documentado, impactante.
-
-### Minuto 8-15: 5 Regras de Seguranca
-
-**O que projetei**:
-1. Anonimizar SEMPRE
-2. Verificar TODA citacao
-3. Revisar TUDO
-4. Registrar uso
-5. Humano decide
-
-**Reacao**: Acenos. "Faz sentido." Nenhuma resistencia. Isso e bom — as regras sao logicas e alinhadas com pratica juridica existente.
-
-**[PROBLEMA #23 — 5 REGRAS SAO GENERICAS DEMAIS]**: "Anonimizar sempre" — ok, mas COMO? Substituir nomes por "Autor" e "Reu"? Usar nomes ficticios? Mascarar CNPJ do banco? O advogado sai da sala sabendo a regra mas nao o metodo.
-
-**[CORRECAO NECESSARIA]**: Adicionar EXEMPLOS PRATICOS para cada regra:
-- Anonimizar: "Substitua 'Banco do Brasil S.A.' por 'Banco XYZ'. Substitua 'Joao Silva' por 'Empregado A'. Remova CPF, CNPJ, numero de processo."
-- Verificar: "Clique no link. Nao apenas leia — CLIQUE."
-- Registrar: "Modelo de nota de rodape: 'Peca elaborada com auxilio de ferramenta de IA generativa, com revisao integral pelo advogado subscritor.'"
-
-### Minuto 15-35: EXERCICIO 6 — Anonimizacao Real
-
-**O que pedi**: "Peguem um caso real do escritorio — uma reclamacao trabalhista contra o banco. Anonimizem TODOS os dados sensiveis. Enviem para a IA. Vejam se a qualidade da resposta muda."
-
-**O que aconteceu**:
-- 10 dos 12 conseguiram anonimizar e enviar
-- Resultado: a IA funciona IGUAL com dados anonimizados. A qualidade nao cai.
-- **Momento de revelacao**: "Quer dizer que eu nao PRECISO colocar o nome do banco?" — "Nao. Nunca precisou."
-
-**[PROBLEMA #24 — FALTA DE CASO PARA ANONIMIZAR]**: 2 participantes nao tinham caso no celular/notebook. Ficaram parados.
-
-**[CORRECAO NECESSARIA]**: Ter caso ficticio ja pronto para quem nao tiver caso real. Pode usar o Caso 3 (Assedio Moral) do roteiro com dados completos para anonimizar como exercicio.
-
-**STATUS DO BLOCO 5**: Tempo real: **35 minutos** (no previsto). Conteudo solido. Precisa de exemplos mais praticos nas regras.
-
----
-
-## BLOCO 6: HORIZONTES (11:00 - 11:15, previsto 15 min)
-
-### Minuto 0-10: Mencoes
-
-**O que mencionei**:
-- Jurimetria: analisar padroes de decisao por vara/juiz para contencioso de massa
-- Visual Law: documentos visuais para clientes corporativos
-- Automacao de fluxos: IA agenticapesquisa → minuta → revisao
-- Ferramentas brasileiras: Juridico AI, GPTuri, JUIT
-
-**Reacao**: Interesse, mas olhos comecando a cansar. Sabado, 11h da manha, depois de muita pratica. Energia caindo.
-
-**[PROBLEMA #25 — BLOCOS 6 E 7 NA HORA DO CANSACO]**: Apos 4h30 de curso (somando os 2 dias), a energia cai naturalmente. Os blocos finais competem com o cansaco. Horizontes (que e inspiracional) perde forca se a sala esta exausta.
-
-**[CORRECAO NECESSARIA]**: Colocar Horizontes ANTES do Bloco 5 (Seguranca). Seguranca e mais pratico e interativo (exercicio de anonimizacao), mantem a energia. Horizontes e passivo (ouvir), melhor quando a energia ainda esta alta.
-
-### Minuto 10-15: Recursos
-
-**O que mostrei**: QR codes para AB2L, Podcast Direito Digital, Curso FGV.
-
-**Reacao**: 6 escanearam os QR codes. Os outros estavam arrumando o celular ou ja olhando o relogio.
-
-**[PROBLEMA #26 — QR CODES NO FINAL NAO FUNCIONAM]**: Ninguem escaneia QR code no penultimo bloco. Estao mentalmente ja no encerramento. Os QR codes precisam estar no MATERIAL IMPRESSO que eles levam para casa.
-
-**[CORRECAO NECESSARIA]**: Remover slide de QR codes do Bloco 6. Incluir QR codes na FOLHA IMPRESSA entregue junto com as cartas. Mencionar verbalmente: "Na folha que voces receberam tem QR codes para continuar aprendendo."
-
----
-
-## BLOCO 7: COMPROMISSO (11:15 - 11:45, previsto 30 min)
-
-### Minuto 0-8: Reflexao
-
-**O que fiz**: "Fechem os olhos. Pensem naquelas 347 contestacoes na fila. Onde a IA entra na segunda-feira?"
-
-**Reacao**: Silencio. Alguns fecharam os olhos. Vi labios mexendo — estavam pensando de verdade.
-
-### Minuto 8-20: EXERCICIO 7 — Compromisso Escrito
-
-**O que pedi**: "Escrevam em papel: 'Na segunda-feira, vou usar IA para _____'"
-
-**Respostas escritas (simuladas)**:
-- "Redigir rascunho de 3 contestacoes bancarias usando CLEAR"
-- "Pesquisar jurisprudencia com Deep Research para o caso do gerente"
-- "Resumir 5 iniciais do lote novo que chegou"
-- "Enviar relatorio mensal pro banco usando template da IA"
-- "Criar prompt padrao de contestacao para a equipe toda"
-- "Testar anonimizacao em caso real antes de enviar"
-
-**[OBSERVACAO]**: Os compromissos sao ESPECIFICOS e REALISTAS. Nao sao vagos ("vou usar mais IA"). Isso e sinal de que o curso funcionou. Eles sabem COMO usar.
-
-### Minuto 20-25: Compartilhamento
-
-**Voluntarios**: 5 compartilharam. Aplausos apos cada um.
-
-**Momento mais impactante**: Sr. Ricardo: "Olha, eu entrei aqui achando que era besteira. Admito que mudei de ideia. Nao sobre a IA — sobre a possibilidade de a gente trabalhar diferente. Na segunda vou testar com as acoes de horas extras." — **STANDING OVATION da sala.**
-
-### Minuto 25-30: Encerramento
-
-**O que falei**: "Voces nao aprenderam uma ferramenta. Voces descobriram uma versao mais poderosa de voces mesmos. Na segunda-feira, essa versao comeca."
-
-**Entrega**: Certificado + foto do grupo.
-
----
-
-# ANALISE POS-SIMULACAO
-
-## Metricas Finais
-
-| Metrica | Meta | Resultado Simulado | Status |
-|---------|------|-------------------|--------|
-| Taxa de conversao (positivos) | 80% | 83% (10 de 12) | OK |
-| Completaram todos exercicios | 100% | 75% (9 de 12) | ABAIXO |
-| Compromisso escrito especifico | 80% | 92% (11 de 12) | ACIMA |
-| Tempo no cronograma | 0 min desvio | +18 min total | PROBLEMA |
-| Exercicios praticos vs instrucao | 67%/33% | ~60%/40% | ABAIXO META |
-
-## Os 7 Problemas Criticos (que preciso resolver)
-
-### 1. CLEAR precisa vir ANTES do Exercicio 1
-**Impacto**: ALTO — Os exercicios 1 a 3 sao feitos sem framework. Qualidade inferior causa frustracoes desnecessarias que poderiam ser evitadas.
-**Solucao**: Micro-CLEAR (3 regras) no Bloco 1 antes do exercicio. CLEAR completo no Bloco 3.
-
-### 2. Paralisia de primeiro uso sem prompt pronto
-**Impacto**: ALTO — 30% da sala ficou travada no primeiro exercicio sem saber o que digitar.
-**Solucao**: Projetar prompt pronto para copiar na tela. Quem quiser personalizar, personaliza.
-
-### 3. Barreira de acesso (conta + funcionalidades)
-**Impacto**: ALTO — Tempo perdido criando contas e ensinando onde clicar.
-**Solucao**: E-mail obrigatorio 48h antes com instrucoes de criacao de conta. Card impresso com "onde clicar" em cada ferramenta. Notebooks reserva.
-
-### 4. Exercicio 5 precisa de mais tempo
-**Impacto**: MEDIO — Fluxo completo em 45 min nao funciona. Precisa de 60 min.
-**Solucao**: Realocar tempo de outros blocos ou reduzir aquecimento.
-
-### 5. Demo WOW nao pode depender de IA ao vivo
-**Impacto**: ALTO — Se a IA citar jurisprudencia falsa na demo, perde credibilidade no minuto 2.
-**Solucao**: Demo pre-gravada em video como backup. Prompt que evita citacao de jurisprudencia.
-
-### 6. Mapa de 5 ferramentas sobrecarrega
-**Impacto**: MEDIO — "Qual eu uso?" 3 vezes.
-**Solucao**: 2 essenciais (ChatGPT + Claude) + 1 bonus (Perplexity). Resto e mencao.
-
-### 7. Intervalos de 10 min nao sao suficientes
-**Impacto**: BAIXO-MEDIO — Atraso cascata de 3-5 minutos por intervalo.
-**Solucao**: Intervalos de 15 min.
-
-## Cronograma Corrigido Proposto
-
-### DIA 1 (3h = 180 min)
-
-| Bloco | Inicio | Fim | Duracao | Mudanca |
-|-------|--------|-----|---------|---------|
-| Colchao de entrada | 0:00 | 0:05 | 5 min | NOVO |
-| 1. Espanto + Micro-CLEAR | 0:05 | 0:50 | 45 min | CLEAR antecipado |
-| 2. Pesquisa Inteligente | 0:50 | 1:40 | 50 min | +Card de funcoes |
-| Intervalo | 1:40 | 1:55 | 15 min | +5 min |
-| 3. Ferramentas + CLEAR Completo | 1:55 | 2:45 | 50 min | -5 min, Exerc. 4 reformulado |
-| FAQ/Perguntas Essenciais | 2:45 | 2:55 | 10 min | NOVO |
-| Buffer | 2:55 | 3:00 | 5 min | Reduzido |
-
-### DIA 2 (3h = 180 min)
-
-| Bloco | Inicio | Fim | Duracao | Mudanca |
-|-------|--------|-----|---------|---------|
-| 4. Aquecimento + Dominio | 0:00 | 1:15 | 75 min | +5 min (Exerc. 5 = 60 min) |
-| Intervalo | 1:15 | 1:30 | 15 min | +5 min |
-| 5. Horizontes | 1:30 | 1:40 | 10 min | MOVIDO, reduzido |
-| 6. Seguranca Real | 1:40 | 2:15 | 35 min | Exemplos praticos |
-| 7. Compromisso | 2:15 | 2:45 | 30 min | Sem mudanca |
-| Buffer | 2:45 | 3:00 | 15 min | Mantido |
-
-## Materiais Novos Necessarios
-
-1. **Card "Onde Clicar"** — 1 pagina com screenshots de cada ferramenta mostrando como ativar Deep Research, Extended Thinking, busca web
-2. **Prompt Pronto para Exercicio 1** — projetado na tela para copiar
-3. **Post-its** — para dinamicas de compartilhamento
-4. **Caso 3 impresso** — como backup para exercicio de anonimizacao
-5. **Video backup da demo WOW** — gravado previamente
-6. **E-mail pre-curso** — template com instrucoes de criacao de conta
-7. **Folha de recursos com QR codes** — impressa, entregue junto com cartas
-
-## Frase de Autochecagem Pronta
-
-Incluir nas cartas e projetar na tela:
+**Projetei a frase de autochecagem**:
 ```
 "Agora revise todas as citacoes acima. Confirme que cada link funciona
 e cada numero de processo esta correto. Se tiver duvida sobre algum,
 sinalize com [VERIFICAR]."
 ```
 
-## Nota de Rodape Modelo para Uso de IA
+**Reacao**: Todos copiaram. Alguns tiraram foto da tela (presencial). Online: screenshot.
 
-Incluir no material:
-```
-"Peca elaborada com auxilio de ferramenta de IA generativa,
-com revisao integral pelo advogado subscritor, nos termos da
-Resolucao CNJ 615/2025."
-```
+### Minuto 28-32: Regulacao Rapida
+
+**O que mostrei**: 1 slide. CNJ 615/2025, OAB Recomendacao 001/2024, caso Samsung (2023).
+
+**Reacao**: Atencao total. O caso Samsung (engenheiros colaram codigo proprietario no ChatGPT, empresa baniu a ferramenta) e mais impactante que o caso americano antigo. Advogados corporativos — especialmente os que defendem empresas — entendem IMEDIATAMENTE o risco.
+
+**Dr. Marcos (BSB, socio gestor)**: "Precisamos de protocolo interno pra isso no escritorio." — **ELE JA ESTA PENSANDO EM IMPLEMENTACAO.**
+
+### Minuto 32-40: Framework CLEAR Completo
+
+**O que fiz**: Demonstrei cada letra com exemplo universal de parecer juridico. Mostrei antes/depois: prompt vago ("faca um parecer") vs prompt CLEAR (5 elementos).
+
+**Reacao**: **ESTE FOI O SEGUNDO MELHOR MOMENTO DO CURSO**. A diferenca entre resultado vago e resultado CLEAR e visivel e imediata. Olhos arregalados. "Aaah, ISSO que faltava!"
+
+**Dra. Ana Paula (BSB)**: "Se eu tivesse feito isso no Exercicio 1, meu resultado teria sido 3x melhor." — **EXATAMENTE. E por isso que o CLEAR funciona.**
+
+**[PONTO POSITIVO]**: Na v3.1, o CLEAR so vinha no Bloco 3 (2h30 de curso). Na v5.0, o Micro-CLEAR veio antes do Exercicio 1 e o CLEAR completo vem aqui, no minuto 72, antes do Exercicio 4. Timing MUITO melhor.
+
+### Minuto 40-55: EXERCICIO 4 — Fluxo Combinado
+
+**O que pedi**: 2 passos:
+1. ChatGPT com Deep Research: buscar jurisprudencia do tema de cada um (5 min)
+2. Colar resultado no Claude com prompt CLEAR e pedir peca/parecer (10 min)
+
+**O que aconteceu**:
+- 14 de 18 conseguiram completar o fluxo nos 15 minutos
+- 3 terminaram o passo 1 mas nao conseguiram fazer o CLEAR completo no tempo (fizeram versao simplificada)
+- 1 de GO teve problema tecnico (Claude deu erro de carga) — usou ChatGPT para ambos os passos
+
+**Resultado qualitativo**: As pecas geradas no Exercicio 4 sao SIGNIFICATIVAMENTE superiores ao Exercicio 1. A evolucao e visivel e os participantes PERCEBEM isso.
+
+**Momento WOW**: Dra. Isabela (SP, consumidor) gerou contestacao de defesa para caso de negativacao indevida com 4 teses fundamentadas + jurisprudencia real do TJ-SP. Tempo: 12 minutos. Ela escreveu no chat: "Isso levaria minha manha inteira."
+
+**[PONTO POSITIVO]**: O Exercicio 4 reformulado como FLUXO COMBINADO (pesquisa numa ferramenta, producao em outra) e muito superior ao antigo "compare a mesma coisa em 2 ferramentas" (Problema #14 historico). Ensina uso REAL — ferramentas em cadeia.
+
+**STATUS DA FASE 2**: Tempo real: **55 minutos** (NO PREVISTO). O Card "Onde Clicar" economizou tempo. O aviso sobre demora do Deep Research eliminou ansiedade. CLEAR no momento certo gerou salto de qualidade visivel.
 
 ---
 
-# VEREDICTO FINAL DA SIMULACAO
+## INTERVALO (10 min)
+**Horario: 16:35 - 16:45**
 
-## O que funciona MUITO BEM:
-1. **Abertura silenciosa** — impacto emocional altissimo
-2. **Verificacao de links** (Exercicio 3) — momento de virada, participante descobre sozinho
-3. **Framework CLEAR** — diferenca visivel e imediata na qualidade
-4. **Exercicio 5 (fluxo completo)** — experiencia transformadora quando funciona
-5. **Compromisso escrito** — encerramento forte e pratico
-6. **Foco em defesa empresarial** — alinhado ao escritorio, relevante e imediato
+**Aviso**: "Voltem em 10 minutos. Preparem um caso real anonimizado da area de voces."
+**Online**: Mesmo aviso no chat + "cameras podem ficar desligadas no intervalo."
 
-## O que NAO funciona e precisa mudar:
-1. **CLEAR tarde demais** — mover para antes do primeiro exercicio
-2. **Paralisia de primeiro uso** — prompt pronto obrigatorio
-3. **Barreiras de acesso** — instrucoes pre-curso obrigatorias
-4. **Exercicio 4 repetitivo** — reformular para fluxo combinado
-5. **Mapa de ferramentas extenso** — simplificar para 2+1
-6. **Intervalos curtos** — 15 min minimo
-7. **QR codes no final** — mover para material impresso
-8. **Horizontes na hora do cansaco** — mover para antes de Seguranca
+**O que observei**:
+- BSB: 6 dos 8 no celular USANDO IA. Conversas: "como ativa aquele raciocinio aprofundado?" / "manda o link do Perplexity?"
+- SP (chat): 2 mensagens de participantes experimentando prompts diferentes
+- GO: Silencio no chat (OK — estao em intervalo)
+
+**[OBSERVACAO]**: 10 minutos funcionou melhor que o esperado. Como o curso e hibrido, nao tem deslocamento — so levantar, ir ao banheiro, voltar. Presencial voltou no horario. Online voltou 1-2 min atrasado (normal).
+
+---
+
+## FASE 3: BLINDAGEM — Comunicacao + Seguranca (15 min)
+**Horario: 16:45 - 17:00**
+
+### Minuto 0-5: EXERCICIO RELAMPAGO — Comunicacao
+
+**O que pedi**: "O cliente ligou. Quer saber AGORA o resultado de uma audiencia. Usem IA para redigir e-mail executivo em 3 paragrafos. 5 minutos. Go."
+
+**Projetei prompt**:
+```
+Sou advogado de escritorio full-service.
+Area: [sua area].
+Resultado de [audiencia / decisao]: [descrever brevemente].
+Redija e-mail executivo para o cliente.
+Maximo 3 paragrafos. Tom formal e direto.
+```
+
+**O que aconteceu**: 15 de 18 geraram e-mail em 3-4 minutos. Resultados uniformemente bons. Formato e-mail e mais simples para IA do que pecas processuais — funciona bem mesmo sem CLEAR completo.
+
+**Dra. Marina (BSB, compliance)**: "Isso eu vou usar HOJE. Tenho 3 e-mails atrasados pro banco."
+
+**[PONTO POSITIVO]**: O exercicio relampago de comunicacao (5 min) era o item #8 da lista de melhorias dos ouvintes da v3.2. Cabe perfeitamente aqui na BLINDAGEM, antes das regras de seguranca. E pratico, rapido, e mostra mais uma aplicacao.
+
+### Minuto 5-10: Seguranca Essencial
+
+**O que projetei**: 5 Regras em 1 slide + exemplo de anonimizacao em 3 areas.
+
+**Reacao**: Serios. Atencao. Quando mostrei o exemplo de anonimizacao ("Joao Silva, CPF..." → "Empregado A, cargo de gestao"), vi 4 advogados olhando pro celular — checando se tinham colado dados reais durante os exercicios. 2 ficaram visivelmente desconfortaveis.
+
+**Dr. Fernando (BSB, coordenador)**: "Preciso criar protocolo de anonimizacao para minha equipe de 4 juniors."
+
+### Minuto 10-13: 3 Perguntas Essenciais
+
+**Respondi em 1 frase cada**:
+1. "Posso usar sem declarar?" → "Quando o juizo exigir, declare. Na pratica: use e revise. A nota de rodape modelo esta na folha de recursos."
+2. "Quanto custa?" → "R$ 100-150/mes. Economiza 15-20h/mes. Facam a conta."
+3. "E se o cliente descobrir?" → "Voce usa Google, calculadora, modelos. IA e ferramenta. O que importa e qualidade e verificacao."
+
+### Minuto 13-15: Tarefa para Amanha
+
+**O que falei**: "Ate amanha, usem IA em algo real. Qualquer coisa — um e-mail, uma pesquisa, um resumo. Amanha tragam o relato para a Prova de Fogo."
+
+**Tarefa especifica no chat**: "Escolham 1 carta CLEAR do baralho digital (link no chat) e apliquem a um caso real da area de voces."
+
+**STATUS DA FASE 3**: Tempo real: **15 minutos** (NO PREVISTO). Fase curta, objetiva. O exercicio relampago deu energia. As regras de seguranca foram absorvidas sem resistencia — o contexto dos exercicios anteriores (verificacao de links, erro sem busca web) JA PREPAROU O TERRENO.
+
+---
+
+## ENCERRAMENTO DIA 1 (17:00)
+
+**O que falei**: "3 fases do Protocolo concluidas: Abertura, Instrucao, Blindagem. Amanha: Prova de Fogo com caso pratico completo + jurimetria. Usem IA hoje em algo real — qualquer coisa. Amanha tragam o relato."
+
+**Reacao de saida**:
+- BSB: 6 empolgados, 1 curioso (convertendo), 1 resistente (mas cedeu bastante)
+- SP: Chat animado. "Ate amanha!" Cameras desligando com sorrisos.
+- GO: "Valeu, ate amanha." Tom mais reservado mas positivo.
+
+**TAXA DE CONVERSAO DIA 1**: ~83% em territorio positivo (15 de 18). Meta era 80%. ATINGIDA.
+
+---
+
+# NOITE ENTRE DIA 1 E DIA 2
+
+**O que aconteceu (simulacao baseada em padrao real)**:
+- 10 dos 18 tentaram algo com IA entre quinta a noite e sexta de manha
+- 6 tiveram sucesso ("Resumi um contrato!", "Pesquisei jurisprudencia real!")
+- 3 tiveram frustracoes ("Esqueci de ativar busca web, deu tudo errado. Ai lembrei do protocolo.")
+- 1 nao conseguiu ("Travou no cadastro do Claude")
+- 8 nao tentaram (hora, cansaco, "vou ver amanha")
+
+**[INSIGHT]**: Os que erraram e CORRIGIRAM sao os mais valiosos amanha. Eles viveram o ciclo completo: erro → lembrar do metodo → acertar. Isso e aprendizado consolidado.
+
+---
+
+# DIA 2 — SEXTA-FEIRA 07/02 (10h - 12h)
+
+## FASE 4: PROVA DE FOGO — Caso Pratico (45 min)
+**Horario: 10:00 - 10:45**
+
+### Minuto 0-5: Aquecimento
+
+**O que pedi**: "Quem usou IA ontem a noite ou hoje de manha? BSB: levantem a mao. Chat: escrevam."
+
+**Respostas**:
+- BSB: 5 levantaram a mao. Dr. Paulo relata: "Tentei sem busca web, deu errado. Lembrei do protocolo, ativei Deep Research, deu certo." — **MOMENTO DE OURO.**
+- SP (chat): 3 respostas. Dra. Camila: "Ja fiz 2 resumos de iniciais e pesquisei jurisprudencia com Deep Research. 4 de 5 links reais."
+- GO (chat): 2 respostas. Um advogado: "Usei pra redigir e-mail pro cliente. Ficou melhor que eu faria."
+
+**[PONTO POSITIVO]**: O aquecimento em 5 minutos (vs 15 na v3.1) funciona melhor no hibrido. Chat + mao levantada = participacao rapida sem que cada um precise falar 2 minutos.
+
+### Minuto 5-7: Entrega de Material
+
+**Presencial**: Entreguei baralho das 12 cartas CLEAR + folha de recursos com QR codes.
+**Online**: Enviei links no chat. "12 modelos de prompt prontos — um para cada situacao."
+
+**Reacao**: Presenciais folheando as cartas. "Essa aqui e pra mim" (Dr. Roberto, audiencias). Online: clicando nos links.
+
+### Minuto 7-9: Escolha do Caso
+
+**3 opcoes projetadas na tela**:
+- **Caso 1 — TRABALHISTA**: Ex-empregado pede horas extras + dano moral
+- **Caso 2 — CONSUMIDOR/CIVIL**: Negativacao indevida por telecom
+- **Caso 3 — ADMINISTRATIVO**: Penalidade em licitacao
+
+**Distribuicao**:
+- Caso 1: 7 participantes (maioria trabalhista do escritorio)
+- Caso 2: 6 participantes (consumidor e civel)
+- Caso 3: 5 participantes (administrativo e tributario)
+
+**[PONTO POSITIVO]**: A opcao de caso por area (3 opcoes) e muito superior ao caso unico da v3.1. Cada advogado trabalha com algo PROXIMO da sua pratica. Engagement visivelmente maior.
+
+### Minuto 9-39: EXERCICIO 5 — Fluxo Completo (30 min)
+
+**Etapas**:
+1. Pesquisa (10 min): Aplicar Protocolo completo
+2. Minuta (13 min): CLEAR completo + fluxo combinado
+3. Verificacao (7 min): Checar links, autochecagem
+
+**O que aconteceu por etapa**:
+
+**Etapa 1 — Pesquisa (10 min)**:
+- 15 de 18 aplicaram o Protocolo corretamente (busca web + link + raciocinio)
+- 2 esqueceram de ativar busca web — circulei/orientei pelo chat
+- 1 usou Perplexity direto (funcionou bem)
+- Resultados: jurisprudencia real do TJDFT, TRT-10, TRF-1, STJ
+
+**Etapa 2 — Minuta (13 min)**:
+- 14 usaram CLEAR completo no Claude com resultado da pesquisa
+- 3 usaram versao simplificada do CLEAR (suficiente)
+- 1 ficou preso na pesquisa e nao chegou na minuta
+
+**Momento WOW**: Dupla de BSB (Dr. Ricardo + Dra. Ana Paula) gerou contestacao trabalhista com 5 teses de defesa + jurisprudencia verificada em 20 minutos. Dr. Ricardo: "Isso levaria 3 horas da minha equipe. E com menos jurisprudencia."
+
+**Etapa 3 — Verificacao (7 min)**:
+- 13 verificaram links. Media: 70% funcionando.
+- 5 nao tiveram tempo (ainda na minuta)
+
+**[OBSERVACAO]**: 30 minutos para o fluxo completo funciona na v5.0 — mas e JUSTO. Nao da pra comprimir mais. Os 7 min de verificacao sao apertados para quem tem 8+ links para checar. Mas o conceito esta consolidado — eles sabem que PRECISAM verificar, mesmo que nao verifiquem 100% no exercicio.
+
+### Minuto 39-44: EXERCICIO 5B — Escala
+
+**O que pedi**: "Voce fez 1 peca. O escritorio tem dezenas de casos similares. O que e FIXO e o que MUDA? Monte o modelo."
+
+**O que aconteceu**: 12 de 18 identificaram variaveis rapidamente (nome das partes, valores, pedidos especificos). 6 reescreveram o prompt CLEAR substituindo dados por [VARIAVEIS].
+
+**Dr. Marcos (socio gestor)**: "Isso e o que eu preciso apresentar pro banco. Modelo replicavel. Padronizado."
+
+**[PONTO POSITIVO]**: O Exercicio 5B de escala em 5 minutos e rapido mas planta a semente certa. Na v3.1, faltava isso (era item #1 de melhorias dos ouvintes). Aqui, nao precisa de mais tempo — a reflexao ja esta ativada.
+
+**STATUS DA FASE 4**: Tempo real: **44 minutos** (1 MIN ABAIXO). Perfeito.
+
+---
+
+## PROTOCOLO ATIVO — Encerramento (15 min)
+**Horario: 10:45 - 11:00**
+
+### Minuto 0-3: As 12 Cartas — Visao Geral
+
+**O que fiz**: Mostrei 3 cartas como exemplo — Carta 1 (Peticao/Contestacao), Carta 7 (Pesquisa Jurisprudencial), Carta 12 (Checklist de Audiencia). "12 modelos prontos. Cada um serve a qualquer area — basta preencher o contexto do caso."
+
+**Reacao**: "Essa Carta 12 e pra mim" (Dr. Roberto, audiencias). "Carta 9 — Relatorio Mensal — e o que eu mais preciso" (Dra. Marina, compliance).
+
+### Minuto 3-7: Compromisso Individual
+
+**O que pedi**: "Na segunda-feira, vou usar IA para _____. ESPECIFICO. Presencial: escrevam no papel. Online: escrevam no chat."
+
+**Compromissos (selecionados)**:
+- "Gerar 5 contestacoes trabalhistas usando CLEAR + fluxo combinado" (Dr. Ricardo)
+- "Pesquisar jurisprudencia do TJDFT sobre dano moral para 3 casos pendentes" (Dra. Isabela, SP)
+- "Montar protocolo interno de anonimizacao para minha equipe" (Dr. Fernando)
+- "Fazer relatorio mensal de janeiro com IA — estou atrasada" (Dra. Marina)
+- "Gerar checklist de audiencia para as 3 audiencias da semana" (Dr. Roberto)
+- "Criar prompt CLEAR padrao de impugnacao para area administrativa" (advogado de GO)
+
+**[OBSERVACAO]**: Os compromissos sao ESPECIFICOS e REALISTAS. Nenhum e vago ("vou usar mais IA"). Isso e sinal de que o curso funcionou.
+
+### Minuto 7-11: Plano do Escritorio
+
+**2 perguntas no quadro + chat**:
+1. "Qual o PRIMEIRO TIPO DE PECA a produzir com IA em CADA area?"
+2. "Quem LIDERA a adocao em cada cidade?"
+
+**Respostas**:
+- Trabalhista: contestacao de horas extras (mais volume)
+- Consumidor: defesa de negativacao (mais repetitivo)
+- Administrativo: impugnacao de penalidade
+- Civil: parecer de risco contratual
+- Tributario: defesa fiscal (autuacao)
+- Comercial: analise de contrato
+
+**Lideres por cidade**:
+- BSB: Dra. Ana Paula (entusiasta, pareceres)
+- SP: Dra. Camila (ja usando ativamente)
+- GO: Dr. Paulo (objetivo, pratico)
+
+### Minuto 11-14: Duplas de Apoio
+
+**Formacao**: Parear cauteloso + entusiasta, incluindo pares cross-cidade via WhatsApp.
+- Dra. Lucia (insegura, BSB) ↔ Dra. Camila (entusiasta, SP)
+- Dr. Ricardo (ex-resistente, BSB) ↔ Dr. Thiago (evangelista, BSB)
+
+### Minuto 14-15: Frase Final
+
+**O que falei**: "Tradicao, solidez e inovacao — agora com um metodo a mais. Protocolo ativo."
+
+**Reacao**: Aplausos (BSB). Emojis no chat (SP/GO). Dr. Ricardo: breve aceno de cabeca (elogio maximo dele).
+
+---
+
+## JURIMETRIA — Modulo Separado (60 min) — OUTRO INSTRUTOR
+**Horario: 11:00 - 12:00**
+
+> Nao simulado em detalhe — modulo conduzido por outro instrutor. Transicao suave: "Agora voces vao conhecer jurimetria com [nome do instrutor]. E o complemento perfeito do que acabamos de ver."
+
+---
+
+# ANALISE POS-SIMULACAO v5.0
+
+## Metricas Finais
+
+| Metrica | Meta | Resultado | Status |
+|---------|------|-----------|--------|
+| Taxa de conversao (positivos) | 80% | 83% (15 de 18) | OK |
+| Completaram todos exercicios | 90% | 89% (16 de 18) | QUASE |
+| Compromisso escrito especifico | 80% | 94% (17 de 18) | ACIMA |
+| Tempo no cronograma | 0 min desvio | -1 min total | PERFEITO |
+| Exercicios praticos vs instrucao | 69%/31% | ~68%/32% | OK |
+| Participacao online ativa | 70% | 80% (8 de 10 online participaram ativamente) | ACIMA |
+
+## Comparacao v3.1 → v5.0
+
+| Problema historico (v3.1) | Status na v5.0 |
+|---------------------------|----------------|
+| #1 Atraso inicial come abertura | RESOLVIDO — abertura hibrida inclui checagem audio/video |
+| #2 Demo ao vivo pode falhar | RESOLVIDO — video backup preparado |
+| #3 Barreira de acesso (contas) | RESOLVIDO — e-mail pre-curso 48h antes |
+| #4 Paralisia de primeiro uso | RESOLVIDO — Micro-CLEAR + Prompt Pronto |
+| #5 "Colar tudo" nao funciona | RESOLVIDO — Micro-CLEAR ensina resumir em 5 linhas |
+| #6 Compartilhamento oral lento | RESOLVIDO — chat + voz = hibrido mais rapido |
+| #7 Nao sabem ativar funcoes | RESOLVIDO — Card "Onde Clicar" impresso/PDF |
+| #8 Espera do Deep Research | RESOLVIDO — aviso previo + Perplexity paralelo |
+| #9 Wi-Fi lento com 12 dispositivos | PARCIAL — duplas presencial + online individual ajuda |
+| #10 Protocolo abstrato | RESOLVIDO — frase de autochecagem pronta |
+| #11 Caso americano antigo | RESOLVIDO — caso Samsung (2023) mais impactante |
+| #12 Intervalo curto | MONITORAR — 10 min funcionou no hibrido, mas e justo |
+| #13 Mapa de 5 ferramentas sobrecarrega | RESOLVIDO — foco em ChatGPT + Claude + Perplexity |
+| #14 Exercicio 4 repetitivo | RESOLVIDO — reformulado para fluxo combinado |
+| #15 CLEAR veio tarde | RESOLVIDO — Micro-CLEAR antes Exerc. 1 + CLEAR completo antes Exerc. 4 |
+| #16 12 cartas de uma vez | RESOLVIDO — entregues no Dia 2 antes do caso pratico |
+| #17 Perguntas sem espaco | RESOLVIDO — 3 Perguntas Essenciais na BLINDAGEM |
+
+## Riscos Remanescentes (v5.0)
+
+### 1. FASE 2 (INSTRUCAO) e a mais densa
+**Risco**: 55 minutos sem intervalo com 4 exercicios (Exerc. 2, 3, regulacao, CLEAR, Exerc. 4). Se qualquer exercicio estourar o tempo, a BLINDAGEM fica espremida.
+**Mitigacao**: Manter disciplina de tempo. O Card "Onde Clicar" ja economiza minutos. Se necessario, reduzir demonstracao do CLEAR de 8 para 5 minutos (ja fizeram Micro-CLEAR no Dia 1).
+
+### 2. FASE 3 (BLINDAGEM) com apenas 15 minutos
+**Risco**: Seguranca e um tema CRITICO para advogados. 15 minutos pode parecer superficial. Se um socio perguntar algo complexo sobre responsabilidade, nao ha buffer.
+**Mitigacao**: Respostas de 1 frase. Material de apoio (folha de recursos) com detalhamento. Follow-up por e-mail com manual completo.
+
+### 3. Online desengajando no Dia 2
+**Risco**: Sexta de manha, online, apos exercicio denso. 2-3 participantes podem desligar camera e sumir.
+**Mitigacao**: Chamar online pelo nome a cada 10 minutos. Pedir respostas no chat. Lideres em SP e GO monitoram.
+
+### 4. 30 minutos para fluxo completo (Exerc. 5)
+**Risco**: Pesquisa + minuta + verificacao em 30 min e justo. 15-20% nao completam a verificacao.
+**Mitigacao**: Aceitavel. O conceito de verificacao ja esta consolidado dos exercicios anteriores. Quem nao verifica no exercicio SABE que precisa verificar na pratica.
+
+## Recomendacoes para o Dia do Curso
+
+1. **Chegar 40 min antes** e testar TODO o setup hibrido
+2. **Ter video backup** da demo gravado e pronto para rodar
+3. **Imprimir Card "Onde Clicar"** para presenciais. Enviar PDF para online.
+4. **Ter 2 notebooks reserva** ja logados (ChatGPT + Claude) em BSB
+5. **Monitorar chat** — responder perguntas online a cada 5-10 minutos
+6. **Repetir perguntas presenciais** no microfone para online ouvir
+7. **Nao confrontar resistentes** — deixar os exercicios fazerem o trabalho
+8. **Celebrar erros** como aprendizado (especialmente "esqueci do protocolo e deu errado")
+9. **Controlar tempo da INSTRUCAO** — e a fase mais densa, nao deixar estourar
+10. **Enviar materiais por e-mail** no mesmo dia apos o curso
+
+---
+
+# VEREDICTO FINAL DA SIMULACAO v5.0
+
+## O que funciona EXCELENTEMENTE:
+1. **Micro-CLEAR + Prompt Pronto** — eliminou a paralisia de primeiro uso (maior melhoria)
+2. **Verificacao de links** (Exercicio 3) — momento de virada, funciona sempre
+3. **Fluxo combinado** (Exercicio 4) — ensina uso REAL (ferramentas em cadeia)
+4. **Card "Onde Clicar"** — resolve barreiras tecnicas silenciosamente
+5. **3 casos por area** — cada advogado trabalha com algo proximo da pratica
+6. **Exercicio de escala** (5B) — planta semente de replicacao
+7. **Formato hibrido** — funciona bem, online participa pelo chat
+8. **Compromisso individual + plano do escritorio** — encerramento forte e pratico
+9. **Timing** — 3 fases no Dia 1 (2h) + 1 fase no Dia 2 (1h) funciona
+
+## O que merece atencao:
+1. **INSTRUCAO (55 min)** — fase mais densa, monitorar tempo
+2. **BLINDAGEM (15 min)** — curta para tema critico, compensar com material escrito
+3. **Intervalo (10 min)** — funcionou no hibrido mas e justo
+4. **Verificacao no Exerc. 5** — 15-20% nao completam (aceitavel)
+5. **Online no Dia 2** — risco de desengajamento, chamar pelo nome
 
 ## Nota do Palestrante:
 
-> "Simulei este curso inteiro na minha cabeca. Vivi cada minuto. Vi rostos.
-> Ouvi perguntas. Senti a energia subir e cair. As correcoes acima nao sao
-> teoricas — sao baseadas em 6 horas vividas mentalmente com 12 advogados
-> de contencioso de massa. Quando eu entrar naquela sala de verdade,
-> ja vou ter 'vivido' isso uma vez. E quem ja viveu o futuro,
-> corrige o presente."
+> "Simulei este curso v5.0 completo. Cada minuto. Cada ferramenta. Cada reacao.
+> A v5.0 e uma evolucao radical da v3.1 — nao em conteudo (que era bom), mas em
+> TIMING e METODO. Micro-CLEAR antes do exercicio, prompt pronto na tela,
+> fluxo combinado, Card 'Onde Clicar', casos por area — tudo isso resolve
+> os 17 problemas que identifiquei na simulacao original. O curso agora
+> FUNCIONA em 3 horas porque cada minuto tem proposito claro.
+>
+> O formato hibrido adiciona complexidade tecnica mas nao prejudica o conteudo.
+> O chat e um canal de participacao MELHOR que levantar a mao — mais democratico,
+> mais rapido, mais rico. 60 advogados em 3 cidades aprendendo o mesmo metodo,
+> ao mesmo tempo. Isso JA e demonstracao de que tecnologia funciona quando tem protocolo."
 
 ---
 
-*Simulacao realizada por ONIR em 2026-02-06*
-*Base: Roteiro v3.1 + Materiais completos do curso*
-*Proxima etapa: Igor simula os ouvintes dando opiniao*
+*Simulacao v5.0 realizada em 2026-02-06*
+*Base: Roteiro v5.0 — O PROTOCOLO — 4 Fases + Protocolo Ativo*
+*18 participantes simulados, formato hibrido (BSB + SP + GO + online)*
+*Proxima etapa: simulacao de opinioes dos ouvintes v5.0*

@@ -1,8 +1,8 @@
-# SIMULACAO DOS OUVINTES — Opiniao dos 12 Participantes
+# SIMULACAO DOS OUVINTES v5.0 — Opiniao dos 18 Participantes
 
 ## Contexto
 
-Simulacao pos-curso com a versao v3.2 corrigida. 12 advogados do escritorio Paixao Cortes assistiram ao curso completo de 6 horas (sexta + sabado). Cada um abaixo e um perfil realista baseado em padrao tipico de escritorio de contencioso de massa em Brasilia.
+Simulacao pos-curso com a versao v5.0 (O Protocolo — linguagem juridica). 18 advogados do escritorio Paixao Cortes Advogados assistiram ao curso hibrido de 3h (instrutor) + 1h (jurimetria). Formato: 8 presenciais em Brasilia + 5 online de Sao Paulo + 5 online de Goiania.
 
 Cada participante da:
 1. Nota geral (1-10)
@@ -13,108 +13,108 @@ Cada participante da:
 
 ---
 
-## Participante 1: Dr. Ricardo Soares, 55 anos
-**Cargo**: Socio senior, 25 anos de contencioso bancario
+## Participante 1: Dr. Ricardo Soares, 55 anos — BSB (presencial)
+**Cargo**: Socio senior, 25 anos de contencioso trabalhista
 **Perfil pre-curso**: Resistente declarado ("vamos ver se isso presta")
-
-### Avaliacao
-
-**Nota: 7,5/10**
-
-**O que mais gostou**:
-> "A verificacao dos links. Aquilo ali mudou minha cabeca. Eu ja tinha tentado ChatGPT ano passado e era so mentira. Agora entendi que tem metodo. O protocolo de pesquisa — busca, link, thinking, checagem — isso eu vou cobrar da equipe toda."
-
-**O que menos gostou**:
-> "O palestrante ficou muito tempo nas ferramentas no primeiro dia. Eu nao preciso saber 5 ferramentas. Me da 2 que funcionem e pronto. E aquele exercicio de comparar ChatGPT e Claude fazendo a mesma coisa... pra que? Ja tinha entendido."
-
-**Sugestao**:
-> "Podia ter mais foco em ESCALA. Eu tenho 450 acoes, nao 1. Quero saber como usar IA pra gerar 50 contestacoes por semana com qualidade. Podia ter um exercicio de producao em lote."
-
-**Vai usar na segunda-feira?**: SIM
-> "Vou pedir pro Paulo testar o fluxo combinado nas contestacoes de horas extras. Se funcionar em 10, escalamos."
-
-### Insight para o curso:
-**[MELHORIA IDENTIFICADA]**: Falta exercicio de ESCALA. O escritorio nao faz 1 contestacao — faz 50. Incluir no Exercicio 5 ou criar exercicio bonus: "Agora que voce fez 1, como replicaria para 50? Crie template replicavel."
-
----
-
-## Participante 2: Dra. Camila Ferreira, 29 anos
-**Cargo**: Advogada junior, 3 anos de experiencia
-**Perfil pre-curso**: Curiosa, ja usava ChatGPT casualmente
-
-### Avaliacao
-
-**Nota: 9/10**
-
-**O que mais gostou**:
-> "Tudo. Mas especialmente o CLEAR. Eu ja usava ChatGPT, mas meus prompts eram bagunca. Quando vi a diferenca entre prompt vago e prompt CLEAR, foi tipo ligar a luz. A contestacao que saiu do Claude com Extended Thinking foi MELHOR do que o que eu faria em 2 horas. E o fluxo combinado — pesquisar no ChatGPT, produzir no Claude — genial."
-
-**O que menos gostou**:
-> "Acho que podia ter comecado com o CLEAR logo. No primeiro exercicio eu fiquei sem saber o que digitar. So quando veio o prompt pronto na tela que destravou. Se o CLEAR tivesse vindo antes, meu primeiro exercicio teria sido muito melhor."
-
-**Sugestao**:
-> "Queria um exercicio de criar MEU PROPRIO prompt CLEAR do zero, nao so usar os prontos. Tipo: 'agora criem um prompt CLEAR para um tipo de peca que voces fazem todo dia'. Ia fixar melhor."
-
-**Vai usar na segunda-feira?**: SIM
-> "Ja estou usando. Comecei ontem a noite. Fiz 3 resumos de iniciais e pesquisei jurisprudencia de gerente bancario com Deep Research. 4 dos 5 links funcionaram."
-
-### Insight para o curso:
-**[MELHORIA IDENTIFICADA]**: Adicionar mini-exercicio de CRIACAO de prompt CLEAR proprio. Apos demonstrar o framework, dar 5 minutos para cada um escrever seu prompt para a tarefa que mais faz no escritorio. Consolida o aprendizado.
-
----
-
-## Participante 3: Dr. Fernando Bastos, 35 anos
-**Cargo**: Advogado pleno, coordena equipe de 4 juniors
-**Perfil pre-curso**: Neutro, pragmatico
 
 ### Avaliacao
 
 **Nota: 8/10**
 
 **O que mais gostou**:
-> "O fluxo combinado do Exercicio 4. Isso e o que vou implementar na equipe. Pesquisar no ChatGPT, produzir no Claude. E o exercicio de anonimizacao — minha equipe ia colar nome de cliente no ChatGPT sem pensar. Agora sei que preciso criar protocolo interno."
+> "A verificacao dos links. Quando vi que SEM busca web era zero e COM busca web era 70%, mudou minha perspectiva. E quando fiz o fluxo completo — pesquisei no ChatGPT, passei pro Claude com aquele CLEAR — a contestacao que saiu era melhor que muita coisa que recebo de junior com 3 anos de experiencia."
 
 **O que menos gostou**:
-> "O bloco de Horizontes. Jurimetria, Visual Law, IA agentica... tudo interessante, mas em 10 minutos vira lista de compras. Ou aprofunda 1 tema ou tira. Ficou superficial."
+> "O intervalo de 10 minutos. Curto demais. E a parte de seguranca — 15 minutos pra tratar de responsabilidade profissional? Isso merecia meia hora pelo menos. E tema serio."
 
 **Sugestao**:
-> "Queria material pos-curso mais robusto. Um PDF com TODOS os prompts, o protocolo, as regras, passo a passo de cada ferramenta. Algo que eu possa entregar pros 4 juniors meus que nao estavam no curso e eles consigam seguir."
+> "Foco em ESCALA. O exercicio 5B de 5 minutos plantou a ideia, mas eu preciso de mais: como gerar 50 contestacoes por semana com qualidade controlada? Um template replicavel com variaveis. Podia ter um modulo so sobre isso."
 
 **Vai usar na segunda-feira?**: SIM
-> "Vou criar protocolo interno de uso de IA para minha equipe. Basear nas 5 regras de seguranca + protocolo de pesquisa. Entregar pros juniors na reuniao de segunda."
+> "Vou pedir pro Fernando testar o fluxo combinado em 5 contestacoes de horas extras essa semana. Se funcionar, escalamos."
 
 ### Insight para o curso:
-**[MELHORIA IDENTIFICADA]**: Criar PDF pos-curso consolidado — "Manual Rapido de IA para o Escritorio" — que coordenadores possam entregar para quem nao fez o curso. 5-10 paginas com tudo essencial.
+**[MELHORIA]**: Considerar versao expandida do Exercicio 5B para escritorios de contencioso de massa. Pode ser modulo avancado de 2h focado em producao em escala.
 
 ---
 
-## Participante 4: Dra. Lucia Mendes, 42 anos
-**Cargo**: Advogada senior, especialista em ACP
+## Participante 2: Dra. Camila Ferreira, 29 anos — SP (online)
+**Cargo**: Advogada junior, 3 anos de experiencia, consumidor
+**Perfil pre-curso**: Curiosa, ja usava ChatGPT casualmente
+
+### Avaliacao
+
+**Nota: 9,5/10**
+
+**O que mais gostou**:
+> "O CLEAR. Eu ja usava ChatGPT, mas meus prompts eram bagunca. Quando vi a diferenca entre prompt vago e prompt CLEAR, foi como acender a luz. E o fluxo combinado — pesquisar no ChatGPT, produzir no Claude — entendi que cada ferramenta tem uma forca. O Micro-CLEAR no comeco ja me ajudou no Exercicio 1. Se nao tivesse vindo antes, eu teria ficado travada."
+
+**O que menos gostou**:
+> "Ser online. Eu queria estar presencial pra ver a demo ao vivo, nao pela tela do Zoom. Mas entendo — SP nao tinha como. O chat funcionou bem, mas nao e a mesma coisa que estar na sala."
+
+**Sugestao**:
+> "Exercicio de criacao de prompt CLEAR do zero. Tipo: 'agora criem UM prompt CLEAR para a tarefa que voces mais fazem'. 5 minutos. Ia fixar mais."
+
+**Vai usar na segunda-feira?**: JA ESTOU USANDO
+> "Ontem a noite fiz 3 resumos de iniciais de negativacao indevida e pesquisei jurisprudencia do TJ-SP com Deep Research. 4 de 5 links reais."
+
+### Insight para o curso:
+**[MELHORIA]**: Mini-exercicio de criacao de prompt CLEAR proprio. 5 minutos apos demonstracao do framework. Consolida o aprendizado.
+
+---
+
+## Participante 3: Dr. Fernando Bastos, 35 anos — BSB (presencial)
+**Cargo**: Advogado pleno, coordena equipe de 4 juniors, civel
+**Perfil pre-curso**: Neutro, pragmatico
+
+### Avaliacao
+
+**Nota: 8,5/10**
+
+**O que mais gostou**:
+> "O fluxo combinado do Exercicio 4 e o exercicio de anonimizacao rapido. Minha equipe ia colar nome de cliente no ChatGPT sem pensar. Agora sei que preciso criar protocolo interno. E o Card 'Onde Clicar' — genial. Simples, pratico, resolve o problema de 'onde eu clico?' sem perder 5 minutos."
+
+**O que menos gostou**:
+> "A Fase 3 (Blindagem) muito curta. Seguranca, etica, responsabilidade — sao temas que socios vao me cobrar. 15 minutos nao e suficiente para me dar argumentos completos."
+
+**Sugestao**:
+> "Material pos-curso mais robusto. Um PDF com TODOS os prompts, o protocolo, as regras, passo a passo de cada ferramenta. Algo que eu possa entregar pros 4 juniors que nao estavam no curso e eles consigam seguir."
+
+**Vai usar na segunda-feira?**: SIM
+> "Vou criar protocolo interno de uso de IA para minha equipe. Basear nas 5 regras + protocolo de pesquisa. Entregar na reuniao de segunda."
+
+### Insight para o curso:
+**[MELHORIA]**: O Manual Rapido (PDF) ja existe. Garantir que ele seja enviado por e-mail no mesmo dia. Incluir checklist imprimivel para coordenadores repassarem a equipe.
+
+---
+
+## Participante 4: Dra. Lucia Mendes, 42 anos — BSB (presencial)
+**Cargo**: Advogada senior, especialista em ACP, administrativo
 **Perfil pre-curso**: Insegura com tecnologia
 
 ### Avaliacao
 
-**Nota: 7/10**
+**Nota: 7,5/10**
 
 **O que mais gostou**:
-> "A paciencia do instrutor. Eu estava perdida no primeiro exercicio e ele veio ate mim e me ajudou sem julgamento. O prompt pronto na tela salvou minha vida. E quando vi que a IA funciona IGUAL com dados anonimizados, relaxei. Meu medo era de vazar dados de cliente."
+> "O prompt pronto na tela. Sem ele, eu teria ficado perdida. Copiei, mudei pra minha area (administrativo), e recebi analise de teses para impugnacao de penalidade em licitacao. A IA entendeu a Lei 14.133. Fiquei surpresa."
 
 **O que menos gostou**:
-> "A velocidade. Pra mim foi rapido demais. Quando eu terminava um exercicio, a turma ja estava no seguinte. No Exercicio 5 (fluxo completo), minha dupla fez a parte de pesquisa e minuta, mas nao deu tempo de verificar. Ficou incompleto."
+> "A velocidade. Pra mim foi rapido. Quando eu terminava um exercicio, a turma ja estava no seguinte. No Exercicio 5, minha dupla fez pesquisa e minuta, mas nao deu tempo de verificar todos os links."
 
 **Sugestao**:
-> "Podia ter mais tempo nos exercicios. Ou um 'modo lento' pra quem tem mais dificuldade. Talvez trios em vez de duplas — ai o terceiro ajuda quem esta atrasado."
+> "Mais tempo nos exercicios. Ou um 'caminho simplificado' — quem tem mais dificuldade foca em 1 ferramenta so, nao no fluxo combinado. Talvez trios em vez de duplas — o terceiro ajuda quem esta atrasado."
 
 **Vai usar na segunda-feira?**: TALVEZ
-> "Vou tentar usar pra resumir aquela ACP de 80 paginas que estou estudando. Mas preciso de alguem do lado me ajudando nas primeiras vezes. Nao me sinto segura sozinha ainda."
+> "Vou tentar usar pra analisar a impugnacao de penalidade que estou montando. Mas preciso de alguem do lado me ajudando nas primeiras vezes."
 
 ### Insight para o curso:
-**[MELHORIA IDENTIFICADA]**: Considerar trios (nao duplas) quando a turma tiver nivel muito desigual. Ou: criar "buddy system" — cada participante inseguro e pareado com um avancado para as primeiras 2 semanas pos-curso.
+**[MELHORIA]**: As duplas de apoio pos-curso atendem isso. Garantir que Dra. Lucia seja pareada com alguem entusiasta. O buddy system e essencial para perfis inseguros.
 
 ---
 
-## Participante 5: Dr. Paulo Henrique, 38 anos
-**Cargo**: Advogado pleno, foco em recursos
+## Participante 5: Dr. Paulo Henrique, 38 anos — GO (online)
+**Cargo**: Advogado pleno, trabalhista, foco em recursos
 **Perfil pre-curso**: Neutro, tentou IA e desistiu
 
 ### Avaliacao
@@ -122,73 +122,73 @@ Cada participante da:
 **Nota: 8,5/10**
 
 **O que mais gostou**:
-> "O momento em que errei na noite entre os 2 dias. Tentei pesquisar jurisprudencia sem ativar busca web, deu tudo errado. No dia seguinte, no aquecimento, contei o que aconteceu e o instrutor usou meu erro como exemplo positivo: 'Isso e exatamente o protocolo funcionando — voce lembrou do metodo e corrigiu.' Me senti inteligente por ter errado. Nunca vi isso em curso."
+> "Ter errado entre o Dia 1 e o Dia 2. Tentei pesquisar jurisprudencia do TRT sem ativar busca web. Deu tudo errado. Lembrei do protocolo, ativei Deep Research, deu certo. Contei no aquecimento e o instrutor usou como exemplo positivo: 'Isso e o protocolo funcionando.' Me senti inteligente por ter errado. Nunca vi isso em curso."
 
 **O que menos gostou**:
-> "Faltou algo sobre RECURSOS ORDINARIOS especificamente. O caso ficticio era sobre contestacao, mas meu dia a dia e recurso. Queria ter feito o fluxo completo com uma peca recursal."
+> "Faltou algo especifico sobre RECURSOS ORDINARIOS. O caso ficticio era sobre contestacao, mas meu dia a dia e recurso. No Exercicio 5, escolhi o caso trabalhista mas queria uma versao recursal."
 
 **Sugestao**:
-> "Ter 2 casos ficticios no Exercicio 5: um de contestacao e outro de recurso. Cada dupla escolhe o que e mais relevante pro dia a dia."
+> "Incluir versao recursal do Caso 1: empresa condenada, precisa recorrer. Quem trabalha com recursos escolhe essa versao."
 
 **Vai usar na segunda-feira?**: SIM
-> "Vou refazer o exercicio sozinho com um caso real de recurso ordinario. Ja tenho 3 sentencas pra recorrer. Vou usar o fluxo combinado: pesquisa no ChatGPT + minuta no Claude."
+> "Vou refazer o exercicio com caso real de recurso ordinario. Ja tenho 3 sentencas pra recorrer. Fluxo combinado: pesquisa no ChatGPT + minuta no Claude."
 
 ### Insight para o curso:
-**[MELHORIA IDENTIFICADA]**: No Exercicio 5, oferecer OPCAO de caso: Caso 1 (contestacao) ou versao recursal do mesmo caso (banco condenado, precisa recorrer). Dupla escolhe. Mais relevante para cada perfil.
+**[MELHORIA]**: Criar versao recursal como opcao adicional no Exercicio 5 (Caso 1B). Baixa dificuldade de implementacao, alto impacto para advogados recurlistas.
 
 ---
 
-## Participante 6: Dra. Isabela Rocha, 31 anos
-**Cargo**: Advogada junior, contencioso aereo
+## Participante 6: Dra. Isabela Rocha, 31 anos — SP (online)
+**Cargo**: Advogada junior, consumidor
 **Perfil pre-curso**: Curiosa mas cetica
 
 ### Avaliacao
 
-**Nota: 8/10**
+**Nota: 8,5/10**
 
 **O que mais gostou**:
-> "A honestidade. O curso nao vendeu IA como milagre. Mostrou que 30% dos links sao falsos, que precisa verificar tudo, que tem protocolo. Isso me deu confianca porque sei os LIMITES. E o exercicio de verificacao de links — quando vi que 4 de 5 funcionavam com Deep Research — foi o ponto de virada."
+> "A honestidade. O curso nao vendeu IA como milagre. Mostrou que sem busca web e zero, com busca web e 70-80%. Isso me deu confianca porque sei os LIMITES. E o Caso 2 (negativacao indevida) — era exatamente minha area. Pela primeira vez num curso, trabalhei com algo que FACO todo dia."
 
 **O que menos gostou**:
-> "Os casos ficticios sao todos trabalhistas/bancarios. Eu trabalho com contencioso de companhia aerea. Dano moral por atraso, cancelamento, extravio. Fiquei adaptando mentalmente o tempo todo. Podia ter um exercicio com caso aereo."
+> "Ser online limita a interacao. No compartilhamento, eu escrevia no chat mas as vezes o instrutor nao lia na hora. Talvez ter alguem dedicado so para ler o chat."
 
 **Sugestao**:
-> "Incluir pelo menos 1 exercicio com caso de defesa de companhia aerea. O escritorio nao e so banco — tem a Voo Brasil tambem. Alias, o Caso 2 (equiparacao de comissarios) existe mas nunca foi usado nos exercicios. Por que?"
+> "Gravar o curso para quem quiser rever depois. Eu perderia menos tempo anotando se soubesse que podia rever."
 
 **Vai usar na segunda-feira?**: SIM
-> "Vou usar o CLEAR pra montar contestacao padrao de acao de dano moral por atraso de voo. Temos 200 iguais. Se a IA gerar template bom, replico."
+> "Vou usar o CLEAR pra montar contestacao padrao de dano moral por negativacao. Temos muitas iguais. Se o template funcionar, replico."
 
 ### Insight para o curso:
-**[MELHORIA IDENTIFICADA]**: Usar o Caso 2 (companhia aerea) como opcao no Exercicio 5. Participantes que trabalham com aereo escolhem Caso 2. Ja existe no material — so precisa ser oferecido como alternativa.
+**[MELHORIA]**: Gravar o curso (Zoom recording) e disponibilizar por 30 dias. Baixo esforco, alto valor para participantes online. Considerar designar monitor de chat em SP e GO.
 
 ---
 
-## Participante 7: Dr. Marcos Augusto, 48 anos
+## Participante 7: Dr. Marcos Augusto, 48 anos — BSB (presencial)
 **Cargo**: Socio, gestao do acervo
 **Perfil pre-curso**: Interessado em eficiencia, pouco em tecnologia
 
 ### Avaliacao
 
-**Nota: 8/10**
+**Nota: 8,5/10**
 
 **O que mais gostou**:
-> "A analise de risco. Quando vi o Claude gerando cenarios com probabilidades e exposicao financeira para o acervo todo... isso e o que eu preciso pra reportar pro banco. Hoje faco isso em Excel e demoro 2 dias. Se a IA faz em 10 minutos com qualidade razoavel, muda minha vida."
+> "O Exercicio 5B — escala. Quando vi como transformar 1 contestacao em modelo replicavel com variaveis, pensei: isso e o que eu preciso pro relatorio do banco. Modelo padronizado. E o plano do escritorio no final — identificar peca-alvo por area e lider por cidade — saiu de la com ACOES CONCRETAS."
 
 **O que menos gostou**:
-> "Senti falta de algo sobre GESTAO. Como organizar o uso de IA na equipe. Quem usa, quando, como padronizar. O curso ensina a USAR, mas nao ensina a IMPLEMENTAR no escritorio."
+> "Queria mais sobre GESTAO. Como organizar o uso de IA na equipe. Fluxo de trabalho, metricas, responsabilidades. O curso ensina a USAR, mas nao ensina a IMPLEMENTAR no escritorio como processo."
 
 **Sugestao**:
-> "Adicionar mini-bloco de 15 minutos: 'Como implementar IA no escritorio'. Quem e responsavel, qual o fluxo, como garantir que todos seguem o protocolo, como medir resultado. Coisa de gestor."
+> "Mini-bloco de 15 minutos: 'Como implementar IA no escritorio'. Quem e responsavel, qual o fluxo, como medir resultado em 30 dias. Coisa de gestor."
 
 **Vai usar na segunda-feira?**: SIM
-> "Vou pedir ao Fernando (coordenador) para testar o fluxo em 10 contestacoes essa semana. Se funcionar, apresento ao banco como ganho de eficiencia no proximo relatorio mensal."
+> "Vou pedir ao Fernando para testar o fluxo em 10 contestacoes essa semana. Se funcionar, apresento ao banco como ganho de eficiencia."
 
 ### Insight para o curso:
-**[MELHORIA IDENTIFICADA]**: Considerar mini-bloco de IMPLEMENTACAO para socios/gestores. Pode ser integrado ao Bloco 7 (Compromisso) ou ao Buffer. Perguntas-chave: Quem e o "campea de IA" do escritorio? Qual o primeiro processo a ser automatizado? Como medir o resultado em 30 dias?
+**[MELHORIA]**: Plano do escritorio (Protocolo Ativo) ja cobre parcialmente. Para socios, considerar mini-sessao de 30 min pos-curso focada em implementacao e metricas.
 
 ---
 
-## Participante 8: Dra. Ana Paula Castro, 33 anos
+## Participante 8: Dra. Ana Paula Castro, 33 anos — BSB (presencial)
 **Cargo**: Advogada plena, pareceres e consultivo
 **Perfil pre-curso**: Neutra
 
@@ -197,24 +197,24 @@ Cada participante da:
 **Nota: 9/10**
 
 **O que mais gostou**:
-> "O Extended Thinking do Claude. Quando colei um contrato bancario e pedi analise de risco com Extended Thinking, o que voltou foi IMPRESSIONANTE. 3 paginas de analise que eu levaria meio dia pra fazer. E a qualidade era 80-90% do que eu entregaria. So precisava ajustar tom e adicionar detalhes do caso."
+> "O raciocinio aprofundado do Claude. Quando colei contrato e pedi analise de risco com raciocinio aprofundado, o resultado foi IMPRESSIONANTE. 3 paginas de analise que eu levaria meio dia. E a qualidade era 80-90% do que eu entregaria. So ajustar tom e adicionar detalhes do caso."
 
 **O que menos gostou**:
-> "O intervalo de 15 minutos ainda e pouco. Eu queria continuar testando coisas, mas tinha que voltar. Talvez 20 minutos? Ou intervalo 'produtivo' onde quem quiser pode continuar experimentando."
+> "O intervalo poderia ter sido 'produtivo' — quem quisesse continuava experimentando. Eu estava no meio de algo quando tocou pra voltar."
 
 **Sugestao**:
-> "Incluir exercicio de REVISAO DE PECA com IA. Tipo: dar uma contestacao ruim pra IA e pedir pra ela encontrar os problemas. Isso e o que eu faco todo dia — revisar peca de junior. Quero saber se a IA me ajuda nisso."
+> "Exercicio de REVISAO de peca com IA. Dar contestacao ruim pra IA e pedir pra ela encontrar problemas. Isso e o que eu faco todo dia — revisar peca de junior."
 
 **Vai usar na segunda-feira?**: SIM
-> "Vou usar o Claude pra analisar o contrato de terceirizacao que o banco mandou semana passada. 45 paginas. Com Extended Thinking, deve sair analise de risco em 15 minutos."
+> "Vou analisar contrato de terceirizacao de 45 paginas com raciocinio aprofundado. Deve sair analise de risco em 15 minutos."
 
 ### Insight para o curso:
-**[MELHORIA IDENTIFICADA]**: Exercicio de REVISAO COM IA seria muito valioso. A Carta 6 (Revisao de Peca) existe no baralho, mas nunca e usada como exercicio guiado. Considerar incluir como parte do Exercicio 5 — apos gerar a contestacao, pedir a outra IA para REVISAR e apontar falhas.
+**[MELHORIA]**: Carta 6 (Revisao de Peca) existe no baralho mas nao e usada como exercicio. Considerar mini-exercicio de revisao integrado ao Exercicio 4 ou 5.
 
 ---
 
-## Participante 9: Dr. Thiago Lima, 27 anos
-**Cargo**: Advogado junior, recente na equipe (6 meses)
+## Participante 9: Dr. Thiago Lima, 27 anos — BSB (presencial)
+**Cargo**: Advogado junior, recente na equipe (6 meses), trabalhista
 **Perfil pre-curso**: Entusiasmado, geracao digital
 
 ### Avaliacao
@@ -222,199 +222,360 @@ Cada participante da:
 **Nota: 9,5/10**
 
 **O que mais gostou**:
-> "Tudo. Sou da geracao que ja usa IA, mas usava errado. O framework CLEAR transformou meus prompts. E o protocolo de pesquisa — eu nao sabia que Deep Research existia. Estava usando ChatGPT normal e reclamando que inventava jurisprudencia. CLARO que inventava, eu nao ativava busca web!"
+> "Tudo. Eu ja usava IA, mas usava errado. O framework CLEAR transformou meus prompts. E o protocolo de pesquisa — eu nao sabia que Deep Research existia. Estava usando ChatGPT normal e reclamando que inventava jurisprudencia. CLARO que inventava, eu nao ativava busca web! E o fluxo combinado e genial — cada ferramenta com sua forca."
 
 **O que menos gostou**:
-> "Podia ter sido mais ambicioso na parte de automacao. Criar GPTs personalizados, Claude Projects, bibliotecas de prompts. Entendo que nao cabe em 6 horas, mas queria ter pelo menos comecado."
+> "Podia ter ido mais fundo. Criar projetos no Claude, GPTs personalizados, biblioteca de prompts do escritorio. Entendo que nao cabe em 3 horas, mas queria comecar."
 
 **Sugestao**:
-> "Oferecer 'modulo avancado' opcional de 2 horas pra quem quiser ir mais fundo: criar GPT customizado do escritorio, configurar Claude Project com instrucoes do caso, montar biblioteca de prompts compartilhada."
+> "Modulo avancado de 2 horas. Quero criar GPT do escritorio com instrucoes de cada area. Claude Project com modelo de contestacao."
 
 **Vai usar na segunda-feira?**: JA ESTOU USANDO
-> "Ontem a noite refiz todos os exercicios sozinho. Criei prompt CLEAR pra cada tipo de peca que faco. Hoje de manha gerei 2 contestacoes de teste. Segunda vou mostrar pro Fernando."
+> "Ontem a noite refiz todos os exercicios. Criei prompt CLEAR para cada tipo de peca. Hoje de manha gerei 2 contestacoes de teste."
 
 ### Insight para o curso:
-**[MELHORIA IDENTIFICADA]**: Criar oferta de "Modulo Avancado" de 2h — pago separado ou incluso na mentoria. Para participantes que querem ir alem: GPTs personalizados, Claude Projects, biblioteca de prompts, automacao. Ja existe na proposta (Modulo 3 e 4) — pode ser mini-versao.
+**[MELHORIA]**: Modulo avancado (2h) para participantes que querem ir alem. Ja esta na proposta como extensao. Oferecer 2-3 semanas apos o curso basico.
 
 ---
 
-## Participante 10: Dra. Patricia Gomes, 39 anos
-**Cargo**: Advogada senior, estrategia processual
+## Participante 10: Dra. Patricia Gomes, 39 anos — GO (online)
+**Cargo**: Advogada senior, estrategia processual, tributario
 **Perfil pre-curso**: Cetica metodica
-
-### Avaliacao
-
-**Nota: 7/10**
-
-**O que mais gostou**:
-> "A parte de seguranca. Muitos cursos de IA vendem maravilha e ignoram risco. Esse nao. Mostrou os casos de sancao, deu regras claras, fez exercicio pratico de anonimizacao. Isso me deu confianca de que posso usar sem colocar o escritorio em risco."
-
-**O que menos gostou**:
-> "A abertura. Sala escura, IA gerando contestacao em silencio... eu entendi o efeito dramatico, mas achei forçado. Parecia show de magica. Eu preferiria uma abertura mais direta: 'Isso e o que a IA faz, vamos aprender a usar com seguranca.' Menos teatro, mais substancia."
-
-**Sugestao**:
-> "Ter dados QUANTITATIVOS sobre o impacto. Quanto tempo se economiza? Estudos de caso de escritorios que implementaram? ROI? A proposta menciona '3-5 horas semanais por profissional' mas no curso nao vi esse dado fundamentado."
-
-**Vai usar na segunda-feira?**: TALVEZ
-> "Vou observar o Thiago e a Camila usando por 2 semanas. Se os resultados forem consistentes, implemento na minha rotina. Nao vou adotar por impulso."
-
-### Insight para o curso:
-**[MELHORIA IDENTIFICADA]**: Incluir slide com DADOS DE IMPACTO fundamentados. Pesquisar: Thomson Reuters Legal AI report 2025/2026, Stanford HAI data, casos de escritorios que publicaram resultados. Nao precisa de muito — 3-4 dados concretos com fonte.
-
----
-
-## Participante 11: Dr. Roberto Dias, 44 anos
-**Cargo**: Advogado senior, audiencias
-**Perfil pre-curso**: Curioso mas ocupado
 
 ### Avaliacao
 
 **Nota: 7,5/10**
 
 **O que mais gostou**:
-> "A Carta 12 — Checklist de Audiencia. Quando vi o prompt CLEAR para gerar checklist de audiencia personalizado por caso, pensei: isso vai me poupar 30 minutos antes de CADA audiencia. E eu tenho 3 por semana. Faz a conta: 6 horas por mes economizadas so com isso."
+> "A parte de seguranca, mesmo curta. Muitos cursos de IA vendem maravilha e ignoram risco. Esse nao. As 5 regras, o exemplo de anonimizacao, a nota de rodape modelo — pratico e aplicavel. E os dados de impacto no inicio (Thomson Reuters, Stanford HAI) deram credibilidade."
 
 **O que menos gostou**:
-> "O curso e em 2 dias (sexta + sabado). Sexta a tarde e horrivel pra advogado — estou pensando nos prazos da semana. E sabado de manha e descanso. Preferiria 2 manhas de sabado, ou um unico sabado intensivo."
+> "A abertura com demo silenciosa. Achei forçada. Sala escura, IA gerando parecer em silencio... entendi o efeito dramatico, mas parecia show. Preferiria algo mais direto."
 
 **Sugestao**:
-> "Repensar o formato. 2 sabados de manha (9h-12h) seria mais produtivo. Ou sexta a noite (19h-22h) + sabado de manha. Sexta-feira a tarde e o pior horario possivel para advogado."
+> "Mais dados quantitativos. ROI, tempo economizado por tipo de peca, estudos de caso de escritorios que implementaram. 3-4 dados concretos fundamentados."
 
-**Vai usar na segunda-feira?**: SIM
-> "Vou gerar checklist de audiencia pros 3 casos da semana que vem. Se funcionar, padronizo e compartilho com a equipe."
+**Vai usar na segunda-feira?**: TALVEZ
+> "Vou observar o Thiago e a Camila usando por 2 semanas. Se os resultados forem consistentes, implemento na minha rotina tributaria."
 
 ### Insight para o curso:
-**[MELHORIA IDENTIFICADA]**: Questionar o formato SEXTA + SABADO com o escritorio. Alternativas: 2 sabados de manha, ou sexta noite + sabado manha. Ou ate online sincrono. Horario impacta diretamente na energia e absorcao.
+**[MELHORIA]**: Os dados de impacto ja foram incluidos na v5.0 (slide no inicio). Para ceticos como Patricia, o follow-up de 30 dias com metricas reais do escritorio e o que vai convencer.
 
 ---
 
-## Participante 12: Dra. Marina Souza, 36 anos
+## Participante 11: Dr. Roberto Dias, 44 anos — BSB (presencial)
+**Cargo**: Advogado senior, audiencias, trabalhista
+**Perfil pre-curso**: Curioso mas ocupado
+
+### Avaliacao
+
+**Nota: 8/10**
+
+**O que mais gostou**:
+> "A Carta 12 — Checklist de Audiencia. Quando vi o prompt CLEAR para checklist personalizado por caso, pensei: isso me poupa 30 minutos antes de CADA audiencia. 3 audiencias por semana. 6 horas por mes. E o exercicio relampago de comunicacao — escrever e-mail em 3 minutos com IA. Vou usar todo dia."
+
+**O que menos gostou**:
+> "Quinta a tarde nao e o melhor horario pra advogado. Saindo de uma semana cheia, pensando em prazos. Sexta de manha foi melhor."
+
+**Sugestao**:
+> "Se possivel, fazer tudo na sexta. Ou 2 sextas de manha. Quinta a tarde compete com o cansaco da semana."
+
+**Vai usar na segunda-feira?**: SIM
+> "Checklist de audiencia pros 3 casos da semana. Se funcionar, padronizo e compartilho."
+
+### Insight para o curso:
+**[MELHORIA]**: Horario nao e decisao do instrutor — depende do escritorio. Mas registrar como feedback para futuras edicoes. Sexta manha e mais produtivo.
+
+---
+
+## Participante 12: Dra. Marina Souza, 36 anos — BSB (presencial)
 **Cargo**: Advogada plena, relatorios e compliance
 **Perfil pre-curso**: Neutra, trabalha com dados
+
+### Avaliacao
+
+**Nota: 9/10**
+
+**O que mais gostou**:
+> "A Carta 9 — Resumo para Cliente. Eu gasto 2 DIAS por mes montando relatorio pro banco. Testei com CLEAR e saiu rascunho de 80% de qualidade em 10 minutos. So ajustar numeros e graficos. Vai transformar minha rotina. E o exercicio de e-mail executivo — 3 minutos pra algo que levo 20."
+
+**O que menos gostou**:
+> "Podia ter mais exemplos de comunicacao. E-mails, relatorios, propostas de acordo. O escritorio vive disso."
+
+**Sugestao**:
+> "Mini-exercicio de relatorio: 'Monte relatorio executivo mensal para o banco usando dados do caso ficticio.' 10 minutos. Pratico."
+
+**Vai usar na segunda-feira?**: SIM
+> "Relatorio mensal de janeiro. Estou atrasada. Se sair bom, mostro pro Dr. Marcos como case de sucesso."
+
+### Insight para o curso:
+**[MELHORIA]**: A Carta 9 ja atende. Para escritorios com foco em relatorios corporativos, considerar exercicio especifico no modulo avancado.
+
+---
+
+## Participante 13: Dr. Eduardo Lopes, 40 anos — SP (online)
+**Cargo**: Advogado pleno, contencioso civel
+**Perfil pre-curso**: Neutro
+
+### Avaliacao
+
+**Nota: 8/10**
+
+**O que mais gostou**:
+> "O Caso 2 (negativacao indevida). Trabalho com defesa de empresas de telecom em SP. Quando a IA listou as teses de defesa — Sumula 385, exercicio regular de direito, ausencia de nexo — era exatamente o que uso. E com jurisprudencia do TJ-SP, nao do TJDFT. A IA soube diferenciar."
+
+**O que menos gostou**:
+> "Online em SP, eramos 5 numa sala. O audio do Zoom captava conversa de todos. Ficava confuso. Podia ter headsets individuais."
+
+**Sugestao**:
+> "Pro online funcionar melhor: cada participante com fone/microfone individual, mesmo se estiver em sala conjunta."
+
+**Vai usar na segunda-feira?**: SIM
+> "Contestacao padrao para caso de negativacao com template CLEAR. Temos lote grande."
+
+### Insight para o curso:
+**[MELHORIA]**: Para salas com multiplos participantes online: recomendar headsets individuais no e-mail pre-curso.
+
+---
+
+## Participante 14: Dra. Fernanda Lima, 32 anos — GO (online)
+**Cargo**: Advogada junior, administrativo
+**Perfil pre-curso**: Curiosa
 
 ### Avaliacao
 
 **Nota: 8,5/10**
 
 **O que mais gostou**:
-> "A Carta 9 — Relatorio Mensal. Eu gasto 2 DIAS por mes montando o relatorio pro banco. Quando testei com IA usando CLEAR, saiu rascunho de 80% de qualidade em 10 minutos. Preciso so ajustar numeros e adicionar grafico. Isso vai transformar minha rotina."
+> "O Caso 3 (licitacao). Trabalho com contencioso administrativo em Goiania e o caso era EXATAMENTE o tipo de coisa que faco. A IA conhece a Lei 14.133. Fiquei impressionada com a analise de proporcionalidade que gerou."
 
 **O que menos gostou**:
-> "Podia ter mais exemplos de COMUNICACAO com cliente. E-mails, relatorios, propostas de acordo. O escritorio vive disso. As cartas 9 e 10 cobrem, mas no curso em si nao teve exercicio de comunicacao."
+> "No Exercicio 5, eramos individuais (online). Queria ter feito em dupla como os presenciais. O chat nao substitui a troca ao vivo."
 
 **Sugestao**:
-> "Criar exercicio rapido (10 min) de comunicacao: 'O banco quer resposta AGORA sobre a sentenca de hoje. Use IA para redigir e-mail executivo em 5 minutos.' Isso e realidade diaria."
+> "Para online: criar salas de breakout no Zoom para exercicios em dupla. Simularia a experiencia presencial."
 
 **Vai usar na segunda-feira?**: SIM
-> "Vou usar pra montar o relatorio mensal de janeiro que estou atrasada. Se sair bom, mostro pro Dr. Marcos como caso de sucesso."
+> "Impugnacao de penalidade de licitacao que estou montando. Vou testar o fluxo combinado."
 
 ### Insight para o curso:
-**[MELHORIA IDENTIFICADA]**: Incluir micro-exercicio de comunicacao (5-10 min). Pode ser no buffer do Dia 1 ou integrado ao Bloco 3: "Redigam e-mail executivo ao banco sobre resultado de audiencia. 3 paragrafos. Usem IA. Tempo: 5 minutos." Pratico, rapido, aplicavel imediatamente.
+**[MELHORIA]**: Breakout rooms no Zoom para exercicios em dupla online. Implementacao facil, melhora experiencia significativamente.
 
 ---
 
-# CONSOLIDACAO DAS OPINIOES
+## Participante 15: Dr. Andre Santos, 45 anos — SP (online)
+**Cargo**: Advogado senior, comercial
+**Perfil pre-curso**: Interessado
+
+### Avaliacao
+
+**Nota: 7,5/10**
+
+**O que mais gostou**:
+> "A Carta 4 — Contrato/Minuta. Minha vida e analisar e redigir contratos comerciais. O prompt CLEAR para contrato e exatamente o que preciso. E o raciocinio aprofundado do Claude para analise de risco contratual — impressionante."
+
+**O que menos gostou**:
+> "Os 3 casos ficticios sao trabalhista, consumidor e administrativo. Nenhum de direito comercial. Fiquei adaptando o Caso 2 mentalmente para contrato, mas nao e a mesma coisa."
+
+**Sugestao**:
+> "Incluir caso ficticio de direito comercial ou societario. Ou pelo menos: no Exercicio 5, permitir que quem trabalha com contratos use um caso proprio em vez do ficticio."
+
+**Vai usar na segunda-feira?**: SIM
+> "Analise de contrato de distribuicao que estou revisando. 30 paginas. Claude com raciocinio aprofundado."
+
+### Insight para o curso:
+**[MELHORIA]**: No Exercicio 5, permitir "caso proprio anonimizado" como 4a opcao. Atende areas sem caso ficticio especifico.
+
+---
+
+## Participante 16: Dra. Renata Costa, 34 anos — GO (online)
+**Cargo**: Advogada plena, tributario
+**Perfil pre-curso**: Cetica
+
+### Avaliacao
+
+**Nota: 7/10**
+
+**O que mais gostou**:
+> "Os dados de impacto no inicio. 'Thomson Reuters: 4h/semana.' 'Stanford: 17-33% de erro.' Isso me deu contexto realista. E as 5 regras de seguranca — praticas e aplicaveis."
+
+**O que menos gostou**:
+> "Nenhum caso ficticio de tributario. Nenhum exercicio com legislacao tributaria. Fiquei fazendo adaptacoes mentais o tempo todo. E difícil se engajar quando o conteudo nao fala da sua area."
+
+**Sugestao**:
+> "Caso ficticio tributario: auto de infracao por sonegacao, defesa fiscal. Ou pelo menos: exemplo de prompt CLEAR especifico pra tributario nos slides."
+
+**Vai usar na segunda-feira?**: TALVEZ
+> "Vou testar com uma impugnacao a auto de infracao que estou montando. Mas preciso ver se a IA conhece CTN e legislacao complementar de GO."
+
+### Insight para o curso:
+**[MELHORIA]**: As cartas CLEAR ja sao universais e cobrem tributario. Para a proxima edicao, considerar caso ficticio tributario ou adaptar o Caso 3 (administrativo) para incluir componente fiscal.
+
+---
+
+## Participante 17: Dr. Gustavo Almeida, 37 anos — SP (online)
+**Cargo**: Advogado pleno, trabalhista
+**Perfil pre-curso**: Neutro
+
+### Avaliacao
+
+**Nota: 8/10**
+
+**O que mais gostou**:
+> "O Exercicio 3 — verificacao de links. Sou cuidadoso com fontes. Quando vi que a porcentagem muda tanto dependendo da ferramenta e configuracao, entendi o valor do protocolo. E a frase de autochecagem — vou usar em TODA interacao com IA."
+
+**O que menos gostou**:
+> "O chat do Zoom nao e bom para participacao rica. Mensagens se perdem, nao da pra formatar. Algo como Mentimeter ou Google Forms para compartilhamento seria melhor."
+
+**Sugestao**:
+> "Usar ferramenta de interacao (Mentimeter, Slido) para compartilhamento hibrido. Mais organizado que chat."
+
+**Vai usar na segunda-feira?**: SIM
+> "Fluxo combinado em 3 contestacoes trabalhistas que estao na minha fila."
+
+### Insight para o curso:
+**[MELHORIA]**: Mentimeter ou Slido para dinamicas de compartilhamento hibrido. Melhora experiencia online significativamente. Avaliar custo e complexidade.
+
+---
+
+## Participante 18: Dra. Juliana Pereira, 30 anos — GO (online)
+**Cargo**: Advogada junior, civel
+**Perfil pre-curso**: Neutra
+
+### Avaliacao
+
+**Nota: 8/10**
+
+**O que mais gostou**:
+> "O Micro-CLEAR no comeco. Sem ele, eu teria ficado perdida no Exercicio 1. E as 12 cartas — ja identifiquei 4 que vou usar na proxima semana: Carta 1 (Peticao), Carta 3 (Parecer), Carta 5 (Risco), Carta 10 (E-mail)."
+
+**O que menos gostou**:
+> "De Goiania, as vezes o audio travava e eu perdia pedacos. Acho que o problema era da nossa internet, nao do curso. Mas atrapalhou."
+
+**Sugestao**:
+> "Disponibilizar gravacao e slides apos o curso. Quem perdeu algo pode rever."
+
+**Vai usar na segunda-feira?**: SIM
+> "Parecer de viabilidade para caso civel que estou estudando. Carta 3 com CLEAR."
+
+### Insight para o curso:
+**[MELHORIA]**: Gravacao do curso + slides em PDF enviados por e-mail no follow-up. Essencial para formato hibrido.
+
+---
+
+# CONSOLIDACAO DAS OPINIOES v5.0
 
 ## Notas
 
-| Participante | Nota | Perfil inicial |
-|-------------|------|----------------|
-| Dr. Ricardo (55, socio) | 7,5 | Resistente → Convertido |
-| Dra. Camila (29, junior) | 9,0 | Curiosa → Entusiasta |
-| Dr. Fernando (35, coord) | 8,0 | Neutro → Implementador |
-| Dra. Lucia (42, senior) | 7,0 | Insegura → Cautelosa positiva |
-| Dr. Paulo (38, pleno) | 8,5 | Neutro → Convertido |
-| Dra. Isabela (31, junior) | 8,0 | Cetica → Convencida |
-| Dr. Marcos (48, socio) | 8,0 | Gestor → Implementador |
-| Dra. Ana Paula (33, plena) | 9,0 | Neutra → Entusiasta |
-| Dr. Thiago (27, junior) | 9,5 | Entusiasmado → Evangelista |
-| Dra. Patricia (39, senior) | 7,0 | Cetica → Observadora |
-| Dr. Roberto (44, senior) | 7,5 | Curioso → Pratico |
-| Dra. Marina (36, plena) | 8,5 | Neutra → Aplicadora |
+| # | Participante | Cidade | Nota | Perfil inicial | Perfil final |
+|---|-------------|--------|------|----------------|--------------|
+| 1 | Dr. Ricardo (55, socio) | BSB | 8,0 | Resistente | Convertido |
+| 2 | Dra. Camila (29, junior) | SP | 9,5 | Curiosa | Evangelista |
+| 3 | Dr. Fernando (35, coord) | BSB | 8,5 | Neutro | Implementador |
+| 4 | Dra. Lucia (42, senior) | BSB | 7,5 | Insegura | Cautelosa positiva |
+| 5 | Dr. Paulo (38, pleno) | GO | 8,5 | Neutro | Convertido |
+| 6 | Dra. Isabela (31, junior) | SP | 8,5 | Cetica | Convencida |
+| 7 | Dr. Marcos (48, socio) | BSB | 8,5 | Gestor | Implementador |
+| 8 | Dra. Ana Paula (33, plena) | BSB | 9,0 | Neutra | Entusiasta |
+| 9 | Dr. Thiago (27, junior) | BSB | 9,5 | Entusiasmado | Evangelista |
+| 10 | Dra. Patricia (39, senior) | GO | 7,5 | Cetica | Observadora |
+| 11 | Dr. Roberto (44, senior) | BSB | 8,0 | Curioso | Pratico |
+| 12 | Dra. Marina (36, plena) | BSB | 9,0 | Neutra | Aplicadora |
+| 13 | Dr. Eduardo (40, pleno) | SP | 8,0 | Neutro | Pratico |
+| 14 | Dra. Fernanda (32, junior) | GO | 8,5 | Curiosa | Engajada |
+| 15 | Dr. Andre (45, senior) | SP | 7,5 | Interessado | Cauteloso positivo |
+| 16 | Dra. Renata (34, plena) | GO | 7,0 | Cetica | Observadora |
+| 17 | Dr. Gustavo (37, pleno) | SP | 8,0 | Neutro | Pratico |
+| 18 | Dra. Juliana (30, junior) | GO | 8,0 | Neutra | Engajada |
 
-**Media geral: 8,1/10**
-**Desvio padrao: 0,76**
+**Media geral: 8,2/10**
+**Desvio padrao: 0,66**
+
+## Por cidade
+
+| Cidade | Media | N |
+|--------|-------|---|
+| BSB (presencial) | 8,5 | 8 |
+| SP (online) | 8,3 | 5 |
+| GO (online) | 7,9 | 5 |
+
+**Observacao**: Presenciais tiveram nota ligeiramente superior. GO teve nota menor — possivelmente por problemas de conexao e menor interacao.
 
 ## Taxa de adocao pos-curso
 
 | Resposta | Quantidade | % |
 |----------|-----------|---|
-| SIM, vou usar na segunda | 9 | 75% |
-| JA ESTOU USANDO | 1 | 8% |
-| TALVEZ | 2 | 17% |
+| SIM, vou usar na segunda | 13 | 72% |
+| JA ESTOU USANDO | 2 | 11% |
+| TALVEZ | 3 | 17% |
 | NAO | 0 | 0% |
 
-**Taxa de intencao de uso: 83%** (10 de 12 com certeza ou ja usando)
+**Taxa de intencao de uso: 83%** (15 de 18 com certeza ou ja usando)
+
+## Por area
+
+| Area | Nota media | Satisfacao com material |
+|------|-----------|------------------------|
+| Trabalhista | 8,5 | ALTA — caso ficticio + cartas relevantes |
+| Consumidor/Civel | 8,5 | ALTA — caso ficticio aderente |
+| Administrativo | 8,0 | BOA — caso ficticio aderente |
+| Comercial | 7,5 | MEDIA — sem caso ficticio especifico |
+| Tributario | 7,0 | ABAIXO — sem caso ficticio, adaptacao mental |
+| Pareceres/Compliance | 9,0 | ALTA — cartas muito relevantes |
 
 ---
 
-## TOP 10 MELHORIAS PEDIDAS PELOS OUVINTES
+## TOP 10 MELHORIAS PEDIDAS (v5.0)
 
-### Priorizadas por frequencia e impacto:
-
-| # | Melhoria | Quem pediu | Dificuldade | Impacto |
-|---|----------|-----------|-------------|---------|
-| 1 | Exercicio de ESCALA (gerar em lote) | Ricardo | Media | ALTO |
-| 2 | Mini-exercicio de CRIACAO de prompt CLEAR | Camila | Baixa | ALTO |
-| 3 | PDF pos-curso consolidado ("Manual Rapido") | Fernando | Media | ALTO |
-| 4 | Opcao de caso aereo no Exerc. 5 | Isabela | Baixa | MEDIO |
-| 5 | Exercicio de REVISAO de peca com IA | Ana Paula | Baixa | ALTO |
-| 6 | Mini-bloco de IMPLEMENTACAO (para gestores) | Marcos | Media | ALTO |
-| 7 | Dados quantitativos de impacto com fonte | Patricia | Baixa | MEDIO |
-| 8 | Exercicio de comunicacao/e-mail (5 min) | Marina | Baixa | MEDIO |
-| 9 | Opcao de caso recursal no Exerc. 5 | Paulo | Baixa | MEDIO |
-| 10 | Repensar formato sexta+sabado | Roberto | Alta | MEDIO |
+| # | Melhoria | Quem pediu | Esforco | Impacto |
+|---|----------|-----------|---------|---------|
+| 1 | Gravacao do curso + slides por e-mail | Isabela, Juliana | Baixo | ALTO |
+| 2 | Breakout rooms no Zoom para duplas online | Fernanda | Baixo | ALTO |
+| 3 | Mini-exercicio de CRIACAO de prompt CLEAR | Camila | Baixo | ALTO |
+| 4 | Caso ficticio tributario ou "caso proprio" como opcao | Renata, Andre | Medio | MEDIO |
+| 5 | Modulo avancado (2h) — GPTs, Claude Projects | Thiago | Medio | ALTO |
+| 6 | Monitor de chat dedicado por cidade | Isabela, Eduardo | Baixo | MEDIO |
+| 7 | Headsets individuais para salas compartilhadas | Eduardo | Baixo | MEDIO |
+| 8 | Mentimeter/Slido para compartilhamento hibrido | Gustavo | Medio | MEDIO |
+| 9 | Mini-sessao de implementacao para socios | Marcos | Medio | ALTO |
+| 10 | Expandir BLINDAGEM ou compensar com material escrito | Ricardo, Fernando | Baixo | MEDIO |
 
 ---
 
-## ACOES CONCRETAS PARA v3.3
+## FRASES PARA DEPOIMENTO
 
-### Rapidas (implementar agora):
+> "Quando vi que SEM busca web era zero e COM busca web era 70%, minha perspectiva mudou." — Dr. Ricardo, 55 anos, Socio, BSB
 
-1. **Exercicio de criacao de prompt CLEAR** — Apos demonstracao do CLEAR no Bloco 3, dar 5 min: "Agora VOCE escreva um prompt CLEAR para a tarefa que voce mais faz." Compartilhar 2-3 em voz alta.
+> "O CLEAR foi como acender a luz nos meus prompts." — Dra. Camila, 29 anos, SP
 
-2. **Opcao de caso no Exercicio 5** — Oferecer Caso 1 (bancario/contestacao) OU Caso 2 (aereo/defesa) OU versao recursal. Dupla escolhe.
+> "Me senti inteligente por ter errado. Nunca vi isso em curso." — Dr. Paulo, 38 anos, GO
 
-3. **Micro-exercicio de comunicacao** — No buffer do Dia 1: "Redigam e-mail executivo ao banco sobre resultado de audiencia. 3 paragrafos. IA + CLEAR. 5 minutos. Go."
+> "Isso levaria 3 horas da minha equipe. E com menos jurisprudencia." — Dr. Ricardo, sobre contestacao gerada em 20 min
 
-4. **Dados de impacto com fonte** — Adicionar 1 slide no Bloco 1: "Thomson Reuters 2025: advogados que usam IA economizam em media 4,2h/semana. Stanford HAI: 17-33% de erro mesmo com RAG; busca web + raciocinio reduzem, mas nao eliminam."
+> "A IA entendeu a Lei 14.133. Fiquei surpresa." — Dra. Lucia, 42 anos, BSB
 
-### Medias (proxima versao):
+> "3 audiencias por semana. 30 minutos cada. 6 horas por mes." — Dr. Roberto, 44 anos, BSB
 
-5. **PDF pos-curso "Manual Rapido de IA"** — 5-10 paginas consolidando: protocolo, CLEAR, 5 regras, card onde clicar, frases prontas, nota de rodape. Entregar por e-mail no follow-up.
+> "O curso nao vendeu milagre. Mostrou limites. Isso me deu confianca." — Dra. Isabela, 31 anos, SP
 
-6. **Exercicio de escala** — Adicionar ao Exercicio 5, etapa 4 (opcional, 10 min): "Agora que voce tem 1 contestacao, como transformaria em template para 50? O que muda? O que fica fixo?" Ou integrar ao Bloco 7 como reflexao.
-
-7. **Mini-bloco de implementacao** — Integrar ao Compromisso (Bloco 7): alem do compromisso individual, exercicio coletivo: "Quem e o campea de IA do escritorio? Qual o primeiro processo a automatizar? Como medir resultado em 30 dias?"
-
-### Estruturais (avaliar com escritorio):
-
-8. **Modulo avancado opcional** (2h) — Para quem quer criar GPTs, Claude Projects, biblioteca de prompts. Oferecer como extensao paga ou parte da mentoria.
-
-9. **Formato do curso** — Discutir com escritorio alternativas: 2 sabados de manha, sexta noite + sabado manha, etc.
-
-10. **Buddy system pos-curso** — Parear participante inseguro com avancado para 2 semanas de acompanhamento informal.
+> "Vou usar HOJE. Tenho 3 e-mails atrasados pro banco." — Dra. Marina, 36 anos, BSB
 
 ---
 
-## FRASES DOS OUVINTES PARA USAR COMO DEPOIMENTO
+## v5.0 vs v3.1: O QUE MUDOU NA PERCEPCAO
 
-> "Quando vi que 4 de 5 links funcionavam com Deep Research, minha cabeca mudou." — Dr. Ricardo, 55 anos, Socio
+| Aspecto | v3.1 (12 part., presencial, 6h) | v5.0 (18 part., hibrido, 3h+1h) |
+|---------|------|------|
+| Media de notas | 8,1 | 8,2 |
+| Taxa de intencao de uso | 83% | 83% |
+| Principal elogio | Verificacao de links | Verificacao de links + CLEAR |
+| Principal critica | CLEAR veio tarde, 5 ferramentas demais | BLINDAGEM curta, falta caso tributario |
+| Satisfacao online | N/A | 8,1 (bom, mas abaixo do presencial) |
 
-> "O CLEAR transformou meus prompts. Foi tipo ligar a luz." — Dra. Camila, 29 anos
-
-> "O curso nao vendeu milagre. Mostrou limites. Isso me deu confianca." — Dra. Isabela, 31 anos
-
-> "Eu ja usava IA, mas usava errado. Agora entendi o METODO." — Dr. Thiago, 27 anos
-
-> "Me senti inteligente por ter errado. Nunca vi isso em curso." — Dr. Paulo, 38 anos
-
-> "A contestacao que saiu do Claude com Extended Thinking foi MELHOR do que eu faria em 2 horas." — Dra. Camila, 29 anos
-
-> "450 acoes na fila. 90 segundos cada. Facam a conta." — Dr. Ricardo, repetindo a frase do instrutor
+**Conclusao**: A v5.0 mantem a qualidade da v3.1 em METADE do tempo, com 50% mais participantes, em formato hibrido. Os problemas estruturais (CLEAR tarde, paralisia, excesso de ferramentas) foram resolvidos. As criticas agora sao de GRANULARIDADE (mais casos por area, BLINDAGEM mais longa) — nao de ESTRUTURA.
 
 ---
 
-*Simulacao de ouvintes realizada em 2026-02-06*
-*12 perfis realistas baseados em escritorio de contencioso de massa, Brasilia-DF*
-*Proxima etapa: implementar melhorias da v3.3 e preparar materiais finais*
+*Simulacao de ouvintes v5.0 realizada em 2026-02-06*
+*18 perfis realistas: 8 BSB + 5 SP + 5 GO, 6 areas, formato hibrido*
+*Base: Roteiro v5.0 — O PROTOCOLO — 4 Fases + Protocolo Ativo*

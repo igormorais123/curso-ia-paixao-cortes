@@ -64,6 +64,33 @@
 
 ---
 
+## NotebookLM (notebooklm.google.com)
+
+### Subir Documentos
+- Clique em **"+"** ou **"Adicionar fonte"**
+- Suba PDFs, docs, links de sites
+- Aceita ate 1 milhao de tokens (processos inteiros)
+
+### Melhor Para
+- Processos volumosos (centenas de paginas)
+- Perguntar sobre documentos ja carregados
+- "Resuma os pontos principais desta contestacao"
+
+---
+
+## Gemini (gemini.google.com)
+
+### Deep Research
+- No campo de texto, selecione **"Deep Research"**
+- Pesquisa aprofundada com multiplas fontes (similar ao ChatGPT)
+
+### Melhor Para
+- Documentos digitalizados/escaneados (OCR nativo)
+- Imagens e tabelas em PDFs
+- Integracao com Google Drive/Docs
+
+---
+
 ## REGRAS DE OURO (em todas as ferramentas)
 
 ```

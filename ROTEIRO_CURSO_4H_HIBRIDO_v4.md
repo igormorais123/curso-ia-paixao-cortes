@@ -168,7 +168,7 @@
 | **Claude** (Opus linha atual) | Extended Thinking, textos longos | Pareceres, analise de contratos |
 | **Perplexity** | Fontes nativas | Jurisprudencia com citacao |
 | **NotebookLM** | Documentos longos, 1M tokens | Processos volumosos |
-| **Gemini** (linha atual) | Multimodal | Documentos digitalizados |
+| **Gemini** (Gemini 3) | Deep Research, multimodal, OCR | Documentos digitalizados, imagens, Google Drive |
 
 ---
 
