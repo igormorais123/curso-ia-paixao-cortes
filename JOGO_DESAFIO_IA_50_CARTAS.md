@@ -30,21 +30,21 @@
 
 ---
 
-#### CARTA #1 - Caçador de Jurisprudência
+#### CARTA #1 - Caçador de Jurisprudência (Defesa Bancária)
 **Categoria:** Pesquisa
-**Ferramenta Sugerida:** Perplexity
+**Ferramenta Sugerida:** Perplexity ou ChatGPT com Deep Research
 
 **MISSÃO:**
-Você está montando a fundamentação de uma petição inicial sobre dano moral em relação de consumo.
+Você defende um grande banco em ações trabalhistas de massa. Precisa de jurisprudência favorável sobre cargo de confiança bancário (art. 224, §2º, CLT).
 
 **DESAFIO:**
-Use o Perplexity para encontrar 5 decisões recentes (2024-2025) do TJDFT sobre dano moral em relação de consumo. Liste: número do processo, relator, valor da condenação e tese principal.
+Use Perplexity ou ChatGPT (Deep Research) para encontrar 5 decisões recentes (2024-2026) do TST favoráveis ao banco sobre gerente de agência e cargo de confiança. Cada citação DEVE ter link para o tribunal. Sem link = não usar. Ao final, peça à IA para checar se os links funcionam.
 
 **DICA:**
-Use termos específicos: "TJDFT dano moral consumidor 2024 2025 indenização"
+Use termos: "TST cargo confiança bancário gerente agência art 224 §2º CLT 2024 2025". Sempre use modo thinking/reasoning.
 
 **ENTREGÁVEL:**
-Tabela com 5 decisões e suas informações
+Tabela com 5 decisões, links verificáveis e teses principais
 
 ---
 
@@ -84,39 +84,39 @@ Relatório de tendência com 3 principais insights
 
 ---
 
-#### CARTA #4 - Comparativo de Tribunais
+#### CARTA #4 - Comparativo de Tribunais (Defesa Empresarial)
 **Categoria:** Pesquisa
-**Ferramenta Sugerida:** ChatGPT
+**Ferramenta Sugerida:** ChatGPT com Deep Research ou Perplexity
 
 **MISSÃO:**
-Você está avaliando se vale a pena ajuizar uma ação em Brasília ou na Justiça Federal.
+Você defende uma companhia aérea em ações de equiparação salarial entre bases diferentes. Precisa comparar posições dos TRTs.
 
 **DESAFIO:**
-Peça ao ChatGPT para comparar as posições do TJDFT e do TRF1 sobre prescrição em ações de cobrança contra a Fazenda Pública. Estruture como tabela comparativa.
+Use ChatGPT (Deep Research) ou Perplexity para comparar posições do TRT-10 (Brasília) e TRT-2 (São Paulo) sobre equiparação salarial entre empregados de estabelecimentos diferentes após a reforma trabalhista. TODA citação com link. Peça à IA para autochecar fontes ao final.
 
 **DICA:**
-Especifique: "Compare TJDFT vs TRF1 sobre prescrição quinquenal vs decenal em ações contra a Fazenda Pública"
+Use modo thinking. Especifique: "TRT equiparação salarial estabelecimentos diferentes art 461 CLT reforma trabalhista 2024 2025"
 
 **ENTREGÁVEL:**
-Tabela comparativa com posições de cada tribunal
+Tabela comparativa com posições de cada TRT e links verificáveis
 
 ---
 
-#### CARTA #5 - Busca de Precedente Vinculante
+#### CARTA #5 - Busca de Precedente Vinculante (Defesa)
 **Categoria:** Pesquisa
 **Ferramenta Sugerida:** Perplexity
 
 **MISSÃO:**
-O cliente quer saber se pode cobrar honorários em execução contra a Fazenda mesmo tendo sucumbido em parte.
+Você defende banco em ações de horas extras. Precisa saber se existe precedente vinculante sobre cargo de confiança bancário que ajude na defesa.
 
 **DESAFIO:**
-Use o Perplexity para verificar se existe súmula vinculante, súmula do STJ/STF ou tese de recurso repetitivo sobre honorários advocatícios em casos de sucumbência recíproca.
+Use Perplexity para buscar: súmulas do TST, OJs da SDI e teses de recursos repetitivos sobre jornada de bancário, cargo de confiança (art. 224 CLT) e controle de jornada. Toda citação com link verificável.
 
 **DICA:**
-Pesquise: "súmula STJ STF honorários sucumbência recíproca fazenda pública"
+Pesquise: "súmula TST OJ SDI bancário cargo confiança jornada art 224 CLT". Peça autochecagem ao final.
 
 **ENTREGÁVEL:**
-Lista de precedentes vinculantes encontrados com número e ementa
+Lista de precedentes vinculantes com número, ementa e link
 
 ---
 
@@ -214,57 +214,57 @@ Checklist de admissibilidade pronto para usar
 
 ---
 
-#### CARTA #11 - Contestação Express
+#### CARTA #11 - Contestação Trabalhista Express (Defesa do Banco)
 **Categoria:** Elaboração de Peças
-**Ferramenta Sugerida:** Claude
+**Ferramenta Sugerida:** Claude (Extended Thinking)
 
 **MISSÃO:**
-Você recebeu uma ação de cobrança indevida. O cliente é consumidor sendo cobrado por serviço não contratado.
+Você defende um grande banco. Ex-caixa entrou com reclamação trabalhista pedindo horas extras, intervalo intrajornada e dano moral por metas abusivas.
 
 **DESAFIO:**
-Use o Claude para gerar a estrutura completa de uma contestação: (1) qualificação, (2) síntese dos fatos, (3) preliminares (se houver), (4) mérito com 3 argumentos principais, (5) pedidos, (6) requerimentos.
+Use o Claude (Extended Thinking ativado) para gerar contestação completa: (1) qualificação da reclamada, (2) síntese e impugnação dos fatos, (3) preliminares (prescrição), (4) mérito — impugnação ponto a ponto, (5) teses de defesa, (6) pedidos. Estrutura replicável para casos similares.
 
 **DICA:**
-Forneça contexto: "Cliente consumidor, ação de cobrança de R$ 5.000 por serviço de telefonia nunca contratado."
+Use CLEAR. Contexto: "Banco réu, ex-caixa com 3 anos, alega 7ª e 8ª hora, intervalo de 15min ao invés de 1h, metas abusivas."
 
 **ENTREGÁVEL:**
-Estrutura de contestação com argumentos desenvolvidos
+Contestação trabalhista estruturada e replicável para contencioso de massa
 
 ---
 
-#### CARTA #12 - Petição Inicial Trabalhista
+#### CARTA #12 - Defesa contra Pejotização (Lado da Empresa)
 **Categoria:** Elaboração de Peças
-**Ferramenta Sugerida:** ChatGPT
+**Ferramenta Sugerida:** ChatGPT (modo Reasoning)
 
 **MISSÃO:**
-Funcionário foi contratado como PJ mas trabalhava como CLT (subordinação, horário fixo, exclusividade).
+Você defende empresa de tecnologia parceira do banco. Ex-consultor PJ entrou com ação pedindo reconhecimento de vínculo CLT. A empresa tem contrato de prestação de serviço, NFs emitidas e autonomia comprovada.
 
 **DESAFIO:**
-Estruture uma petição inicial de reclamação trabalhista pedindo reconhecimento de vínculo. Inclua: causa de pedir com elementos da subordinação, pedidos (vínculo, FGTS, 13º, férias, etc.), valor da causa.
+Estruture contestação demonstrando ausência de vínculo: (1) contrato de PJ válido, (2) autonomia (sem subordinação, sem horário fixo), (3) pessoalidade não configurada, (4) impugnação dos fatos da inicial. Use ChatGPT com modo reasoning ativado.
 
 **DICA:**
-Use o framework CLEAR e especifique que é para a Vara do Trabalho de Brasília.
+Use CLEAR. Pesquise jurisprudência favorável à empresa em casos de PJ com Deep Research — sempre com link.
 
 **ENTREGÁVEL:**
-Estrutura de inicial trabalhista completa
+Contestação de defesa contra reconhecimento de vínculo
 
 ---
 
-#### CARTA #13 - Recurso Inominado (JEC)
+#### CARTA #13 - Defesa de Companhia Aérea (Cancelamento de Voo)
 **Categoria:** Elaboração de Peças
-**Ferramenta Sugerida:** Claude
+**Ferramenta Sugerida:** Claude (Extended Thinking)
 
 **MISSÃO:**
-Cliente perdeu no Juizado Especial uma ação contra companhia aérea por cancelamento de voo.
+Você defende companhia aérea em ação no JEC por cancelamento de voo. Passageiro pede dano moral de R$ 10.000. O cancelamento foi por condições meteorológicas (força maior).
 
 **DESAFIO:**
-Elabore as razões do recurso inominado apontando: (1) erro na valoração da prova, (2) inobservância do CDC, (3) pedido de reforma com majoração do dano moral.
+Elabore contestação demonstrando: (1) força maior / fortuito externo, (2) assistência material prestada conforme ANAC, (3) ausência de dano moral indenizável, (4) impugnação do valor pedido. Busque jurisprudência do TJDFT favorável à aérea — com link.
 
 **DICA:**
-Lembre que no JEC não cabe recurso sobre fatos, só sobre direito.
+Use Extended Thinking. Pesquise: "TJDFT companhia aérea cancelamento voo força maior improcedente 2024 2025". Toda citação com link.
 
 **ENTREGÁVEL:**
-Razões de recurso inominado estruturadas
+Contestação de defesa da aérea com jurisprudência verificável
 
 ---
 
@@ -322,21 +322,21 @@ Roteiro de sustentação oral cronometrado
 
 ---
 
-#### CARTA #17 - Parecer Jurídico
+#### CARTA #17 - Parecer Jurídico para Banco
 **Categoria:** Elaboração de Peças
-**Ferramenta Sugerida:** Claude
+**Ferramenta Sugerida:** Claude (Extended Thinking) + Perplexity
 
 **MISSÃO:**
-Cliente empresa quer saber se pode demitir funcionário que postou críticas à empresa no LinkedIn.
+Banco cliente quer implementar banco de horas para agências e precisa de parecer sobre riscos trabalhistas antes de aplicar para 5.000 funcionários.
 
 **DESAFIO:**
-Elabore parecer jurídico analisando: (1) liberdade de expressão vs dever de lealdade, (2) jurisprudência do TST sobre demissão por postagem em rede social, (3) recomendação fundamentada.
+Elabore parecer analisando: (1) requisitos legais do banco de horas (individual vs coletivo, reforma trabalhista), (2) jurisprudência do TST sobre bancários e banco de horas — com links, (3) riscos quantificados (5.000 empregados), (4) recomendação fundamentada. Use Perplexity para jurisprudência.
 
 **DICA:**
-Peça para o Claude citar casos reais (depois verifique se existem).
+Use Extended Thinking no Claude para análise. Perplexity para jurisprudência com links. Peça autochecagem ao final.
 
 **ENTREGÁVEL:**
-Parecer jurídico de 2 páginas
+Parecer jurídico com jurisprudência verificável e análise de risco em escala
 
 ---
 
@@ -430,21 +430,21 @@ Petição de cumprimento de sentença
 
 ---
 
-#### CARTA #23 - Recurso Ordinário Trabalhista
+#### CARTA #23 - Recurso Ordinário (Defesa — Banco Condenado)
 **Categoria:** Elaboração de Peças
-**Ferramenta Sugerida:** Claude
+**Ferramenta Sugerida:** Claude (Extended Thinking) + Perplexity
 
 **MISSÃO:**
-Reclamante perdeu pedido de horas extras porque juiz entendeu que cargo era de confiança.
+Banco foi condenado a pagar horas extras a ex-gerente que o juiz entendeu não exercer cargo de confiança real. Você precisa recorrer.
 
 **DESAFIO:**
-Elabore razões de recurso ordinário trabalhista demonstrando: (1) que não havia real poder de gestão, (2) que diferença salarial era inferior a 40%, (3) jurisprudência do TST.
+Elabore razões de recurso ordinário demonstrando: (1) gerente tinha autonomia real (procuração, gestão de equipe, assinatura de contratos), (2) gratificação > 1/3 do salário, (3) jurisprudência favorável do TST. Use Perplexity para buscar jurisprudência com links verificáveis.
 
 **DICA:**
-Aborde o art. 62, II da CLT e os requisitos para configuração de cargo de confiança.
+Art. 224, §2º da CLT. Busque no Perplexity: "TST gerente agência bancária cargo confiança reforma sentença 2024 2025". Toda citação com link.
 
 **ENTREGÁVEL:**
-Razões de recurso ordinário trabalhista
+Razões de recurso ordinário com jurisprudência verificável
 
 ---
 
@@ -506,39 +506,39 @@ Relatório de análise com riscos e sugestões
 
 ---
 
-#### CARTA #27 - Detector de Cláusulas Abusivas
+#### CARTA #27 - Blindagem de Contrato Bancário
 **Categoria:** Análise e Revisão
-**Ferramenta Sugerida:** ChatGPT
+**Ferramenta Sugerida:** ChatGPT (modo Reasoning)
 
 **MISSÃO:**
-Cliente assinou contrato de financiamento e acha que tem coisas erradas.
+Banco cliente vai lançar novo produto de crédito. Precisa que o contrato de adesão esteja blindado contra alegações de abusividade.
 
 **DESAFIO:**
-Analise um contrato de adesão (financiamento, cartão, etc.) e identifique todas as cláusulas potencialmente abusivas com base no CDC. Liste: cláusula, artigo do CDC violado, consequência.
+Analise modelo de contrato de financiamento e identifique: (1) cláusulas que podem ser atacadas como abusivas (arts. 51/52 CDC), (2) sugestões de redação para blindar cada ponto, (3) argumentos de defesa caso sejam questionadas. Use modo reasoning.
 
 **DICA:**
-Foque nos arts. 51 e 52 do CDC.
+Pense como o advogado do consumidor atacaria — e blinde preventivamente.
 
 **ENTREGÁVEL:**
-Lista de cláusulas abusivas com fundamento legal
+Relatório de blindagem com redação sugerida para cada cláusula sensível
 
 ---
 
-#### CARTA #28 - Análise de Risco Processual
+#### CARTA #28 - Análise de Risco do Acervo (Contencioso de Massa)
 **Categoria:** Análise e Revisão
-**Ferramenta Sugerida:** Claude
+**Ferramenta Sugerida:** Claude (Extended Thinking)
 
 **MISSÃO:**
-Cliente quer saber se vale a pena processar o banco por cobrança indevida de R$ 2.000.
+Banco cliente quer relatório de risco do acervo trabalhista: 800 ações ativas, pedidos variados (horas extras, dano moral, equiparação).
 
 **DESAFIO:**
-Faça análise de risco considerando: (1) probabilidade de êxito, (2) custos processuais, (3) tempo estimado, (4) valor esperado de condenação, (5) recomendação final (processar ou não).
+Use Claude (Extended Thinking) para criar modelo de análise de risco em massa: (1) classificação por tipo de pedido, (2) probabilidade de condenação por categoria, (3) valor médio de condenação, (4) exposição financeira total, (5) recomendação (defender/acordar) por faixa.
 
 **DICA:**
-Peça ao Claude para ser objetivo e considerar custos ocultos (tempo, estresse).
+Peça ao Claude para criar uma tabela de classificação de risco replicável. Pense em escala: 800 ações.
 
 **ENTREGÁVEL:**
-Parecer de viabilidade com recomendação
+Modelo de análise de risco de acervo com classificação por faixa
 
 ---
 
@@ -560,21 +560,21 @@ Checklist de due diligence por área
 
 ---
 
-#### CARTA #30 - Comparativo de Propostas de Acordo
+#### CARTA #30 - Política de Acordos em Massa
 **Categoria:** Análise e Revisão
-**Ferramenta Sugerida:** Claude
+**Ferramenta Sugerida:** Claude (Extended Thinking)
 
 **MISSÃO:**
-Réu em ação trabalhista fez 2 propostas de acordo e você precisa comparar para o cliente.
+Banco cliente autorizou faixa de acordo para 300 ações de horas extras. Você precisa definir a política.
 
 **DESAFIO:**
-Compare duas propostas de acordo analisando: valor total, forma de pagamento, renúncias exigidas, riscos de cada opção. Faça recomendação fundamentada.
+Use Claude para criar política de acordos: (1) classificação das ações por faixa de risco, (2) valores máximos de acordo por faixa, (3) cláusulas obrigatórias (quitação ampla), (4) critérios para recusar acordo, (5) fluxo de aprovação. Compare cenário "defender tudo" vs "acordo por faixa".
 
 **DICA:**
-Considere valor do dinheiro no tempo e risco de execução.
+Considere custo processual médio por ação vs valor do acordo. Use Extended Thinking.
 
 **ENTREGÁVEL:**
-Tabela comparativa com recomendação
+Política de acordos em massa com faixas e critérios decisórios
 
 ---
 
@@ -672,39 +672,39 @@ Parecer sobre prescrição com cálculo de prazo
 
 ---
 
-#### CARTA #36 - E-mail ao Cliente (Leigo)
+#### CARTA #36 - Relatório de Resultado para Cliente Corporativo
 **Categoria:** Comunicação
 **Ferramenta Sugerida:** ChatGPT
 
 **MISSÃO:**
-Saiu sentença parcialmente procedente e você precisa explicar ao cliente leigo.
+Banco cliente foi parcialmente condenado em ação trabalhista de grande visibilidade. Diretor jurídico quer relatório imediato.
 
 **DESAFIO:**
-Escreva e-mail explicando: (1) o que foi pedido, (2) o que foi ganho, (3) o que foi perdido, (4) próximos passos, (5) o que o cliente precisa fazer. Use linguagem simples.
+Escreva e-mail executivo ao diretor jurídico do banco: (1) resultado da sentença (procedente em parte), (2) pedidos deferidos e indeferidos, (3) valor da condenação estimado, (4) recomendação (recorrer ou não), (5) próximos passos e prazos. Tom formal-corporativo, direto.
 
 **DICA:**
-Evite juridiquês. Imagine que está explicando para sua avó.
+Executivo quer números e recomendação, não explicação jurídica longa. Máximo 3 parágrafos + tabela de resultado.
 
 **ENTREGÁVEL:**
-E-mail pronto para enviar
+E-mail executivo pronto para enviar ao cliente corporativo
 
 ---
 
-#### CARTA #37 - Relatório Executivo
+#### CARTA #37 - Dashboard Mensal de Contencioso
 **Categoria:** Comunicação
-**Ferramenta Sugerida:** Claude
+**Ferramenta Sugerida:** Claude (Extended Thinking)
 
 **MISSÃO:**
-Diretor jurídico de empresa cliente quer resumo de todos os processos da empresa.
+Banco cliente exige relatório mensal do acervo de 800+ ações trabalhistas. Você precisa de um modelo padronizado.
 
 **DESAFIO:**
-Crie modelo de relatório executivo de 1 página com: (1) processos ativos por tipo, (2) valores envolvidos, (3) riscos principais, (4) próximas ações, (5) recomendações.
+Use Claude para criar modelo de dashboard mensal: (1) ações ativas/novas/encerradas no mês, (2) resultados (procedentes/improcedentes/acordos), (3) exposição financeira por tipo de pedido, (4) taxa de êxito, (5) ações recomendadas, (6) gráficos sugeridos.
 
 **DICA:**
-Use bullet points e seja direto. Executivos têm pouco tempo.
+Banco quer dados e tendências, não narrativa. Use tabelas e números. Extended Thinking para estruturar.
 
 **ENTREGÁVEL:**
-Modelo de relatório executivo
+Modelo de dashboard mensal replicável para contencioso de massa
 
 ---
 
@@ -726,21 +726,21 @@ FAQ com 10 perguntas e respostas
 
 ---
 
-#### CARTA #39 - Proposta de Acordo Persuasiva
+#### CARTA #39 - Proposta de Acordo (Defesa → Reclamante)
 **Categoria:** Comunicação
 **Ferramenta Sugerida:** Claude
 
 **MISSÃO:**
-Você representa o autor e quer convencer o réu a aceitar acordo.
+Você defende o banco e quer propor acordo ao reclamante em ação de horas extras. Banco autorizou até R$ 25.000. Risco de condenação estimado em R$ 60.000.
 
 **DESAFIO:**
-Elabore proposta de acordo que: (1) reconheça pontos do réu, (2) mostre benefícios do acordo, (3) apresente riscos de não aceitar, (4) defina termos claros, (5) seja respeitosa.
+Elabore proposta de acordo que: (1) não admita culpa, (2) mostre benefícios ao reclamante (receber rápido, sem risco de recurso), (3) inclua quitação ampla e irrevogável, (4) defina prazo de aceite, (5) tom respeitoso mas firme.
 
 **DICA:**
-Use técnica de negociação baseada em interesses, não posições.
+Destaque: valor líquido (sem IR e custas), pagamento imediato vs anos de recurso. Sem linguagem que admita responsabilidade.
 
 **ENTREGÁVEL:**
-Proposta de acordo formal e persuasiva
+Proposta de acordo padronizada para contencioso de massa
 
 ---
 
@@ -780,21 +780,21 @@ Briefing executivo para reunião
 
 ---
 
-#### CARTA #42 - Artigo para Newsletter
+#### CARTA #42 - Newsletter para Clientes Corporativos
 **Categoria:** Comunicação
-**Ferramenta Sugerida:** ChatGPT
+**Ferramenta Sugerida:** ChatGPT (Deep Research)
 
 **MISSÃO:**
-Escritório quer enviar newsletter mensal com novidades jurídicas para clientes.
+Escritório quer enviar newsletter trimestral sobre novidades trabalhistas para seus clientes (bancos, aéreas, grandes empresas).
 
 **DESAFIO:**
-Escreva artigo curto (300-500 palavras) sobre uma novidade legal recente. Deve ser: (1) relevante para empresas, (2) didático, (3) com call-to-action sutil.
+Use ChatGPT com Deep Research para: (1) identificar 3 novidades trabalhistas recentes (2025-2026) relevantes para grandes empregadores, (2) escrever artigo curto (300-500 palavras) sobre a principal novidade, (3) incluir impacto prático para a empresa e recomendação de ação. Toda citação legislativa/jurisprudencial com link.
 
 **DICA:**
-Termine com algo como "Se tiver dúvidas sobre como isso afeta sua empresa, estamos à disposição."
+Tom: informativo mas com viés prático para o empregador. Termine com: "Para análise personalizada do impacto no seu negócio, estamos à disposição."
 
 **ENTREGÁVEL:**
-Artigo pronto para newsletter
+Artigo para newsletter com fontes verificáveis e recomendação prática
 
 ---
 
@@ -802,21 +802,21 @@ Artigo pronto para newsletter
 
 ---
 
-#### CARTA #43 - Criador de GPT Personalizado
+#### CARTA #43 - GPT Especializado em Defesa Bancária
 **Categoria:** Automação
 **Ferramenta Sugerida:** ChatGPT
 
 **MISSÃO:**
-Você quer um assistente de IA especializado na área de atuação do escritório.
+Você quer um assistente de IA especializado em contencioso trabalhista bancário para o escritório.
 
 **DESAFIO:**
-Configure um GPT personalizado (My GPTs) com: (1) nome, (2) descrição, (3) instruções específicas, (4) conhecimento base (descrição do que sabe), (5) exemplos de uso.
+Configure um GPT personalizado (My GPTs) com: (1) nome (ex: "Defensor Bancário"), (2) descrição do perfil, (3) instruções: defesa do empregador, linguagem técnica, teses recorrentes do banco, (4) regra: SEMPRE buscar jurisprudência na internet com link, (5) regra: usar Extended Thinking/Reasoning, (6) base: principais súmulas do TST sobre bancários.
 
 **DICA:**
-Nas instruções, inclua limitações: "nunca invente jurisprudência", "sempre cite fontes".
+Nas instruções: "Você é advogado do banco réu. Nunca cite jurisprudência sem buscar na internet e fornecer link. Sempre use modo reasoning."
 
 **ENTREGÁVEL:**
-GPT configurado e funcionando (ou especificação se não tiver acesso)
+GPT configurado para contencioso bancário (ou especificação completa)
 
 ---
 
@@ -856,21 +856,21 @@ Notebook configurado com briefing gerado
 
 ---
 
-#### CARTA #46 - Pesquisa Completa com Perplexity
+#### CARTA #46 - Protocolo Completo de Pesquisa Jurisprudencial
 **Categoria:** Automação
-**Ferramenta Sugerida:** Perplexity
+**Ferramenta Sugerida:** Perplexity + ChatGPT (Deep Research)
 
 **MISSÃO:**
-Cliente perguntou algo que você não sabe e precisa responder com fontes confiáveis.
+Banco cliente quer saber a posição atual do TST sobre terceirização de atividade-fim após a reforma trabalhista. Resposta precisa ter fontes verificáveis.
 
 **DESAFIO:**
-Faça pesquisa completa sobre um tema jurídico usando Perplexity. Documente: (1) pergunta feita, (2) fontes retornadas, (3) verificação das fontes, (4) resposta final com citações.
+Aplique o Protocolo de Pesquisa completo: (1) Pesquise no Perplexity com termos específicos, (2) Exija link para cada citação, (3) Repita no ChatGPT com Deep Research para cruzar fontes, (4) Verifique os links manualmente, (5) Peça à IA para autochecar, (6) Monte resposta final com apenas as fontes confirmadas.
 
 **DICA:**
-Use o modo "Academic" ou "Pro" se disponível para fontes mais confiáveis.
+Pesquise: "TST terceirização atividade-fim ADPF 324 tema 725 repercussão geral 2024 2025". Compare resultados entre Perplexity e ChatGPT.
 
 **ENTREGÁVEL:**
-Pesquisa documentada com fontes verificadas
+Pesquisa com protocolo completo documentado: fontes cruzadas, links verificados, autochecagem
 
 ---
 
@@ -910,21 +910,21 @@ Página funcionando (ou link do preview)
 
 ---
 
-#### CARTA #49 - Biblioteca de Prompts
+#### CARTA #49 - Biblioteca de Prompts para Contencioso de Massa
 **Categoria:** Automação
 **Ferramenta Sugerida:** Qualquer
 
 **MISSÃO:**
-Você quer padronizar o uso de IA no escritório com prompts prontos.
+Você quer padronizar o uso de IA no escritório para que toda a equipe produza com qualidade e velocidade.
 
 **DESAFIO:**
-Crie biblioteca com 5 prompts otimizados para: (1) resumo de decisão, (2) rascunho de petição, (3) análise de contrato, (4) pesquisa jurisprudencial, (5) e-mail ao cliente.
+Crie biblioteca com 5 prompts otimizados (framework CLEAR) para: (1) contestação trabalhista padrão (defesa do banco), (2) pesquisa jurisprudencial com links (protocolo completo), (3) análise de risco em lote, (4) relatório mensal para cliente corporativo, (5) proposta de acordo padronizada. Cada prompt deve incluir instrução de usar thinking mode.
 
 **DICA:**
-Use o framework CLEAR em cada prompt e teste antes de salvar.
+Cada prompt deve ser replicável por qualquer advogado da equipe. Teste cada um antes de salvar. Inclua: "Use modo thinking/reasoning" e "Cite apenas com link verificável".
 
 **ENTREGÁVEL:**
-Documento com 5 prompts prontos para uso
+Documento com 5 prompts CLEAR prontos para contencioso de massa
 
 ---
 
@@ -1047,12 +1047,12 @@ Layout:
       "titulo": "Caçador de Jurisprudência",
       "categoria": "pesquisa",
       "cor": "#3B82F6",
-      "missao": "Você está montando a fundamentação de uma petição inicial sobre dano moral em relação de consumo.",
-      "desafio": "Use o Perplexity para encontrar 5 decisões recentes (2024-2025) do TJDFT sobre dano moral em relação de consumo. Liste: número do processo, relator, valor da condenação e tese principal.",
-      "ferramenta": "Perplexity",
+      "missao": "Você defende um grande banco em ações trabalhistas de massa. Precisa de jurisprudência favorável sobre cargo de confiança bancário.",
+      "desafio": "Use Perplexity ou ChatGPT (Deep Research) para encontrar 5 decisões recentes do TST favoráveis ao banco sobre gerente de agência e cargo de confiança. Cada citação DEVE ter link. Peça autochecagem ao final.",
+      "ferramenta": "Perplexity / ChatGPT Deep Research",
       "tempo": 30,
-      "dica": "Use termos específicos: 'TJDFT dano moral consumidor 2024 2025 indenização'",
-      "entregavel": "Tabela com 5 decisões e suas informações"
+      "dica": "Use termos: 'TST cargo confiança bancário gerente agência art 224 §2º CLT 2024 2025'. Sempre use modo thinking.",
+      "entregavel": "Tabela com 5 decisões, links verificáveis e teses principais"
     }
   ]
 }
