@@ -10,7 +10,7 @@
 | Material | Arquivo | Status |
 |----------|---------|--------|
 | Roteiro v5.0 | `ROTEIRO_CURSO_4H_IA_ADVOCACIA_v4.md` | PRONTO |
-| Apresentacao 12 slides | `APRESENTACAO_CURSO_IA_ADVOCACIA_v5.pptx` | VERIFICAR conteudo |
+| Apresentacao 12 slides | `APRESENTACAO_CURSO_IA_ADVOCACIA_v5.pptx` | **REFAZER** — conteudo v4.1 |
 | 12 Cartas CLEAR (web) | `pagina_12_cartas_v3.html` | PRONTO — GitHub Pages |
 | QR Codes (web) | `qrcodes_curso.html` | PRONTO — GitHub Pages |
 | Central de materiais (web) | `index_curso.html` | PRONTO — GitHub Pages |
@@ -25,7 +25,7 @@
 | Proposta | `proposta_ia_advocacia (3).html` | PRONTO |
 | Casos ficticios (3) | Dentro do roteiro v5.0 | PRONTO |
 | Video backup da demo | — | **FAZER** |
-| Formulario de feedback | — | **FAZER** (Google Forms) |
+| Formulario de feedback | `FORMULARIO_FEEDBACK_CURSO.html` | PRONTO |
 | Gravacao do curso (Zoom) | — | **FAZER** no dia |
 
 ---

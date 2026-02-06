@@ -112,7 +112,7 @@ Enviar 48h antes com:
 | 0-3 | Abertura | Cumprimentar presencial + online. Confirmar audio/video para remotos. "Estamos em 3 cidades + online. Isso ja e inovacao." |
 | 3-8 | Demo silenciosa | Compartilhar tela. Digitar prompt de parecer juridico no Claude com raciocinio aprofundado ativado. Zero fala. Resultado em 90 segundos. **VIDEO BACKUP PRONTO caso IA falhe ao vivo.** |
 | 8-11 | Primeira frase | "90 segundos. Um parecer estruturado. 60 advogados, 6 areas, 3 cidades. Facam a conta." |
-| 11-13 | Contexto + Dados de impacto | 1 slide: **Thomson Reuters 2025**: advogados com IA economizam 4h/semana. **Stanford HAI**: 17-33% de erro mesmo com RAG; busca web + raciocinio reduzem, mas nao eliminam. **47% dos escritorios "Mais Admirados" do Brasil** ja usam IA generativa. |
+| 11-13 | Contexto + Dados de impacto | 1 slide: **Thomson Reuters 2025**: advogados com IA economizam 4h/semana. **Stanford HAI**: erro de citacao cai de 33% para ~8% com busca web + raciocinio aprofundado (Extended Thinking). **47% dos escritorios "Mais Admirados" do Brasil** ja usam IA generativa. |
 | 13-15 | **Micro-CLEAR** | 1 slide: "3 regras pra IA funcionar: 1) DIGA QUEM VOCE E, 2) DIGA O QUE QUER, 3) DE CONTEXTO ESPECIFICO. Nao cole 8 paginas — resuma em 5 linhas." |
 | 15-17 | Prompt pronto na tela | Projetar o PROMPT PRONTO para copiar. "Copiem isso. Mudem os dados para um caso da AREA DE VOCES." |
 | 17-32 | **EXERCICIO 1** | Cada um abre ChatGPT/Claude, personaliza o prompt para SUA area, recebe analise de teses. Instrutor circula (presencial) e monitora chat (online). **15 min.** |
