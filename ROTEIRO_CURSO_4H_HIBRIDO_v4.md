@@ -46,7 +46,7 @@
 |---|---|---|
 | **Data** | Quinta, 06/02/2026 | Sexta, 07/02/2026 |
 | **Horario** | 15h - 17h | 10h - 12h |
-| **Duracao liquida** | 120 min | 60 min curso + 60 min jurimetria |
+| **Duracao liquida** | 120 min | 55 min caso + 40 min jurimetria + 25 min encerramento |
 | **Formato** | Hibrido (3 cidades + online) | Hibrido (3 cidades + online) |
 
 ---
@@ -103,7 +103,7 @@
 | Instrucao | 100 min | 85 min (35%) | -15% |
 | Pratica | 200 min | 155 min (65%) | -23% |
 | Slides | 20 | 12 | -40% |
-| Exercicios | 7 | 5 | -2 |
+| Exercicios | 7 | 7 (+1 mini) | 0 |
 | Casos ficticios | 3 | 1 | -2 |
 
 ---
@@ -195,15 +195,15 @@
 
 ## TIMING DIA 1
 
-| Bloco | Inicio | Fim | Duracao |
-|-------|--------|-----|---------|
+| Fase | Inicio | Fim | Duracao |
+|------|--------|-----|---------|
 | 1. BOOT | 15:00 | 15:30 | 30 min |
 | 2. SCANNER | 15:30 | 16:00 | 30 min |
 | 3. ARSENAL | 16:00 | 16:35 | 35 min |
 | 4. FIREWALL | 16:35 | 17:00 | 25 min |
 | **Total** | | | **120 min** |
 
-**Exercicios**: 4 (Primeiro prompt, Pesquisa, Verificacao links, Comparativo ChatGPT/Claude, Anonimizacao)
+**Exercicios Dia 1**: 5 (Primeiro prompt, Pesquisa, Verificacao links, Comparativo ChatGPT/Claude, Anonimizacao mini)
 **Pratica**: ~78 min (65%)
 **Instrucao**: ~42 min (35%)
 
@@ -217,7 +217,7 @@
 | Min | Hora | Atividade | Detalhe | Hibrido |
 |-----|------|-----------|---------|---------|
 | 0-10 | 10:00 | Aquecimento | "O que tentaram ontem? O que funcionou?" **Online primeiro**. Celebrar. | Chat + mic |
-| 10-50 | 10:10 | **EXERCICIO 6** | Fluxo completo com CASO FICTICICO. Individual. 3 etapas. | Timer: 40 min |
+| 10-50 | 10:10 | **EXERCICIO 6** | Fluxo completo com CASO FICTICIO. Individual. 3 etapas. | Timer: 40 min |
 | 50-55 | 10:50 | Debrief | "Onde a IA ajudou mais? Onde atrapalhou?" | 2-3 relatos |
 
 ### EXERCICIO 6: Fluxo Completo de Defesa (40 min)
@@ -231,7 +231,7 @@
 
 **Instrutor circula (presencial) e monitora chat (online).**
 
-**Slides: 1** (caso ficticico projetado na tela)
+**Slides: 1** (caso ficticio projetado na tela)
 
 ---
 
@@ -243,7 +243,8 @@
 | 0-5 | 10:55 | Transicao | "Agora vamos para algo que muda a estrategia de contencioso de massa: jurimetria." | |
 | 5-15 | 11:00 | O que e | Jurimetria = dados + estatistica aplicados ao direito. Exemplos concretos para defesa empresarial. | Slide com exemplos |
 | 15-25 | 11:10 | Demo pratica | Mostrar: pedir a IA para analisar padroes de decisao de uma vara. "Qual o % de condenacao em horas extras na 3a Vara de Brasilia?" Discutir limitacoes. | Tela compartilhada |
-| 25-35 | 11:20 | Aplicacoes | Para contencioso de massa: previsao de risco, provisao financeira, estrategia por vara/juiz, momento ideal de acordo. | Slide com casos |
+| 25-27 | 11:20 | Aplicacoes | Para contencioso de massa: previsao de risco, provisao financeira, estrategia por vara/juiz, momento ideal de acordo. | Slide com casos |
+| 27-35 | 11:22 | **EXERCICIO 7** (mini) | Cada um pergunta a IA: "Qual o perfil decisorio da [vara/juiz] em [tema do escritorio]?" Comparar resposta com experiencia real. | Timer: 8 min |
 | 35-40 | 11:30 | Ferramentas | Jurimetrics (ABAJ), Jusbrasil Analytics, Turivius, JUIT. "IA ajuda na analise, mas os dados precisam ser de fonte confiavel." | Slide com links |
 
 **Slides: 3** (conceito, demo, ferramentas)
@@ -280,16 +281,16 @@
 
 ## TIMING DIA 2
 
-| Bloco | Inicio | Fim | Duracao |
-|-------|--------|-----|---------|
+| Fase | Inicio | Fim | Duracao |
+|------|--------|-----|---------|
 | 5. TESTE DE CAMPO | 10:00 | 10:55 | 55 min |
 | 6. ANALYTICS | 10:55 | 11:35 | 40 min |
 | 7. ATIVACAO COMPLETA | 11:35 | 12:00 | 25 min |
 | **Total** | | | **120 min** |
 
-**Exercicios**: 1 completo (fluxo de defesa)
-**Pratica**: ~77 min (64%)
-**Instrucao**: ~43 min (36%)
+**Exercicios**: 1 completo (fluxo de defesa) + 1 mini (jurimetria)
+**Pratica**: ~85 min (71%)
+**Instrucao**: ~35 min (29%)
 
 ---
 

@@ -10,7 +10,7 @@
 
 Prezados colegas,
 
-Nos dias [quinta 06/02 (15h-17h) e sexta 07/02 (10h-12h)], teremos nosso curso pratico de **IA na Advocacia**. Para aproveitarmos ao maximo as 4 horas juntos, preciso que voces facam **3 coisas simples antes**:
+Nos dias [quinta 06/02 (15h-17h) e sexta 07/02 (10h-12h)], teremos nosso curso pratico de **IA na Advocacia**. Para aproveitarmos ao maximo o curso, preciso que voces facam **3 coisas simples antes**:
 
 ---
 

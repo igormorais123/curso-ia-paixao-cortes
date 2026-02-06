@@ -1,5 +1,5 @@
-# Checklist Completo - Curso IA Advocacia v4.0
-## Paixao Cortes Advogados | Multi-area | Hibrido (3 cidades + online)
+# Checklist Completo — O PROTOCOLO v4.1
+## Paixao Cortes Advogados | Hibrido (3 cidades + online) | 7 Fases
 
 ---
 
@@ -30,7 +30,7 @@
 - [ ] Verificar se ferramentas funcionam no celular
 
 ### Backup Offline
-- [ ] Gravar video da demo WOW (parecer juridico em 90s)
+- [ ] Gravar video da demo WOW (contestacao em 90s)
 - [ ] Salvar prints das telas principais
 - [ ] Baixar PDFs das regulacoes (CNJ 615/2025, OAB Recomendacao 001/2024)
 
@@ -46,11 +46,9 @@
 - [ ] Verso: categoria + numero
 - [ ] **CONFERIR**: cartas sao multi-area v4.0 (universais, 6 areas)
 
-### Casos Ficticios
-- [ ] Caso 1: Trabalhista — Horas Extras de Empregado (2 paginas)
-- [ ] Caso 2: Consumidor/Civil — Negativacao Indevida (2 paginas)
-- [ ] Caso 3: Administrativo — Penalidade em Licitacao (2 paginas)
-- [ ] Imprimir 1 copia por dupla + 3 extras
+### Caso Ficticio (unico)
+- [ ] Dispensa Discriminatoria — Defesa da Empresa (2 paginas)
+- [ ] Imprimir 1 copia por participante + 5 extras
 
 ### Folhas de Apoio
 - [ ] Folha de compromisso (1 por pessoa)
@@ -72,28 +70,25 @@
 - [ ] Link da pagina de cartas CLEAR (pagina_12_cartas_v3.html)
 - [ ] Link da pagina de QR codes (qrcodes_curso.html)
 - [ ] PDF do Card "Onde Clicar"
-- [ ] PDF dos 3 casos ficticios
+- [ ] PDF do caso ficticio
 
-### Slides (15 no total)
-- [ ] Slide 1: Titulo + "60+ advogados, 6 areas, 3 cidades"
-- [ ] Slide 2: Dados de impacto (Thomson Reuters, Stanford, 47%)
-- [ ] Slide 3: Micro-CLEAR (3 regras basicas)
-- [ ] Slide 4: Prompt pronto multi-area
-- [ ] Slide 5: Protocolo de Pesquisa (Busca + Link + Thinking + Checagem)
-- [ ] Slide 6: Regulacao (CNJ 615/2025, OAB Rec. 001/2024)
-- [ ] Slide 7-8: Framework CLEAR completo com exemplo universal
-- [ ] Slide 9: Fluxo combinado (ChatGPT pesquisa + Claude produz)
-- [ ] Slide 10: Exercicio Comunicacao (prompt relampago)
-- [ ] Slide 11: Seguranca — 5 regras + anonimizacao multi-area
-- [ ] Slide 12: Preview das 12 cartas
-- [ ] Slide 13: Jurimetria — introducao
-- [ ] Slide 14: Horizontes e Recursos
-- [ ] Slide 15: Compromisso + Plano de Implementacao
+### Slides (12 no total)
+- [ ] Slide 1: Titulo + "Paixao Cortes. 3 cidades. O Protocolo."
+- [ ] Slide 2: Demo WOW (tela de contestacao gerada em 90s)
+- [ ] Slide 3: Protocolo de Pesquisa (Busca + Link + Thinking + Checagem)
+- [ ] Slide 4: Regulacao (CNJ 615/2025, OAB Rec. 001/2024)
+- [ ] Slide 5: Mapa de Ferramentas (5 ferramentas, forcas e fraquezas)
+- [ ] Slide 6-7: Framework CLEAR com exemplo universal
+- [ ] Slide 8: 12 Cartas CLEAR (preview)
+- [ ] Slide 9: Caso sancionamento EUA + 5 Regras de Seguranca
+- [ ] Slide 10: Caso Ficticio (Dispensa Discriminatoria)
+- [ ] Slide 11: Recursos (QR codes: AB2L, FGV, Podcast)
+- [ ] Slide 12: Template de Compromisso
 
 ### Paginas HTML (hospedadas no GitHub Pages)
-- [ ] pagina_12_cartas_v3.html — testado, cartas multi-area v4.0
+- [ ] pagina_12_cartas_v3.html — testado, cartas multi-area
 - [ ] qrcodes_curso.html — testado, com TJDFT e TRF-1
-- [ ] index_curso.html — testado, v4.0
+- [ ] index_curso.html — testado, INTEIA
 
 ---
 
@@ -115,7 +110,7 @@
 
 ---
 
-## 5. DIA 1 - QUINTA 06/02 (15h-17h)
+## 5. DIA 1 — QUINTA 06/02 (15h-17h) — Igor
 
 ### Antes de comecar (30 min)
 - [ ] Chegar 30 min antes
@@ -123,55 +118,63 @@
 - [ ] Testar Wi-Fi com celular
 - [ ] Abrir videoconferencia e compartilhar tela
 - [ ] Abrir ChatGPT, Claude e Perplexity no notebook
-- [ ] Preparar demo WOW (parecer juridico em 90s — prompt pronto)
+- [ ] Preparar demo WOW (contestacao em 90s — prompt pronto)
 - [ ] Distribuir materiais nas mesas (presencial)
 - [ ] Enviar links no chat (online)
 
-### Bloco 1: Espanto + Primeiro Contato (40 min)
+### FASE 1: BOOT — Espanto + Primeiro Contato (30 min | 15:00-15:30)
 - [ ] Confirmar audio/video para remotos
-- [ ] Demo WOW executada (parecer juridico em 90s)
+- [ ] Demo WOW executada (contestacao em 90s)
 - [ ] Exercicio 1: todos acessaram IA e fizeram prompt da SUA area
-- [ ] Compartilhamento feito (presencial fala, online chat)
+- [ ] Compartilhamento feito (online primeiro, depois presencial)
 
-### Bloco 2: Pesquisa + CLEAR + Fluxo (55 min)
-- [ ] Exercicio 2: pesquisa de jurisprudencia — tema livre por area
-- [ ] Exercicio 3: verificacao de links nos tribunais
-- [ ] Framework CLEAR apresentado com exemplo multi-area
-- [ ] Exercicio 4: fluxo combinado (ChatGPT pesquisa + Claude produz)
+### FASE 2: SCANNER — Pesquisa + Verificacao (30 min | 15:30-16:00)
+- [ ] Exercicio 2: pesquisa de jurisprudencia com Protocolo de Pesquisa
+- [ ] Exercicio 3: clicar nos links, anotar % de acerto
+- [ ] Protocolo de Pesquisa projetado (Busca + Link + Thinking + Checagem)
+- [ ] Regulacao: CNJ 615/2025 + OAB 001/2024 (1 slide rapido)
 
-### Bloco 3: Comunicacao + Seguranca (15 min)
-- [ ] Exercicio Relampago: e-mail para cliente
-- [ ] 5 regras de seguranca + anonimizacao multi-area
-- [ ] 3 perguntas essenciais respondidas
-- [ ] Tarefa para amanha explicada
+### FASE 3: ARSENAL — Ferramentas + Pratica Comparativa (35 min | 16:00-16:35)
+- [ ] Mapa de ferramentas apresentado (5 ferramentas, forcas e fraquezas)
+- [ ] Exercicio 4: mesmo caso no ChatGPT E no Claude, comparar resultados
+- [ ] Framework CLEAR apresentado (3 min) + mostrar 2 cartas
+- [ ] Link das 12 cartas enviado no chat
 
-### Encerramento 17h
+### FASE 4: FIREWALL — Seguranca + Encerramento Dia 1 (25 min | 16:35-17:00)
+- [ ] Caso de sancionamento (advogado EUA) apresentado
+- [ ] 5 Regras de Seguranca projetadas e lidas
+- [ ] Exercicio 5: anonimizar 1 trecho de caso real
+- [ ] Tarefa para amanha: "Usem IA em algo real. Tragam a experiencia."
 - [ ] Confirmar horario de amanha (10h)
-- [ ] Lembrar da tarefa: usar IA em algo real
 
 ---
 
-## 6. DIA 2 - SEXTA 07/02 (10h-12h)
+## 6. DIA 2 — SEXTA 07/02 (10h-12h)
 
 ### Antes de comecar (15 min)
 - [ ] Testar equipamentos e videoconferencia
-- [ ] Preparar 3 casos ficticios (Trabalhista, Consumidor, Administrativo)
+- [ ] Preparar caso ficticio (Dispensa Discriminatoria)
 
-### Bloco 4: Aquecimento + Caso Pratico (55 min)
-- [ ] Aquecimento: ouvir experiencias de ontem
-- [ ] Entrega de materiais (presencial: fisico / online: links)
-- [ ] Exercicio 5: fluxo completo com caso escolhido (35 min)
-- [ ] Exercicio 5B: template replicavel (escala)
-- [ ] Debrief
+### FASE 5: TESTE DE CAMPO — Caso Completo (55 min | 10:00-10:55) — Igor
+- [ ] Aquecimento: "O que tentaram ontem?" (online primeiro)
+- [ ] Exercicio 6: fluxo completo com caso ficticio (40 min)
+  - [ ] Etapa 1: Pesquisa (12 min)
+  - [ ] Etapa 2: Minuta com CLEAR (18 min)
+  - [ ] Etapa 3: Verificacao (10 min)
+- [ ] Debrief: "Onde a IA ajudou mais? Onde atrapalhou?"
+- [ ] Transicao para professor de jurimetria
 
-### Bloco 5: Jurimetria + Implementacao (60 min)
-- [ ] Preview das 12 cartas (2-3 exemplos)
-- [ ] Jurimetria: demonstracao + exercicio rapido (20 min)
-- [ ] Horizontes e recursos
-- [ ] Exercicio 7: compromisso individual
-- [ ] Exercicio 8: plano de implementacao (campeao IA, primeira peca, metricas)
-- [ ] Buddy system formado (incluir pares cross-cidade)
-- [ ] Encerramento: "Tradicao, solidez e inovacao"
+### FASE 6: ANALYTICS — Jurimetria (40 min | 10:55-11:35) — Outro professor
+- [ ] Conceito de jurimetria
+- [ ] Demo pratica com IA
+- [ ] Aplicacoes para contencioso
+- [ ] Ferramentas especializadas
+
+### FASE 7: ATIVACAO COMPLETA — Recursos + Compromisso (25 min | 11:35-12:00)
+- [ ] Recursos: AB2L, Podcast, FGV (QR codes na tela)
+- [ ] Compromisso: "Na segunda-feira, vou usar IA para _____"
+- [ ] Compartilhamento de 3-4 voluntarios (mix online + presencial)
+- [ ] Encerramento: "Protocolo ativado. 3 cidades, uma equipe."
 
 ---
 
@@ -179,10 +182,10 @@
 
 ### Imediato (mesmo dia)
 - [ ] Enviar e-mail com materiais
-  - [ ] PDF das 12 cartas (multi-area v4.0)
+  - [ ] PDF das 12 cartas (multi-area)
   - [ ] Link das paginas HTML
   - [ ] PDF do Manual Rapido
-  - [ ] PDF dos 3 casos ficticios
+  - [ ] PDF do caso ficticio
   - [ ] Links dos recursos
 - [ ] Agradecer a participacao
 
@@ -207,7 +210,7 @@
 | Presencial GO | ___ |
 | Online | ___ |
 | Jogos de cartas (presencial) | ___ (1 por pessoa + 3 extras por cidade) |
-| Casos ficticios (presencial) | ___ (1 por dupla + 3 extras) |
+| Casos ficticios (presencial) | ___ (1 por pessoa + 5 extras) |
 
 ---
 
@@ -222,4 +225,4 @@
 
 ---
 
-*Checklist v4.0 — Multi-area + Hibrido — Atualizado em 06/02/2026*
+*Checklist O PROTOCOLO v4.1 — 7 Fases + Hibrido — Atualizado em 06/02/2026*
