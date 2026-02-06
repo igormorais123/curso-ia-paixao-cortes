@@ -22,7 +22,7 @@
 ```
 1. BUSCAR NA INTERNET — Sempre ativar busca web
 2. EXIGIR LINK — Sem link = nao existe
-3. USAR THINKING MODE — Raciocinio estendido ativado
+3. ATIVAR RACIOCINIO APROFUNDADO — Extended Thinking / Reasoning ativado
 4. PEDIR AUTOCHECAGEM — "Revise suas citacoes, confirme
    que cada link funciona. Sinalize duvidas com [VERIFICAR]."
 ```
@@ -77,7 +77,7 @@ da Resolucao CNJ 615/2025.
 
 1. **Anonimizar SEMPRE** — Nomes ficticios, dados mascarados
 2. **Verificar TODA citacao** — Clicar no link, nao apenas ler
-3. **Revisar TUDO** — Output de IA e rascunho, nao produto final
+3. **Revisar TUDO** — Resultado da IA e rascunho, nao produto final
 4. **Registrar uso** — Transparencia quando exigido
 5. **Humano decide** — IA sugere, advogado assina
 
@@ -105,5 +105,5 @@ _____________________________________________
 
 ---
 
-*Curso IA na Advocacia v4.0 — Paixao Cortes Advogados — 2026*
+*O PROTOCOLO — Curso IA na Advocacia v5.0 — Paixao Cortes Advogados — 2026*
 *Multi-area | 6 areas do direito | Material de apoio. Guarde esta folha.*
