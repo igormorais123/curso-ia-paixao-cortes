@@ -1,7 +1,9 @@
-# Curso: IA na Advocacia — Roteiro v3
+# Curso: IA na Advocacia — Roteiro v3.1
 ## Paixão Côrtes Advogados | 6 horas (3h + 3h)
 
 > **Filosofia**: Não convencer, converter. Não ensinar sobre IA, fazer experimentar IA.
+
+> **Perfil do escritório**: Contencioso de massa, defesa empresarial. Clientes de grande porte (bancos, companhias aéreas). Alto volume, demandas repetitivas. Foco em escala e padronização.
 
 ---
 
@@ -17,15 +19,15 @@
 
 ---
 
-## Métricas v3
+## Métricas v3.1
 
-| Métrica | v1 | v2 | v3 |
-|---------|----|----|-----|
-| Instrução | 160 min | 110 min | 100 min (33%) |
-| Prática | 20 min | 190 min | 200 min (67%) |
-| Slides | 85 | 28 | 20 |
-| Cartas | 50 | 12 | 12 (reescritas) |
-| Casos fictícios | 0 | 0 | 3 completos |
+| Métrica | v1 | v2 | v3 | v3.1 |
+|---------|----|----|-----|------|
+| Instrução | 160 min | 110 min | 100 min (33%) | 100 min (33%) |
+| Prática | 20 min | 190 min | 200 min (67%) | 200 min (67%) |
+| Slides | 85 | 28 | 20 | 20 |
+| Cartas | 50 | 12 | 12 (reescritas) | 12 (defesa empresarial) |
+| Casos fictícios | 0 | 0 | 3 completos | 3 (contencioso de massa) |
 
 ---
 
@@ -36,31 +38,40 @@
 
 | Min | Atividade | Detalhe |
 |-----|-----------|---------|
-| 0-5 | Abertura silenciosa | Sala escura, IA gerando petição trabalhista em tempo real. Zero fala. |
-| 5-8 | Primeira frase | "90 segundos. Quanto tempo você levaria?" Pausa. |
+| 0-5 | Abertura silenciosa | Sala escura, IA gerando contestação trabalhista padrão em tempo real. Zero fala. |
+| 5-8 | Primeira frase | "90 segundos. Uma contestação estruturada. Vocês têm 200 ações iguais na fila. Façam a conta." |
 | 8-12 | Contexto mínimo | "Isso é o presente. Não o futuro. E vocês vão fazer agora." |
-| 12-35 | **EXERCÍCIO 1** | Cada um abre ChatGPT/Claude, descreve caso real, recebe análise em 60s |
+| 12-35 | **EXERCÍCIO 1** | Cada um abre ChatGPT/Claude, descreve um caso real de defesa do escritório, recebe análise de teses e riscos em 60s |
 | 35-45 | Compartilhamento | "O que surpreendeu? O que decepcionou?" Sem julgamento. |
 
 **Slides: 2** (QR code, pergunta de compartilhamento)
 
+**NOTA PARA O INSTRUTOR**: A demo deve ser uma contestação típica do escritório — ex-funcionário de banco pedindo horas extras, equiparação, dano moral. Algo que o escritório produz centenas de vezes por ano.
+
 ---
 
-## BLOCO 2: DESCOBERTA DO PERIGO (50 min)
-**"O momento em que você entende o risco"**
+## BLOCO 2: PESQUISA INTELIGENTE COM IA (50 min)
+**"O momento em que você aprende a pesquisar de verdade"**
 
 | Min | Atividade | Detalhe |
 |-----|-----------|---------|
-| 0-3 | Setup | "Agora vamos testar algo perigoso. Buscar jurisprudência." |
-| 3-18 | **EXERCÍCIO 2** | Buscar 3 decisões sobre dano moral trabalhista no ChatGPT/Claude. Anotar números. |
-| 18-30 | **EXERCÍCIO 3** | Verificar cada citação no site do tribunal. Descobrir quais existem. |
-| 30-35 | Momento de choque | Silêncio. Deixar impactar. "Quantas eram reais?" |
-| 35-42 | Framework | **"IA gera, advogado verifica"** — não regra, sobrevivência. |
-| 42-50 | Regulação | CNJ 615/2025, OAB Recomendação 001/2024. Advogado americano sancionado. (1 slide, 1 caso) |
+| 0-3 | Setup | "Agora vamos fazer algo que muda tudo: pesquisar jurisprudência com IA. Funciona, mas tem método." |
+| 3-18 | **EXERCÍCIO 2** | Pesquisar jurisprudência real com IA usando o Protocolo de Pesquisa (ver abaixo). Tema: "horas extras de gerente bancário — TST". |
+| 18-30 | **EXERCÍCIO 3** | Clicar em cada link retornado pela IA. Verificar quais existem. Anotar % de acerto. |
+| 30-35 | Momento de clareza | "Quando a IA busca na internet e cita com link, funciona. Quando inventa de cabeça, falha. A diferença é o método." |
+| 35-42 | Framework | **"Busca → Link → Thinking → Checagem"** — o protocolo de pesquisa jurídica com IA. |
+| 42-50 | Regulação | CNJ 615/2025, OAB Recomendação 001/2024. Caso de advogado americano sancionado por NÃO verificar. (1 slide, 1 caso) |
 
-**Slides: 3** (framework, regulação, caso real)
+**Slides: 3** (protocolo de pesquisa, regulação, caso real)
 
-**REGRA GRAVADA**: A partir daqui, TODA citação passa por verificação.
+### Protocolo de Pesquisa Jurídica com IA (4 passos)
+
+1. **BUSCAR NA INTERNET** — Sempre ativar busca web. No ChatGPT: usar Deep Research ou navegar. No Claude: pedir para buscar. No Perplexity: é nativo.
+2. **EXIGIR LINK** — Toda citação de jurisprudência DEVE vir com link direto para o tribunal. Sem link = não existe.
+3. **USAR THINKING MODE** — Sempre ativar raciocínio estendido. ChatGPT: modo o1/o3 ou "Reasoning". Claude: Extended Thinking. Isso reduz alucinações drasticamente.
+4. **PEDIR AUTOCHECAGEM** — Ao final, pedir: "Agora revise todas as citações acima. Confirme que cada link funciona e cada número de processo está correto. Se tiver dúvida sobre algum, sinalize."
+
+**REGRA GRAVADA**: IA serve para jurisprudência SIM — mas só com busca na internet, link verificável, thinking mode e autochecagem.
 
 ---
 
@@ -69,21 +80,22 @@
 
 | Min | Atividade | Detalhe |
 |-----|-----------|---------|
-| 0-10 | Mapa honesto | 2 essenciais + 2 especializadas. Sem ilusões. |
-| 10-35 | **EXERCÍCIO 4** | Mesmo prompt em ChatGPT e Claude. Comparar. Qual melhor para quê? |
-| 35-45 | Framework CLEAR | Demonstrar com exemplo real, não só explicar. |
+| 0-10 | Mapa honesto | 3 essenciais + 2 especializadas. Sem ilusões. |
+| 10-35 | **EXERCÍCIO 4** | Mesmo caso de defesa em ChatGPT e Claude. Comparar: qual dá melhor contestação? Qual pesquisa melhor? |
+| 35-45 | Framework CLEAR | Demonstrar com exemplo real de contestação bancária, não só explicar. |
 | 45-55 | As 12 Cartas | Entregar físico. Mostrar 2-3 exemplos. Material para levar. |
 
 ### Mapa de Ferramentas (honesto)
 
 | Ferramenta | Força | Fraqueza | Usar para |
 |------------|-------|----------|-----------|
-| **ChatGPT** | Versatilidade, velocidade | Inventa citações, superficial em análise longa | Rascunhos, brainstorm, resumos |
-| **Claude** | Análise profunda, textos longos, nuance | Mais lento, menos popular | Pareceres, análise de contratos, revisão |
-| **NotebookLM** | Estuda documentos longos | Não gera peças | Processos volumosos, due diligence |
-| **Agentes (Claude Code)** | Automação real | Complexo, requer setup | Demonstração de futuro próximo |
+| **ChatGPT** | Deep Research, versatilidade, GPTs customizados | Pode inventar se não forçar busca web | Pesquisa jurisprudencial (com Deep Research), rascunhos em massa, brainstorm de teses |
+| **Claude** | Análise profunda, Extended Thinking, textos longos | Acesso à internet limitado | Pareceres, análise de contratos, revisão de peças, análise de risco |
+| **Perplexity** | Pesquisa com fontes nativas, links automáticos | Não gera peças completas | Pesquisa de jurisprudência com citação, atualização legislativa, verificação de fontes |
+| **NotebookLM** | Estuda documentos longos, compara | Não gera peças, não busca web | Processos volumosos, análise de acervo de decisões, due diligence |
+| **Gemini** | Multimodal, integração Google | Menos preciso em jurídico | Transcrição de audiências, análise de documentos digitalizados |
 
-**NÃO INCLUÍDO**: Perplexity para jurisprudência (demonstramos que falha)
+**IMPORTANTE**: Para pesquisa de jurisprudência, a regra é sempre buscar na internet. ChatGPT com Deep Research ou Perplexity são as melhores opções. Nunca confiar em citação sem link.
 
 **Slides: 5** (mapa, CLEAR, exemplos de cartas)
 
@@ -105,12 +117,12 @@
 | 15-60 | **EXERCÍCIO 5** | Fluxo completo com CASO FICTÍCIO 1 (ver abaixo). Duplas. |
 | 60-70 | Debrief | "Onde a IA ajudou mais? Onde ela atrapalhou?" |
 
-### EXERCÍCIO 5: Fluxo Simplificado (45 min)
+### EXERCÍCIO 5: Fluxo Completo de Defesa (45 min)
 
 **Etapas reduzidas para caber no tempo:**
-1. **Análise** (15 min): Usar IA para identificar teses e riscos do caso
-2. **Minuta** (20 min): Gerar petição inicial, aplicar CLEAR
-3. **Verificação** (10 min): Checar se citou jurisprudência, verificar existência
+1. **Pesquisa** (15 min): Usar IA para pesquisar jurisprudência de defesa + identificar teses. Aplicar Protocolo de Pesquisa (busca web + link + thinking + checagem).
+2. **Minuta** (20 min): Gerar contestação aplicando CLEAR. Foco em impugnar ponto a ponto.
+3. **Verificação** (10 min): Checar se citou jurisprudência com link, verificar existência, pedir autochecagem à IA.
 
 **Instrutor circula como consultor, não palestra.**
 
@@ -123,17 +135,17 @@
 
 | Min | Atividade | Detalhe |
 |-----|-----------|---------|
-| 0-8 | Casos reais | Advogado EUA sancionado. Vazamento de dados. Plágio detectado. |
+| 0-8 | Casos reais | Advogado EUA sancionado. Vazamento de dados de cliente corporativo. Plágio detectado. |
 | 8-15 | 5 Regras | Protocolo inegociável (ver abaixo) |
-| 15-35 | **EXERCÍCIO 6** | Anonimização real: pegar caso do escritório, anonimizar, enviar para IA |
+| 15-35 | **EXERCÍCIO 6** | Anonimização real: pegar caso do escritório (reclamação trabalhista contra banco), anonimizar dados sensíveis, enviar para IA |
 
 ### Protocolo de Segurança (5 Regras)
 
-1. **Anonimizar SEMPRE** — Nomes fictícios, datas alteradas, valores aproximados
-2. **Verificar TODA citação** — Nenhuma jurisprudência sem checar fonte primária
-3. **Revisar TUDO** — Output de IA é rascunho, não produto final
-4. **Registrar uso** — Transparência com cliente e tribunal quando exigido
-5. **Humano decide** — IA sugere, advogado assina
+1. **Anonimizar SEMPRE** — Nomes fictícios, dados bancários mascarados, valores aproximados. Nunca enviar nome do cliente corporativo.
+2. **Verificar TODA citação** — Nenhuma jurisprudência sem link verificável para tribunal. Usar Protocolo de Pesquisa.
+3. **Revisar TUDO** — Output de IA é rascunho, não produto final. Especialmente em contencioso de massa, erros se multiplicam.
+4. **Registrar uso** — Transparência com cliente e tribunal quando exigido (CNJ 615/2025).
+5. **Humano decide** — IA sugere, advogado assina. Em contencioso de massa, revisar amostra antes de replicar.
 
 **Slides: 3** (casos, protocolo, checklist)
 
@@ -144,16 +156,14 @@
 
 | Min | Atividade | Detalhe |
 |-----|-----------|---------|
-| 0-10 | Menções | Jurimetria, Visual Law, Legal Design — "cursos inteiros, não cabe aqui" |
+| 0-10 | Menções | Jurimetria para contencioso de massa, padrões decisórios por vara/juiz, Visual Law, automação de fluxos — "cursos inteiros, não cabe aqui" |
 | 10-15 | Recursos | Links reais para continuar aprendendo |
 
-### Recursos Concretos (verificados)
+### Recursos Concretos (verificados, todos com QR code)
 
-- **Newsletter**: [Direito & IA - AB2L](https://ab2l.org.br) — Associação Brasileira de Lawtechs
-- **Comunidade**: [Legal Hackers](https://legalhackers.org) — Rede global de inovação jurídica
-- **Cursos**: [IA e Proteção de Dados - FGV Direito SP](https://direitosp.fgv.br/cursos/curta-duracao/fgvlaw-protecao-dados-e-inteligencia-artificial) — Curta duração, 32h
-- **Podcast**: [Direito 4.0](https://open.spotify.com/show/5Q0rJimaM6ao4NWoyuMIve) — Inovação, tecnologia e direito
-- **Curso online gratuito**: [Regulação da IA - FGV](https://educacao-executiva.fgv.br/cursos/online/curta-media-duracao-online/regulacao-da-inteligencia-artificial)
+- **Ecossistema**: [AB2L](https://ab2l.org.br) — Associação Brasileira de Lawtechs e Legaltechs
+- **Podcast**: [Direito Digital](https://open.spotify.com/show/7mWbaobExP8NXp1wRGSsD3) — Episódios sobre direito e tecnologia (ativo, 54+ episódios)
+- **Curso gratuito**: [Regulação da IA - FGV](https://educacao-executiva.fgv.br/cursos/online/curta-media-duracao-online/regulacao-da-inteligencia-artificial) — Online, gratuito, 6.400+ alunos
 
 **Slides: 2** (horizontes, QR codes dos recursos)
 
@@ -164,7 +174,7 @@
 
 | Min | Atividade | Detalhe |
 |-----|-----------|---------|
-| 0-8 | Reflexão | Olhos fechados. "Pense na sua semana. Onde IA teria ajudado?" |
+| 0-8 | Reflexão | Olhos fechados. "Pensem naquelas 200 contestações na fila. Onde a IA entra na segunda-feira?" |
 | 8-20 | **EXERCÍCIO 7** | Escrever em papel: "Na segunda-feira, vou usar IA para _____." |
 | 20-25 | Compartilhamento | Voluntário. Celebrar a coragem. |
 | 25-30 | Encerramento | "Vocês descobriram uma versão mais poderosa de vocês." Certificado. Foto. |
@@ -173,331 +183,384 @@
 
 ---
 
-# AS 12 CARTAS (Reescritas com CLEAR)
+# AS 12 CARTAS (Reescritas com CLEAR — Defesa Empresarial)
 
 ## Categoria: ELABORAÇÃO DE PEÇAS (4 cartas)
 
-### Carta 1: Petição Inicial
+### Carta 1: Contestação Trabalhista em Massa
 ```
-CONTEXTO: Sou advogado trabalhista elaborando petição inicial de
-reclamação trabalhista. O reclamante trabalhou como [cargo] de [data]
-a [data] e foi dispensado sem justa causa.
+CONTEXTO: Sou advogado de escritório que defende grande banco em
+contencioso trabalhista de massa. Preciso de contestação para
+reclamação trabalhista que pede [horas extras / equiparação / dano moral].
+Volume: temos 300+ ações similares.
 
-LIMITE: Não cite jurisprudência específica (vou verificar depois).
-Não invente nomes de testemunhas.
+LIMITE: Não cite jurisprudência específica sem buscar na internet
+com link. Foque em teses de defesa consolidadas. Estrutura replicável.
 
-EXEMPLO: Estrutura desejada: 1) Qualificação, 2) Fatos, 3) Fundamentos,
-4) Pedidos numerados, 5) Valor da causa.
+EXEMPLO: Estrutura desejada: 1) Qualificação da reclamada,
+2) Síntese da inicial, 3) Preliminares, 4) Impugnação ponto a ponto,
+5) Mérito (teses de defesa), 6) Pedidos, 7) Documentos.
 
-AUDIÊNCIA: Juiz do trabalho de vara de [cidade].
+AUDIÊNCIA: Juiz do trabalho de vara de Brasília.
 
-ROLE: Atue como advogado trabalhista experiente, com linguagem técnica
-mas objetiva.
+ROLE: Advogado empresarial experiente em contencioso bancário de massa,
+linguagem técnica, objetiva, sem excesso.
 
-FATOS DO CASO: [inserir fatos]
-```
-
-### Carta 2: Contestação
-```
-CONTEXTO: Sou advogado da reclamada em ação trabalhista. Preciso
-contestar os pedidos do reclamante.
-
-LIMITE: Não admita fatos prejudiciais. Não cite jurisprudência
-específica. Foque em impugnar ponto a ponto.
-
-EXEMPLO: Para cada pedido: a) Impugnação dos fatos, b) Impugnação
-do direito, c) Pedido de improcedência.
-
-AUDIÊNCIA: Juiz do trabalho.
-
-ROLE: Advogado empresarial experiente, técnico e preciso.
-
-PEDIDOS A CONTESTAR: [inserir pedidos da inicial]
+FATOS DO CASO: [inserir pedidos da inicial e fatos a impugnar]
 ```
 
-### Carta 3: Recurso Ordinário
+### Carta 2: Recurso Ordinário (Defesa)
 ```
-CONTEXTO: Fui condenado em primeira instância e preciso recorrer.
-A sentença [deferiu/indeferiu] [pedidos].
+CONTEXTO: Sou advogado da reclamada (banco/empresa de grande porte).
+Fomos condenados em primeira instância. Preciso recorrer dos pedidos
+de [horas extras / equiparação / dano moral].
 
-LIMITE: Não cite acórdãos específicos (verificarei depois). Foque
-nos fundamentos para reforma.
+LIMITE: Não cite acórdãos sem buscar na internet com link verificável.
+Para jurisprudência: use Perplexity ou ChatGPT com Deep Research,
+sempre com link para tribunal. Foque nos fundamentos para reforma.
 
-EXEMPLO: Estrutura: 1) Tempestividade, 2) Síntese da sentença,
-3) Razões de reforma por pedido, 4) Pedido de provimento.
+EXEMPLO: Estrutura: 1) Tempestividade e preparo, 2) Síntese da
+sentença, 3) Razões de reforma por pedido condenatório,
+4) Pedido de provimento total ou parcial.
 
 AUDIÊNCIA: Desembargadores do TRT.
 
-ROLE: Advogado recursal experiente.
+ROLE: Advogado recursal de contencioso empresarial, técnico e preciso.
 
-PONTOS A ATACAR: [inserir fundamentos da sentença]
+PONTOS A ATACAR: [inserir fundamentos da sentença condenatória]
 ```
 
-### Carta 4: Contrato de Trabalho
+### Carta 3: Defesa em Ação Civil Pública
 ```
-CONTEXTO: Preciso elaborar contrato de trabalho para [cargo] em
-regime [CLT/PJ/temporário].
+CONTEXTO: Empresa cliente (banco/aérea) é ré em ação civil pública
+do MPT sobre [prática trabalhista]. Risco de condenação em obrigação
+de fazer + dano moral coletivo.
 
-LIMITE: Usar legislação vigente. Não incluir cláusulas abusivas
-ou inconstitucionais.
+LIMITE: Não cite jurisprudência sem busca na internet com link.
+Foque em demonstrar regularidade das práticas empresariais.
 
-EXEMPLO: Cláusulas essenciais: identificação, função, jornada,
-remuneração, benefícios, confidencialidade, rescisão.
+EXEMPLO: Estrutura: 1) Preliminares (legitimidade, interesse),
+2) Impugnação dos fatos, 3) Regularidade demonstrada com documentos,
+4) Ausência de dano coletivo, 5) Pedidos.
 
-AUDIÊNCIA: RH e jurídico da empresa, e o colaborador.
+AUDIÊNCIA: Juiz da vara do trabalho.
 
-ROLE: Advogado trabalhista empresarial.
+ROLE: Advogado empresarial sênior em defesa de litígios coletivos.
 
-CONDIÇÕES: [inserir condições acordadas]
+FATOS: [inserir resumo da ACP e práticas questionadas]
+```
+
+### Carta 4: Acordo em Massa — Proposta Padronizada
+```
+CONTEXTO: Escritório defende banco/empresa com 500+ ações trabalhistas
+similares. Diretoria autorizou faixa de acordo. Preciso de proposta
+padronizada por faixa de pedido.
+
+LIMITE: Valores genéricos (faixas). Linguagem que minimize admissão
+de responsabilidade. Cláusula de quitação ampla.
+
+EXEMPLO: Formato: 1) Contextualização (sem admissão de culpa),
+2) Proposta por faixa de valor, 3) Forma de pagamento,
+4) Cláusula de quitação, 5) Prazo de aceite.
+
+AUDIÊNCIA: Juiz do trabalho e advogado do reclamante.
+
+ROLE: Advogado negociador de contencioso de massa.
+
+PARÂMETROS: [inserir faixas de valor autorizadas e perfil das ações]
 ```
 
 ## Categoria: ANÁLISE E REVISÃO (4 cartas)
 
-### Carta 5: Análise de Risco Trabalhista
+### Carta 5: Análise de Risco para Empresa
 ```
-CONTEXTO: Cliente quer demitir funcionário que [situação]. Preciso
-analisar riscos.
+CONTEXTO: Cliente corporativo (banco/aérea) quer avaliar risco de
+[prática trabalhista ou política interna]. Preciso mapear exposição.
 
 LIMITE: Não afirme certeza sobre decisões judiciais. Apresente
-cenários.
+cenários com probabilidade. Considere volume de ações similares.
 
-EXEMPLO: Formato: 1) Situação, 2) Riscos identificados com
-probabilidade (alto/médio/baixo), 3) Recomendações, 4) Alternativas.
+EXEMPLO: Formato: 1) Prática analisada, 2) Riscos por cenário
+(condenação total/parcial/improcedência) com probabilidade,
+3) Exposição financeira estimada (unitária e total do acervo),
+4) Recomendações, 5) Alternativas de mitigação.
 
-AUDIÊNCIA: Diretor de RH sem formação jurídica.
+AUDIÊNCIA: Diretor jurídico e RH da empresa, sem formação jurídica.
 
-ROLE: Consultor trabalhista preventivo.
+ROLE: Consultor trabalhista preventivo de grandes empresas.
 
-SITUAÇÃO: [inserir detalhes]
+SITUAÇÃO: [inserir prática e número estimado de empregados afetados]
 ```
 
-### Carta 6: Revisão de Peça
+### Carta 6: Revisão de Peça de Defesa
 ```
-CONTEXTO: Redigi esta [tipo de peça] e preciso de revisão crítica.
+CONTEXTO: Advogado júnior do escritório redigiu esta [contestação/recurso]
+para caso de contencioso bancário. Preciso revisar antes de protocolar.
 
 LIMITE: Não reescreva tudo. Aponte problemas específicos com
-sugestões de correção.
+sugestões de correção. Foco em: teses fracas, fundamentos faltantes,
+oportunidades de defesa não exploradas.
 
-EXEMPLO: Formato: 1) Pontos fortes, 2) Problemas de fundamentação,
-3) Oportunidades perdidas, 4) Sugestões de melhoria linha a linha.
+EXEMPLO: Formato: 1) Pontos fortes, 2) Teses de defesa ausentes,
+3) Problemas de fundamentação, 4) Oportunidades perdidas,
+5) Sugestões linha a linha.
 
-AUDIÊNCIA: Eu mesmo, para aprendizado.
+AUDIÊNCIA: Advogado júnior, para aprendizado e melhoria.
 
-ROLE: Revisor jurídico sênior, exigente mas construtivo.
+ROLE: Revisor sênior de contencioso empresarial, exigente mas
+construtivo.
 
-PEÇA: [colar peça]
+PEÇA: [colar peça de defesa]
 ```
 
-### Carta 7: Parecer Jurídico
+### Carta 7: Parecer para Cliente Corporativo
 ```
-CONTEXTO: Cliente pergunta se pode [situação]. Preciso de parecer
-fundamentado.
+CONTEXTO: Banco/empresa cliente pergunta se pode [prática trabalhista:
+alterar jornada, terceirizar setor, implementar banco de horas, etc.].
+Preciso de parecer com análise de risco.
 
 LIMITE: Seja honesto sobre incertezas. Não prometa resultados.
+Considere jurisprudência do TST e TRT da região.
+Para citar jurisprudência, buscar na internet com link.
 
-EXEMPLO: Formato: 1) Consulta, 2) Fundamentação legal, 3) Análise
-do caso concreto, 4) Riscos, 5) Conclusão e recomendação.
+EXEMPLO: Formato: 1) Consulta, 2) Fundamentação legal,
+3) Jurisprudência relevante (com links), 4) Análise do caso,
+5) Riscos quantificados, 6) Conclusão e recomendação.
 
-AUDIÊNCIA: Cliente empresário sem formação jurídica.
+AUDIÊNCIA: Diretor jurídico de grande empresa.
 
-ROLE: Parecerista experiente, claro e objetivo.
+ROLE: Parecerista trabalhista empresarial, claro e objetivo.
 
-CONSULTA: [inserir pergunta do cliente]
+CONSULTA: [inserir pergunta do cliente corporativo]
 ```
 
-### Carta 8: Estratégia de Caso
+### Carta 8: Estratégia de Contencioso de Massa
 ```
-CONTEXTO: Assumi caso [tipo] com as seguintes características
-[resumo]. Preciso definir estratégia.
+CONTEXTO: Empresa cliente enfrenta onda de [tipo de ação] — 50 novas
+ações por mês com pedidos similares. Preciso definir estratégia global.
 
-LIMITE: Não sugira táticas antiéticas. Considere custo-benefício.
+LIMITE: Não sugira táticas antiéticas. Considere custo-benefício em
+escala. Avaliar: defender tudo vs acordar por faixa.
 
-EXEMPLO: Formato: 1) Diagnóstico, 2) Teses possíveis (forte/média/fraca),
-3) Provas necessárias, 4) Cronograma, 5) Acordo vs litígio.
+EXEMPLO: Formato: 1) Diagnóstico do acervo, 2) Perfil das ações
+(pedidos recorrentes, valores médios), 3) Teses de defesa padronizadas,
+4) Política de acordo por faixa, 5) KPIs de acompanhamento.
 
-AUDIÊNCIA: Minha equipe interna.
+AUDIÊNCIA: Sócios do escritório e diretor jurídico do cliente.
 
-ROLE: Advogado estrategista experiente.
+ROLE: Advogado estrategista de contencioso de massa.
 
-CASO: [inserir fatos]
+DADOS: [inserir perfil das ações e resultados recentes]
 ```
 
 ## Categoria: COMUNICAÇÃO (2 cartas)
 
-### Carta 9: Resumo para Cliente
+### Carta 9: Relatório Mensal para Cliente Corporativo
 ```
-CONTEXTO: Recebi [decisão/parecer/citação] e preciso explicar ao
-cliente leigo.
+CONTEXTO: Preciso enviar relatório mensal do contencioso ao banco/empresa
+cliente. [X] ações ativas, [Y] encerradas no mês, [Z] novas.
 
-LIMITE: Máximo 3 parágrafos. Zero jargão jurídico. Foque no
-impacto prático.
+LIMITE: Máximo 2 páginas. Dados consolidados. Linguagem executiva.
+Foque em números, tendências e recomendações.
 
-EXEMPLO: Formato: 1) O que aconteceu (1 frase), 2) O que significa
-para você (1 parágrafo), 3) Próximos passos (lista simples).
+EXEMPLO: Formato: 1) Dashboard (ações ativas/encerradas/novas),
+2) Resultados do mês (ganhos/perdas/acordos), 3) Exposição financeira,
+4) Tendências observadas, 5) Ações recomendadas, 6) Próximos passos.
 
-AUDIÊNCIA: Cliente [perfil] sem formação jurídica.
+AUDIÊNCIA: Diretor jurídico de banco, sem tempo, quer números.
 
-ROLE: Advogado que explica com clareza e empatia.
+ROLE: Advogado gestor de contencioso que reporta com clareza.
 
-DOCUMENTO: [colar ou resumir]
+DADOS: [inserir números do mês]
 ```
 
-### Carta 10: E-mail Profissional
+### Carta 10: E-mail Profissional para Cliente Corporativo
 ```
-CONTEXTO: Preciso enviar e-mail para [destinatário] sobre [assunto].
+CONTEXTO: Preciso enviar e-mail para [destinatário no banco/empresa]
+sobre [resultado de audiência / decisão / necessidade de documentos].
 
-LIMITE: Tom [formal/cordial]. Máximo [X] parágrafos. Sem juridiquês
-desnecessário.
+LIMITE: Tom formal-corporativo. Máximo 3 parágrafos. Direto ao ponto.
+Sem juridiquês desnecessário.
 
-EXEMPLO: Estrutura: saudação, contexto em 1 frase, conteúdo principal,
-call-to-action claro, despedida.
+EXEMPLO: Estrutura: saudação, resultado/informação principal em 1 frase,
+detalhamento breve, ação necessária do cliente, despedida.
 
-AUDIÊNCIA: [descrever destinatário e relação].
+AUDIÊNCIA: [gestor jurídico / RH / diretor] de grande empresa.
 
-ROLE: Profissional assertivo e respeitoso.
+ROLE: Advogado que se comunica com clareza e eficiência corporativa.
 
 PONTOS A INCLUIR: [listar]
 ```
 
 ## Categoria: PRODUTIVIDADE (2 cartas)
 
-### Carta 11: Resumo de Processo
+### Carta 11: Resumo de Processo em Lote
 ```
-CONTEXTO: Preciso entender rapidamente este processo de [X] páginas
-que assumi.
+CONTEXTO: Assumi lote de [X] processos trabalhistas contra banco/empresa.
+Preciso entender rapidamente cada um para definir estratégia.
 
-LIMITE: Foque em: partes, pedidos, status, próximos prazos, pontos
-críticos.
+LIMITE: Foque em: partes, pedidos principais, fase processual,
+risco (alto/médio/baixo), ação recomendada.
 
-EXEMPLO: Formato: 1) Partes e representantes, 2) Objeto, 3)
-Histórico processual (linha do tempo), 4) Situação atual,
-5) Riscos e oportunidades.
+EXEMPLO: Formato tabular: 1) Nº processo, 2) Reclamante e pedidos,
+3) Fase, 4) Risco, 5) Valor estimado, 6) Próximo prazo,
+7) Recomendação (defender/acordar/recorrer).
 
-AUDIÊNCIA: Eu mesmo, para assumir o caso.
+AUDIÊNCIA: Eu mesmo e equipe, para gestão do acervo.
 
-ROLE: Assistente jurídico eficiente.
+ROLE: Assistente jurídico de contencioso de massa, eficiente.
 
-DOCUMENTOS: [colar peças principais ou resumo]
+DOCUMENTOS: [colar iniciais ou resumo de cada processo]
 ```
 
-### Carta 12: Checklist de Audiência
+### Carta 12: Checklist de Audiência de Defesa
 ```
-CONTEXTO: Tenho audiência [tipo] no processo [resumo] em [data].
+CONTEXTO: Tenho audiência [instrução/julgamento] em processo trabalhista
+contra banco/empresa. Reclamante pede [pedidos].
 
-LIMITE: Seja prático. Foque no que posso esquecer.
+LIMITE: Seja prático. Foque no que posso esquecer. Considere que
+é contencioso de massa — padronizar para replicar.
 
-EXEMPLO: Formato: 1) Documentos para levar, 2) Perguntas para
-testemunhas, 3) Pontos para destacar, 4) Objeções prováveis
-da outra parte, 5) Acordos possíveis.
+EXEMPLO: Formato: 1) Documentos para levar (guias GFIP, controle
+de jornada, holerites), 2) Perguntas para testemunha da empresa,
+3) Contraditas possíveis, 4) Pontos para destacar em defesa,
+5) Objeções prováveis do reclamante, 6) Parâmetros de acordo.
 
-AUDIÊNCIA: Eu mesmo, como lembrete.
+AUDIÊNCIA: Eu mesmo, como lembrete padronizado.
 
-ROLE: Advogado experiente me preparando.
+ROLE: Advogado experiente em audiências trabalhistas de defesa.
 
 DETALHES DO CASO: [inserir]
 ```
 
 ---
 
-# CASOS FICTÍCIOS PARA EXERCÍCIOS
+# CASOS FICTÍCIOS PARA EXERCÍCIOS (Contencioso de Massa)
 
-## CASO 1: Dispensa Discriminatória (Exercício 5)
+## CASO 1: Horas Extras de Gerente Bancário (Exercício 5)
 
 **Partes:**
-- Reclamante: Maria Silva Santos, 52 anos, auxiliar administrativa
-- Reclamada: Comércio ABC Ltda, loja de materiais de construção
+- Reclamante: Roberto Almeida Costa, 38 anos, ex-gerente de agência
+- Reclamada: Banco Nacional S.A. (grande banco de varejo, 800+ agências)
 
-**Fatos:**
-Maria trabalhou na empresa de 15/03/2018 a 10/01/2026 (quase 8 anos). Salário: R$ 2.800,00. Foi dispensada sem justa causa uma semana após retornar de licença médica de 30 dias por síndrome do pânico. No mesmo mês, a empresa contratou funcionária de 24 anos para a mesma função, com salário de R$ 2.200,00.
+**Cenário do escritório:** O Banco Nacional enfrenta 450+ ações similares de ex-gerentes pedindo horas extras. Este é um caso-tipo que definirá a estratégia para todo o acervo.
 
-Maria relata que o gerente disse: "Precisamos de sangue novo na equipe." Não há testemunhas diretas, mas duas colegas ouviram o comentário.
+**Fatos alegados pelo reclamante:**
+Roberto trabalhou como gerente de agência de 10/03/2020 a 15/12/2025. Salário: R$ 12.500,00 + gratificação de função de R$ 4.200,00. Alega que, apesar do cargo de confiança, não tinha autonomia real: seguia metas impostas pela regional, não podia contratar nem demitir, horário era controlado por sistema biométrico, trabalhava das 7h30 às 20h incluindo sábados.
 
-**Documentos disponíveis:**
-- CTPS com registros
-- Atestados médicos
-- Termo de rescisão
-- Print do LinkedIn mostrando contratação da substituta
+**Documentos do reclamante:**
+- Prints de e-mails da regional às 6h e 21h cobrando metas
+- Relatório de ponto biométrico mostrando entradas/saídas
+- WhatsApp com superior cobrando abertura da agência aos sábados
+- Holerites mostrando gratificação de função
 
-**Questões para análise:**
-1. Há indícios de dispensa discriminatória (idade/saúde)?
-2. Quais verbas rescisórias devidas?
-3. Cabe reintegração ou indenização?
-4. Como provar o comentário do gerente?
+**Teses de defesa a desenvolver:**
+1. Cargo de confiança bancário (art. 224, §2º, CLT) — gratificação > 1/3 do salário
+2. Autonomia real: gerente tinha procuração, assinava contratos, gerenciava equipe de 12 pessoas
+3. Ponto biométrico era exigência de segurança (resolução BACEN), não controle de jornada
+4. E-mails da regional não significam trabalho efetivo fora do horário
+5. Prescrição quinquenal
+
+**Questões para análise com IA:**
+1. A gratificação de R$ 4.200 (33,6% do salário) configura o requisito legal?
+2. Como impugnar os registros de ponto biométrico como prova de jornada?
+3. Qual a jurisprudência atual do TST sobre gerente de agência bancária? (USAR PROTOCOLO DE PESQUISA — busca web + link)
+4. Qual o risco financeiro por ação e para o acervo total (450 ações)?
+5. Vale defender ou propor acordo? Qual faixa?
 
 ---
 
-## CASO 2: Horas Extras Não Pagas (Exercício alternativo)
+## CASO 2: Equiparação Salarial de Comissários (Exercício alternativo)
 
 **Partes:**
-- Reclamante: João Pedro Oliveira, 34 anos, vendedor externo
-- Reclamada: Distribuidora XYZ S.A.
+- Reclamante: Patrícia Mendes Rocha, 29 anos, comissária de bordo
+- Reclamada: Voo Brasil S.A. (companhia aérea, 3.000+ tripulantes)
 
-**Fatos:**
-João trabalhou de 02/05/2022 a 30/11/2025 como vendedor externo. Contrato previa jornada de 8h (8h-17h com 1h intervalo), mas ele atendia clientes das 7h às 20h, incluindo sábados até meio-dia.
+**Cenário do escritório:** A Voo Brasil enfrenta 180 ações de comissários pedindo equiparação salarial com colegas de outra base. Vitória dos reclamantes geraria efeito cascata de R$ 45 milhões.
 
-A empresa não controlava jornada alegando "atividade externa incompatível". João tem WhatsApp com ordens do supervisor às 6h30 e 21h, GPS do carro da empresa mostrando trajetos, e e-mails enviados em horários diversos.
+**Fatos alegados pela reclamante:**
+Patrícia trabalha na base de Brasília desde 2021. Salário: R$ 4.800,00. Alega que comissários da base de São Paulo, contratados na mesma época e com mesma função, recebem R$ 7.200,00. Diz que faz as mesmas rotas, mesma carga horária e mesmas atribuições. Aponta como paradigma: Lucas Ferreira da Silva, base SP, contratado em 2020.
 
-**Documentos disponíveis:**
-- Contrato de trabalho (cláusula de jornada externa)
-- Prints de WhatsApp (150 mensagens)
-- Relatório de GPS do veículo
-- Recibos de pagamento (sem horas extras)
+**Documentos da reclamante:**
+- Holerites próprios e do paradigma (obtidos em grupo de WhatsApp)
+- Descrição de cargo idêntica (mesmo código no RH)
+- Escalas de voo mostrando mesmas rotas
 
-**Questões para análise:**
-1. A cláusula de jornada externa é válida neste caso?
-2. Como calcular as horas extras devidas?
-3. Quais provas são mais fortes?
-4. Há reflexos em outras verbas?
+**Teses de defesa a desenvolver:**
+1. Bases diferentes = estabelecimentos diferentes (art. 461, CLT — reforma trabalhista)
+2. Plano de cargos e salários registrado (diferenciação por base é legítima)
+3. Paradigma com tempo de serviço superior (diferença > 4 anos na função)
+4. Custo de vida diferente entre bases justifica diferença
+5. Impugnar holerites obtidos irregularmente
+
+**Questões para análise com IA:**
+1. Após a reforma trabalhista, a equiparação exige mesmo estabelecimento?
+2. Qual a jurisprudência do TST sobre equiparação entre bases diferentes de companhia aérea? (USAR PROTOCOLO DE PESQUISA)
+3. O plano de cargos e salários precisa de homologação sindical após a reforma?
+4. Como impugnar prova obtida em grupo de WhatsApp?
+5. Exposição financeira total se perder (180 ações x diferença salarial)?
 
 ---
 
-## CASO 3: Acidente de Trabalho (Exercício alternativo)
+## CASO 3: Assédio Moral — Defesa do Banco (Exercício alternativo)
 
 **Partes:**
-- Reclamante: Carlos Ferreira, 45 anos, operador de empilhadeira
-- Reclamada: Indústria Metalúrgica Beta Ltda.
+- Reclamante: Ana Cristina Lopes, 41 anos, ex-analista de crédito
+- Reclamada: Banco Nacional S.A.
 
-**Fatos:**
-Carlos sofreu acidente em 22/08/2025 quando a empilhadeira tombou por falha no freio. Fraturou a perna e ficou afastado 6 meses pelo INSS. Retornou com restrições (não pode carregar peso). A empresa não tinha manutenção preventiva documentada da empilhadeira. EPI estava vencido.
+**Cenário do escritório:** Ações de assédio moral representam 25% do acervo do banco (600+ ações). Condenações médias de R$ 15.000-50.000. Este caso tem particularidades que podem virar precedente.
 
-Após retorno, foi colocado em função de portaria, com redução salarial de R$ 4.500 para R$ 2.800.
+**Fatos alegados pela reclamante:**
+Ana trabalhou de 2019 a 2025 como analista de crédito. Alega que o gerente regional Paulo Mendes a assediava moralmente: cobranças excessivas por e-mail com cópia para toda a equipe, exposição de metas individuais em ranking público, ameaças de demissão em reunião, isolamento após retorno de licença maternidade (2023). Pede: dano moral de R$ 100.000 + rescisão indireta + verbas rescisórias.
 
-**Documentos disponíveis:**
-- CAT (Comunicação de Acidente de Trabalho)
-- Laudo do INSS
-- Fotos da empilhadeira após acidente
-- Histórico de manutenção (incompleto)
-- Holerites antes e depois
+**Documentos da reclamante:**
+- E-mails do gerente com cobranças agressivas (cópia para equipe)
+- Print de ranking de metas exposto no Teams
+- Atestado psiquiátrico (ansiedade e depressão)
+- Testemunha: colega que presenciou "reunião de pressão"
 
-**Questões para análise:**
-1. Há responsabilidade da empresa?
-2. A redução salarial é legal?
-3. Cabe estabilidade acidentária?
-4. Quais indenizações possíveis (material, moral, estética)?
+**Teses de defesa a desenvolver:**
+1. Cobrança de metas é exercício regular do poder diretivo (não é assédio)
+2. Rankings de produtividade são prática de mercado, sem exposição vexatória
+3. E-mails em cópia são comunicação institucional normal
+4. Ausência de nexo causal entre trabalho e quadro psiquiátrico
+5. Caso isolado de gestão inadequada vs política institucional de assédio
+6. Empresa tem canal de denúncia e programa de compliance — reclamante nunca registrou queixa
+
+**Questões para análise com IA:**
+1. Qual o limite entre cobrança legítima de metas e assédio moral? Jurisprudência do TST? (USAR PROTOCOLO DE PESQUISA)
+2. Ranking de produtividade configura exposição vexatória segundo a jurisprudência?
+3. Como usar o programa de compliance e canal de denúncia como defesa?
+4. O atestado psiquiátrico é suficiente para provar nexo causal?
+5. Estratégia: defender integralmente ou propor acordo? Qual faixa?
+6. Como mitigar risco de precedente para as outras 600 ações?
 
 ---
 
 # CHECKLIST DO INSTRUTOR
 
 ## Antes do Curso
-- [ ] Testar ChatGPT, Claude em celular e notebook
-- [ ] Gravar vídeo backup da demo WOW (petição em 90s)
+- [ ] Testar ChatGPT (Deep Research), Claude (Extended Thinking), Perplexity em celular e notebook
+- [ ] Gravar vídeo backup da demo WOW (contestação bancária em 90s)
 - [ ] Imprimir 12 cartas (1 jogo por participante)
 - [ ] Imprimir casos fictícios
 - [ ] Imprimir folhas de compromisso
-- [ ] Criar QR codes: ChatGPT, Claude, site do TRT
+- [ ] Criar QR codes: ChatGPT, Claude, Perplexity, site do TST
 - [ ] Testar Wi-Fi do local
 - [ ] Confirmar tomadas para carregadores
+- [ ] Preparar exemplo de pesquisa jurisprudencial com links funcionando
 
 ## Durante o Curso
 - [ ] ZERO menções a "substituição" ou "medo"
+- [ ] Enfatizar: "IA serve para jurisprudência SIM — com método"
 - [ ] Celebrar erros como aprendizado
 - [ ] Circular durante exercícios (não sentar)
 - [ ] Dar tempo para reflexões (não apressar)
 - [ ] Anotar dúvidas para FAQ futuro
+- [ ] Sempre demonstrar thinking mode quando usar IA
 
 ## Depois do Curso
-- [ ] Enviar por e-mail: cartas PDF, casos, links
+- [ ] Enviar por e-mail: cartas PDF, casos, links, Protocolo de Pesquisa
 - [ ] Criar grupo WhatsApp (opcional)
 - [ ] Follow-up em 7 dias: "Como foi o compromisso?"
 - [ ] Coletar feedback para v4
@@ -511,7 +574,7 @@ Após retorno, foi colocado em função de portaria, com redução salarial de R
 | Bloco | Início | Fim | Duração |
 |-------|--------|-----|---------|
 | 1. Espanto | 0:00 | 0:45 | 45 min |
-| 2. Perigo | 0:45 | 1:35 | 50 min |
+| 2. Pesquisa Inteligente | 0:45 | 1:35 | 50 min |
 | Intervalo | 1:35 | 1:45 | 10 min |
 | 3. Ferramentas | 1:45 | 2:40 | 55 min |
 | Buffer | 2:40 | 3:00 | 20 min |
@@ -531,22 +594,25 @@ Após retorno, foi colocado em função de portaria, com redução salarial de R
 
 ---
 
-# MUDANÇAS v2 → v3
+# MUDANÇAS v3 → v3.1
 
-| Item | v2 | v3 |
+| Item | v3 | v3.1 |
 |------|----|----|
-| Timing Bloco 2 | Sobreposto | Corrigido |
-| Perplexity | "Essencial" | Removido (demonstrado que falha) |
-| Cartas | Prompts básicos | Reescritas com CLEAR |
-| Exercício 5 | 6 etapas em 40min | 3 etapas em 45min |
-| Exercício 6 | 5 min | 20 min |
-| Casos fictícios | Mencionados | 3 completos incluídos |
-| Recursos | Placeholders | Links reais |
-| Tarefa entre dias | Nenhuma | "Use IA em algo real" |
-| Slides | 28 | 20 |
-| Buffer | 25 min total | 40 min total |
+| Perspectiva | Mista (reclamante/genérico) | 100% defesa empresarial |
+| Exemplos | Genéricos | Banco + companhia aérea, contencioso de massa |
+| Jurisprudência | "IA falha, não use" | "IA funciona com Protocolo de Pesquisa" |
+| Perplexity | Removido | Reincluído como essencial para pesquisa |
+| Thinking mode | Não mencionado | Obrigatório em toda pesquisa |
+| Autochecagem | Não existia | Passo 4 do Protocolo de Pesquisa |
+| Cartas CLEAR | Lado do trabalhador | Defesa empresarial de massa |
+| Casos fictícios | Trabalhador vs empresa genérica | Banco/aérea sendo defendidos |
+| Demo WOW | Petição inicial | Contestação em massa |
+| Bloco 2 | "Descoberta do Perigo" | "Pesquisa Inteligente com IA" |
+| Exercício 5 | Petição inicial | Contestação + pesquisa de defesa |
+| Escala | Individual | Contencioso de massa (centenas de ações) |
 
 ---
 
-*Roteiro v3 — Revisão crítica em 2026-02-04*
-*Corrigido: timing, cartas CLEAR, casos concretos, contradição Perplexity*
+*Roteiro v3.1 — Adequação para contencioso de massa em 2026-02-06*
+*Perfil: Defesa empresarial, banco + aérea, alto volume, repetitivo*
+*Protocolo de Pesquisa: Busca → Link → Thinking → Checagem*

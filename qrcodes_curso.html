@@ -22,6 +22,14 @@
             color: #666;
             margin-bottom: 40px;
         }
+        .section-title {
+            color: #1a1a2e;
+            font-size: 1.1rem;
+            margin: 30px 0 15px;
+            padding-left: 5px;
+            border-left: 4px solid #7c3aed;
+            padding: 5px 15px;
+        }
         .qr-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -42,6 +50,16 @@
             color: #888;
             font-size: 0.85rem;
             margin-bottom: 15px;
+        }
+        .bloco-tag {
+            display: inline-block;
+            background: #e8e8ff;
+            color: #5b21b6;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            font-weight: 600;
         }
         .qr-placeholder {
             width: 200px;
@@ -103,8 +121,9 @@
         .print-btn:hover { background: #6d28d9; }
         @media print {
             body { background: white; }
-            .print-btn { display: none; }
+            .print-btn, .instructions { display: none; }
             .qr-card { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
+            .section-title { break-before: auto; }
         }
     </style>
 </head>
@@ -118,25 +137,29 @@
             <ol>
                 <li>Aponte a camera do celular para o QR code desejado</li>
                 <li>O link abrira automaticamente no navegador</li>
-                <li>Para imprimir, clique no botao "Imprimir QR Codes" abaixo</li>
+                <li>Cada QR code indica em qual bloco do curso e usado</li>
+                <li>Para imprimir, clique no botao abaixo</li>
             </ol>
         </div>
 
+        <!-- FERRAMENTAS — Usadas nos Exercicios 1 a 5 -->
+        <h3 class="section-title">Ferramentas de IA</h3>
         <div class="qr-grid">
-            <!-- FERRAMENTAS -->
             <div class="qr-card">
                 <span class="category cat-ferramenta">Ferramenta</span>
                 <h3>ChatGPT</h3>
+                <span class="bloco-tag">Blocos 1, 2, 3 e 4</span>
                 <p>IA conversacional da OpenAI</p>
                 <div class="qr-placeholder">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://chat.openai.com" alt="QR ChatGPT">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://chatgpt.com" alt="QR ChatGPT">
                 </div>
-                <div class="qr-url">https://chat.openai.com</div>
+                <div class="qr-url">https://chatgpt.com</div>
             </div>
 
             <div class="qr-card">
                 <span class="category cat-ferramenta">Ferramenta</span>
                 <h3>Claude</h3>
+                <span class="bloco-tag">Blocos 1, 2, 3 e 4</span>
                 <p>IA conversacional da Anthropic</p>
                 <div class="qr-placeholder">
                     <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://claude.ai" alt="QR Claude">
@@ -147,91 +170,49 @@
             <div class="qr-card">
                 <span class="category cat-ferramenta">Ferramenta</span>
                 <h3>NotebookLM</h3>
-                <p>Estudo de documentos longos</p>
+                <span class="bloco-tag">Bloco 3 — Mapa de ferramentas</span>
+                <p>Analise de documentos longos (Google)</p>
                 <div class="qr-placeholder">
                     <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://notebooklm.google.com" alt="QR NotebookLM">
                 </div>
                 <div class="qr-url">https://notebooklm.google.com</div>
             </div>
+        </div>
 
-            <!-- VERIFICACAO -->
+        <!-- VERIFICACAO — Exercicio 3 (Bloco 2) -->
+        <h3 class="section-title">Verificacao de Jurisprudencia</h3>
+        <div class="qr-grid">
             <div class="qr-card">
                 <span class="category cat-verificacao">Verificacao</span>
-                <h3>TRT (Consulta)</h3>
-                <p>Verificar jurisprudencia trabalhista</p>
+                <h3>TRT-10 Brasilia</h3>
+                <span class="bloco-tag">Bloco 2 — Exercicio 3</span>
+                <p>Pesquisa de jurisprudencia trabalhista regional</p>
                 <div class="qr-placeholder">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://www.trt10.jus.br/jurisprudencia/" alt="QR TRT">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://www.trt10.jus.br/jurisprudencia/" alt="QR TRT-10">
                 </div>
                 <div class="qr-url">https://www.trt10.jus.br/jurisprudencia/</div>
             </div>
 
             <div class="qr-card">
                 <span class="category cat-verificacao">Verificacao</span>
-                <h3>TST (Consulta)</h3>
-                <p>Verificar jurisprudencia TST</p>
+                <h3>TST</h3>
+                <span class="bloco-tag">Bloco 2 — Exercicio 3</span>
+                <p>Pesquisa de jurisprudencia do Tribunal Superior</p>
                 <div class="qr-placeholder">
                     <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://jurisprudencia.tst.jus.br" alt="QR TST">
                 </div>
                 <div class="qr-url">https://jurisprudencia.tst.jus.br</div>
             </div>
+        </div>
 
-            <!-- MATERIAIS DO CURSO -->
-            <div class="qr-card">
-                <span class="category cat-material">Material</span>
-                <h3>12 Cartas CLEAR</h3>
-                <p>Prompts estruturados para advocacia</p>
-                <div class="qr-placeholder">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://igormorais123.github.io/curso-ia-paixao-cortes/pagina_12_cartas_v3.html" alt="QR Cartas">
-                </div>
-                <div class="qr-url">igormorais123.github.io/curso-ia-paixao-cortes/pagina_12_cartas_v3.html</div>
-            </div>
-
-            <div class="qr-card">
-                <span class="category cat-material">Material</span>
-                <h3>Perfis Resistentes</h3>
-                <p>27 perfis de advogados</p>
-                <div class="qr-placeholder">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://igormorais123.github.io/curso-ia-paixao-cortes/pagina_perfis_resistentes.html" alt="QR Perfis">
-                </div>
-                <div class="qr-url">igormorais123.github.io/curso-ia-paixao-cortes/pagina_perfis_resistentes.html</div>
-            </div>
-
-            <!-- RECURSOS -->
-            <div class="qr-card">
-                <span class="category cat-recurso">Recurso</span>
-                <h3>AB2L</h3>
-                <p>Associacao Brasileira de Lawtechs</p>
-                <div class="qr-placeholder">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://ab2l.org.br" alt="QR AB2L">
-                </div>
-                <div class="qr-url">https://ab2l.org.br</div>
-            </div>
-
-            <div class="qr-card">
-                <span class="category cat-recurso">Recurso</span>
-                <h3>Legal Hackers</h3>
-                <p>Comunidade de inovacao juridica</p>
-                <div class="qr-placeholder">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://legalhackers.org" alt="QR Legal Hackers">
-                </div>
-                <div class="qr-url">https://legalhackers.org</div>
-            </div>
-
-            <div class="qr-card">
-                <span class="category cat-recurso">Recurso</span>
-                <h3>FGV Direito e IA</h3>
-                <p>Curso IA e Protecao de Dados</p>
-                <div class="qr-placeholder">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://direitosp.fgv.br/cursos/curta-duracao/fgvlaw-protecao-dados-e-inteligencia-artificial" alt="QR FGV">
-                </div>
-                <div class="qr-url">direitosp.fgv.br/cursos/curta-duracao/fgvlaw-protecao-dados-e-inteligencia-artificial</div>
-            </div>
-
-            <!-- REGULACAO -->
+        <!-- REGULACAO — Bloco 2, slide de regulacao -->
+        <h3 class="section-title">Regulacao sobre IA</h3>
+        <div class="qr-grid">
             <div class="qr-card">
                 <span class="category cat-regulacao">Regulacao</span>
                 <h3>Resolucao CNJ 615/2025</h3>
-                <p>IA no Poder Judiciario</p>
+                <span class="bloco-tag">Bloco 2 — Slide de regulacao</span>
+                <p>Diretrizes para IA no Poder Judiciario</p>
                 <div class="qr-placeholder">
                     <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://atos.cnj.jus.br/atos/detalhar/6001" alt="QR CNJ">
                 </div>
@@ -241,11 +222,64 @@
             <div class="qr-card">
                 <span class="category cat-regulacao">Regulacao</span>
                 <h3>Recomendacao OAB 001/2024</h3>
-                <p>IA na advocacia</p>
+                <span class="bloco-tag">Bloco 2 — Slide de regulacao</span>
+                <p>Recomendacoes para uso de IA na advocacia</p>
                 <div class="qr-placeholder">
                     <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://www.oab.org.br/noticia/62704/oab-aprova-recomendacoes-para-uso-de-ia-na-pratica-juridica" alt="QR OAB">
                 </div>
                 <div class="qr-url">oab.org.br/noticia/62704/oab-aprova-recomendacoes-para-uso-de-ia-na-pratica-juridica</div>
+            </div>
+        </div>
+
+        <!-- MATERIAL DO CURSO — Bloco 3 -->
+        <h3 class="section-title">Material do Curso</h3>
+        <div class="qr-grid">
+            <div class="qr-card">
+                <span class="category cat-material">Material</span>
+                <h3>12 Cartas CLEAR</h3>
+                <span class="bloco-tag">Bloco 3 — Entrega das cartas</span>
+                <p>Prompts estruturados para advocacia</p>
+                <div class="qr-placeholder">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://igormorais123.github.io/curso-ia-paixao-cortes/pagina_12_cartas_v3.html" alt="QR Cartas">
+                </div>
+                <div class="qr-url">igormorais123.github.io/curso-ia-paixao-cortes/pagina_12_cartas_v3.html</div>
+            </div>
+        </div>
+
+        <!-- RECURSOS — Bloco 6 (Horizontes) -->
+        <h3 class="section-title">Recursos para Continuar Aprendendo</h3>
+        <div class="qr-grid">
+            <div class="qr-card">
+                <span class="category cat-recurso">Recurso</span>
+                <h3>AB2L</h3>
+                <span class="bloco-tag">Bloco 6 — Horizontes</span>
+                <p>Associacao Brasileira de Lawtechs e Legaltechs</p>
+                <div class="qr-placeholder">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://ab2l.org.br" alt="QR AB2L">
+                </div>
+                <div class="qr-url">https://ab2l.org.br</div>
+            </div>
+
+            <div class="qr-card">
+                <span class="category cat-recurso">Recurso</span>
+                <h3>Podcast Direito Digital</h3>
+                <span class="bloco-tag">Bloco 6 — Horizontes</span>
+                <p>Podcast ativo sobre direito e tecnologia (Spotify)</p>
+                <div class="qr-placeholder">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://open.spotify.com/show/7mWbaobExP8NXp1wRGSsD3" alt="QR Podcast">
+                </div>
+                <div class="qr-url">open.spotify.com/show/7mWbaobExP8NXp1wRGSsD3</div>
+            </div>
+
+            <div class="qr-card">
+                <span class="category cat-recurso">Recurso</span>
+                <h3>FGV Regulacao da IA</h3>
+                <span class="bloco-tag">Bloco 6 — Horizontes</span>
+                <p>Curso online gratuito — 6.400+ alunos</p>
+                <div class="qr-placeholder">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://educacao-executiva.fgv.br/cursos/online/curta-media-duracao-online/regulacao-da-inteligencia-artificial" alt="QR FGV">
+                </div>
+                <div class="qr-url">educacao-executiva.fgv.br/cursos/online/.../regulacao-da-inteligencia-artificial</div>
             </div>
         </div>
 
