@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila — Anonimizacao de Dados e Privacidade no Uso de IAs</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        @page { size: A4; margin: 12mm; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.55;
+            color: #e2e8f0;
+            background: #0f172a;
+            font-size: 11pt;
+        }
+
+        .page {
+            max-width: 210mm;
+            margin: 0 auto 20px;
+            padding: 25px 32px;
+            background: #111a35;
+            border-radius: 16px;
+            box-shadow: 0 18px 45px rgba(9,14,34,0.12);
+            page-break-after: always;
+        }
+        .page:last-of-type { page-break-after: avoid; }
+
+        .cover {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+            text-align: center;
+        }
+
+        .cover-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #d69e2e, #b7791f);
+            color: white;
+            padding: 8px 25px;
+            border-radius: 25px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .cover h1 {
+            font-size: 2.1em;
+            color: #e2e8f0;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .cover .subtitle {
+            font-size: 1.05em;
+            color: #94a3b8;
+            margin-bottom: 30px;
+            max-width: 520px;
+        }
+
+        .cover .tagline {
+            font-size: 1.3em;
+            color: #d69e2e;
+            font-weight: 600;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        .cover-meta { color: #64748b; font-size: 0.9em; line-height: 1.8; }
+
+        .cover-logo {
+            width: 80px; height: 80px;
+            background: linear-gradient(135deg, #66142E, #8b1a3a);
+            border-radius: 20px;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-weight: 800; font-size: 1.5em;
+            margin-bottom: 30px;
+            box-shadow: 0 0 40px -10px rgba(102,20,46,0.5);
+        }
+
+        .header {
+            display: flex; align-items: center; gap: 12px;
+            margin-bottom: 18px; padding-bottom: 10px;
+            border-bottom: 2px solid rgba(214,158,46,0.3);
+        }
+
+        .logo-sm {
+            width: 36px; height: 36px;
+            background: linear-gradient(135deg, #d69e2e, #b7791f);
+            border-radius: 9px;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-weight: 800; font-size: 0.9em;
+            flex-shrink: 0;
+        }
+
+        h2 {
+            font-size: 1.3em;
+            color: #d69e2e;
+            margin: 22px 0 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid rgba(214,158,46,0.2);
+        }
+
+        h3 { font-size: 1.05em; color: #f3d994; margin: 16px 0 8px; }
+        h4 { font-size: 0.95em; color: #e2e8f0; margin: 10px 0 5px; }
+        p { margin: 6px 0; }
+
+        .toc { padding: 10px 0; }
+        .toc-title { font-size: 1.4em; color: #d69e2e; margin-bottom: 18px; text-align: center; }
+        .toc-section {
+            display: flex; justify-content: space-between; align-items: baseline;
+            padding: 8px 0; border-bottom: 1px dotted rgba(214,158,46,0.2);
+            font-size: 0.95em;
+        }
+        .toc-section .num { color: #d69e2e; font-weight: 700; margin-right: 10px; }
+        .toc-section .title { flex: 1; }
+        .toc-section .pg { color: #64748b; font-size: 0.85em; }
+
+        .protocol-box {
+            background: rgba(214,158,46,0.08);
+            border: 2px solid rgba(214,158,46,0.3);
+            border-radius: 12px;
+            padding: 18px;
+            margin: 14px 0;
+        }
+        .protocol-box h3 { color: #d69e2e; margin-top: 0; font-size: 1.1em; }
+
+        .alert-box {
+            background: rgba(239,68,68,0.06);
+            border-left: 4px solid #ef4444;
+            padding: 12px 15px; margin: 10px 0;
+            border-radius: 0 10px 10px 0;
+        }
+        .alert-box strong { color: #fca5a5; }
+
+        .success-box {
+            background: rgba(34,197,94,0.06);
+            border-left: 4px solid #22c55e;
+            padding: 12px 15px; margin: 10px 0;
+            border-radius: 0 10px 10px 0;
+        }
+        .success-box strong { color: #86efac; }
+
+        .info-box {
+            background: rgba(59,130,246,0.06);
+            border-left: 4px solid #3b82f6;
+            padding: 12px 15px; margin: 10px 0;
+            border-radius: 0 10px 10px 0;
+        }
+        .info-box strong { color: #93c5fd; }
+
+        .protocol-steps {
+            list-style: none; padding: 0; counter-reset: step;
+        }
+        .protocol-steps li {
+            padding: 8px 0 8px 40px;
+            position: relative;
+            counter-increment: step;
+            border-bottom: 1px solid rgba(214,158,46,0.1);
+        }
+        .protocol-steps li:last-child { border-bottom: none; }
+        .protocol-steps li::before {
+            content: counter(step);
+            position: absolute; left: 0; top: 8px;
+            width: 28px; height: 28px;
+            background: linear-gradient(135deg, #d69e2e, #b7791f);
+            color: white; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 0.85em;
+        }
+
+        .comp-table {
+            width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.82em;
+        }
+        .comp-table th {
+            background: linear-gradient(135deg, #d69e2e, #b7791f);
+            color: white; padding: 8px 6px;
+            text-align: center; font-weight: 600; font-size: 0.95em;
+        }
+        .comp-table th:first-child { text-align: left; }
+        .comp-table td {
+            padding: 7px 6px;
+            border-bottom: 1px solid rgba(214,158,46,0.1);
+            text-align: center; vertical-align: top;
+        }
+        .comp-table td:first-child { text-align: left; font-weight: 600; color: #f3d994; }
+        .comp-table tr:nth-child(even) td { background: rgba(214,158,46,0.04); }
+
+        .plat-header {
+            display: flex; align-items: center; gap: 14px;
+            margin: 0 0 15px; padding: 14px 18px;
+            border-radius: 12px;
+        }
+        .plat-header.chatgpt { background: rgba(16,163,127,0.1); border: 2px solid rgba(16,163,127,0.3); }
+        .plat-header.claude { background: rgba(204,120,50,0.1); border: 2px solid rgba(204,120,50,0.3); }
+        .plat-header.gemini { background: rgba(66,133,244,0.1); border: 2px solid rgba(66,133,244,0.3); }
+        .plat-header.notebooklm { background: rgba(234,67,53,0.1); border: 2px solid rgba(234,67,53,0.3); }
+        .plat-header.perplexity { background: rgba(32,191,196,0.1); border: 2px solid rgba(32,191,196,0.3); }
+
+        .plat-icon {
+            width: 48px; height: 48px; border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5em; font-weight: 800; color: white; flex-shrink: 0;
+        }
+        .plat-icon.chatgpt { background: #10a37f; }
+        .plat-icon.claude { background: #cc7832; }
+        .plat-icon.gemini { background: #4285f4; }
+        .plat-icon.notebooklm { background: #ea4335; }
+        .plat-icon.perplexity { background: #20bfc4; }
+
+        .plat-header h2 { margin: 0; padding: 0; border: none; }
+        .plat-header p { color: #94a3b8; font-size: 0.9em; margin: 2px 0 0; }
+
+        .setting-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 10px; padding: 14px; margin: 10px 0;
+        }
+        .setting-card h4 { margin-top: 0; color: #d69e2e; font-size: 0.95em; }
+
+        .path-steps {
+            background: #0f172a; border-radius: 8px;
+            padding: 10px 14px; margin: 8px 0;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.88em; color: #93c5fd;
+            border: 1px solid rgba(59,130,246,0.2);
+        }
+
+        .tier-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0;
+        }
+        .tier-card {
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 10px; padding: 12px;
+            background: rgba(255,255,255,0.02);
+        }
+        .tier-card h4 { color: #d69e2e; margin: 0 0 6px; font-size: 0.9em; }
+        .tier-card.recommended { border-color: rgba(34,197,94,0.4); background: rgba(34,197,94,0.05); }
+        .tier-card.recommended h4 { color: #86efac; }
+
+        .anon-example {
+            display: grid; grid-template-columns: 1fr auto 1fr;
+            gap: 8px; align-items: center;
+            margin: 8px 0; font-size: 0.9em;
+        }
+        .anon-before {
+            background: rgba(239,68,68,0.1); padding: 6px 10px;
+            border-radius: 5px; text-decoration: line-through; color: #fca5a5;
+        }
+        .anon-arrow { font-size: 1.2em; color: #d69e2e; font-weight: 700; }
+        .anon-after {
+            background: rgba(34,197,94,0.1); padding: 6px 10px;
+            border-radius: 5px; color: #86efac; font-weight: 600;
+        }
+
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 15px; margin: 10px 0;
+        }
+
+        .check-item {
+            display: flex; align-items: flex-start;
+            gap: 6px; font-size: 0.9em; padding: 4px 0;
+        }
+        .check-item::before {
+            content: "\2610"; font-size: 1.1em; color: #d69e2e; flex-shrink: 0;
+        }
+
+        .footer-note {
+            text-align: center; color: #475569;
+            font-size: 0.8em; margin-top: 25px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+
+        ul, ol { margin: 6px 0 6px 20px; }
+        li { margin: 3px 0; font-size: 0.92em; }
+
+        .badge-yes { color: #86efac; font-weight: 700; }
+        .badge-no { color: #fca5a5; font-weight: 700; }
+        .badge-partial { color: #fde68a; font-weight: 700; }
+
+        .copy-box {
+            background: #0f172a; color: #e2e8f0;
+            padding: 14px 18px; border-radius: 8px; margin: 10px 0;
+            font-family: 'Consolas', monospace;
+            font-size: 0.88em; line-height: 1.6;
+            white-space: pre-wrap; word-wrap: break-word;
+            border: 1px solid rgba(214,158,46,0.2);
+        }
+        .copy-label {
+            display: inline-block;
+            background: linear-gradient(135deg, #d69e2e, #b7791f);
+            color: white; font-size: 0.7em;
+            padding: 2px 8px; border-radius: 4px;
+            margin-bottom: 6px;
+            font-family: 'Segoe UI', sans-serif;
+            text-transform: uppercase; letter-spacing: 0.5px;
+        }
+
+        @media print {
+            body { background: white; color: #1a1a2e; }
+            .page { background: white; box-shadow: none; border: 1px solid #e5e7eb; }
+            .cover h1 { color: #1a1a2e; }
+            .cover .tagline { color: #66142E; }
+            .cover-meta { color: #888; }
+            .cover-logo { box-shadow: none; }
+            h2 { color: #66142E; border-color: #d69e2e; }
+            h3 { color: #66142E; }
+            .protocol-box { background: #fffbeb; border-color: #d69e2e; }
+            .protocol-steps li { border-color: #fde68a; }
+            .comp-table tr:nth-child(even) td { background: #fffbeb; }
+            .setting-card { background: #f8fafc; border-color: #e5e7eb; }
+            .setting-card h4 { color: #66142E; }
+            .tier-card { background: #f8fafc; border-color: #e5e7eb; }
+            .tier-card h4 { color: #66142E; }
+            .tier-card.recommended { background: #f0fdf4; border-color: #22c55e; }
+            .alert-box { background: #fef2f2; }
+            .alert-box strong { color: #dc2626; }
+            .success-box { background: #f0fdf4; }
+            .success-box strong { color: #16a34a; }
+            .info-box { background: #eff6ff; }
+            .info-box strong { color: #2563eb; }
+            .copy-box { background: #f8fafc; color: #1a1a2e; border-color: #d69e2e; }
+            .anon-before { color: #dc2626; background: #fef2f2; }
+            .anon-after { color: #16a34a; background: #f0fdf4; }
+            .path-steps { background: #f1f5f9; color: #1e40af; border-color: #93c5fd; }
+            .plat-header.chatgpt { background: #f0fdf9; border-color: #10a37f; }
+            .plat-header.claude { background: #fff7ed; border-color: #cc7832; }
+            .plat-header.gemini { background: #eff6ff; border-color: #4285f4; }
+            .plat-header.notebooklm { background: #fef2f2; border-color: #ea4335; }
+            .plat-header.perplexity { background: #ecfeff; border-color: #20bfc4; }
+            .badge-yes { color: #16a34a; }
+            .badge-no { color: #dc2626; }
+            .badge-partial { color: #ca8a04; }
+            .check-item::before { color: #66142E; }
+            .no-print { display: none; }
+        }
+
+        .print-btn {
+            display: block; width: 220px; margin: 20px auto;
+            padding: 12px;
+            background: linear-gradient(135deg, #d69e2e, #b7791f);
+            color: white; border: none; border-radius: 10px;
+            font-size: 1em; cursor: pointer; font-weight: 600;
+        }
+        .print-btn:hover { background: #b7791f; }
+    </style>
+</head>
+<body>
+
+<!-- ==================== CAPA ==================== -->
+<div class="page">
+    <div class="cover">
+        <div class="cover-logo">PC</div>
+        <div class="cover-badge">MATERIAL DE APOIO — CURSO IA NA ADVOCACIA</div>
+        <h1>Anonimizacao de Dados<br>e Privacidade no Uso de IAs</h1>
+        <p class="subtitle">Guia completo de configuracoes, ferramentas e protocolos para garantir a seguranca dos dados compartilhados com plataformas de inteligencia artificial.</p>
+        <p class="tagline">"Dado de cliente nao e insumo de treinamento."</p>
+        <div class="cover-meta">
+            Curso: O PROTOCOLO — Ativacao do Advogado Aumentado<br>
+            Paixao Cortes Advogados — Brasilia/DF<br>
+            Fevereiro 2026<br><br>
+            <strong style="color:#d69e2e;">INTEIA</strong> — Instituto de Treinamento e Estudos em IA<br>
+            <strong>Dr. Igor Morais Vasconcelos</strong><br>
+            Doutorando em IA | Consultor
+        </div>
+    </div>
+</div>
+
+<!-- ==================== SUMARIO ==================== -->
+<div class="page">
+    <div class="header">
+        <div class="logo-sm">PC</div>
+        <div><strong style="color:#e2e8f0;">Apostila de Privacidade e Anonimizacao</strong><br><span style="color:#64748b; font-size:0.85em;">Sumario</span></div>
+    </div>
+
+    <div class="toc">
+        <div class="toc-title">Sumario</div>
+
+        <div class="toc-section"><span class="num">1</span><span class="title">Por Que Privacidade Importa na Advocacia com IA</span><span class="pg">3</span></div>
+        <div class="toc-section"><span class="num">2</span><span class="title">LGPD e Inteligencia Artificial — O Que o Advogado Precisa Saber</span><span class="pg">3</span></div>
+        <div class="toc-section"><span class="num">3</span><span class="title">Tecnicas de Anonimizacao — Protocolo Pratico</span><span class="pg">4</span></div>
+        <div class="toc-section"><span class="num">4</span><span class="title">ChatGPT (OpenAI) — Configuracoes de Privacidade</span><span class="pg">5</span></div>
+        <div class="toc-section"><span class="num">5</span><span class="title">Claude (Anthropic) — Configuracoes de Privacidade</span><span class="pg">7</span></div>
+        <div class="toc-section"><span class="num">6</span><span class="title">Google Gemini — Configuracoes de Privacidade</span><span class="pg">9</span></div>
+        <div class="toc-section"><span class="num">7</span><span class="title">Google NotebookLM — Configuracoes de Privacidade</span><span class="pg">11</span></div>
+        <div class="toc-section"><span class="num">8</span><span class="title">Perplexity — Configuracoes de Privacidade</span><span class="pg">12</span></div>
+        <div class="toc-section"><span class="num">9</span><span class="title">Tabela Comparativa — Todas as Plataformas</span><span class="pg">14</span></div>
+        <div class="toc-section"><span class="num">10</span><span class="title">Protocolo do Escritorio — Passo a Passo</span><span class="pg">15</span></div>
+        <div class="toc-section"><span class="num">11</span><span class="title">Modelos de Anonimizacao Prontos para Uso</span><span class="pg">16</span></div>
+        <div class="toc-section"><span class="num">12</span><span class="title">Checklist Final e Referencia Rapida</span><span class="pg">17</span></div>
+    </div>
+
+    <div class="info-box" style="margin-top: 20px;">
+        <strong>Nota importante:</strong> As configuracoes descritas nesta apostila foram verificadas em fevereiro de 2026. Plataformas de IA atualizam seus termos com frequencia. Recomenda-se verificar periodicamente se houve alteracoes nas politicas de privacidade de cada ferramenta.
+    </div>
+
+    <div class="footer-note">Paixao Cortes Advogados — Curso IA na Advocacia — Fev/2026</div>
+</div>
+
+<!-- ==================== CAPITULO 1: POR QUE PRIVACIDADE IMPORTA ==================== -->
+<div class="page">
+    <div class="header">
+        <div class="logo-sm">1</div>
+        <div><strong style="color:#e2e8f0;">Por Que Privacidade Importa na Advocacia com IA</strong></div>
+    </div>
+
+    <p>A utilizacao de inteligencia artificial na pratica juridica traz ganhos enormes de produtividade, mas impoe uma responsabilidade proporcional: <strong>proteger os dados dos clientes</strong>. Quando um advogado insere informacoes em uma plataforma de IA, essas informacoes podem, dependendo da configuracao:</p>
+
+    <ul>
+        <li>Ser armazenadas nos servidores da plataforma por tempo indeterminado</li>
+        <li>Ser utilizadas para treinar e aprimorar modelos de linguagem</li>
+        <li>Ser acessadas por equipes de revisao humana da empresa</li>
+        <li>Ser expostas em caso de vazamento ou falha de seguranca</li>
+    </ul>
+
+    <div class="alert-box">
+        <strong>O risco e real:</strong> Um estudo da FGV (2025) constatou que <strong>nenhuma das grandes plataformas de IA</strong> (ChatGPT, Gemini, Claude, Copilot, Grok, DeepSeek, Meta AI) estava em plena conformidade com a LGPD. A responsabilidade recai sobre o advogado que compartilha os dados.
+    </div>
+
+    <h3>O que esta em jogo</h3>
+    <ul>
+        <li><strong>Sigilo profissional</strong> — Art. 7o do Codigo de Etica da OAB: dever inviolavel do advogado</li>
+        <li><strong>LGPD</strong> — Lei 13.709/2018: multas de ate 2% do faturamento (teto de R$ 50 milhoes por infracao)</li>
+        <li><strong>Credibilidade</strong> — Um vazamento de dados de cliente pode destruir a reputacao do escritorio</li>
+        <li><strong>Responsabilidade civil</strong> — O advogado responde pessoalmente por danos causados ao cliente</li>
+    </ul>
+
+    <div class="success-box">
+        <strong>A boa noticia:</strong> Todas as plataformas abordadas nesta apostila oferecem configuracoes que, quando ativadas corretamente, reduzem drasticamente o risco. Esta apostila ensina exatamente quais botoes apertar.
+    </div>
+
+    <!-- ==================== CAPITULO 2: LGPD ==================== -->
+    <h2>2. LGPD e Inteligencia Artificial</h2>
+
+    <h3>Conceitos essenciais para o advogado</h3>
+
+    <div class="two-col">
+        <div class="setting-card">
+            <h4>Dado pessoal (Art. 5o, I)</h4>
+            <p>Qualquer informacao que identifique ou possa identificar uma pessoa natural. Nome, CPF, endereco, telefone, e-mail e ate combinacao de dados aparentemente anonimos.</p>
+        </div>
+        <div class="setting-card">
+            <h4>Dado sensivel (Art. 5o, II)</h4>
+            <p>Origem racial/etnica, conviccao religiosa, opiniao politica, saude, vida sexual, dado genetico/biometrico. Exige protecao redobrada.</p>
+        </div>
+        <div class="setting-card">
+            <h4>Anonimizacao (Art. 5o, XI)</h4>
+            <p>Processo que torna impossivel a reidentificacao do titular. Dado genuinamente anonimizado <strong>nao esta sujeito a LGPD</strong>. Mas se houver qualquer possibilidade de reidentificacao, o dado e apenas pseudonimizado e continua sob a lei.</p>
+        </div>
+        <div class="setting-card">
+            <h4>Pseudonimizacao (Art. 13o, §4o)</h4>
+            <p>Substituicao de identificadores por codigos. O dado pode ser revertido com uma chave. <strong>Continua sendo dado pessoal</strong> e sujeito a LGPD, mas e uma boa pratica de seguranca adicional.</p>
+        </div>
+    </div>
+
+    <h3>Regulamentacao especifica para IA</h3>
+    <ul>
+        <li><strong>CNJ Resolucao 615/2025</strong> — Disciplina o uso de IA no Poder Judiciario. Exige transparencia, supervisao humana e protecao de dados.</li>
+        <li><strong>OAB Recomendacao 001/2024</strong> — Orienta advogados sobre uso etico de IA. Nao e provimento (nao tem forca vinculante), mas sinaliza a direcao da regulamentacao.</li>
+        <li><strong>PL 2338/2023</strong> — Projeto de lei que visa regulamentar IA no Brasil. Em tramitacao no Congresso.</li>
+    </ul>
+
+    <div class="footer-note">Paixao Cortes Advogados — Curso IA na Advocacia — Fev/2026</div>
+</div>
+
+<!-- ==================== CAPITULO 3: TECNICAS DE ANONIMIZACAO ==================== -->
+<div class="page">
+    <div class="header">
+        <div class="logo-sm">3</div>
+        <div><strong style="color:#e2e8f0;">Tecnicas de Anonimizacao — Protocolo Pratico</strong></div>
+    </div>
+
+    <p>Antes de inserir qualquer informacao em uma plataforma de IA, o advogado deve aplicar este protocolo de anonimizacao. O objetivo: <strong>tornar impossivel identificar o cliente, a parte adversa ou o caso concreto.</strong></p>
+
+    <div class="protocol-box">
+        <h3>Protocolo de Anonimizacao em 5 Passos</h3>
+        <ol class="protocol-steps">
+            <li><strong>CLASSIFICAR</strong> — Identifique todos os dados pessoais, sensiveis e sigilosos no texto. Nomes, CPFs, CNPJs, enderecos, numeros de processo, valores, datas especificas, nomes de juizes.</li>
+            <li><strong>SUBSTITUIR</strong> — Troque por rotulos genericos: "Parte A", "Empresa X", "Tribunal Y". Crie uma tabela de correspondencia e guarde-a APENAS no seu computador local.</li>
+            <li><strong>GENERALIZAR</strong> — Datas viram periodos ("primeiro trimestre de 2025"), valores viram faixas ("entre R$ 100 mil e R$ 500 mil"), cidades viram regioes ("capital de estado do Sudeste").</li>
+            <li><strong>VERIFICAR</strong> — Releia todo o texto anonimizado e pergunte: "Alguem lendo isto conseguiria descobrir de qual caso se trata?" Se sim, anonimize mais.</li>
+            <li><strong>REGISTRAR</strong> — Anote internamente que IA foi usada, para qual finalidade e confirme que a anonimizacao foi aplicada. Isso protege o escritorio em eventual auditoria.</li>
+        </ol>
+    </div>
+
+    <h3>Exemplos praticos de anonimizacao</h3>
+
+    <div class="anon-example">
+        <div class="anon-before">Joao Carlos da Silva, CPF 123.456.789-00</div>
+        <div class="anon-arrow">→</div>
+        <div class="anon-after">Parte A (pessoa fisica)</div>
+    </div>
+    <div class="anon-example">
+        <div class="anon-before">Processo 0012345-67.2024.8.07.0001 — TJDFT</div>
+        <div class="anon-arrow">→</div>
+        <div class="anon-after">Acao civel em tramite no tribunal local</div>
+    </div>
+    <div class="anon-example">
+        <div class="anon-before">Contrato de R$ 2.350.000,00 com a Construtora Alfa Ltda.</div>
+        <div class="anon-arrow">→</div>
+        <div class="anon-after">Contrato na faixa de R$ 2 a 3 milhoes com Empresa X</div>
+    </div>
+    <div class="anon-example">
+        <div class="anon-before">Dr. Marcos Oliveira, juiz da 3a Vara Civel de Brasilia</div>
+        <div class="anon-arrow">→</div>
+        <div class="anon-after">Magistrado da vara civel competente</div>
+    </div>
+    <div class="anon-example">
+        <div class="anon-before">Audiencia marcada para 15/03/2026 as 14h</div>
+        <div class="anon-arrow">→</div>
+        <div class="anon-after">Audiencia prevista para o proximo mes</div>
+    </div>
+    <div class="anon-example">
+        <div class="anon-before">Rua das Palmeiras, 450, Asa Sul, Brasilia-DF</div>
+        <div class="anon-arrow">→</div>
+        <div class="anon-after">Endereco na regiao central da capital federal</div>
+    </div>
+
+    <div class="alert-box">
+        <strong>Atencao com fatos unicos:</strong> Mesmo sem nomes, um caso com circunstancias muito especificas (ex: "queda de aviao sobre escola em cidade X") pode ser identificavel. Nesses casos, generalize tambem as circunstancias: "acidente de grande porte envolvendo instituicao de ensino".
+    </div>
+
+    <h3>O que NUNCA colocar em uma IA (mesmo com anonimizacao)</h3>
+    <ul>
+        <li>Senhas, credenciais de acesso, tokens de autenticacao</li>
+        <li>Documentos originais de clientes sem tratamento (contratos, procuracoes com dados reais)</li>
+        <li>Estrategias processuais detalhadas com partes identificaveis</li>
+        <li>Dados biometricos ou de saude sem consentimento expresso</li>
+        <li>Informacoes sob segredo de justica</li>
+    </ul>
+
+    <div class="footer-note">Paixao Cortes Advogados — Curso IA na Advocacia — Fev/2026</div>
+</div>
+
+<!-- ==================== CAPITULO 4: CHATGPT ==================== -->
+<div class="page">
+    <div class="header">
+        <div class="logo-sm">4</div>
+        <div><strong style="color:#e2e8f0;">ChatGPT (OpenAI) — Configuracoes de Privacidade</strong></div>
+    </div>
+
+    <div class="plat-header chatgpt">
+        <div class="plat-icon chatgpt">G</div>
+        <div>
+            <h2 style="color: #10a37f;">ChatGPT</h2>
+            <p>OpenAI — chatgpt.com</p>
+        </div>
+    </div>
+
+    <h3>Como o ChatGPT usa seus dados</h3>
+    <p>Por padrao, nas versoes gratuita e Plus, a OpenAI <strong>pode utilizar suas conversas para treinar e aprimorar seus modelos</strong>. Isso inclui o texto digitado, arquivos enviados e respostas recebidas. Equipes de revisores humanos podem acessar conversas para fins de seguranca e qualidade.</p>
+
+    <div class="setting-card">
+        <h4>Configuracao 1: Desativar treinamento com seus dados</h4>
+        <p>Esta e a configuracao mais importante. Impede que suas conversas alimentem futuros modelos.</p>
+        <div class="path-steps">Perfil (canto superior direito) → Configuracoes → Controles de dados → "Melhorar o modelo para todos" → DESATIVAR</div>
+        <p style="color:#94a3b8; font-size:0.88em;">Observacao: Essa opcao so impede o uso FUTURO. Conversas anteriores ja podem ter sido processadas. Apague o historico antigo apos desativar.</p>
+    </div>
+
+    <div class="setting-card">
+        <h4>Configuracao 2: Chat Temporario</h4>
+        <p>Conversas que nao sao salvas no historico e nao sao usadas para treinamento. Ideal para consultas com dados sensiveis.</p>
+        <div class="path-steps">Ao iniciar nova conversa → Clicar no icone de chat temporario (ao lado do seletor de modelo) → Ativar "Chat temporario"</div>
+        <p style="color:#94a3b8; font-size:0.88em;">A OpenAI ainda pode reter temporariamente (ate 30 dias) para monitoramento de abuso, mas nao usa para treinamento.</p>
+    </div>
+
+    <div class="setting-card">
+        <h4>Configuracao 3: Desativar Memoria</h4>
+        <p>O ChatGPT possui uma funcao de "memoria" que lembra informacoes entre conversas. Desative para evitar acumulo de dados pessoais.</p>
+        <div class="path-steps">Configuracoes → Personalizacao → Memoria → DESATIVAR
+Ou: Configuracoes → Personalizacao → Memoria → Gerenciar → Apagar todas as memorias</div>
+    </div>
+
+    <div class="setting-card">
+        <h4>Configuracao 4: Apagar historico de conversas</h4>
+        <div class="path-steps">Configuracoes → Geral → Apagar todos os chats
+Para conversas individuais: Barra lateral → Passar o mouse sobre a conversa → "..." → Excluir</div>
+    </div>
+
+    <div class="setting-card">
+        <h4>Configuracao 5: Solicitar exclusao completa de dados</h4>
+        <div class="path-steps">Enviar e-mail para: dsar@openai.com
+Ou: Configuracoes → Controles de dados → Exportar/Excluir dados → Solicitar exclusao</div>
+        <p style="color:#94a3b8; font-size:0.88em;">A OpenAI tem ate 30 dias para processar o pedido conforme politica de privacidade.</p>
+    </div>
+
+    <h3>Niveis de privacidade por plano</h3>
+    <div class="tier-grid">
+        <div class="tier-card">
+            <h4>Free / Plus (US$ 20/mes)</h4>
+            <ul>
+                <li>Treinamento ativado por padrao</li>
+                <li>Opt-out disponivel (desativar manual)</li>
+                <li>Chat temporario disponivel</li>
+                <li>Retencao: ate 30 dias apos exclusao</li>
+                <li>Sem DPA ou SOC 2</li>
+            </ul>
+        </div>
+        <div class="tier-card recommended">
+            <h4>Team (US$ 25/usuario/mes)</h4>
+            <ul>
+                <li><strong>Dados NAO usados para treinamento</strong></li>
+                <li>Workspace isolado</li>
+                <li>Controles de admin</li>
+                <li>SOC 2 Type II</li>
+                <li>DPA disponivel</li>
+            </ul>
+        </div>
+        <div class="tier-card recommended">
+            <h4>Enterprise</h4>
+            <ul>
+                <li><strong>Dados NUNCA usados para treinamento</strong></li>
+                <li>Criptografia em repouso (AES-256)</li>
+                <li>SSO/SAML, SCIM</li>
+                <li>SOC 2 Type II</li>
+                <li>DPA, logs de auditoria</li>
+                <li>Retencao configuravel pelo admin</li>
+            </ul>
+        </div>
+        <div class="tier-card">
+            <h4>API (pago por uso)</h4>
+            <ul>
+                <li><strong>Dados NAO usados para treinamento</strong></li>
+                <li>Retencao de 30 dias (por padrao)</li>
+                <li>Zero Data Retention disponivel</li>
+                <li>DPA disponivel</li>
+                <li>Ideal para integracoes customizadas</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="alert-box">
+        <strong>Custom GPTs — cuidado:</strong> GPTs criados por terceiros podem ter "instrucoes" que capturam dados. Use apenas GPTs de fontes confiaveis. Nunca insira dados reais de clientes em GPTs de terceiros.
+    </div>
+
+    <div class="footer-note">Paixao Cortes Advogados — Curso IA na Advocacia — Fev/2026</div>
+</div>
+
+<!-- ==================== CHATGPT - CONTINUACAO + ARQUIVOS ==================== -->
+<div class="page">
+    <div class="header">
+        <div class="logo-sm">4</div>
+        <div><strong style="color:#e2e8f0;">ChatGPT — Arquivos, Exportacao e Resumo</strong></div>
+    </div>
+
+    <div class="setting-card">
+        <h4>Como o ChatGPT trata arquivos enviados</h4>
+        <ul>
+            <li>Arquivos enviados ficam armazenados enquanto a conversa existir</li>
+            <li>Se voce apagar a conversa, os arquivos sao removidos</li>
+            <li>No plano Free/Plus com treinamento ativado, o conteudo dos arquivos pode ser usado para treinamento</li>
+            <li>No Chat Temporario, arquivos sao descartados ao final da sessao</li>
+            <li><strong>Recomendacao:</strong> Nunca envie documentos com dados reais. Anonimize antes ou use a versao Team/Enterprise</li>
+        </ul>
+    </div>
+
+    <div class="setting-card">
+        <h4>Exportar seus dados</h4>
+        <div class="path-steps">Configuracoes → Controles de dados → Exportar dados → Confirmar
+Voce recebera um e-mail com link para download (ZIP com todas as conversas em formato JSON).</div>
+    </div>
+
+    <div class="protocol-box">
+        <h3>Resumo — Configuracao minima para advogados no ChatGPT</h3>
+        <ol class="protocol-steps">
+            <li>Desativar "Melhorar o modelo para todos" em Controles de dados</li>
+            <li>Desativar Memoria (ou gerencia-la ativamente)</li>
+            <li>Usar Chat Temporario para qualquer consulta com dados de caso</li>
+            <li>Apagar conversas sensiveis apos extrair a informacao necessaria</li>
+            <li>Considerar plano Team ou Enterprise para uso institucional</li>
+        </ol>
+    </div>
+
+    <!-- ==================== CAPITULO 5: CLAUDE ==================== -->
+    <h2 style="margin-top: 30px;">5. Claude (Anthropic) — Configuracoes de Privacidade</h2>
+
+    <div class="plat-header claude">
+        <div class="plat-icon claude">C</div>
+        <div>
+            <h2 style="color: #cc7832;">Claude</h2>
+            <p>Anthropic — claude.ai</p>
+        </div>
+    </div>
+
+    <h3>Como o Claude usa seus dados</h3>
+    <p>A Anthropic adota uma abordagem diferenciada: nos planos pagos (Pro, Team, Enterprise) e na API, <strong>as conversas NAO sao usadas para treinamento por padrao</strong>. No plano gratuito, as conversas podem ser usadas para treinamento, mas ha opcao de opt-out.</p>
+
+    <div class="success-box">
+        <strong>Diferencial da Anthropic:</strong> O Claude foi projetado com "IA Constitucional" — um framework de seguranca que prioriza a recusa de pedidos perigosos e a protecao de informacoes sensiveis. E uma das plataformas mais conservadoras em termos de seguranca.
+    </div>
+
+    <div class="setting-card">
+        <h4>Configuracao 1: Desativar treinamento com seus dados</h4>
+        <div class="path-steps">claude.ai → Icone do perfil (canto inferior esquerdo) → Configuracoes → Privacidade → Desativar "Permitir que conversas aprimorem o Claude"</div>
+        <p style="color:#94a3b8; font-size:0.88em;">Nos planos Pro (US$ 20/mes) e superiores, essa opcao ja vem desativada por padrao.</p>
+    </div>
+
+    <div class="setting-card">
+        <h4>Configuracao 2: Apagar conversas</h4>
+        <div class="path-steps">Barra lateral → Passar o mouse sobre a conversa → Icone de lixeira → Confirmar
+Para apagar todas: Configuracoes → Conta → Apagar todas as conversas</div>
+    </div>
+
+    <div class="setting-card">
+        <h4>Configuracao 3: Solicitar exclusao completa</h4>
+        <div class="path-steps">Enviar e-mail para: privacy@anthropic.com
+Incluir: nome da conta, e-mail cadastrado, solicitacao de exclusao completa sob LGPD</div>
+    </div>
+
+    <div class="footer-note">Paixao Cortes Advogados — Curso IA na Advocacia — Fev/2026</div>
+</div>
+
+<!-- ==================== CLAUDE CONTINUACAO ==================== -->
+<div class="page">
+    <div class="header">
+        <div class="logo-sm">5</div>
+        <div><strong style="color:#e2e8f0;">Claude — Planos, Code, Projetos e Resumo</strong></div>
+    </div>
+
+    <h3>Niveis de privacidade por plano</h3>
+    <div class="tier-grid">
+        <div class="tier-card">
+            <h4>Free</h4>
+            <ul>
+                <li>Treinamento: ativado por padrao (opt-out disponivel)</li>
+                <li>Conversas armazenadas nos servidores</li>
+                <li>Revisao humana possivel para seguranca</li>
+                <li>Sem DPA</li>
+            </ul>
+        </div>
+        <div class="tier-card">
+            <h4>Pro (US$ 20/mes)</h4>
+            <ul>
+                <li><strong>Dados NAO usados para treinamento (padrao)</strong></li>
+                <li>Raciocinio aprofundado (Extended Thinking)</li>
+                <li>Projetos com contexto persistente</li>
+                <li>Maior volume de uso</li>
+            </ul>
+        </div>
+        <div class="tier-card recommended">
+            <h4>Team (US$ 25/usuario/mes)</h4>
+            <ul>
+                <li><strong>Dados NUNCA usados para treinamento</strong></li>
+                <li>Workspace isolado por equipe</li>
+                <li>Controles de admin</li>
+                <li>SOC 2 Type II</li>
+                <li>DPA disponivel</li>
+            </ul>
+        </div>
+        <div class="tier-card recommended">
+            <h4>Enterprise</h4>
+            <ul>
+                <li><strong>Dados NUNCA usados para treinamento</strong></li>
+                <li>SSO/SAML, SCIM</li>
+                <li>SOC 2 Type II + HIPAA</li>
+                <li>DPA, logs de auditoria</li>
+                <li>Retencao configuravel</li>
+                <li>Dominio dedicado</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="setting-card">
+        <h4>Claude Code (ferramenta de linha de comando)</h4>
+        <p>O Claude Code e uma ferramenta de terminal que integra o Claude diretamente ao fluxo de trabalho de desenvolvimento. Para advogados que usam automacao:</p>
+        <ul>
+            <li>Dados enviados via Claude Code seguem as mesmas politicas do plano contratado (Pro, Team, etc.)</li>
+            <li>O Claude Code nao armazena dados localmente alem do cache de sessao</li>
+            <li>Arquivos do projeto podem ser lidos pelo Claude Code — garanta que nao ha dados sensiveis expostos</li>
+            <li>Use o arquivo <code>.claudeignore</code> para excluir pastas/arquivos sensiveis da leitura automatica</li>
+        </ul>
+        <div class="path-steps">Criar arquivo .claudeignore na raiz do projeto:
+# Arquivos sensiveis — nao enviar ao Claude
+dados_clientes/
+contratos_originais/
+*.env
+credenciais.*</div>
+    </div>
+
+    <div class="setting-card">
+        <h4>Projetos (Projects) — Privacidade</h4>
+        <p>A funcionalidade "Projetos" permite enviar documentos para dar contexto ao Claude. Esses documentos:</p>
+        <ul>
+            <li>Ficam armazenados na sua conta enquanto o projeto existir</li>
+            <li>NAO sao usados para treinamento (nos planos Pro e superiores)</li>
+            <li>Podem ser excluidos a qualquer momento pelo usuario</li>
+            <li><strong>Recomendacao:</strong> Use Projetos com documentos ja anonimizados. Exclua o projeto apos concluir o trabalho.</li>
+        </ul>
+    </div>
+
+    <div class="protocol-box">
+        <h3>Resumo — Configuracao minima para advogados no Claude</h3>
+        <ol class="protocol-steps">
+            <li>Verificar que "Permitir que conversas aprimorem o Claude" esta DESATIVADO</li>
+            <li>Usar no minimo o plano Pro (treinamento desativado por padrao)</li>
+            <li>Apagar conversas sensiveis apos uso</li>
+            <li>Configurar <code>.claudeignore</code> se usar Claude Code</li>
+            <li>Excluir projetos apos conclusao do trabalho juridico</li>
+        </ol>
+    </div>
+
+    <div class="footer-note">Paixao Cortes Advogados — Curso IA na Advocacia — Fev/2026</div>
+</div>
+
+<!-- ==================== CAPITULO 6: GEMINI ==================== -->
+<div class="page">
+    <div class="header">
+        <div class="logo-sm">6</div>
+        <div><strong style="color:#e2e8f0;">Google Gemini — Configuracoes de Privacidade</strong></div>
+    </div>
+
+    <div class="plat-header gemini">
+        <div class="plat-icon gemini">G</div>
+        <div>
+            <h2 style="color: #4285f4;">Google Gemini</h2>
+            <p>Google — gemini.google.com</p>
+        </div>
+    </div>
+
+    <h3>Como o Gemini usa seus dados</h3>
+    <p>O Google Gemini (antigo Bard) tem uma politica de dados atrelada a conta Google do usuario. Por padrao, <strong>as conversas sao armazenadas como "Atividade do Gemini" e podem ser revisadas por humanos para aprimorar o produto</strong>. A retencao padrao e de ate 18 meses (mas conversas revisadas por humanos podem ser retidas por ate 3 anos).</p>
+
+    <div class="alert-box">
+        <strong>Alerta critico:</strong> Diferente de outras plataformas, o controle de treinamento no Gemini nao e um simples botao de "opt-out". Ele esta vinculado ao sistema de "Atividades" da conta Google, o mesmo que controla historico de busca e YouTube. Desativar exige navegar pela conta Google, nao apenas pelas configuracoes do Gemini.
+    </div>
+
+    <div class="setting-card">
+        <h4>Configuracao 1: Desativar Atividade do Gemini (impede treinamento)</h4>
+        <p>Esta e a configuracao mais importante. Quando desativada, novas conversas nao sao salvas e nao sao usadas para treinamento.</p>
+        <div class="path-steps">Opcao A (via Gemini):
+gemini.google.com → Menu (tres linhas, canto superior esquerdo) → Atividade → Desativar "Atividade do Gemini Apps"
+
+Opcao B (via conta Google):
+myactivity.google.com/product/gemini → Clicar em "Atividade do Gemini Apps" → Desativar</div>
+        <p style="color:#94a3b8; font-size:0.88em;">Atencao: Desativar impede novos salvamentos, mas NAO apaga conversas anteriores automaticamente. Voce precisa apaga-las manualmente.</p>
+    </div>
+
+    <div class="setting-card">
+        <h4>Configuracao 2: Apagar historico de conversas</h4>
+        <div class="path-steps">myactivity.google.com/product/gemini → Excluir atividade por:
+  → "Sempre" (apaga tudo)
+  → Ou selecionar periodo especifico
+
+Para conversas individuais:
+Barra lateral do Gemini → Passar o mouse sobre a conversa → Icone de lixeira</div>
+    </div>
+
+    <div class="setting-card">
+        <h4>Configuracao 3: Exclusao automatica</h4>
+        <p>Configure para que o Google apague automaticamente atividades antigas.</p>
+        <div class="path-steps">myactivity.google.com → Controles de atividade → Atividade do Gemini Apps → Exclusao automatica → Escolher: 3 meses, 18 meses ou 36 meses</div>
+        <p style="color:#94a3b8; font-size:0.88em;">Recomendacao para advogados: configurar para 3 meses (o minimo disponivel).</p>
+    </div>
+
+    <div class="setting-card">
+        <h4>Configuracao 4: Gerenciar extensoes</h4>
+        <p>O Gemini pode acessar dados do Google Workspace (Gmail, Drive, Docs). Desative extensoes desnecessarias:</p>
+        <div class="path-steps">gemini.google.com → Configuracoes → Extensoes → Desativar: Google Workspace, Google Maps, Google Voos, YouTube, etc. (manter apenas o necessario)</div>
+    </div>
+
+    <h3>Niveis de privacidade por plano</h3>
+    <div class="tier-grid">
+        <div class="tier-card">
+            <h4>Free / Gemini Advanced</h4>
+            <ul>
+                <li>Atividade do Gemini: ativada por padrao (opt-out manual)</li>
+                <li>Revisao humana possivel</li>
+                <li>Retencao: ate 18 meses (ou 3 anos se revisada)</li>
+                <li>Sem DPA</li>
+            </ul>
+        </div>
+        <div class="tier-card recommended">
+            <h4>Google Workspace (Gemini para empresas)</h4>
+            <ul>
+                <li><strong>Dados NAO usados para treinamento</strong></li>
+                <li>Nao ha revisao humana</li>
+                <li>DPA do Google Workspace aplicavel</li>
+                <li>Controles de admin (DLP, retencao)</li>
+                <li>SOC 2, ISO 27001</li>
+                <li>Residencia de dados configuravel</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="info-box">
+        <strong>Diferenca crucial:</strong> O Gemini "pessoal" (conta @gmail.com) e o Gemini "corporativo" (Google Workspace) tem politicas de privacidade completamente diferentes. Para uso profissional, o Workspace e fortemente recomendado.
+    </div>
+
+    <div class="footer-note">Paixao Cortes Advogados — Curso IA na Advocacia — Fev/2026</div>
+</div>
+
+<!-- ==================== GEMINI CONTINUACAO ==================== -->
+<div class="page">
+    <div class="header">
+        <div class="logo-sm">6</div>
+        <div><strong style="color:#e2e8f0;">Google Gemini — Arquivos, Exclusao e Resumo</strong></div>
+    </div>
+
+    <div class="setting-card">
+        <h4>Como o Gemini trata arquivos enviados</h4>
+        <ul>
+            <li>Arquivos enviados (imagens, PDFs, documentos) sao processados nos servidores do Google</li>
+            <li>Se a Atividade do Gemini estiver ATIVADA, o conteudo dos arquivos pode ser retido e revisado</li>
+            <li>Se estiver DESATIVADA, os arquivos sao processados apenas para gerar a resposta e descartados</li>
+            <li>No Workspace, arquivos seguem as politicas corporativas de retencao</li>
+            <li><strong>Recomendacao:</strong> Desative a Atividade do Gemini ANTES de enviar qualquer arquivo</li>
+        </ul>
+    </div>
+
+    <div class="setting-card">
+        <h4>Solicitar exclusao completa de dados</h4>
+        <div class="path-steps">Via conta Google:
+myaccount.google.com → Dados e privacidade → Fazer download ou excluir seus dados → Excluir um servico → Selecionar dados do Gemini
+
+Para exclusao sob LGPD:
+support.google.com/accounts/troubleshooter/6151248 (formulario de privacidade do Google)</div>
+    </div>
+
+    <div class="protocol-box">
+        <h3>Resumo — Configuracao minima para advogados no Gemini</h3>
+        <ol class="protocol-steps">
+            <li>Desativar "Atividade do Gemini Apps" em myactivity.google.com</li>
+            <li>Apagar todo o historico existente de atividade do Gemini</li>
+            <li>Configurar exclusao automatica para 3 meses</li>
+            <li>Desativar extensoes desnecessarias (Gmail, Drive, etc.)</li>
+            <li>Considerar Google Workspace para uso institucional</li>
+        </ol>
+    </div>
+
+    <!-- ==================== CAPITULO 7: NOTEBOOKLM ==================== -->
+    <h2 style="margin-top: 30px;">7. Google NotebookLM — Configuracoes de Privacidade</h2>
+
+    <div class="plat-header notebooklm">
+        <div class="plat-icon notebooklm">N</div>
+        <div>
+            <h2 style="color: #ea4335;">NotebookLM</h2>
+            <p>Google — notebooklm.google.com</p>
+        </div>
+    </div>
+
+    <h3>Como o NotebookLM usa seus dados</h3>
+    <p>O NotebookLM tem uma das melhores politicas de privacidade entre as plataformas analisadas:</p>
+
+    <div class="success-box">
+        <strong>Politica favoravel:</strong> O Google afirma que os dados enviados ao NotebookLM <strong>NAO sao usados para treinar modelos de IA</strong>. Isso vale para todos os usuarios, incluindo a versao gratuita. Os documentos ficam restritos ao notebook do usuario e nao sao acessados por outros usuarios.
+    </div>
+
+    <div class="setting-card">
+        <h4>O que e enviado ao NotebookLM</h4>
+        <ul>
+            <li><strong>Fontes:</strong> PDFs, Google Docs, textos colados, URLs, videos do YouTube, arquivos de audio</li>
+            <li>O conteudo e processado pelo Gemini para gerar resumos, respostas e podcasts (Audio Overviews)</li>
+            <li>Os dados ficam armazenados na infraestrutura do Google vinculados a sua conta</li>
+            <li>Cada notebook e independente — o conteudo de um nao cruza com outro</li>
+        </ul>
+    </div>
+
+    <div class="setting-card">
+        <h4>Configuracao 1: Gerenciar notebooks e fontes</h4>
+        <div class="path-steps">notebooklm.google.com → Selecionar notebook → Fontes (painel esquerdo) → Clicar no "X" ao lado da fonte para remover
+
+Para excluir notebook inteiro:
+Tela inicial → Tres pontos no notebook → Excluir</div>
+    </div>
+
+    <div class="setting-card">
+        <h4>Configuracao 2: Controlar compartilhamento</h4>
+        <p>Notebooks podem ser compartilhados com outras pessoas. Verifique as permissoes:</p>
+        <div class="path-steps">Dentro do notebook → Botao "Compartilhar" (canto superior direito) → Verificar com quem esta compartilhado → Remover acessos desnecessarios</div>
+        <p style="color:#94a3b8; font-size:0.88em;">Notebooks sao privados por padrao. So sao compartilhados se voce explicitamente convidar alguem.</p>
+    </div>
+
+    <div class="setting-card">
+        <h4>Audio Overviews (Podcasts gerados por IA) — Privacidade</h4>
+        <ul>
+            <li>Os audios sao gerados a partir do conteudo do notebook</li>
+            <li>O audio gerado pode ser compartilhado via link — <strong>cuidado ao compartilhar!</strong></li>
+            <li>Se o notebook contiver dados sensiveis, o podcast tambem contera</li>
+            <li><strong>Recomendacao:</strong> Nao gere Audio Overviews de notebooks com conteudo confidencial</li>
+        </ul>
+    </div>
+
+    <div class="footer-note">Paixao Cortes Advogados — Curso IA na Advocacia — Fev/2026</div>
+</div>
+
+<!-- ==================== NOTEBOOKLM CONTINUACAO ==================== -->
+<div class="page">
+    <div class="header">
+        <div class="logo-sm">7</div>
+        <div><strong style="color:#e2e8f0;">NotebookLM — Enterprise e Resumo</strong></div>
+    </div>
+
+    <h3>NotebookLM Plus e versao Enterprise</h3>
+    <div class="tier-grid">
+        <div class="tier-card">
+            <h4>NotebookLM (gratuito)</h4>
+            <ul>
+                <li>Dados NAO usados para treinamento</li>
+                <li>Notebooks privados por padrao</li>
+                <li>Ate 50 fontes por notebook</li>
+                <li>Vinculado a conta Google pessoal</li>
+                <li>Sem DPA</li>
+            </ul>
+        </div>
+        <div class="tier-card recommended">
+            <h4>NotebookLM Plus / Enterprise</h4>
+            <ul>
+                <li><strong>Dados NUNCA usados para treinamento</strong></li>
+                <li>Controles de admin do Workspace</li>
+                <li>DPA do Google Workspace</li>
+                <li>Mais fontes e notebooks</li>
+                <li>Seguranca de nivel corporativo</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="protocol-box">
+        <h3>Resumo — Configuracao minima para advogados no NotebookLM</h3>
+        <ol class="protocol-steps">
+            <li>Anonimizar documentos ANTES de envia-los como fonte</li>
+            <li>Nunca compartilhar notebooks com dados sensiveis</li>
+            <li>Excluir notebooks e fontes apos concluir a analise</li>
+            <li>Nao gerar Audio Overviews de conteudo confidencial</li>
+            <li>Para uso institucional, adotar NotebookLM via Google Workspace</li>
+        </ol>
+    </div>
+
+    <!-- ==================== CAPITULO 8: PERPLEXITY ==================== -->
+    <h2 style="margin-top: 30px;">8. Perplexity — Configuracoes de Privacidade</h2>
+
+    <div class="plat-header perplexity">
+        <div class="plat-icon perplexity">P</div>
+        <div>
+            <h2 style="color: #20bfc4;">Perplexity</h2>
+            <p>Perplexity AI — perplexity.ai</p>
+        </div>
+    </div>
+
+    <h3>Como o Perplexity usa seus dados</h3>
+    <p>O Perplexity coleta consultas, resultados de busca, informacoes do dispositivo, IP e localizacao. Nos planos gratuito e Pro, <strong>os dados podem ser usados para treinamento por padrao</strong>. A opcao de opt-out so esta disponivel no plano Pro ou superior.</p>
+
+    <div class="alert-box">
+        <strong>Vulnerabilidade conhecida:</strong> Pesquisadores de seguranca documentaram que arquivos enviados ao Perplexity podem ser acessiveis via URL direta sem autenticacao. O Perplexity roteia imagens via Cloudinary e outros arquivos via AWS S3. <strong>Nunca envie documentos com dados identificaveis.</strong>
+    </div>
+
+    <div class="setting-card">
+        <h4>Configuracao 1: Desativar treinamento com seus dados (somente Pro+)</h4>
+        <div class="path-steps">perplexity.ai → Icone do perfil (canto inferior esquerdo) → Configuracoes → "AI Data Usage" → DESATIVAR</div>
+        <p style="color:#94a3b8; font-size:0.88em;">Atencao: Essa opcao NAO esta disponivel no plano gratuito. A desativacao so se aplica a dados futuros — dados anteriores nao sao retroativamente removidos do treinamento.</p>
+    </div>
+
+    <div class="setting-card">
+        <h4>Configuracao 2: Modo anonimo (Incognito)</h4>
+        <p>Conversas que expiram em 24 horas, sem historico e sem uso de memoria.</p>
+        <div class="path-steps">Iniciar nova conversa → Ativar o modo "Incognito" antes de enviar a primeira mensagem</div>
+    </div>
+
+    <div class="setting-card">
+        <h4>Configuracao 3: Gerenciar e apagar memoria</h4>
+        <div class="path-steps">Configuracoes → Personalize → Desativar "Reference memory and search history"
+Para apagar memorias: Configuracoes → Personalize → Manage Memory → Excluir individualmente</div>
+    </div>
+
+    <div class="footer-note">Paixao Cortes Advogados — Curso IA na Advocacia — Fev/2026</div>
+</div>
+
+<!-- ==================== PERPLEXITY CONTINUACAO ==================== -->
+<div class="page">
+    <div class="header">
+        <div class="logo-sm">8</div>
+        <div><strong style="color:#e2e8f0;">Perplexity — Planos, Arquivos e Resumo</strong></div>
+    </div>
+
+    <div class="setting-card">
+        <h4>Configuracao 4: Apagar conversas (threads)</h4>
+        <div class="path-steps">Para conversa individual: Abrir a conversa → "..." → Excluir
+Para todo o historico: Library/Historico → "Excluir Threads" → Confirmar</div>
+    </div>
+
+    <div class="setting-card">
+        <h4>Configuracao 5: Solicitar exclusao da conta</h4>
+        <div class="path-steps">perplexity.ai/account/details → Rolar ate o final → "Learn more" → Confirmar exclusao
+Ou: enviar e-mail para support@perplexity.ai</div>
+    </div>
+
+    <div class="setting-card">
+        <h4>Como o Perplexity trata arquivos enviados</h4>
+        <ul>
+            <li>Formatos aceitos: PDF, DOCX, PPTX, XLSX, CSV, imagens, audio, video</li>
+            <li>Limite: 40 MB por arquivo</li>
+            <li><strong>Auto-exclusao: 7 dias apos o envio</strong> (no plano Pro)</li>
+            <li>Arquivos em Spaces NAO expiram automaticamente</li>
+            <li>Threads publicas expoe TODOS os arquivos anexados</li>
+        </ul>
+    </div>
+
+    <h3>Niveis de privacidade por plano</h3>
+    <div class="tier-grid">
+        <div class="tier-card">
+            <h4>Free</h4>
+            <ul>
+                <li>Dados usados para treinamento (sem opt-out)</li>
+                <li>Threads anonimas: 14 dias</li>
+                <li>Sem modo Incognito</li>
+            </ul>
+        </div>
+        <div class="tier-card">
+            <h4>Pro (US$ 20/mes)</h4>
+            <ul>
+                <li>Opt-out de treinamento disponivel</li>
+                <li>Modo Incognito</li>
+                <li>Arquivos: auto-exclusao em 7 dias</li>
+                <li>Gerenciamento de memoria</li>
+            </ul>
+        </div>
+        <div class="tier-card recommended">
+            <h4>Enterprise Pro (US$ 40/usuario/mes)</h4>
+            <ul>
+                <li><strong>Zero Data Retention</strong></li>
+                <li><strong>Dados NUNCA usados para treinamento</strong></li>
+                <li>SOC 2 Type II</li>
+                <li>DPA disponivel</li>
+                <li>SSO/MFA, controles de admin</li>
+            </ul>
+        </div>
+        <div class="tier-card recommended">
+            <h4>API (Sonar)</h4>
+            <ul>
+                <li><strong>Zero Data Retention automatico</strong></li>
+                <li><strong>Dados NUNCA retidos ou usados</strong></li>
+                <li>DPA disponivel</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="protocol-box">
+        <h3>Resumo — Configuracao minima para advogados no Perplexity</h3>
+        <ol class="protocol-steps">
+            <li>Assinar no minimo o plano Pro e desativar "AI Data Usage"</li>
+            <li>Usar modo Incognito para consultas sensiveis</li>
+            <li>Desativar memoria e historico de busca</li>
+            <li>Manter todas as threads privadas — nunca tornar publicas</li>
+            <li>Excluir arquivos manualmente apos uso (nao esperar 7 dias)</li>
+            <li>Apagar threads sensiveis apos extrair informacao</li>
+        </ol>
+    </div>
+
+    <div class="footer-note">Paixao Cortes Advogados — Curso IA na Advocacia — Fev/2026</div>
+</div>
+
+<!-- ==================== CAPITULO 9: TABELA COMPARATIVA ==================== -->
+<div class="page">
+    <div class="header">
+        <div class="logo-sm">9</div>
+        <div><strong style="color:#e2e8f0;">Tabela Comparativa — Todas as Plataformas</strong></div>
+    </div>
+
+    <h3>Comparacao geral de privacidade (planos pessoais/pagos)</h3>
+
+    <table class="comp-table">
+        <thead>
+            <tr>
+                <th>Criterio</th>
+                <th>ChatGPT</th>
+                <th>Claude</th>
+                <th>Gemini</th>
+                <th>NotebookLM</th>
+                <th>Perplexity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Opt-out de treinamento (gratis)</td>
+                <td class="badge-yes">Sim</td>
+                <td class="badge-yes">Sim</td>
+                <td class="badge-yes">Sim*</td>
+                <td class="badge-yes">N/A**</td>
+                <td class="badge-no">Nao</td>
+            </tr>
+            <tr>
+                <td>Opt-out de treinamento (pago)</td>
+                <td class="badge-yes">Sim</td>
+                <td class="badge-yes">Padrao</td>
+                <td class="badge-yes">Sim*</td>
+                <td class="badge-yes">N/A**</td>
+                <td class="badge-yes">Sim</td>
+            </tr>
+            <tr>
+                <td>Nao treina por padrao (pago)</td>
+                <td class="badge-no">Nao***</td>
+                <td class="badge-yes">Sim (Pro+)</td>
+                <td class="badge-partial">Workspace</td>
+                <td class="badge-yes">Sim</td>
+                <td class="badge-no">Nao</td>
+            </tr>
+            <tr>
+                <td>Modo temporario/incognito</td>
+                <td class="badge-yes">Sim</td>
+                <td class="badge-no">Nao</td>
+                <td class="badge-no">Nao</td>
+                <td class="badge-no">N/A</td>
+                <td class="badge-yes">Sim</td>
+            </tr>
+            <tr>
+                <td>Controle de memoria</td>
+                <td class="badge-yes">Sim</td>
+                <td class="badge-partial">Limitado</td>
+                <td class="badge-no">Nao</td>
+                <td class="badge-no">N/A</td>
+                <td class="badge-yes">Sim</td>
+            </tr>
+            <tr>
+                <td>Exclusao de conversas</td>
+                <td class="badge-yes">Sim</td>
+                <td class="badge-yes">Sim</td>
+                <td class="badge-yes">Sim</td>
+                <td class="badge-yes">Sim</td>
+                <td class="badge-yes">Sim</td>
+            </tr>
+            <tr>
+                <td>Auto-exclusao de arquivos</td>
+                <td class="badge-no">Nao</td>
+                <td class="badge-no">Nao</td>
+                <td class="badge-partial">Depende</td>
+                <td class="badge-no">Nao</td>
+                <td class="badge-yes">7 dias</td>
+            </tr>
+            <tr>
+                <td>Plano corporativo c/ DPA</td>
+                <td class="badge-yes">Team+</td>
+                <td class="badge-yes">Team+</td>
+                <td class="badge-yes">Workspace</td>
+                <td class="badge-yes">Workspace</td>
+                <td class="badge-yes">Enterprise</td>
+            </tr>
+            <tr>
+                <td>SOC 2 Type II</td>
+                <td class="badge-yes">Sim</td>
+                <td class="badge-yes">Sim</td>
+                <td class="badge-yes">Sim</td>
+                <td class="badge-yes">Sim</td>
+                <td class="badge-yes">Enterprise</td>
+            </tr>
+            <tr>
+                <td>Zero Data Retention</td>
+                <td class="badge-partial">API</td>
+                <td class="badge-partial">API</td>
+                <td class="badge-no">Nao</td>
+                <td class="badge-no">Nao</td>
+                <td class="badge-yes">Enterprise</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p style="font-size: 0.82em; color: #94a3b8; margin-top: 8px;">
+        * Gemini: desativar "Atividade do Gemini" impede salvamento/treinamento, mas via controles da conta Google.<br>
+        ** NotebookLM: Google afirma que dados NAO sao usados para treinamento em nenhum plano.<br>
+        *** ChatGPT: No plano Plus, treinamento e ativado por padrao. Apenas Team/Enterprise desativam por padrao.
+    </p>
+
+    <h3>Qual plataforma escolher para cada situacao?</h3>
+
+    <div class="two-col">
+        <div class="setting-card">
+            <h4>Pesquisa juridica geral</h4>
+            <p>Sem dados de caso, apenas teses e doutrina.</p>
+            <p><strong>Recomendacao:</strong> Qualquer plataforma com opt-out ativado. Perplexity e ideal pela busca nativa.</p>
+        </div>
+        <div class="setting-card">
+            <h4>Analise de documentos com dados anonimizados</h4>
+            <p>Contratos, pecas, pareceres com dados ja substituidos.</p>
+            <p><strong>Recomendacao:</strong> Claude Pro, ChatGPT com Chat Temporario, ou NotebookLM.</p>
+        </div>
+        <div class="setting-card">
+            <h4>Trabalho com dados sensiveis (anonimizados)</h4>
+            <p>Analise de casos complexos apos anonimizacao rigorosa.</p>
+            <p><strong>Recomendacao:</strong> Claude Team/Enterprise ou ChatGPT Team/Enterprise.</p>
+        </div>
+        <div class="setting-card">
+            <h4>Dados reais de clientes (excepcional)</h4>
+            <p>Apenas quando anonimizacao nao e viavel e ha necessidade critica.</p>
+            <p><strong>Recomendacao:</strong> Somente planos Enterprise com DPA assinado + consentimento expresso do cliente.</p>
+        </div>
+    </div>
+
+    <div class="footer-note">Paixao Cortes Advogados — Curso IA na Advocacia — Fev/2026</div>
+</div>
+
+<!-- ==================== CAPITULO 10: PROTOCOLO DO ESCRITORIO ==================== -->
+<div class="page">
+    <div class="header">
+        <div class="logo-sm">10</div>
+        <div><strong style="color:#e2e8f0;">Protocolo do Escritorio — Passo a Passo</strong></div>
+    </div>
+
+    <p>Este protocolo deve ser seguido por todos os profissionais do escritorio ao utilizar qualquer plataforma de IA generativa.</p>
+
+    <div class="protocol-box">
+        <h3>ANTES de usar a IA</h3>
+        <ol class="protocol-steps">
+            <li><strong>VERIFICAR CONFIGURACOES</strong> — Confirme que o opt-out de treinamento esta ATIVADO na plataforma. Faca isso na primeira vez e revise mensalmente (plataformas mudam configuracoes apos atualizacoes).</li>
+            <li><strong>CLASSIFICAR O CONTEUDO</strong> — Pergunte: "Este texto contem dados que identificam um cliente, parte adversa, processo ou qualquer pessoa?" Se sim, anonimize antes do proximo passo.</li>
+            <li><strong>ANONIMIZAR</strong> — Aplique o protocolo de 5 passos (Capitulo 3). Substitua nomes, numeros, datas, valores e fatos unicos por rotulos genericos.</li>
+            <li><strong>ESCOLHER A PLATAFORMA</strong> — Use a tabela comparativa (Capitulo 9) para escolher a ferramenta mais adequada ao nivel de sensibilidade dos dados.</li>
+        </ol>
+    </div>
+
+    <div class="protocol-box">
+        <h3>DURANTE o uso da IA</h3>
+        <ol class="protocol-steps">
+            <li><strong>MODO SEGURO</strong> — No ChatGPT, use Chat Temporario. No Perplexity, use Incognito. No Claude, use o plano Pro ou superior.</li>
+            <li><strong>NAO CORRIGIR COM DADOS REAIS</strong> — Se a IA "adivinhar" o nome real ou pedir mais detalhes, nao confirme e nao forneca. Mantenha os rotulos genericos.</li>
+            <li><strong>REVISAO CRITICA</strong> — Toda resposta da IA deve ser revisada. Nao copie e cole automaticamente. Verifique jurisprudencia, legislacao e numeros de processo.</li>
+        </ol>
+    </div>
+
+    <div class="protocol-box">
+        <h3>DEPOIS de usar a IA</h3>
+        <ol class="protocol-steps">
+            <li><strong>EXTRAIR E SALVAR LOCALMENTE</strong> — Copie o resultado util para um documento local no computador do escritorio.</li>
+            <li><strong>APAGAR A CONVERSA</strong> — Exclua a conversa/thread da plataforma. Nao deixe conversas sensiveis acumulando no historico.</li>
+            <li><strong>REGISTRAR O USO</strong> — Anote brevemente: qual IA foi usada, para qual finalidade, se houve anonimizacao. Manter um log protege o escritorio em eventual questionamento.</li>
+            <li><strong>RESUBSTITUIR</strong> — No documento final, substitua os rotulos genericos de volta pelos dados reais (usando a tabela de correspondencia local).</li>
+        </ol>
+    </div>
+
+    <div class="alert-box">
+        <strong>Regra de ouro:</strong> Na duvida, NAO insira. E sempre mais seguro reescrever a pergunta de forma generica do que arriscar expor dados de cliente. "Preciso de modelo de contrato de prestacao de servicos de TI" e tao util quanto enviar o contrato real — e infinitamente mais seguro.
+    </div>
+
+    <div class="footer-note">Paixao Cortes Advogados — Curso IA na Advocacia — Fev/2026</div>
+</div>
+
+<!-- ==================== CAPITULO 11: MODELOS DE ANONIMIZACAO ==================== -->
+<div class="page">
+    <div class="header">
+        <div class="logo-sm">11</div>
+        <div><strong style="color:#e2e8f0;">Modelos de Anonimizacao Prontos para Uso</strong></div>
+    </div>
+
+    <p>Use estes modelos como ponto de partida para anonimizar diferentes tipos de documentos antes de enviar a uma IA.</p>
+
+    <div class="setting-card">
+        <h4>Modelo 1 — Consulta sobre contrato</h4>
+        <span class="copy-label">Prompt anonimizado — copie e adapte</span>
+        <div class="copy-box">Analise a seguinte clausula contratual e identifique possiveis riscos juridicos para a parte contratante:
+
+"A EMPRESA X (contratante) firmou contrato de prestacao de servicos com a EMPRESA Y (contratada) no valor aproximado de R$ [faixa: 500 mil a 1 milhao], com vigencia de 24 meses, contendo clausula de exclusividade e multa rescisoria de 30%. A contratada atrasou a entrega em [periodo: mais de 60 dias]. Quais medidas juridicas a contratante pode adotar?"
+
+Considere a legislacao brasileira (Codigo Civil, CDC se aplicavel).</div>
+    </div>
+
+    <div class="setting-card">
+        <h4>Modelo 2 — Pesquisa de jurisprudencia</h4>
+        <span class="copy-label">Prompt anonimizado — copie e adapte</span>
+        <div class="copy-box">Busque jurisprudencia recente (2023-2026) sobre responsabilidade civil de [tipo de profissional, ex: "medico"] por [tipo de dano, ex: "erro em procedimento cirurgico"], especificamente em casos onde houve [circunstancia generica, ex: "falta de consentimento informado"].
+
+Foque em decisoes do STJ e tribunais estaduais. Inclua o link direto para cada acordao citado.</div>
+    </div>
+
+    <div class="setting-card">
+        <h4>Modelo 3 — Revisao de peca processual</h4>
+        <span class="copy-label">Prompt anonimizado — copie e adapte</span>
+        <div class="copy-box">Revise a fundamentacao juridica da peca abaixo e sugira melhorias na argumentacao. Nao altere os fatos — foque apenas nos fundamentos legais e na estrutura argumentativa.
+
+[COLAR AQUI A PECA JA ANONIMIZADA — com "Parte A", "Parte B", sem numeros reais de processo, sem nomes de juizes]
+
+Identifique: (1) argumentos frageis, (2) jurisprudencia que poderia reforcar a tese, (3) possiveis contra-argumentos da parte adversa.</div>
+    </div>
+
+    <div class="setting-card">
+        <h4>Modelo 4 — Tabela de correspondencia (manter LOCAL)</h4>
+        <span class="copy-label">Salvar APENAS no computador local — NUNCA enviar a IA</span>
+        <div class="copy-box">TABELA DE CORRESPONDENCIA — Caso [numero interno]
+Data: [data]
+Responsavel: [nome do advogado]
+
+Parte A     = [nome real do cliente]
+Parte B     = [nome real da parte adversa]
+Empresa X   = [razao social real]
+Tribunal Y  = [tribunal real]
+Valor ~R$500k = [valor exato: R$ XXX.XXX,XX]
+Processo ref. = [numero real do processo]
+
+ATENCAO: Este documento e SIGILOSO.
+Nao enviar por e-mail. Nao salvar em nuvem.
+Manter apenas na rede local do escritorio.</div>
+    </div>
+
+    <div class="footer-note">Paixao Cortes Advogados — Curso IA na Advocacia — Fev/2026</div>
+</div>
+
+<!-- ==================== CAPITULO 12: CHECKLIST FINAL ==================== -->
+<div class="page">
+    <div class="header">
+        <div class="logo-sm">12</div>
+        <div><strong style="color:#e2e8f0;">Checklist Final e Referencia Rapida</strong></div>
+    </div>
+
+    <h3>Checklist de configuracao inicial (fazer uma vez)</h3>
+    <div style="margin: 10px 0;">
+        <div class="check-item">ChatGPT: Desativar "Melhorar o modelo para todos" em Controles de dados</div>
+        <div class="check-item">ChatGPT: Desativar Memoria ou gerencia-la ativamente</div>
+        <div class="check-item">Claude: Desativar "Permitir que conversas aprimorem o Claude"</div>
+        <div class="check-item">Gemini: Desativar "Atividade do Gemini Apps" em myactivity.google.com</div>
+        <div class="check-item">Gemini: Configurar exclusao automatica para 3 meses</div>
+        <div class="check-item">Gemini: Desativar extensoes desnecessarias (Gmail, Drive, etc.)</div>
+        <div class="check-item">Perplexity: Assinar Pro e desativar "AI Data Usage"</div>
+        <div class="check-item">Perplexity: Desativar memoria e historico de busca</div>
+        <div class="check-item">NotebookLM: Verificar que notebooks nao estao compartilhados</div>
+        <div class="check-item">Todas: Apagar historico de conversas anteriores a esta configuracao</div>
+    </div>
+
+    <h3>Checklist de uso diario (fazer sempre)</h3>
+    <div style="margin: 10px 0;">
+        <div class="check-item">Anonimizar dados antes de inserir em qualquer IA</div>
+        <div class="check-item">Usar modo temporario/incognito para consultas sensiveis</div>
+        <div class="check-item">Nao enviar documentos originais com dados reais</div>
+        <div class="check-item">Salvar tabela de correspondencia APENAS localmente</div>
+        <div class="check-item">Apagar conversa apos extrair a informacao necessaria</div>
+        <div class="check-item">Revisar toda resposta da IA antes de usar em pecas</div>
+    </div>
+
+    <h3>Checklist mensal (revisao periodica)</h3>
+    <div style="margin: 10px 0;">
+        <div class="check-item">Verificar se configuracoes de privacidade continuam ativas (plataformas mudam)</div>
+        <div class="check-item">Apagar conversas e arquivos antigos das plataformas</div>
+        <div class="check-item">Revisar memorias salvas e excluir informacoes desnecessarias</div>
+        <div class="check-item">Verificar se ha atualizacoes nas politicas de privacidade</div>
+        <div class="check-item">Atualizar o log de uso de IA do escritorio</div>
+    </div>
+
+    <h3>Referencia rapida de caminhos</h3>
+    <table class="comp-table" style="font-size: 0.8em;">
+        <thead>
+            <tr>
+                <th style="text-align:left;">Acao</th>
+                <th style="text-align:left;">Caminho</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ChatGPT: opt-out</td>
+                <td style="text-align:left;">Perfil → Configuracoes → Controles de dados → Melhorar o modelo → OFF</td>
+            </tr>
+            <tr>
+                <td>Claude: opt-out</td>
+                <td style="text-align:left;">Perfil → Configuracoes → Privacidade → Aprimorar Claude → OFF</td>
+            </tr>
+            <tr>
+                <td>Gemini: opt-out</td>
+                <td style="text-align:left;">myactivity.google.com → Atividade do Gemini Apps → Desativar</td>
+            </tr>
+            <tr>
+                <td>Perplexity: opt-out</td>
+                <td style="text-align:left;">Perfil → Configuracoes → AI Data Usage → OFF (somente Pro+)</td>
+            </tr>
+            <tr>
+                <td>ChatGPT: chat temporario</td>
+                <td style="text-align:left;">Nova conversa → Icone de chat temporario → Ativar</td>
+            </tr>
+            <tr>
+                <td>Perplexity: incognito</td>
+                <td style="text-align:left;">Nova conversa → Toggle Incognito → Ativar</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="protocol-box" style="text-align: center; margin-top: 20px;">
+        <h3>Lembre-se</h3>
+        <p style="font-size: 1.1em; color: #e2e8f0; margin: 10px 0;">"<strong>A IA e uma ferramenta poderosa, mas o sigilo profissional e inegociavel.</strong><br>Configure primeiro. Anonimize sempre. Na duvida, nao insira."</p>
+        <p style="font-size: 0.9em; color: #94a3b8;">Art. 7o do Codigo de Etica da OAB — Art. 46 da LGPD — CNJ Res. 615/2025</p>
+    </div>
+
+    <div class="footer-note">
+        Paixao Cortes Advogados — Curso IA na Advocacia — Fev/2026<br>
+        <strong style="color:#d69e2e;">INTEIA</strong> — Instituto de Treinamento e Estudos em IA<br>
+        Material elaborado por Dr. Igor Morais Vasconcelos
+    </div>
+</div>
+
+<button class="print-btn no-print" onclick="window.print()">Imprimir / Salvar PDF</button>
+
+</body>
+</html>
