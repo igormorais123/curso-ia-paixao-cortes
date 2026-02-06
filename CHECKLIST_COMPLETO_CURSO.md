@@ -35,10 +35,10 @@
 ### 2.1 E-mail Pre-Curso
 - [ ] Adaptar template `EMAIL_PRE_CURSO.md` com dados reais
 - [ ] Inserir link da videoconferencia (Zoom/Teams/Meet)
-- [ ] Inserir URLs do GitHub Pages:
-  - Cartas: `igormorais123.github.io/curso-ia-paixao-cortes/pagina_12_cartas_v3.html`
-  - QR Codes: `igormorais123.github.io/curso-ia-paixao-cortes/qrcodes_curso.html`
-  - Central: `igormorais123.github.io/curso-ia-paixao-cortes/index_curso.html`
+- [ ] Inserir URLs do site INTEIA:
+  - Cartas: `inteia.com.br/paixaocortes/pagina_12_cartas_v3.html`
+  - QR Codes: `inteia.com.br/paixaocortes/qrcodes_curso.html`
+  - Central: `inteia.com.br/paixaocortes/index_curso.html`
 - [ ] Incluir PDF do Card "Onde Clicar" como anexo
 - [ ] Incluir PDF do Tutorial de Cadastro como anexo
 - [ ] Enviar para TODOS (presencial + online, BSB + SP + GO)

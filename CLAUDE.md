@@ -7,7 +7,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 Materiais didaticos do curso "O PROTOCOLO: Ativacao do Advogado Aumentado" para Paixao Cortes Advogados (Brasilia-DF). Curso hibrido (presencial 3 cidades + online) sobre IA generativa aplicada a advocacia.
 
 - **Repo GitHub**: `igormorais123/curso-ia-paixao-cortes` (publico)
-- **GitHub Pages**: `igormorais123.github.io/curso-ia-paixao-cortes/`
+- **Site Vercel**: `inteia.com.br/paixaocortes/` (rewrite via frontend inteia.com.br)
+- **GitHub Pages (legado)**: `igormorais123.github.io/curso-ia-paixao-cortes/`
 - **Branch unico**: master
 
 ## Arquitetura

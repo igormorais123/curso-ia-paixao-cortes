@@ -74,8 +74,8 @@
 ### Materiais a enviar ANTES (email/WhatsApp)
 - [ ] Link: ChatGPT (https://chatgpt.com)
 - [ ] Link: Claude (https://claude.ai)
-- [ ] Link: 12 Cartas CLEAR (https://igormorais123.github.io/curso-ia-paixao-cortes/pagina_12_cartas_v3.html)
-- [ ] Link: QR Codes (https://igormorais123.github.io/curso-ia-paixao-cortes/qrcodes_curso.html)
+- [ ] Link: 12 Cartas CLEAR (https://inteia.com.br/paixaocortes/pagina_12_cartas_v3.html)
+- [ ] Link: QR Codes (https://inteia.com.br/paixaocortes/qrcodes_curso.html)
 - [ ] Instrucao: "Crie conta gratuita no ChatGPT OU Claude antes do curso."
 
 ---
@@ -341,8 +341,8 @@ Trabalhou de 15/03/2018 a 10/01/2026. Salario: R$ 2.800. Dispensada sem justa ca
 - [ ] Enviar links por email/WhatsApp para TODOS (online e presencial):
   - ChatGPT: https://chatgpt.com
   - Claude: https://claude.ai
-  - 12 Cartas: https://igormorais123.github.io/curso-ia-paixao-cortes/pagina_12_cartas_v3.html
-  - QR Codes: https://igormorais123.github.io/curso-ia-paixao-cortes/qrcodes_curso.html
+  - 12 Cartas: https://inteia.com.br/paixaocortes/pagina_12_cartas_v3.html
+  - QR Codes: https://inteia.com.br/paixaocortes/qrcodes_curso.html
 - [ ] Instrucao: "Crie conta no ChatGPT ou Claude ANTES do curso"
 - [ ] Preparar demo: contestacao trabalhista gerada em 90s
 - [ ] Testar ChatGPT e Claude no celular (funciona no 4G?)

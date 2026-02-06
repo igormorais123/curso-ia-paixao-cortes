@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback — O Protocolo: IA na Advocacia</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 12px 12px 0 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .header .subtitle {
+            font-size: 1rem;
+            opacity: 0.85;
+            font-weight: 300;
+        }
+
+        .header .escritorio {
+            margin-top: 15px;
+            font-size: 0.85rem;
+            opacity: 0.7;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 12px;
+        }
+
+        /* Form body */
+        .form-body {
+            background: white;
+            padding: 30px;
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .section {
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #0f3460;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        /* Questions */
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .question label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .question .hint {
+            font-size: 0.8rem;
+            color: #888;
+            margin-bottom: 6px;
+            font-style: italic;
+        }
+
+        /* Inputs */
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #0f3460;
+            box-shadow: 0 0 0 3px rgba(15, 52, 96, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 70px;
+        }
+
+        /* Rating scale */
+        .rating-scale {
+            display: flex;
+            gap: 0;
+            margin: 8px 0;
+        }
+
+        .rating-scale label {
+            flex: 1;
+            text-align: center;
+            padding: 10px 4px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            margin: 0;
+        }
+
+        .rating-scale label:first-child {
+            border-radius: 6px 0 0 6px;
+        }
+
+        .rating-scale label:last-child {
+            border-radius: 0 6px 6px 0;
+        }
+
+        .rating-scale label:hover {
+            background: #e8f0fe;
+        }
+
+        .rating-scale input[type="radio"] {
+            display: none;
+        }
+
+        .rating-scale input[type="radio"]:checked + span {
+            background: #0f3460;
+            color: white;
+        }
+
+        .rating-scale .rating-option {
+            display: block;
+            padding: 10px 4px;
+        }
+
+        .rating-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: #999;
+            margin-top: 4px;
+            padding: 0 4px;
+        }
+
+        /* Radio groups */
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 400;
+            transition: background 0.2s;
+        }
+
+        .radio-group label:hover {
+            background: #f8f9fa;
+        }
+
+        .radio-group input[type="radio"],
+        .radio-group input[type="checkbox"] {
+            accent-color: #0f3460;
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Checkbox groups */
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 400;
+            transition: background 0.2s;
+        }
+
+        .checkbox-group label:hover {
+            background: #f8f9fa;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            accent-color: #0f3460;
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Inline fields */
+        .inline-fields {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        /* Submit */
+        .submit-area {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+            color: white;
+            border: none;
+            padding: 14px 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            letter-spacing: 1px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(15, 52, 96, 0.3);
+        }
+
+        .privacy-note {
+            font-size: 0.75rem;
+            color: #999;
+            margin-top: 12px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.75rem;
+            color: #aaa;
+        }
+
+        /* Print styles */
+        @media print {
+            body { background: white; }
+            .container { max-width: 100%; padding: 0; }
+            .header {
+                background: none !important;
+                color: #1a1a2e !important;
+                border-bottom: 3px solid #1a1a2e;
+                border-radius: 0;
+                padding: 20px 0;
+            }
+            .header .subtitle, .header .escritorio { color: #333 !important; opacity: 1 !important; }
+            .form-body { box-shadow: none; padding: 20px 0; }
+            .submit-area { display: none; }
+            .rating-scale label {
+                border: 1px solid #999;
+                padding: 6px 2px;
+                font-size: 0.8rem;
+            }
+            .radio-group label,
+            .checkbox-group label {
+                border: none;
+                padding: 4px 0;
+            }
+            input[type="text"], textarea {
+                border: none;
+                border-bottom: 1px solid #999;
+                border-radius: 0;
+                padding: 4px 0;
+                min-height: 30px;
+            }
+            textarea { min-height: 50px; border: 1px solid #999; }
+            .section { page-break-inside: avoid; }
+            .footer { display: none; }
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 10px; }
+            .header { padding: 25px 20px; }
+            .header h1 { font-size: 1.4rem; }
+            .form-body { padding: 20px 15px; }
+            .inline-fields { grid-template-columns: 1fr; }
+            .rating-scale label { font-size: 0.8rem; padding: 8px 2px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>O PROTOCOLO</h1>
+            <div class="subtitle">Feedback do Curso — IA na Advocacia</div>
+            <div class="escritorio">Paixao Cortes Advogados — Fevereiro 2026</div>
+        </div>
+
+        <div class="form-body">
+
+            <!-- IDENTIFICACAO -->
+            <div class="section">
+                <div class="section-title">Identificacao (opcional)</div>
+                <div class="inline-fields">
+                    <div class="question">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" placeholder="Opcional">
+                    </div>
+                    <div class="question">
+                        <label for="area">Area de atuacao</label>
+                        <select id="area">
+                            <option value="">Selecione...</option>
+                            <option value="civil">Civil</option>
+                            <option value="trabalhista">Trabalhista</option>
+                            <option value="consumidor">Consumidor</option>
+                            <option value="administrativo">Administrativo</option>
+                            <option value="tributario">Tributario</option>
+                            <option value="comercial">Comercial</option>
+                            <option value="outra">Outra</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inline-fields" style="margin-top: 12px;">
+                    <div class="question">
+                        <label for="local">Participou de</label>
+                        <select id="local">
+                            <option value="">Selecione...</option>
+                            <option value="bsb">Brasilia (presencial)</option>
+                            <option value="sp">Sao Paulo (presencial)</option>
+                            <option value="go">Goiania (presencial)</option>
+                            <option value="online">Online</option>
+                        </select>
+                    </div>
+                    <div class="question">
+                        <label for="experiencia">Experiencia previa com IA</label>
+                        <select id="experiencia">
+                            <option value="">Selecione...</option>
+                            <option value="nenhuma">Nenhuma</option>
+                            <option value="basica">Basica (ja usei ChatGPT/similar)</option>
+                            <option value="intermediaria">Intermediaria (uso com frequencia)</option>
+                            <option value="avancada">Avancada (uso profissionalmente)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AVALIACAO GERAL -->
+            <div class="section">
+                <div class="section-title">Avaliacao Geral</div>
+
+                <div class="question">
+                    <label>1. Nota geral para o curso</label>
+                    <div class="rating-scale">
+                        <label><input type="radio" name="nota_geral" value="1"><span class="rating-option">1</span></label>
+                        <label><input type="radio" name="nota_geral" value="2"><span class="rating-option">2</span></label>
+                        <label><input type="radio" name="nota_geral" value="3"><span class="rating-option">3</span></label>
+                        <label><input type="radio" name="nota_geral" value="4"><span class="rating-option">4</span></label>
+                        <label><input type="radio" name="nota_geral" value="5"><span class="rating-option">5</span></label>
+                        <label><input type="radio" name="nota_geral" value="6"><span class="rating-option">6</span></label>
+                        <label><input type="radio" name="nota_geral" value="7"><span class="rating-option">7</span></label>
+                        <label><input type="radio" name="nota_geral" value="8"><span class="rating-option">8</span></label>
+                        <label><input type="radio" name="nota_geral" value="9"><span class="rating-option">9</span></label>
+                        <label><input type="radio" name="nota_geral" value="10"><span class="rating-option">10</span></label>
+                    </div>
+                    <div class="rating-labels">
+                        <span>Ruim</span>
+                        <span>Excelente</span>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>2. Relevancia pratica para seu dia a dia</label>
+                    <div class="rating-scale">
+                        <label><input type="radio" name="relevancia" value="1"><span class="rating-option">1</span></label>
+                        <label><input type="radio" name="relevancia" value="2"><span class="rating-option">2</span></label>
+                        <label><input type="radio" name="relevancia" value="3"><span class="rating-option">3</span></label>
+                        <label><input type="radio" name="relevancia" value="4"><span class="rating-option">4</span></label>
+                        <label><input type="radio" name="relevancia" value="5"><span class="rating-option">5</span></label>
+                        <label><input type="radio" name="relevancia" value="6"><span class="rating-option">6</span></label>
+                        <label><input type="radio" name="relevancia" value="7"><span class="rating-option">7</span></label>
+                        <label><input type="radio" name="relevancia" value="8"><span class="rating-option">8</span></label>
+                        <label><input type="radio" name="relevancia" value="9"><span class="rating-option">9</span></label>
+                        <label><input type="radio" name="relevancia" value="10"><span class="rating-option">10</span></label>
+                    </div>
+                    <div class="rating-labels">
+                        <span>Irrelevante</span>
+                        <span>Essencial</span>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>3. Equilibrio entre teoria e pratica</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="equilibrio" value="muita_teoria"> Muita teoria, pouca pratica</label>
+                        <label><input type="radio" name="equilibrio" value="equilibrado"> Equilibrio adequado</label>
+                        <label><input type="radio" name="equilibrio" value="muita_pratica"> Muita pratica, pouca teoria</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FASES DO CURSO -->
+            <div class="section">
+                <div class="section-title">Fases do Protocolo</div>
+
+                <div class="question">
+                    <label>4. Qual fase foi mais util para voce?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="fase_util" value="abertura"> ABERTURA — Demonstracao ao vivo de IA</label>
+                        <label><input type="radio" name="fase_util" value="instrucao"> INSTRUCAO — Pesquisa juridica com IA e framework CLEAR</label>
+                        <label><input type="radio" name="fase_util" value="blindagem"> BLINDAGEM — Seguranca, etica e verificacao</label>
+                        <label><input type="radio" name="fase_util" value="prova_fogo"> PROVA DE FOGO — Caso pratico completo</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>5. Qual fase poderia ser melhorada?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="fase_melhorar" value="abertura"> ABERTURA</label>
+                        <label><input type="radio" name="fase_melhorar" value="instrucao"> INSTRUCAO</label>
+                        <label><input type="radio" name="fase_melhorar" value="blindagem"> BLINDAGEM</label>
+                        <label><input type="radio" name="fase_melhorar" value="prova_fogo"> PROVA DE FOGO</label>
+                        <label><input type="radio" name="fase_melhorar" value="nenhuma"> Nenhuma — todas foram boas</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FERRAMENTAS -->
+            <div class="section">
+                <div class="section-title">Ferramentas de IA</div>
+
+                <div class="question">
+                    <label>6. Quais ferramentas voce pretende usar na proxima segunda-feira?</label>
+                    <p class="hint">Marque todas que se aplicam</p>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="ferramentas" value="chatgpt"> ChatGPT</label>
+                        <label><input type="checkbox" name="ferramentas" value="claude"> Claude</label>
+                        <label><input type="checkbox" name="ferramentas" value="perplexity"> Perplexity</label>
+                        <label><input type="checkbox" name="ferramentas" value="notebooklm"> NotebookLM</label>
+                        <label><input type="checkbox" name="ferramentas" value="gemini"> Gemini</label>
+                        <label><input type="checkbox" name="ferramentas" value="nenhuma"> Nenhuma por enquanto</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>7. Voce se sente seguro para usar IA no trabalho juridico?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="seguranca" value="sim"> Sim, me sinto preparado</label>
+                        <label><input type="radio" name="seguranca" value="parcial"> Parcialmente — preciso praticar mais</label>
+                        <label><input type="radio" name="seguranca" value="nao"> Nao — preciso de mais treinamento</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROTOCOLO -->
+            <div class="section">
+                <div class="section-title">O Protocolo de Pesquisa</div>
+
+                <div class="question">
+                    <label>8. Voce lembra as 4 etapas do protocolo de pesquisa segura?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="protocolo" value="sim"> Sim: Busca, Link, Raciocinio, Checagem</label>
+                        <label><input type="radio" name="protocolo" value="parcial"> Lembro parcialmente</label>
+                        <label><input type="radio" name="protocolo" value="nao"> Nao lembro</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>9. O framework CLEAR (Contexto, Limite, Exemplo, Audiencia, Role) foi util?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="clear" value="muito"> Muito util — vou aplicar</label>
+                        <label><input type="radio" name="clear" value="util"> Util — faz sentido</label>
+                        <label><input type="radio" name="clear" value="pouco"> Pouco util — prefiro escrever livremente</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORMATO HIBRIDO -->
+            <div class="section">
+                <div class="section-title">Formato do Curso</div>
+
+                <div class="question">
+                    <label>10. Como avalia a duracao do curso (3 horas)?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="duracao" value="curto"> Curto demais — queria mais tempo</label>
+                        <label><input type="radio" name="duracao" value="adequado"> Duracao adequada</label>
+                        <label><input type="radio" name="duracao" value="longo"> Longo demais</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>11. Os materiais de apoio (cartas CLEAR, card "Onde Clicar", QR codes) foram uteis?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="materiais" value="muito"> Muito uteis — vou usar depois</label>
+                        <label><input type="radio" name="materiais" value="uteis"> Uteis durante o curso</label>
+                        <label><input type="radio" name="materiais" value="pouco"> Pouco uteis</label>
+                        <label><input type="radio" name="materiais" value="nao_recebi"> Nao recebi / nao acessei</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ABERTA -->
+            <div class="section">
+                <div class="section-title">Comentarios Abertos</div>
+
+                <div class="question">
+                    <label>12. O que mais gostou no curso?</label>
+                    <textarea placeholder="Escreva livremente..."></textarea>
+                </div>
+
+                <div class="question">
+                    <label>13. O que mudaria ou acrescentaria?</label>
+                    <textarea placeholder="Escreva livremente..."></textarea>
+                </div>
+
+                <div class="question">
+                    <label>14. Gostaria de um curso avancado (nivel 2) sobre IA juridica?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="nivel2" value="sim"> Sim, com certeza</label>
+                        <label><input type="radio" name="nivel2" value="talvez"> Talvez, dependendo do conteudo</label>
+                        <label><input type="radio" name="nivel2" value="nao"> Nao, este curso foi suficiente</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>15. Qual o maior receio que ainda tem sobre usar IA no trabalho?</label>
+                    <textarea placeholder="Ex.: errar citacao, expor dados do cliente, parecer preguicoso..."></textarea>
+                </div>
+            </div>
+
+            <!-- SUBMIT -->
+            <div class="submit-area">
+                <button type="button" class="submit-btn" onclick="coletarRespostas()">ENVIAR FEEDBACK</button>
+                <p class="privacy-note">Suas respostas sao confidenciais e serao usadas apenas para melhorar o curso.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            Formulario de Feedback v1.0 — O Protocolo: IA na Advocacia<br>
+            Paixao Cortes Advogados — Fev 2026
+        </div>
+    </div>
+
+    <script>
+        // Highlight selected ratings
+        document.querySelectorAll('.rating-scale label').forEach(label => {
+            label.addEventListener('click', function() {
+                const parent = this.parentElement;
+                parent.querySelectorAll('label').forEach(l => l.style.background = '');
+                this.style.background = '#0f3460';
+                this.style.color = 'white';
+                this.style.borderColor = '#0f3460';
+                // Highlight all before
+                let prev = this.previousElementSibling;
+                while (prev) {
+                    prev.style.background = '#e8f0fe';
+                    prev.style.borderColor = '#0f3460';
+                    prev = prev.previousElementSibling;
+                }
+            });
+        });
+
+        function coletarRespostas() {
+            const respostas = {};
+            let respondidas = 0;
+
+            // Ratings
+            document.querySelectorAll('input[type="radio"]:checked').forEach(r => {
+                respostas[r.name] = r.value;
+                respondidas++;
+            });
+
+            // Checkboxes
+            const ferramentas = [];
+            document.querySelectorAll('input[name="ferramentas"]:checked').forEach(c => {
+                ferramentas.push(c.value);
+            });
+            if (ferramentas.length > 0) {
+                respostas.ferramentas = ferramentas;
+                respondidas++;
+            }
+
+            // Texts
+            document.querySelectorAll('textarea').forEach(t => {
+                if (t.value.trim()) {
+                    const label = t.closest('.question').querySelector('label').textContent.trim();
+                    respostas[label] = t.value.trim();
+                    respondidas++;
+                }
+            });
+
+            // Selects
+            document.querySelectorAll('select').forEach(s => {
+                if (s.value) {
+                    respostas[s.id] = s.value;
+                }
+            });
+
+            // Nome
+            const nome = document.getElementById('nome').value.trim();
+            if (nome) respostas.nome = nome;
+
+            if (respondidas < 3) {
+                alert('Por favor, responda pelo menos 3 perguntas antes de enviar.');
+                return;
+            }
+
+            // Show summary
+            const resumo = JSON.stringify(respostas, null, 2);
+            const win = window.open('', '_blank');
+            win.document.write(`
+                <html><head><title>Feedback Registrado</title>
+                <style>
+                    body { font-family: 'Segoe UI', sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; }
+                    h1 { color: #0f3460; }
+                    .success { background: #d4edda; border: 1px solid #c3e6cb; padding: 20px; border-radius: 8px; margin: 20px 0; }
+                    pre { background: #f8f9fa; padding: 15px; border-radius: 6px; overflow-x: auto; font-size: 0.85rem; }
+                    .note { color: #666; font-size: 0.85rem; margin-top: 20px; }
+                    button { background: #0f3460; color: white; border: none; padding: 10px 25px; border-radius: 6px; cursor: pointer; margin: 5px; }
+                    button:hover { background: #1a1a2e; }
+                </style></head><body>
+                <h1>Feedback Registrado</h1>
+                <div class="success">
+                    <strong>Obrigado pelo seu feedback!</strong><br>
+                    ${respondidas} perguntas respondidas.
+                </div>
+                <p>Resumo das respostas:</p>
+                <pre>${resumo}</pre>
+                <p>
+                    <button onclick="navigator.clipboard.writeText(document.querySelector('pre').textContent).then(() => alert('Copiado!'))">Copiar respostas</button>
+                    <button onclick="window.print()">Imprimir</button>
+                </p>
+                <p class="note">Envie este resumo para o organizador do curso ou entregue a versao impressa.</p>
+                </body></html>
+            `);
+
+            alert('Feedback registrado! Obrigado pela participacao.');
+        }
+    </script>
+</body>
+</html>
