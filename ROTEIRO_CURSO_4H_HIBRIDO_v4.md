@@ -1,8 +1,42 @@
-# Curso: IA na Advocacia — Roteiro v4 (OPERACIONAL)
-## Paixao Cortes Advogados | 4 horas (2h + 2h) | Hibrido
+# O PROTOCOLO — Ativacao do Advogado Aumentado
+## Paixao Cortes Advogados | 4 horas (2h + 2h) | Hibrido | 3 cidades + online
 
-> **MUDANCA CRITICA**: Curso compactado de 6h para 4h.
-> Hibrido: presencial em 3 cidades + participantes online.
+> **A PREMISSA** (30 segundos, antes de tudo):
+> "Voces ja sao advogados de elite. Tradicao, especializacao, Tribunais Superiores, 3 cidades operando.
+> O que falta nao e competencia — e velocidade. Este protocolo nao ensina direito.
+> Ele ATIVA o que voces ja sabem fazer, na velocidade que o mercado exige agora."
+
+---
+
+## A Jornada em 7 Fases
+
+| Fase | Codigo | Frase de abertura | O que ativa |
+|------|--------|-------------------|-------------|
+| 1 | **BOOT** | "Primeira ativacao. Vejam a maquina operar." | A percepcao — "isso e real" |
+| 2 | **SCANNER** | "Visao aumentada. Voces vao enxergar o que antes era invisivel." | A pesquisa — buscar com metodo |
+| 3 | **ARSENAL** | "Carreguem o arsenal. Cada ferramenta e uma arma." | As ferramentas — qual usar quando |
+| 4 | **FIREWALL** | "Todo sistema precisa de protecao. Este e o escudo." | A protecao — nao ser sancionado |
+| 5 | **TESTE DE CAMPO** | "Caso real. Mostrem o que ativaram." | A execucao — fluxo completo |
+| 6 | **ANALYTICS** | "Dados onde outros veem caos. O nivel estrategico." | A jurimetria — decidir com dados |
+| 7 | **ATIVACAO COMPLETA** | "A partir de segunda-feira, voces sao diferentes." | O compromisso — ir ao campo |
+
+### Slide de abertura (antes do BOOT)
+
+> "Paixao Cortes. 3 cidades. Milhares de causas ganhas. Tudo isso, no braco.
+> Imaginem tudo isso — com o protocolo ativado."
+
+### Materiais na narrativa
+
+| Material | Na narrativa | Quando entra |
+|----------|-------------|--------------|
+| 12 cartas CLEAR | **Protocolos de Ativacao** — cada carta e um protocolo que voce dominou | Fase 3 (ARSENAL) |
+| Caso ficticio | **Simulacao** — cenario de teste controlado antes do campo real | Fase 5 (TESTE DE CAMPO) |
+
+### Visual sugerido para slides
+- **Palette**: Vinho do escritorio (#66142E) + dourado/tech-blue para ativacao
+- **Transicoes**: Tela escura com nome da fase + frase de abertura (3 segundos)
+- **Tipografia**: Sans-serif limpa (Apple, nao Cyberpunk)
+- **Cards**: Verso com padrao de circuito minimalista — elegante, nao exagerado
 
 ---
 
@@ -76,8 +110,8 @@
 
 # DIA 1 — QUINTA-FEIRA, 06/02 (15h - 17h = 120 min)
 
-## BLOCO 1: ESPANTO + PRIMEIRO CONTATO (30 min)
-**"O momento em que tudo muda"**
+## FASE 1: BOOT — Espanto + Primeiro Contato (30 min)
+**[Tela escura] "Primeira ativacao. Vejam a maquina operar."**
 
 | Min | Hora | Atividade | Detalhe | Hibrido |
 |-----|------|-----------|---------|---------|
@@ -93,8 +127,8 @@
 
 ---
 
-## BLOCO 2: PESQUISA + VERIFICACAO (30 min)
-**"O momento em que voce aprende o metodo"**
+## FASE 2: SCANNER — Pesquisa + Verificacao (30 min)
+**[Tela escura] "Visao aumentada. Voces vao enxergar o que antes era invisivel."**
 
 | Min | Hora | Atividade | Detalhe | Hibrido |
 |-----|------|-----------|---------|---------|
@@ -115,8 +149,8 @@
 
 ---
 
-## BLOCO 3: FERRAMENTAS + PRATICA COMPARATIVA (35 min)
-**"O momento em que voce monta seu arsenal"**
+## FASE 3: ARSENAL — Ferramentas + Pratica Comparativa (35 min)
+**[Tela escura] "Carreguem o arsenal. Cada ferramenta e uma arma."**
 
 | Min | Hora | Atividade | Detalhe | Hibrido |
 |-----|------|-----------|---------|---------|
@@ -138,8 +172,8 @@
 
 ---
 
-## BLOCO 4: SEGURANCA + ENCERRAMENTO DIA 1 (25 min)
-**"O momento em que voce protege a si e aos clientes"**
+## FASE 4: FIREWALL — Seguranca + Encerramento Dia 1 (25 min)
+**[Tela escura] "Todo sistema precisa de protecao. Este e o escudo."**
 
 | Min | Hora | Atividade | Detalhe | Hibrido |
 |-----|------|-----------|---------|---------|
@@ -163,10 +197,10 @@
 
 | Bloco | Inicio | Fim | Duracao |
 |-------|--------|-----|---------|
-| 1. Espanto | 15:00 | 15:30 | 30 min |
-| 2. Pesquisa | 15:30 | 16:00 | 30 min |
-| 3. Ferramentas | 16:00 | 16:35 | 35 min |
-| 4. Seguranca | 16:35 | 17:00 | 25 min |
+| 1. BOOT | 15:00 | 15:30 | 30 min |
+| 2. SCANNER | 15:30 | 16:00 | 30 min |
+| 3. ARSENAL | 16:00 | 16:35 | 35 min |
+| 4. FIREWALL | 16:35 | 17:00 | 25 min |
 | **Total** | | | **120 min** |
 
 **Exercicios**: 4 (Primeiro prompt, Pesquisa, Verificacao links, Comparativo ChatGPT/Claude, Anonimizacao)
@@ -177,8 +211,8 @@
 
 # DIA 2 — SEXTA-FEIRA, 07/02 (10h - 12h = 120 min)
 
-## BLOCO 5: AQUECIMENTO + CASO COMPLETO (55 min)
-**"O momento em que voce assume o controle"**
+## FASE 5: TESTE DE CAMPO — Caso Completo (55 min)
+**[Tela escura] "Caso real. Mostrem o que ativaram."**
 
 | Min | Hora | Atividade | Detalhe | Hibrido |
 |-----|------|-----------|---------|---------|
@@ -201,8 +235,8 @@
 
 ---
 
-## BLOCO 6: JURIMETRIA (40 min)
-**"O momento em que voce ve padroes onde outros veem caos"**
+## FASE 6: ANALYTICS — Jurimetria (40 min)
+**[Tela escura] "Dados onde outros veem caos. O nivel estrategico."**
 
 | Min | Hora | Atividade | Detalhe | Hibrido |
 |-----|------|-----------|---------|---------|
@@ -223,15 +257,15 @@
 
 ---
 
-## BLOCO 7: RECURSOS + COMPROMISSO + ENCERRAMENTO (25 min)
-**"O momento em que voce decide o proximo passo"**
+## FASE 7: ATIVACAO COMPLETA — Recursos + Compromisso (25 min)
+**[Tela escura] "A partir de segunda-feira, voces sao diferentes."**
 
 | Min | Hora | Atividade | Detalhe | Hibrido |
 |-----|------|-----------|---------|---------|
 | 0-8 | 11:35 | Recursos | Links para continuar: AB2L, Podcast Direito Digital, FGV gratuito. QR codes na tela. | Enviar links no chat |
 | 8-15 | 11:43 | Compromisso | "Na segunda-feira, vou usar IA para _____." Escrever (papel ou chat). | Online: digitar no chat |
 | 15-20 | 11:50 | Compartilhamento | 3-4 voluntarios (mix online + presencial). Celebrar. | |
-| 20-25 | 11:55 | Encerramento | "Voces descobriram uma versao mais poderosa de voces." Certificado. Foto (presencial). | Online: print de tela |
+| 20-25 | 11:55 | Encerramento | "Protocolo ativado. 3 cidades, uma equipe. A partir de segunda, voces operam diferente." Certificado. Foto. | Online: print de tela |
 
 **Slides: 2** (recursos com QR, template compromisso)
 
@@ -248,9 +282,9 @@
 
 | Bloco | Inicio | Fim | Duracao |
 |-------|--------|-----|---------|
-| 5. Caso completo | 10:00 | 10:55 | 55 min |
-| 6. Jurimetria | 10:55 | 11:35 | 40 min |
-| 7. Encerramento | 11:35 | 12:00 | 25 min |
+| 5. TESTE DE CAMPO | 10:00 | 10:55 | 55 min |
+| 6. ANALYTICS | 10:55 | 11:35 | 40 min |
+| 7. ATIVACAO COMPLETA | 11:35 | 12:00 | 25 min |
 | **Total** | | | **120 min** |
 
 **Exercicios**: 1 completo (fluxo de defesa)
@@ -326,5 +360,5 @@ Trabalhou de 15/03/2018 a 10/01/2026. Salario: R$ 2.800. Dispensada sem justa ca
 
 ---
 
-*Roteiro v4 — Formato hibrido compactado — 06/02/2026*
-*Adaptado de v3.1 (6h) para 4h (2+2) com jurimetria*
+*O PROTOCOLO v4 — Hibrido, 3 cidades + online, 4h (2+2) — 06/02/2026*
+*Narrativa: "Ativacao do Advogado Aumentado" — conteudo tecnico intocado, moldura narrativa aplicada*

@@ -1,7 +1,7 @@
 # O PROTOCOLO — IA na Advocacia
 ## Paixao Cortes Advogados | 4 horas (2h + 2h) | Hibrido
 
-> **Narrativa**: O Protocolo. 7 fases. O escritorio ja tem 30 anos de resultados. O Protocolo ativa a proxima velocidade.
+> **Narrativa**: O Protocolo. 5 fases + Ativacao Completa. O escritorio ja tem 30 anos de resultados. O Protocolo ativa a proxima velocidade.
 
 > **Filosofia**: Nao convencer, converter. Nao ensinar sobre IA, fazer experimentar IA.
 
@@ -13,7 +13,7 @@
 > - Dia 1: Quinta 06/02, 15h-17h (2h liquidas)
 > - Dia 2: Sexta 07/02, 10h-12h (2h liquidas, ultima hora inclui jurimetria)
 
-> **v4.0**: Adaptacao multi-area (6 areas do escritorio), formato hibrido (presencial + online), reducao de 6h para 4h com manutencao de 70%+ pratica. Narrativa "O Protocolo" aplicada.
+> **v4.1**: Adaptacao multi-area (6 areas do escritorio), formato hibrido (presencial + online), reducao de 6h para 4h com manutencao de 70%+ pratica. Narrativa "O Protocolo" aplicada — 5 fases (BOOT, SCANNER, FIREWALL, TESTE DE CAMPO, RADAR) + ATIVACAO COMPLETA.
 
 ---
 
@@ -29,7 +29,24 @@
 
 ---
 
-## Metricas v4.0
+## O PROTOCOLO — Mapa das Fases
+
+> O escritorio ja tem 30 anos de resultados. O Protocolo ativa a proxima velocidade.
+
+| Fase | Nome | O que acontece |
+|------|------|----------------|
+| FASE 1 | **BOOT** | Sistema liga. Primeiro contato com IA ao vivo. O espanto. |
+| FASE 2 | **SCANNER** | Pesquisa juridica com IA. Protocolo de busca + CLEAR. |
+| FASE 3 | **FIREWALL** | Seguranca. As regras que protegem o escritorio e o cliente. |
+| FASE 4 | **TESTE DE CAMPO** | Caso real completo. Metodo aplicado do inicio ao fim. |
+| FASE 5 | **RADAR** | Jurimetria + horizontes. O que vem pela frente. |
+| — | **ATIVACAO COMPLETA** | Compromisso individual + plano do escritorio. Protocolo ativo. |
+
+> **Tom**: O Protocolo nao e sobre "aprender a usar IA". E sobre ativar uma camada a mais no que o escritorio ja faz com excelencia.
+
+---
+
+## Metricas v4.1
 
 | Metrica | v3.3 (6h) | v4.0 (4h) |
 |---------|-----------|-----------|
@@ -127,7 +144,7 @@ NAO cite jurisprudencia especifica — foque nas teses e argumentos.
 
 | Min | Atividade | Detalhe |
 |-----|-----------|---------|
-| 0-3 | Setup | "Agora vamos fazer algo que muda tudo: pesquisar jurisprudencia com IA. Funciona, mas tem metodo." |
+| 0-3 | Setup | "SCANNER ativado. Agora vamos pesquisar jurisprudencia com IA. Funciona — mas tem metodo." |
 | 3-5 | Orientacao pratica | "ChatGPT: ativem Deep Research. Perplexity: ja busca sozinho. Claude: pedir para buscar na web." |
 | 5-18 | **EXERCICIO 2** | Pesquisar jurisprudencia real. **Cada um escolhe tema da SUA area.** Sugestao na tela: "responsabilidade civil por dano moral — TJDFT" ou "revisao de penalidade administrativa — TRF-1". DOIS caminhos: metade usa ChatGPT Deep Research, outra metade Perplexity. **Aviso**: "Deep Research demora 2-5 min. Enquanto espera, abra o Perplexity." |
 | 18-25 | **EXERCICIO 3** | Clicar em cada link retornado pela IA. Verificar quais existem. Anotar % de acerto. **Fazer em duplas para reduzir carga no Wi-Fi. Online: cada um faz individualmente.** |
@@ -208,7 +225,7 @@ FATOS DO CASO: [inserir situacao e pedidos]
 | 0-5 | **EXERCICIO RELAMPAGO: COMUNICACAO** | "O cliente ligou. Quer saber AGORA o resultado. Usem IA para redigir e-mail executivo em 3 paragrafos. 5 minutos. Go." |
 | 5-10 | Seguranca essencial | 5 Regras em 1 slide: Anonimizar, Verificar, Revisar, Registrar, Humano decide. Exemplo rapido de anonimizacao (3 areas). |
 | 10-13 | 3 Perguntas Essenciais | "Posso usar sem declarar?" / "Quanto custa?" / "E se o cliente descobrir?" — respostas de 1 frase cada. |
-| 13-15 | Tarefa para amanha | "Ate amanha, usem IA em algo real. Qualquer coisa. Tragam a experiencia." |
+| 13-15 | Tarefa para amanha | "FIREWALL instalado. Ate amanha, usem IA em algo real. Qualquer coisa. Tragam a experiencia pro TESTE DE CAMPO." |
 
 ### EXERCICIO RELAMPAGO: COMUNICACAO (projetar prompt)
 ```
@@ -240,10 +257,10 @@ Incluir: resultado, impacto, proximo passo.
 
 ---
 
-## ENCERRAMENTO DIA 1 (no horario)
+## ENCERRAMENTO DIA 1 — Fim da Fase 3 (no horario)
 **Horario: 17:00**
 
-"Amanha: caso pratico completo com fluxo inteiro, cartas CLEAR, jurimetria. Usem IA hoje a noite em algo real."
+"3 fases do Protocolo concluidas: BOOT, SCANNER, FIREWALL. Amanha: TESTE DE CAMPO com caso real + RADAR com jurimetria. Usem IA hoje a noite em algo real — qualquer coisa. Amanha tragam a experiencia."
 
 ---
 
@@ -256,7 +273,7 @@ Incluir: resultado, impacto, proximo passo.
 | Min | Atividade | Detalhe |
 |-----|-----------|---------|
 | 0-5 | Aquecimento rapido | "Quem tentou ontem?" Presencial: levantar mao e contar. Online: escrever no chat. 2-3 relatos rapidos. |
-| 5-8 | Entrega do material | Presencial: entregar baralho das 12 cartas + folha de recursos. Online: enviar links no chat. "Isso e o arsenal de voces." |
+| 5-8 | Entrega do material | Presencial: entregar baralho das 12 cartas + folha de recursos. Online: enviar links no chat. "Isso e o arsenal do Protocolo — 12 cartas CLEAR prontas para qualquer area." |
 | 8-10 | Escolha do caso | Cada participante (ou dupla presencial) ESCOLHE o caso mais proximo da sua area: **Caso 1** (Trabalhista), **Caso 2** (Consumidor/Civil) ou **Caso 3** (Administrativo). |
 | 10-45 | **EXERCICIO 5** | Fluxo completo com caso escolhido. **35 minutos.** Presencial: duplas. Online: individual. |
 | 45-50 | **EXERCICIO 5B: ESCALA** | "Voce fez 1 peca. O escritorio tem dezenas de casos similares. O que e FIXO e o que MUDA? Crie o TEMPLATE." 5 min. |
@@ -295,9 +312,9 @@ Incluir: resultado, impacto, proximo passo.
 
 ---
 
-## BLOCO 5: JURIMETRIA + IMPLEMENTACAO + COMPROMISSO (60 min)
+## FASE 5: RADAR — Jurimetria + Implementacao (60 min)
 **Horario: 11:00 - 12:00**
-**"O futuro ja chegou — e o escritorio decide como muda"**
+**> "O que mais esta surgindo — e onde um escritorio como este pode chegar."**
 
 | Min | Atividade | Detalhe |
 |-----|-----------|---------|
@@ -307,7 +324,7 @@ Incluir: resultado, impacto, proximo passo.
 | 35-42 | **EXERCICIO 7: Compromisso individual** | "Na segunda-feira, vou usar IA para _____." ESPECIFICO. Escrever (presencial: papel / online: chat ou doc). |
 | 42-50 | **EXERCICIO 8: Plano de Implementacao (coletivo)** | 3 perguntas no quadro/tela compartilhada (ver abaixo). Todo o escritorio junto — presencial fala, online escreve no chat. |
 | 50-55 | Buddy system | Parear participantes. Presencial + online podem parear entre si. "2 semanas, o buddy ajuda nas primeiras tentativas." |
-| 55-60 | Encerramento | "Tradicao, solidez e inovacao — o escritorio ja tem as duas primeiras. Agora tem a terceira." Certificado. |
+| 55-60 | **ATIVACAO COMPLETA** | "Na segunda-feira, a mesma excelencia. Com uma ferramenta a mais. Tradicao, solidez e inovacao — agora com velocidade." Certificado. |
 
 ### JURIMETRIA — Introducao Pratica (20 min)
 
@@ -789,32 +806,35 @@ A Construtora Planalto venceu licitacao para reforma de escola publica (R$ 2,8 m
 
 ## DIA 1 — QUINTA 06/02 (15h-17h = 120 min)
 
-| Bloco | Inicio | Fim | Duracao |
-|-------|--------|-----|---------|
-| 1. Espanto + Primeiro Contato | 15:00 | 15:40 | 40 min |
-| 2. Pesquisa + CLEAR + Fluxo | 15:40 | 16:35 | 55 min |
-| Intervalo | 16:35 | 16:45 | 10 min |
-| 3. Comunicacao + Seguranca | 16:45 | 17:00 | 15 min |
-| **Total** | | | **120 min** |
+| Fase | Nome | Inicio | Fim | Duracao |
+|------|------|--------|-----|---------|
+| FASE 1 | BOOT — Primeiro Contato | 15:00 | 15:40 | 40 min |
+| FASE 2 | SCANNER — Pesquisa + CLEAR | 15:40 | 16:35 | 55 min |
+| — | Intervalo | 16:35 | 16:45 | 10 min |
+| FASE 3 | FIREWALL — Comunicacao + Seguranca | 16:45 | 17:00 | 15 min |
+| | **Total Dia 1** | | | **120 min** |
 
 ## DIA 2 — SEXTA 07/02 (10h-12h = 120 min)
 
-| Bloco | Inicio | Fim | Duracao |
-|-------|--------|-----|---------|
-| 4. Aquecimento + Caso Pratico | 10:00 | 10:55 | 55 min |
-| Intervalo | 10:55 | 11:00 | 5 min |
-| 5. Jurimetria + Implementacao | 11:00 | 12:00 | 60 min |
-| **Total** | | | **120 min** |
+| Fase | Nome | Inicio | Fim | Duracao |
+|------|------|--------|-----|---------|
+| FASE 4 | TESTE DE CAMPO — Caso Pratico | 10:00 | 10:55 | 55 min |
+| — | Intervalo | 10:55 | 11:00 | 5 min |
+| FASE 5 | RADAR — Jurimetria + Implementacao | 11:00 | 11:55 | 55 min |
+| — | ATIVACAO COMPLETA — Encerramento | 11:55 | 12:00 | 5 min |
+| | **Total Dia 2** | | | **120 min** |
 
 ---
 
-# MUDANCAS v3.3 → v4.0 (Resumo)
+# MUDANCAS v3.3 → v4.1 (Resumo)
 
-| Item | v3.3 | v4.0 |
+| Item | v3.3 | v4.1 |
 |------|------|------|
 | Duracao | 6h (3+3) | 4h (2+2) |
 | Formato | Presencial | Hibrido (presencial 3 cidades + online) |
 | Perfil | Defesa empresarial (banco/aerea) | Multi-area (6 areas) |
+| Narrativa | Nenhuma | "O Protocolo" — 5 fases + Ativacao Completa |
+| Blocos | Blocos 1-7 | Fases: BOOT, SCANNER, FIREWALL, TESTE DE CAMPO, RADAR |
 | Demo WOW | Contestacao bancaria 90s | Parecer juridico 90s (universal) |
 | Exercicio 1 prompt | "defende banco em acao trabalhista" | "Atuo em [area]..." (cada um escolhe) |
 | Exercicio 2 tema | "horas extras gerente bancario — TST" | Cada um escolhe tema da SUA area |
@@ -840,11 +860,12 @@ A Construtora Planalto venceu licitacao para reforma de escola publica (R$ 2,8 m
 | v3.1 | Fev/2026 | Defesa empresarial | 7 | 200 min (67%) | Presencial |
 | v3.2 | Fev/2026 | Pos-simulacao palestrante | 7 | 205 min (68%) | Presencial |
 | v3.3 | Fev/2026 | Pos-simulacao ouvintes | 9 | 215 min (72%) | Presencial |
-| **v4.0** | **Fev/2026** | **Multi-area + hibrido** | **7** | **170 min (71%)** | **Hibrido** |
+| v4.0 | Fev/2026 | Multi-area + hibrido | 7 | 170 min (71%) | Hibrido |
+| **v4.1** | **Fev/2026** | **Narrativa "O Protocolo"** | **7** | **170 min (71%)** | **Hibrido** |
 
 ---
 
-*Roteiro v4.0 — Multi-area (6 areas) + Hibrido (3 cidades + online) — 2026-02-06*
-*60+ advogados, 12 cartas CLEAR universais, 3 casos ficticios multi-area*
+*Roteiro v4.1 — "O PROTOCOLO" — Multi-area (6 areas) + Hibrido (3 cidades + online) — 2026-02-06*
+*Narrativa: 5 Fases + Ativacao Completa | 60+ advogados, 12 cartas CLEAR universais, 3 casos ficticios*
 *Jurimetria incluida, buddy system cross-cidade*
 *Materiais: Card Onde Clicar, E-mail Pre-Curso, Folha de Recursos, Manual Rapido (PDF)*

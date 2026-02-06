@@ -3,103 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso IA Advocacia | Central</title>
+    <title>Curso IA na Advocacia — INTEIA | Central de Materiais</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', system-ui, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            background: #0f172a;
             min-height: 100vh;
-            color: white;
+            color: #e2e8f0;
             padding: 40px 20px;
         }
         .container { max-width: 800px; margin: 0 auto; }
+
+        .logo-badge {
+            width: 70px; height: 70px;
+            background: linear-gradient(135deg, #d69e2e, #b7791f);
+            border-radius: 18px;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-weight: 800; font-size: 1.8em;
+            margin: 0 auto 20px;
+            box-shadow: 0 0 40px -10px rgba(214,158,46,0.4);
+        }
+
         h1 {
             text-align: center;
             font-size: 2rem;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
+            color: #e2e8f0;
         }
         .subtitle {
             text-align: center;
-            color: #888;
-            margin-bottom: 40px;
+            color: #94a3b8;
+            margin-bottom: 10px;
+            font-size: 0.95em;
         }
+        .org {
+            text-align: center;
+            color: #d69e2e;
+            font-weight: 600;
+            font-size: 0.85em;
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            color: #d69e2e;
+            font-size: 0.9em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin: 30px 0 12px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid rgba(214,158,46,0.2);
+        }
+
         .card {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 20px;
+            background: #111a35;
+            border: 1px solid rgba(214,158,46,0.12);
+            border-radius: 14px;
+            padding: 22px 25px;
+            margin-bottom: 14px;
             transition: all 0.3s;
         }
         .card:hover {
-            background: rgba(255,255,255,0.08);
-            transform: translateY(-3px);
+            border-color: rgba(214,158,46,0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(9,14,34,0.3);
         }
         .card h2 {
-            color: #00d4ff;
-            margin-bottom: 10px;
-            font-size: 1.3rem;
+            color: #f3d994;
+            margin-bottom: 8px;
+            font-size: 1.15rem;
         }
         .card p {
-            color: #aaa;
-            margin-bottom: 15px;
+            color: #94a3b8;
+            margin-bottom: 14px;
             line-height: 1.6;
+            font-size: 0.92em;
         }
         .card a {
             display: inline-block;
-            background: linear-gradient(90deg, #7c3aed, #00d4ff);
+            background: linear-gradient(135deg, #d69e2e, #b7791f);
             color: white;
             text-decoration: none;
-            padding: 10px 25px;
-            border-radius: 25px;
-            font-weight: 500;
+            padding: 9px 22px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.9em;
             transition: all 0.3s;
         }
         .card a:hover {
-            transform: scale(1.05);
+            transform: scale(1.04);
+            box-shadow: 0 4px 12px rgba(214,158,46,0.3);
         }
         .status {
             display: inline-block;
-            padding: 3px 10px;
-            border-radius: 10px;
-            font-size: 0.75rem;
-            margin-left: 10px;
+            padding: 2px 10px;
+            border-radius: 8px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-left: 8px;
+            vertical-align: middle;
         }
-        .status-ok { background: #10b981; }
-        .status-new { background: #f59e0b; color: #000; }
+        .status-ok { background: rgba(34,197,94,0.15); color: #86efac; }
+        .status-new { background: rgba(214,158,46,0.15); color: #d69e2e; }
+        .status-print { background: rgba(59,130,246,0.15); color: #93c5fd; }
+
+        .card.archive {
+            opacity: 0.4;
+            border-color: rgba(255,255,255,0.05);
+        }
+        .card.archive a {
+            background: #475569;
+        }
+
         .version {
             text-align: center;
-            color: #666;
-            margin-top: 40px;
-            font-size: 0.85rem;
+            color: #475569;
+            margin-top: 35px;
+            font-size: 0.82rem;
+            line-height: 1.8;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="logo-badge">IA</div>
         <h1>Curso IA na Advocacia</h1>
         <p class="subtitle">Paixao Cortes Advogados | Central de Materiais</p>
+        <p class="org">INTEIA — Instituto de Treinamento e Estudos em Inteligencia Artificial</p>
+
+        <div class="section-title">Material do Curso</div>
+
+        <div class="card">
+            <h2>Apostila Completa <span class="status status-new">Novo</span> <span class="status status-print">Imprimir</span></h2>
+            <p>16 paginas com todo o conteudo: fundamentos, 3 ferramentas, protocolo de pesquisa, framework CLEAR, fluxo combinado, todos os prompts dos exercicios, 12 cartas CLEAR, seguranca, regulacao, escala e implementacao.</p>
+            <a href="APOSTILA_CURSO_IA_ADVOCACIA.html">Abrir Apostila</a>
+        </div>
+
+        <div class="card">
+            <h2>Folha de Prompts e QR Codes <span class="status status-new">Novo</span> <span class="status status-print">Imprimir</span></h2>
+            <p>4 paginas A4 para imprimir: QR codes de todas as ferramentas e recursos, prompts dos exercicios prontos para copiar, framework CLEAR de referencia rapida, 5 regras de seguranca.</p>
+            <a href="FOLHA_PROMPTS_QR_CODES.html">Abrir Folha</a>
+        </div>
 
         <div class="card">
             <h2>12 Cartas CLEAR <span class="status status-ok">v4.0</span></h2>
-            <p>Prompts estruturados para 6 areas do direito usando framework CLEAR. 4 categorias: Elaboracao de Pecas, Analise e Revisao, Comunicacao, Produtividade. Universais — cada advogado preenche sua area.</p>
+            <p>Prompts estruturados para todas as areas do escritorio usando framework CLEAR. 4 categorias: Elaboracao de Pecas, Analise e Revisao, Comunicacao, Produtividade.</p>
             <a href="pagina_12_cartas_v3.html">Acessar Cartas</a>
         </div>
 
         <div class="card">
-            <h2>QR Codes <span class="status status-ok">v4.0</span></h2>
-            <p>QR codes com links clicaveis: ferramentas (ChatGPT, Claude, Perplexity, NotebookLM), verificacao (TRT-10, TST, TJDFT, TRF-1), regulacao (CNJ, OAB), material e recursos.</p>
+            <h2>QR Codes do Curso <span class="status status-ok">v4.0</span></h2>
+            <p>QR codes com links clicaveis: ferramentas (ChatGPT, Claude, Perplexity, NotebookLM), regulacao (CNJ, OAB), recursos (AB2L, FGV, Podcast).</p>
             <a href="qrcodes_curso.html">Ver QR Codes</a>
         </div>
 
-        <div class="card" style="opacity: 0.5;">
-            <h2>Jogo de Desafios <span class="status" style="background:#666;">Substituido</span></h2>
-            <p>50 cartas de desafios praticos — substituido pelas 12 cartas CLEAR na v3. Mantido apenas como arquivo.</p>
-            <a href="pagina_desafio_ia.html" style="background: #666;">Ver Arquivo</a>
+        <div class="section-title">Material Pos-Curso</div>
+
+        <div class="card">
+            <h2>Manual Rapido de IA para o Escritorio <span class="status status-new">Novo</span> <span class="status status-print">Imprimir</span></h2>
+            <p>8 paginas pos-curso: protocolo de pesquisa, ferramentas, framework CLEAR com prompt universal, biblioteca de 5 prompts, seguranca, onde clicar, escala, checklist e compromisso.</p>
+            <a href="MANUAL_RAPIDO_IA_ESCRITORIO.html">Abrir Manual</a>
         </div>
 
-        <p class="version">Roteiro v4.0 — Multi-area (6 areas) | Hibrido | Atualizado em 06/02/2026</p>
+        <div class="card">
+            <h2>Tutorial: Cadastro nas Ferramentas <span class="status status-new">Novo</span> <span class="status status-print">Imprimir</span></h2>
+            <p>Passo a passo para iniciantes: como criar conta no ChatGPT, Claude e Perplexity. Com capturas de tela e dicas de configuracao.</p>
+            <a href="TUTORIAL_CADASTRO_FERRAMENTAS.html">Abrir Tutorial</a>
+        </div>
+
+        <div class="section-title">Arquivo</div>
+
+        <div class="card archive">
+            <h2>Jogo de Desafios <span class="status" style="background:rgba(100,116,139,0.2);color:#64748b;">Substituido</span></h2>
+            <p>50 cartas de desafios praticos — substituido pelas 12 cartas CLEAR. Mantido como arquivo.</p>
+            <a href="pagina_desafio_ia.html">Ver Arquivo</a>
+        </div>
+
+        <p class="version">
+            INTEIA — Curso IA na Advocacia — v4.0<br>
+            Dr. Igor Morais Vasconcelos | Fevereiro 2026
+        </p>
     </div>
 </body>
 </html>
