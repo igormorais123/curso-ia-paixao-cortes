@@ -19,7 +19,7 @@
 
 ## Os 7 Mandamentos
 
-1. **Espanto primeiro** — Demonstracao WOW antes de qualquer slide
+1. **Espanto primeiro** — Demonstracao impactante antes de qualquer slide
 2. **Verificacao muscular** — Participante descobre o erro, nao ouve sobre ele
 3. **Identidade ampliada** — "Voce com superpoderes", nunca "nao sera substituido"
 4. **Pratica e conteudo** — 70% mao na massa, 30% instrucao
@@ -377,7 +377,7 @@ Incluir: resultado, impacto, proximo passo.
 
 ---
 
-# AS 12 CARTAS CLEAR v4.0 — Multi-area
+# AS 12 CARTAS CLEAR v5.0 — Multi-area
 
 > As 12 cartas CLEAR sao universais: funcionam para qualquer das 6 areas do escritorio.
 > Cada carta tem `[area]` e `[tribunal]` como campos a preencher.
@@ -653,7 +653,7 @@ DETALHES: [inserir caso, partes, pedidos, data]
 
 ---
 
-# CASOS FICTICIOS PARA EXERCICIOS v4.0
+# CASOS FICTICIOS PARA EXERCICIOS
 
 ## CASO 1 — TRABALHISTA: Horas Extras de Empregado
 
@@ -769,7 +769,7 @@ A Construtora Planalto venceu licitacao para reforma de escola publica (R$ 2,8 m
 - [ ] Enviar links das paginas HTML para todos (presencial + online)
 
 ## 1 Dia Antes
-- [ ] Gravar video backup da demo WOW (parecer juridico em 90s)
+- [ ] Gravar video backup da demo impactante (parecer juridico em 90s)
 - [ ] Testar ChatGPT (pesquisa aprofundada), Claude (raciocinio aprofundado), Perplexity
 - [ ] Preparar materiais digitais: PDF das cartas, folha de recursos, Card Onde Clicar
 - [ ] Imprimir por participante PRESENCIAL: Card Onde Clicar, 12 cartas CLEAR, folha de recursos
