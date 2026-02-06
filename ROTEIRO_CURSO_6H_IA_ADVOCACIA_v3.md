@@ -10,7 +10,7 @@
 1. **Espanto primeiro** — Demonstração WOW antes de qualquer slide
 2. **Verificação muscular** — Participante descobre o erro, não ouve sobre ele
 3. **Identidade ampliada** — "Você com superpoderes", nunca "não será substituído"
-4. **Prática é conteúdo** — 60% mão na massa, 40% instrução
+4. **Prática é conteúdo** — 67% mão na massa, 33% instrução
 5. **Corte radical** — Se pode ser curso separado, não entra
 6. **Presente, não futuro** — Mostrar 2026, não prometer 2030
 7. **Compromisso > Certificado** — Sair com promessa, não com PDF
@@ -56,7 +56,7 @@
 | 18-30 | **EXERCÍCIO 3** | Verificar cada citação no site do tribunal. Descobrir quais existem. |
 | 30-35 | Momento de choque | Silêncio. Deixar impactar. "Quantas eram reais?" |
 | 35-42 | Framework | **"IA gera, advogado verifica"** — não regra, sobrevivência. |
-| 42-50 | Regulação | CNJ 615/2025, OAB 001/2024. Advogado americano sancionado. (1 slide, 1 caso) |
+| 42-50 | Regulação | CNJ 615/2025, OAB Recomendação 001/2024. Advogado americano sancionado. (1 slide, 1 caso) |
 
 **Slides: 3** (framework, regulação, caso real)
 
@@ -147,13 +147,13 @@
 | 0-10 | Menções | Jurimetria, Visual Law, Legal Design — "cursos inteiros, não cabe aqui" |
 | 10-15 | Recursos | Links reais para continuar aprendendo |
 
-### Recursos Concretos (não placeholders)
+### Recursos Concretos (verificados)
 
 - **Newsletter**: [Direito & IA - AB2L](https://ab2l.org.br) — Associação Brasileira de Lawtechs
-- **Comunidade**: [Legal Hackers Brasília](https://legalhackers.org) — Encontros mensais
-- **Cursos**: [Direito 4.0 - FGV](https://educacao-executiva.fgv.br) — Certificação completa
-- **Podcast**: [Tech e Direito](https://open.spotify.com) — Episódios semanais
-- **Livro**: "Advocacia 4.0" — Alexandre Zavaglia (2024)
+- **Comunidade**: [Legal Hackers](https://legalhackers.org) — Rede global de inovação jurídica
+- **Cursos**: [IA e Proteção de Dados - FGV Direito SP](https://direitosp.fgv.br/cursos/curta-duracao/fgvlaw-protecao-dados-e-inteligencia-artificial) — Curta duração, 32h
+- **Podcast**: [Direito 4.0](https://open.spotify.com/show/5Q0rJimaM6ao4NWoyuMIve) — Inovação, tecnologia e direito
+- **Curso online gratuito**: [Regulação da IA - FGV](https://educacao-executiva.fgv.br/cursos/online/curta-media-duracao-online/regulacao-da-inteligencia-artificial)
 
 **Slides: 2** (horizontes, QR codes dos recursos)
 

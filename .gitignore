@@ -15,3 +15,9 @@ desktop.ini
 
 # Claude Code local settings
 .claude/settings.local.json
+
+# Logs de conversa Claude/ChatGPT
+*.jsonl
+
+# Documentos sem titulo (rascunhos)
+Documento sem título*.docx

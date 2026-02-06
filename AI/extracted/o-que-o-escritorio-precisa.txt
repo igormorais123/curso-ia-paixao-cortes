@@ -1,0 +1,235 @@
+O que o escritório precisa 
+
+
+
+Roteiro prático do curso de IA para o Paixão Côrtes Advogados
+
+1) Diagnóstico didático (o que o curso precisa endereçar)
+
+[Não verificado] Perfil de atuação: alto volume em cível/consumidor e trabalhista; presença frequente no TRF1/TJDFT e atuação estratégica em recursos no STJ/STF.
+
+
+Ponto crítico: equipe com baixo nível de tecnologia — precisamos de ferramentas simples, passos guiados e ganhos rápidos visíveis no mesmo dia.
+
+
+Onde a IA mais ajuda: triagem de lote de processos, rascunho de peças repetitivas, memos de jurisprudência, comparativo de acórdãos, checklists de recursos e preparação de sustentação oral.
+
+
+
+
+2) Objetivos do curso (3 níveis)
+
+Sobrevivência (básico): saber pedir, revisar e colar resultados com segurança (minutas, resumos, checklists).
+
+
+Eficiência (intermediário): padronizar prompts, criar biblioteca de modelos e usar dados do escritório para “puxar” precedentes (RAG simples).
+
+
+Qualidade (estratégico): usar a IA para planejar teses recursais, simular contra-argumentos e montar memoriais/sustentações com mapa lógico.
+
+
+
+
+3) Arquitetura mínima sem fricção
+
+Ferramentas: um assistente de texto confiável; pastas organizadas por “tipo de peça”; planilha jurimétrica (Excel/Google Sheets).
+
+
+RAG simples (opcional no dia 1): 1 pasta “Jurisprudência relevante” + 1 pasta “Modelos aprovados”.
+
+
+Governança: revisão humana obrigatória; rotulagem de trechos:
+
+
+[Inferência] hipótese argumentativa
+
+
+[Não verificado] dado sem fonte primária
+
+
+Sempre anexar o link ou número do processo quando houver.
+
+
+
+
+4) Programa sugerido (1 dia, mãos na massa)
+
+Manhã
+
+Prompting jurídico em 6 passos: contexto, objetivo, forma da resposta, limites, citação obrigatória, checklist de verificação.
+
+
+Ganhos rápidos
+
+
+Resumo de acórdão em 5 marcadores + extração de tese, precedentes e ônus argumentativo.
+
+
+Rascunho de contestação em ações repetitivas (consumidor/trabalhista) a partir de um modelo da casa.
+
+
+Checklist recursal: requisitos de admissibilidade e riscos (REsp/RE/agravos).
+
+
+Tarde
+ 3. Jurimetria aplicada (planilha pronta)
+
+Lançar 30–50 processos recentes: classe, assunto, fase, resultado, câmara/turma, relator.
+
+
+Calcular: tempo médio até sentença/acórdão; onde mais se ganha/perde; quais argumentos aparecem nos êxitos.
+
+
+Recursos estratégicos
+
+
+Gerar quadro comparativo entre decisões conflitantes.
+
+
+Produzir memorial de 1 página e roteiro de sustentação de 3 minutos.
+
+
+Rotina diária
+
+
+Caixa de entrada de intimações → triagem automática → plano de ação em 24h.
+
+
+Biblioteca viva de modelos com carimbo de última revisão.
+
+
+
+
+5) Casos de uso prontos (comandos que funcionam)
+
+Triagem de intimações em lote
+ “Liste prazos, peça afetada, risco e próximo passo. Saída em tabela. Sinalize [Urgente] se < 5 dias.”
+
+
+Resumo de acórdão com tese
+ “Resuma em 5 tópicos. Extraia tese, ratio decidendi, precedentes citados, pontos fracos para embargos.”
+
+
+Minuta base de contestação
+ “Use este modelo da casa. Adapte aos fatos. Insira defesas preliminares cabíveis. Liste documentos faltantes.”
+
+
+Checklist recursal (REsp/RE)
+ “Verifique cabimento, prequestionamento, dissídio, súmulas impeditivas. Gere seção ‘Risco e Mitigação’.”
+
+
+Memorial de 1 página
+ “Estruture: Fatos essenciais, Questão jurídica, Tese em 2 linhas, 3 precedentes fortes, Pedido.”
+
+
+Roteiro de sustentação oral (3–5 min)
+ “Abra com caso, delimite questão, tese, impacto prático, feche com pedido claro.”
+
+
+Comparativo de jurisprudência
+ “Compare decisões A e B. Mostre convergências, divergências e como harmonizar para o meu caso.”
+
+
+Minuta de acordo
+ “Sugira 2 faixas de proposta (conservadora e agressiva) com cláusulas de quitação e cronograma.”
+
+
+Plano de Embargos/EDcl
+ “Mapeie omissões/contradições/escuridade. Sugira redação objetiva em 10 parágrafos.”
+
+
+Relatório executivo para cliente
+ “Painel de 1 página: status do processo, próximos passos, riscos, probabilidade qualitativa, linha do tempo.”
+
+
+
+
+6) Jurimetria que interessa ao escritório (planilha pronta para o curso)
+
+Campos mínimos:
+
+Número do processo; Tribunal; Classe/Assunto; Parte cliente; Polo; Fase; Data de distribuição; Data da última decisão; Resultado parcial/final; Relator; Câmara/Turma; Tese usada; Precedentes citados; Tempo até decisão; Palavras-chave.
+
+
+Métricas práticas:
+
+Tempo médio até decisão por classe e câmara.
+
+
+Hotspots de êxito (turmas/relatores em que a tese performa melhor).
+
+
+Argumentos que aparecem nas vitórias (nuvem de termos).
+
+
+Gargalos (prazos que estouram; tipos de peça que pedem mais retrabalho).
+
+
+
+
+7) Fluxos prontos (coláveis na rotina)
+
+Fluxo de contestação em ações repetitivas
+
+Ler inicial → 2) Extrair pedidos e fatos controversos → 3) Puxar modelo da casa → 4) IA preenche estrutura → 5) Verificação: súmulas impeditivas, documentos, preliminares → 6) Gerar checklist de anexos.
+
+
+Fluxo de recurso
+
+IA gera checklist de admissibilidade → 2) Varredura de prequestionamento → 3) Montar quadro de dissídio com trechos cotejados → 4) Redigir minuta → 5) Anexar 3 precedentes nucleares com ementa e trecho-chave.
+
+
+Fluxo de sustentação oral
+
+IA sintetiza tese em 2 linhas → 2) Storyboard de 6 blocos → 3) Trinca de perguntas difíceis e respectivas respostas → 4) Fecho com pedido e dispositivo desejado.
+
+
+
+
+8) Controles de qualidade e segurança (obrigatórios)
+
+Dupla checagem: todo dado “fático” vem com fonte (nº do processo, link oficial).
+
+
+Marcação: rotular [Inferência]/[Não verificado] no rascunho até confirmar.
+
+
+Privacidade: não subir pastas do cliente a serviços sem acordo; preferir ambiente interno; restringir acesso por pasta.
+
+
+Padronização: modelos “congelados” com versão e data; mudanças passam por revisão de um sócio.
+
+
+
+
+9) Indicadores de sucesso (30 dias)
+
+Tempo médio de minuta (ex.: contestação) reduzido em X%.
+
+
+Taxa de reaproveitamento de modelos ≥ 70%.
+
+
+Erros formais (endereçamento, classe, partes) → zero.
+
+
+Citações com fonte → 100% dos documentos.
+
+
+Adoção: cada advogado executou ao menos 5 fluxos completos com IA.
+
+
+
+
+10) Materiais que preparo para você levar no dia
+
+Cartões de prompt (laminados) com os 10 casos de uso.
+
+
+Planilha jurimétrica com fórmulas prontas (colunas e métricas acima).
+
+
+Pasta “Modelos aprovados” com 6 esqueletos: contestação consumidor, embargos de declaração, agravo de instrumento, contrarrazões (REsp/RE), memorial 1 página, roteiro de sustentação.
+
+
+Checklists de admissibilidade (REsp/RE) e de documentos por tipo de ação.
