@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila — IA na Advocacia — Curso Completo</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        @page { size: A4; margin: 12mm; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+            font-size: 11pt;
+        }
+
+        .page {
+            max-width: 210mm;
+            margin: 0 auto 20px;
+            padding: 28px 34px;
+            background: #111a35;
+            border-radius: 16px;
+            box-shadow: 0 18px 45px rgba(9,14,34,0.12);
+            page-break-after: always;
+        }
+        .page:last-of-type { page-break-after: avoid; }
+
+        /* COVER */
+        .cover {
+            display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+            min-height: 92vh; text-align: center;
+        }
+        .cover-logo {
+            width: 90px; height: 90px;
+            background: linear-gradient(135deg, #d69e2e, #b7791f);
+            border-radius: 22px;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-weight: 800; font-size: 2.3em;
+            margin-bottom: 35px;
+            box-shadow: 0 0 50px -10px rgba(214,158,46,0.45);
+        }
+        .cover-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #d69e2e, #b7791f);
+            color: white; padding: 6px 22px; border-radius: 20px;
+            font-size: 0.8em; font-weight: 600;
+            margin-bottom: 25px; letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        .cover h1 {
+            font-size: 2.4em; color: #e2e8f0;
+            margin-bottom: 8px; letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+        .cover .subtitle {
+            font-size: 1.15em; color: #94a3b8;
+            margin-bottom: 25px; max-width: 500px;
+        }
+        .cover .tagline {
+            font-size: 1.5em; color: #d69e2e;
+            font-weight: 600; margin-bottom: 40px; font-style: italic;
+        }
+        .cover-meta {
+            color: #64748b; font-size: 0.88em; line-height: 2;
+        }
+        .cover-line {
+            width: 60px; height: 3px;
+            background: linear-gradient(135deg, #d69e2e, #b7791f);
+            margin: 20px auto;
+            border-radius: 2px;
+        }
+
+        /* HEADERS */
+        .page-header {
+            display: flex; align-items: center; gap: 12px;
+            margin-bottom: 18px; padding-bottom: 10px;
+            border-bottom: 2px solid rgba(214,158,46,0.3);
+        }
+        .logo-sm {
+            width: 38px; height: 38px;
+            background: linear-gradient(135deg, #d69e2e, #b7791f);
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-weight: 800; font-size: 0.95em;
+            flex-shrink: 0;
+        }
+        .page-header-text h2 { font-size: 1.25em; color: #d69e2e; margin: 0; }
+        .page-header-text p { font-size: 0.78em; color: #94a3b8; margin: 0; }
+
+        h2 {
+            font-size: 1.25em; color: #d69e2e;
+            margin: 22px 0 10px; padding-bottom: 5px;
+            border-bottom: 2px solid rgba(214,158,46,0.2);
+        }
+        h3 { font-size: 1.05em; color: #f3d994; margin: 15px 0 7px; }
+        h4 { font-size: 0.95em; color: #e2e8f0; margin: 10px 0 5px; }
+        p { margin: 6px 0; }
+
+        /* BOXES */
+        .highlight-box {
+            background: rgba(214,158,46,0.08);
+            border: 1px solid rgba(214,158,46,0.2);
+            border-radius: 12px; padding: 16px; margin: 12px 0;
+        }
+        .highlight-box p { color: #cbd5e1; }
+
+        .warning-box {
+            background: rgba(239,68,68,0.06);
+            border-left: 4px solid #ef4444;
+            padding: 12px 16px; margin: 10px 0;
+            border-radius: 0 10px 10px 0;
+        }
+        .warning-box strong { color: #fca5a5; }
+
+        .tip-box {
+            background: rgba(34,197,94,0.06);
+            border-left: 4px solid #22c55e;
+            padding: 12px 16px; margin: 10px 0;
+            border-radius: 0 10px 10px 0;
+            color: #86efac;
+        }
+
+        .info-box {
+            background: rgba(59,130,246,0.06);
+            border-left: 4px solid #3b82f6;
+            padding: 12px 16px; margin: 10px 0;
+            border-radius: 0 10px 10px 0;
+            color: #93c5fd;
+        }
+
+        /* COPY BOXES */
+        .copy-box {
+            background: #0f172a; color: #e2e8f0;
+            padding: 14px 18px; border-radius: 8px;
+            margin: 8px 0;
+            font-family: 'Consolas', monospace;
+            font-size: 0.86em; line-height: 1.6;
+            white-space: pre-wrap; word-wrap: break-word;
+            border: 1px solid rgba(214,158,46,0.2);
+        }
+        .copy-label {
+            display: inline-block;
+            background: linear-gradient(135deg, #d69e2e, #b7791f);
+            color: white; font-size: 0.68em;
+            padding: 2px 8px; border-radius: 4px;
+            margin-bottom: 5px;
+            text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .var { color: #d69e2e; font-weight: 600; }
+
+        /* CARDS / GRID */
+        .card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 10px; padding: 14px; margin: 8px 0;
+        }
+        .card h4 { margin-top: 0; }
+
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+        .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 10px 0; }
+
+        /* STEPS */
+        .step {
+            display: flex; gap: 12px; margin: 10px 0;
+            padding: 12px; background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 10px;
+        }
+        .step-num {
+            width: 32px; height: 32px;
+            background: linear-gradient(135deg, #d69e2e, #b7791f);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-weight: 700; font-size: 0.85em;
+            flex-shrink: 0;
+        }
+        .step-content { flex: 1; }
+        .step-content strong { color: #f3d994; display: block; margin-bottom: 2px; }
+        .step-content p { color: #94a3b8; font-size: 0.92em; margin: 0; }
+
+        /* TABLES */
+        .data-table {
+            width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 0.9em;
+        }
+        .data-table th {
+            background: linear-gradient(135deg, #d69e2e, #b7791f);
+            color: white; padding: 9px 12px; text-align: left;
+            font-weight: 600;
+        }
+        .data-table td {
+            padding: 9px 12px;
+            border-bottom: 1px solid rgba(214,158,46,0.08);
+        }
+        .data-table tr:nth-child(even) td { background: rgba(214,158,46,0.03); }
+
+        /* ANON */
+        .anon-row {
+            display: grid; grid-template-columns: 1fr auto 1fr;
+            gap: 8px; align-items: center; margin: 6px 0; font-size: 0.9em;
+        }
+        .anon-before {
+            background: rgba(239,68,68,0.1); padding: 5px 10px;
+            border-radius: 5px; text-decoration: line-through; color: #fca5a5;
+        }
+        .anon-arrow { font-size: 1.1em; color: #d69e2e; font-weight: 700; text-align: center; }
+        .anon-after {
+            background: rgba(34,197,94,0.1); padding: 5px 10px;
+            border-radius: 5px; color: #86efac; font-weight: 600;
+        }
+
+        /* PROTOCOL */
+        .protocol-box {
+            background: rgba(214,158,46,0.08);
+            border: 2px solid rgba(214,158,46,0.3);
+            border-radius: 12px; padding: 18px; margin: 14px 0;
+        }
+        .protocol-box h3 { color: #d69e2e; margin-top: 0; }
+        .protocol-steps { list-style: none; padding: 0; counter-reset: pstep; }
+        .protocol-steps li {
+            padding: 8px 0 8px 42px; position: relative;
+            counter-increment: pstep;
+            border-bottom: 1px solid rgba(214,158,46,0.1);
+        }
+        .protocol-steps li:last-child { border-bottom: none; }
+        .protocol-steps li::before {
+            content: counter(pstep);
+            position: absolute; left: 0; top: 8px;
+            width: 28px; height: 28px;
+            background: linear-gradient(135deg, #d69e2e, #b7791f);
+            color: white; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 0.85em;
+        }
+
+        /* CLEAR LETTER */
+        .clear-letter {
+            display: inline-block; width: 32px; height: 32px;
+            background: linear-gradient(135deg, #d69e2e, #b7791f);
+            color: white; border-radius: 7px;
+            text-align: center; line-height: 32px;
+            font-weight: 700; font-size: 1.1em; margin-right: 6px;
+        }
+
+        /* TOOL HEADER */
+        .tool-section {
+            display: flex; align-items: center; gap: 10px;
+            margin: 18px 0 10px; padding: 12px 16px;
+            border-radius: 12px;
+        }
+        .tool-section.chatgpt { background: rgba(16,163,127,0.1); border: 1px solid rgba(16,163,127,0.2); }
+        .tool-section.claude { background: rgba(214,158,46,0.1); border: 1px solid rgba(214,158,46,0.2); }
+        .tool-section.perplexity { background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); }
+        .tool-section h3 { margin: 0; }
+        .tool-section.chatgpt h3 { color: #10a37f; }
+        .tool-section.claude h3 { color: #d69e2e; }
+        .tool-section.perplexity h3 { color: #3b82f6; }
+        .tool-icon {
+            width: 36px; height: 36px; border-radius: 9px;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; color: white; font-size: 0.75em;
+        }
+        .tool-icon.chatgpt { background: #10a37f; }
+        .tool-icon.claude { background: #d69e2e; }
+        .tool-icon.perplexity { background: #3b82f6; }
+
+        /* EXERCISE */
+        .exercise-header {
+            background: linear-gradient(135deg, rgba(214,158,46,0.12), rgba(214,158,46,0.05));
+            border: 1px solid rgba(214,158,46,0.2);
+            border-radius: 12px; padding: 14px 18px;
+            margin: 16px 0 8px;
+        }
+        .exercise-header h3 { color: #d69e2e; margin: 0 0 3px; font-size: 1.1em; }
+        .exercise-header p { color: #94a3b8; font-size: 0.85em; margin: 0; }
+
+        /* FOOTER */
+        .footer {
+            text-align: center; color: #475569;
+            font-size: 0.75em; margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* COMMITMENT */
+        .commit-line {
+            border-bottom: 2px solid rgba(214,158,46,0.2);
+            margin: 12px 20px; height: 28px;
+        }
+
+        /* TOC */
+        .toc-item {
+            display: flex; justify-content: space-between;
+            padding: 8px 0; border-bottom: 1px dotted rgba(214,158,46,0.15);
+            font-size: 0.95em;
+        }
+        .toc-item strong { color: #f3d994; }
+        .toc-item span { color: #64748b; }
+        .toc-section {
+            color: #d69e2e; font-weight: 700; font-size: 1.05em;
+            margin-top: 12px; padding-top: 8px;
+            border-top: 1px solid rgba(214,158,46,0.15);
+        }
+        .toc-section:first-child { border-top: none; padding-top: 0; }
+
+        /* RULE */
+        .rule-card {
+            background: rgba(239,68,68,0.05);
+            border: 1px solid rgba(239,68,68,0.15);
+            border-radius: 10px; padding: 14px; margin: 8px 0;
+        }
+        .rule-card h4 { color: #fca5a5; margin-top: 0; }
+
+        /* PRINT */
+        @media print {
+            body { background: white; color: #1a1a2e; }
+            .page { background: white; box-shadow: none; border: 1px solid #e5e7eb; border-radius: 0; }
+            .cover h1 { color: #1a1a2e; }
+            .cover .tagline { color: #92400e; }
+            .cover-logo { box-shadow: none; }
+            h2 { color: #92400e; border-color: #d69e2e; }
+            h3 { color: #92400e; }
+            .highlight-box { background: #fffbeb; border-color: #d69e2e; }
+            .highlight-box p { color: #475569; }
+            .protocol-box { background: #fffbeb; border-color: #d69e2e; }
+            .copy-box { background: #f8fafc; color: #1a1a2e; border-color: #d69e2e; }
+            .var { color: #92400e; }
+            .card { background: #fafafa; border-color: #e5e7eb; }
+            .step { background: #fafafa; border-color: #e5e7eb; }
+            .step-content p { color: #475569; }
+            .tip-box { color: #166534; background: #f0fdf4; }
+            .warning-box { background: #fef2f2; }
+            .warning-box strong { color: #dc2626; }
+            .info-box { color: #1e40af; background: #eff6ff; }
+            .data-table tr:nth-child(even) td { background: #fffbeb; }
+            .tool-section.chatgpt { background: #f0fdf4; border-color: #86efac; }
+            .tool-section.claude { background: #fffbeb; border-color: #d69e2e; }
+            .tool-section.perplexity { background: #eff6ff; border-color: #93c5fd; }
+            .anon-before { color: #dc2626; background: #fef2f2; }
+            .anon-after { color: #16a34a; background: #f0fdf4; }
+            .rule-card { background: #fef2f2; border-color: #fca5a5; }
+            .rule-card h4 { color: #dc2626; }
+            .exercise-header { background: #fffbeb; border-color: #d69e2e; }
+            .exercise-header p { color: #64748b; }
+            .toc-item strong { color: #92400e; }
+            .page-header-text p { color: #64748b; }
+            .no-print { display: none; }
+        }
+
+        .print-btn {
+            display: block; width: 240px; margin: 20px auto;
+            padding: 14px;
+            background: linear-gradient(135deg, #d69e2e, #b7791f);
+            color: white; border: none; border-radius: 12px;
+            font-size: 1.05em; cursor: pointer; font-weight: 600;
+        }
+        .print-btn:hover { background: #b7791f; }
+    </style>
+</head>
+<body>
+
+<!-- ==================== PAGINA 1: CAPA ==================== -->
+<div class="page">
+    <div class="cover">
+        <div class="cover-logo">IA</div>
+        <div class="cover-badge">Apostila Completa do Curso</div>
+        <h1>Inteligencia Artificial<br>na Advocacia</h1>
+        <p class="subtitle">Metodo, ferramentas e prompts prontos para advogados que querem resultado real com IA — do contencioso de massa ao consultivo.</p>
+        <p class="tagline">"IA funciona. Com metodo."</p>
+        <div class="cover-line"></div>
+        <div class="cover-meta">
+            <strong style="color:#d69e2e;">INTEIA</strong> — Instituto de Treinamento e Estudos em Inteligencia Artificial<br>
+            Capacitacao para Escritorios de Advocacia<br>
+            Brasilia-DF | Fevereiro 2026<br><br>
+            <strong>Dr. Igor Morais Vasconcelos</strong><br>
+            Doutorando em IA e Psicologia Organizacional | Consultor INTEIA<br>
+            igormorais123@gmail.com | (61) 98115-7120
+        </div>
+    </div>
+</div>
+
+<!-- ==================== PAGINA 2: SUMARIO ==================== -->
+<div class="page">
+    <div class="page-header">
+        <div class="logo-sm">IA</div>
+        <div class="page-header-text">
+            <h2>Sumario</h2>
+            <p>Apostila IA na Advocacia — Conteudo Completo</p>
+        </div>
+    </div>
+
+    <div class="toc-section">Parte 1 — Fundamentos</div>
+    <div class="toc-item"><strong>1. Por que IA na Advocacia?</strong> <span>p. 3</span></div>
+    <div class="toc-item"><strong>2. As 3 Ferramentas Essenciais</strong> <span>p. 3-4</span></div>
+    <div class="toc-item"><strong>3. Onde Clicar em Cada Ferramenta</strong> <span>p. 4</span></div>
+
+    <div class="toc-section">Parte 2 — Metodo</div>
+    <div class="toc-item"><strong>4. Protocolo de Pesquisa (4 Passos)</strong> <span>p. 5</span></div>
+    <div class="toc-item"><strong>5. Framework CLEAR</strong> <span>p. 6</span></div>
+    <div class="toc-item"><strong>6. Fluxo Combinado (Pesquisa + Producao)</strong> <span>p. 7</span></div>
+
+    <div class="toc-section">Parte 3 — Prompts Prontos</div>
+    <div class="toc-item"><strong>7. Prompts dos Exercicios (copiar e colar)</strong> <span>p. 8-9</span></div>
+    <div class="toc-item"><strong>8. 12 Cartas CLEAR — Biblioteca Completa</strong> <span>p. 10-13</span></div>
+
+    <div class="toc-section">Parte 4 — Seguranca e Regulacao</div>
+    <div class="toc-item"><strong>9. Protocolo de Seguranca (5 Regras)</strong> <span>p. 14</span></div>
+    <div class="toc-item"><strong>10. Regulacao: CNJ e OAB</strong> <span>p. 15</span></div>
+
+    <div class="toc-section">Parte 5 — Escala e Implementacao</div>
+    <div class="toc-item"><strong>11. Pensando em Escala</strong> <span>p. 16</span></div>
+    <div class="toc-item"><strong>12. Plano de Implementacao</strong> <span>p. 16</span></div>
+    <div class="toc-item"><strong>13. Checklist Diario + Compromisso</strong> <span>p. 17</span></div>
+    <div class="toc-item"><strong>14. Recursos e Proximos Passos</strong> <span>p. 17</span></div>
+
+    <div class="highlight-box" style="margin-top: 25px;">
+        <p style="text-align:center;"><strong style="color:#d69e2e;">Como usar esta apostila:</strong> Todos os prompts estao prontos para copiar e colar. Os campos entre <strong style="color:#d69e2e;">[colchetes]</strong> devem ser preenchidos com dados do seu caso. Imprima ou salve como PDF para consulta rapida.</p>
+    </div>
+
+    <div class="footer">Apostila IA na Advocacia — INTEIA — p. 2</div>
+</div>
+
+<!-- ==================== PAGINA 3: FUNDAMENTOS ==================== -->
+<div class="page">
+    <div class="page-header">
+        <div class="logo-sm">IA</div>
+        <div class="page-header-text">
+            <h2>Parte 1 — Fundamentos</h2>
+            <p>O que voce precisa saber antes de comecar</p>
+        </div>
+    </div>
+
+    <h2>1. Por que IA na Advocacia?</h2>
+
+    <div class="highlight-box">
+        <p><strong style="color:#d69e2e;">A realidade em numeros:</strong></p>
+        <p>&bull; <strong>Thomson Reuters 2025:</strong> Advogados com IA economizam em media 4 horas por semana</p>
+        <p>&bull; <strong>Stanford HAI:</strong> Taxa de alucinacao cai de 33% para ~8% com busca web + thinking mode</p>
+        <p>&bull; <strong>47% dos escritorios "Mais Admirados"</strong> do mundo ja usam IA generativa</p>
+    </div>
+
+    <p>IA generativa nao substitui advogados. Ela transforma a forma como advogados trabalham. O escritorio que domina essa ferramenta com metodo produz mais, com mais qualidade, em menos tempo.</p>
+
+    <p>Para escritorios full-service, a vantagem e exponencial: uma peca bem estruturada com IA em 45 minutos pode ser adaptada para dezenas de casos similares — seja no civel, trabalhista, consumidor ou administrativo.</p>
+
+    <div class="warning-box">
+        <strong>Mas atencao:</strong> IA sem metodo gera riscos graves — jurisprudencia inventada, dados confidenciais vazados, pecas com erros multiplicados por centenas de casos. Esta apostila ensina o metodo seguro.
+    </div>
+
+    <h2>2. As 3 Ferramentas Essenciais</h2>
+
+    <div class="tool-section chatgpt">
+        <div class="tool-icon chatgpt">GPT</div>
+        <div>
+            <h3>ChatGPT (OpenAI) — chatgpt.com</h3>
+            <p style="color:#94a3b8; font-size:0.88em;">A ferramenta mais popular. Forte em Deep Research com fontes, versatil para brainstorm e rascunhos em massa.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h4>Quando usar ChatGPT:</h4>
+        <ul style="margin-left:16px; font-size:0.92em;">
+            <li><strong>Pesquisa jurisprudencial</strong> — Deep Research busca na internet e traz links</li>
+            <li><strong>Brainstorm de teses</strong> — Explorar argumentos de defesa</li>
+            <li><strong>Rascunhos em massa</strong> — Gerar versoes iniciais rapidamente</li>
+            <li><strong>Analise de documentos</strong> — Upload de PDFs e analise</li>
+        </ul>
+        <p style="font-size:0.85em; color:#94a3b8; margin-top:8px;"><strong>Custo:</strong> Gratuito (limitado) | Plus: US$ 20/mes (~R$ 100) | Deep Research exige Plus</p>
+    </div>
+
+    <div class="tool-section claude">
+        <div class="tool-icon claude">C</div>
+        <div>
+            <h3>Claude (Anthropic) — claude.ai</h3>
+            <p style="color:#94a3b8; font-size:0.88em;">Excelente para analise profunda, textos longos e raciocinio complexo. Extended Thinking reduz erros.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h4>Quando usar Claude:</h4>
+        <ul style="margin-left:16px; font-size:0.92em;">
+            <li><strong>Producao de pecas</strong> — Contestacoes, recursos, pareceres longos</li>
+            <li><strong>Revisao critica</strong> — Identificar falhas e oportunidades em pecas existentes</li>
+            <li><strong>Analise de contratos</strong> — Clausulas, riscos, inconsistencias</li>
+            <li><strong>Raciocinio complexo</strong> — Extended Thinking para questoes sofisticadas</li>
+        </ul>
+        <p style="font-size:0.85em; color:#94a3b8; margin-top:8px;"><strong>Custo:</strong> Gratuito (limitado) | Pro: US$ 20/mes (~R$ 100) | Extended Thinking exige Pro</p>
+    </div>
+
+    <div class="tool-section perplexity">
+        <div class="tool-icon perplexity">P</div>
+        <div>
+            <h3>Perplexity — perplexity.ai</h3>
+            <p style="color:#94a3b8; font-size:0.88em;">Motor de busca com IA. Ja pesquisa na internet automaticamente e mostra fontes. Otimo para verificacao rapida.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h4>Quando usar Perplexity:</h4>
+        <ul style="margin-left:16px; font-size:0.92em;">
+            <li><strong>Verificacao rapida</strong> — Confirmar se jurisprudencia existe</li>
+            <li><strong>Pesquisa com fontes</strong> — Links automaticos para cada citacao</li>
+            <li><strong>Atualizacao legislativa</strong> — O que mudou recentemente</li>
+        </ul>
+        <p style="font-size:0.85em; color:#94a3b8; margin-top:8px;"><strong>Custo:</strong> Gratuito (funciona bem) | Pro: US$ 20/mes (opcional)</p>
+    </div>
+
+    <div class="footer">Apostila IA na Advocacia — INTEIA — p. 3</div>
+</div>
+
+<!-- ==================== PAGINA 4: ONDE CLICAR ==================== -->
+<div class="page">
+    <div class="page-header">
+        <div class="logo-sm">IA</div>
+        <div class="page-header-text">
+            <h2>3. Onde Clicar em Cada Ferramenta</h2>
+            <p>Guia visual rapido — o que ativar antes de comecar</p>
+        </div>
+    </div>
+
+    <div class="two-col">
+        <div class="card">
+            <h4 style="color:#10a37f;">ChatGPT (chatgpt.com)</h4>
+            <div class="step" style="margin:8px 0; padding:8px;">
+                <div class="step-num" style="width:24px;height:24px;font-size:0.7em;">1</div>
+                <div class="step-content"><strong style="font-size:0.9em;">Busca web</strong><p>Icone de lupa/globo no campo de texto</p></div>
+            </div>
+            <div class="step" style="margin:8px 0; padding:8px;">
+                <div class="step-num" style="width:24px;height:24px;font-size:0.7em;">2</div>
+                <div class="step-content"><strong style="font-size:0.9em;">Deep Research</strong><p>Seletor de modelo > "Deep Research" (demora 2-5 min, normal)</p></div>
+            </div>
+            <div class="step" style="margin:8px 0; padding:8px;">
+                <div class="step-num" style="width:24px;height:24px;font-size:0.7em;">3</div>
+                <div class="step-content"><strong style="font-size:0.9em;">Thinking Mode</strong><p>Seletor de modelo > o1 ou o3</p></div>
+            </div>
+        </div>
+        <div class="card">
+            <h4 style="color:#d69e2e;">Claude (claude.ai)</h4>
+            <div class="step" style="margin:8px 0; padding:8px;">
+                <div class="step-num" style="width:24px;height:24px;font-size:0.7em;">1</div>
+                <div class="step-content"><strong style="font-size:0.9em;">Extended Thinking</strong><p>Icone de cerebro/engrenagem abaixo do campo de texto</p></div>
+            </div>
+            <div class="step" style="margin:8px 0; padding:8px;">
+                <div class="step-num" style="width:24px;height:24px;font-size:0.7em;">2</div>
+                <div class="step-content"><strong style="font-size:0.9em;">Busca web</strong><p>Escrever "Busque na internet..."</p></div>
+            </div>
+            <div class="step" style="margin:8px 0; padding:8px;">
+                <div class="step-num" style="width:24px;height:24px;font-size:0.7em;">3</div>
+                <div class="step-content"><strong style="font-size:0.9em;">Upload</strong><p>Arraste PDF/arquivo para a conversa</p></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h4 style="color:#3b82f6;">Perplexity (perplexity.ai)</h4>
+        <div class="two-col" style="margin:5px 0;">
+            <p style="font-size:0.9em;">&bull; <strong>Busca:</strong> Automatica (nativo — nao precisa ativar nada)</p>
+            <p style="font-size:0.9em;">&bull; <strong>Modo Pro:</strong> Ativar "Pro" acima do campo de pesquisa</p>
+        </div>
+        <div class="two-col" style="margin:5px 0;">
+            <p style="font-size:0.9em;">&bull; <strong>Fontes:</strong> Aparecem automaticamente ao lado da resposta</p>
+            <p style="font-size:0.9em;">&bull; <strong>Mencoes extras:</strong> NotebookLM (processos volumosos), Gemini (transcricao)</p>
+        </div>
+    </div>
+
+    <div class="tip-box">
+        <strong>Fluxo recomendado:</strong> Use ChatGPT/Perplexity para PESQUISAR (com links). Depois copie o resultado e cole no Claude para PRODUZIR a peca com CLEAR. Pesquisa numa, producao na outra.
+    </div>
+
+    <h2>Dica: Tres Regras Rapidas para IA Funcionar</h2>
+
+    <div class="three-col">
+        <div class="card" style="text-align:center; border-color:rgba(214,158,46,0.2);">
+            <div style="font-size:2em; color:#d69e2e; font-weight:700;">1</div>
+            <p><strong>Diga quem voce e</strong></p>
+            <p style="color:#94a3b8; font-size:0.85em;">"Sou advogado de escritorio full-service..."</p>
+        </div>
+        <div class="card" style="text-align:center; border-color:rgba(214,158,46,0.2);">
+            <div style="font-size:2em; color:#d69e2e; font-weight:700;">2</div>
+            <p><strong>Diga o que quer</strong></p>
+            <p style="color:#94a3b8; font-size:0.85em;">"Preciso de contestacao sobre..."</p>
+        </div>
+        <div class="card" style="text-align:center; border-color:rgba(214,158,46,0.2);">
+            <div style="font-size:2em; color:#d69e2e; font-weight:700;">3</div>
+            <p><strong>De contexto especifico</strong></p>
+            <p style="color:#94a3b8; font-size:0.85em;">"Fatos: autor alega dano moral por..."</p>
+        </div>
+    </div>
+
+    <div class="footer">Apostila IA na Advocacia — INTEIA — p. 4</div>
+</div>
+
+<!-- ==================== PAGINA 5: PROTOCOLO ==================== -->
+<div class="page">
+    <div class="page-header">
+        <div class="logo-sm">IA</div>
+        <div class="page-header-text">
+            <h2>Parte 2 — Metodo</h2>
+            <p>O que diferencia resultado profissional de resultado amador</p>
+        </div>
+    </div>
+
+    <h2>4. Protocolo de Pesquisa Juridica com IA</h2>
+
+    <p><strong>A regra de ouro:</strong> IA serve para jurisprudencia SIM — mas so com este metodo. Sem metodo, vai inventar casos que nao existem.</p>
+
+    <div class="protocol-box">
+        <h3>Os 4 Passos Obrigatorios</h3>
+        <ol class="protocol-steps">
+            <li><strong>BUSCAR NA INTERNET</strong> — Sempre ativar busca web antes de pesquisar. ChatGPT: usar Deep Research. Perplexity: ja busca automaticamente. Claude: escrever "Busque na internet...". <em style="color:#fca5a5;">Sem busca web ativada, a IA inventa jurisprudencia.</em></li>
+            <li><strong>EXIGIR LINK</strong> — Toda citacao de jurisprudencia DEVE vir com link direto para o site do tribunal. Escreva no prompt: "Traga apenas decisoes com link verificavel." <strong>Sem link = nao existe.</strong></li>
+            <li><strong>USAR THINKING MODE</strong> — Sempre ativar raciocinio estendido. ChatGPT: modelo o1 ou o3. Claude: Extended Thinking. O thinking mode forca a IA a "pensar antes de falar" — reduz alucinacoes drasticamente (Stanford HAI: de 33% para ~8%).</li>
+            <li><strong>PEDIR AUTOCHECAGEM</strong> — Ao final de TODA pesquisa, enviar a frase abaixo. Forca a IA a revisar suas proprias citacoes.</li>
+        </ol>
+    </div>
+
+    <div>
+        <span class="copy-label">Frase de autochecagem — copie e cole ao final de toda pesquisa</span>
+        <div class="copy-box">Agora revise todas as citacoes acima. Confirme que cada link funciona e cada numero de processo esta correto. Se tiver duvida sobre algum, sinalize com [VERIFICAR].</div>
+    </div>
+
+    <h3>Fluxo Visual do Protocolo</h3>
+
+    <div style="display:flex; gap:8px; align-items:center; justify-content:center; margin:15px 0; flex-wrap:wrap;">
+        <div style="background:rgba(214,158,46,0.15); padding:10px 16px; border-radius:10px; text-align:center; font-weight:600;">
+            <div style="color:#d69e2e; font-size:1.5em;">1</div>
+            BUSCA WEB<br><span style="font-size:0.8em; color:#94a3b8;">Ativar antes</span>
+        </div>
+        <div style="color:#d69e2e; font-size:1.5em;">&rarr;</div>
+        <div style="background:rgba(214,158,46,0.15); padding:10px 16px; border-radius:10px; text-align:center; font-weight:600;">
+            <div style="color:#d69e2e; font-size:1.5em;">2</div>
+            LINK<br><span style="font-size:0.8em; color:#94a3b8;">Exigir sempre</span>
+        </div>
+        <div style="color:#d69e2e; font-size:1.5em;">&rarr;</div>
+        <div style="background:rgba(214,158,46,0.15); padding:10px 16px; border-radius:10px; text-align:center; font-weight:600;">
+            <div style="color:#d69e2e; font-size:1.5em;">3</div>
+            THINKING<br><span style="font-size:0.8em; color:#94a3b8;">Modo estendido</span>
+        </div>
+        <div style="color:#d69e2e; font-size:1.5em;">&rarr;</div>
+        <div style="background:rgba(214,158,46,0.15); padding:10px 16px; border-radius:10px; text-align:center; font-weight:600;">
+            <div style="color:#d69e2e; font-size:1.5em;">4</div>
+            CHECAGEM<br><span style="font-size:0.8em; color:#94a3b8;">Frase pronta</span>
+        </div>
+    </div>
+
+    <h3>Prompt de Pesquisa Completo</h3>
+    <div>
+        <span class="copy-label">Copie e cole no ChatGPT (Deep Research) ou Perplexity</span>
+        <div class="copy-box">Pesquise na internet jurisprudencia recente (2024-2026) do <span class="var">[TJDFT / TRT-10 / TRF-1 / STJ / TST]</span> sobre <span class="var">[tema — ex: dano moral, revisao tributaria, horas extras]</span>.
+
+Traga APENAS decisoes com link verificavel para o site do tribunal.
+Para cada decisao, inclua:
+- Numero do processo
+- Relator
+- Data do julgamento
+- Ementa resumida (3 linhas)
+- Link direto para o acordao
+
+Use modo de raciocinio estendido.
+
+Ao final, revise todos os links e sinalize duvidas com [VERIFICAR].</div>
+    </div>
+
+    <div class="footer">Apostila IA na Advocacia — INTEIA — p. 5</div>
+</div>
+
+<!-- ==================== PAGINA 6: FRAMEWORK CLEAR ==================== -->
+<div class="page">
+    <div class="page-header">
+        <div class="logo-sm">IA</div>
+        <div class="page-header-text">
+            <h2>5. Framework CLEAR</h2>
+            <p>A estrutura que transforma prompts amadores em prompts profissionais</p>
+        </div>
+    </div>
+
+    <p>A diferenca entre um resultado generico e um resultado profissional e o prompt. O Framework CLEAR garante que a IA receba todas as informacoes necessarias para gerar output util.</p>
+
+    <table class="data-table">
+        <tr>
+            <th width="7%"></th>
+            <th width="15%">Letra</th>
+            <th width="35%">O que e</th>
+            <th width="43%">Exemplo</th>
+        </tr>
+        <tr>
+            <td><span class="clear-letter">C</span></td>
+            <td><strong>Contexto</strong></td>
+            <td>Quem voce e, o que faz, qual o cenario</td>
+            <td>"Sou advogado de escritorio full-service com 30+ anos. Atuo em [civil/trabalhista/consumidor/administrativo/tributario/comercial]."</td>
+        </tr>
+        <tr>
+            <td><span class="clear-letter">L</span></td>
+            <td><strong>Limite</strong></td>
+            <td>O que NAO fazer, restricoes, formato</td>
+            <td>"Nao cite jurisprudencia sem link verificavel. Estrutura replicavel. Foque em teses consolidadas."</td>
+        </tr>
+        <tr>
+            <td><span class="clear-letter">E</span></td>
+            <td><strong>Exemplo</strong></td>
+            <td>Estrutura ou formato desejado</td>
+            <td>"1) Qualificacao, 2) Sintese dos fatos, 3) Preliminares, 4) Fundamentos juridicos, 5) Pedidos."</td>
+        </tr>
+        <tr>
+            <td><span class="clear-letter">A</span></td>
+            <td><strong>Audiencia</strong></td>
+            <td>Quem vai ler/receber o resultado</td>
+            <td>"Juiz de [vara civel/trabalhista/federal] de Brasilia" ou "Cliente [diretor juridico/empresario]"</td>
+        </tr>
+        <tr>
+            <td><span class="clear-letter">R</span></td>
+            <td><strong>Role</strong></td>
+            <td>Qual papel a IA deve assumir</td>
+            <td>"Advogado experiente em [area], linguagem tecnica e objetiva"</td>
+        </tr>
+    </table>
+
+    <h3>Antes e Depois — CLEAR na Pratica</h3>
+
+    <div class="two-col">
+        <div class="card" style="border-color: rgba(239,68,68,0.2);">
+            <h4 style="color:#fca5a5;">Sem CLEAR (resultado generico)</h4>
+            <div class="copy-box" style="border-color:rgba(239,68,68,0.2); font-size:0.82em;">"Faz uma contestacao pra mim"</div>
+            <p style="font-size:0.82em; color:#fca5a5;">Resultado: peca generica, sem teses especificas, linguagem errada, estrutura incompleta.</p>
+        </div>
+        <div class="card" style="border-color: rgba(34,197,94,0.2);">
+            <h4 style="color:#86efac;">Com CLEAR (resultado profissional)</h4>
+            <div class="copy-box" style="border-color:rgba(34,197,94,0.2); font-size:0.82em;">"Sou advogado de escritorio full-service, area [civel/trabalhista]. Estrutura: Qualificacao, Preliminares, Fundamentos juridicos..."</div>
+            <p style="font-size:0.82em; color:#86efac;">Resultado: peca precisa, teses adequadas a area, estrutura replicavel, linguagem profissional.</p>
+        </div>
+    </div>
+
+    <h3>Prompt CLEAR Completo — Peca Juridica (universal)</h3>
+    <div>
+        <span class="copy-label">Modelo principal — copie e preencha os [ ]</span>
+        <div class="copy-box">CONTEXTO: Sou advogado de escritorio full-service com 30+ anos.
+Atuo em <span class="var">[civil / trabalhista / consumidor / administrativo / tributario / comercial]</span>.
+Preciso de <span class="var">[peticao inicial / contestacao / recurso / parecer]</span>
+sobre <span class="var">[descrever situacao]</span>.
+
+LIMITE: Nao cite jurisprudencia sem buscar na internet com link.
+Foque em teses consolidadas. Estrutura replicavel.
+
+EXEMPLO: Estrutura: 1) Qualificacao das partes, 2) Sintese dos fatos,
+3) Preliminares (se aplicavel), 4) Fundamentos juridicos,
+5) Pedidos, 6) Documentos.
+
+AUDIENCIA: Juiz de <span class="var">[vara civel / trabalhista / federal]</span> de <span class="var">[Brasilia / SP / Goiania]</span>.
+
+ROLE: Advogado experiente em <span class="var">[area]</span>, linguagem tecnica,
+objetiva, sem excesso.
+
+FATOS DO CASO: <span class="var">[inserir situacao, pedidos e fatos relevantes]</span></div>
+    </div>
+
+    <div class="footer">Apostila IA na Advocacia — INTEIA — p. 6</div>
+</div>
+
+<!-- ==================== PAGINA 7: FLUXO COMBINADO ==================== -->
+<div class="page">
+    <div class="page-header">
+        <div class="logo-sm">IA</div>
+        <div class="page-header-text">
+            <h2>6. Fluxo Combinado: Pesquisa + Producao</h2>
+            <p>O uso REAL no dia a dia — cada ferramenta faz o que faz melhor</p>
+        </div>
+    </div>
+
+    <p>No dia a dia do escritorio, voce nao usa uma so ferramenta. Usa ferramentas em <strong>cadeia</strong>: pesquisa numa, produz na outra.</p>
+
+    <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+            <strong>PESQUISAR (ChatGPT Deep Research ou Perplexity)</strong>
+            <p>Buscar jurisprudencia com links verificaveis. Usar o Protocolo de Pesquisa completo. Deep Research demora 2-5 min — e normal, use Perplexity em paralelo enquanto espera.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+            <strong>COPIAR resultado da pesquisa</strong>
+            <p>Selecionar o resultado (com links, acordaos, ementas). Ctrl+C.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+            <strong>PRODUZIR no Claude com CLEAR</strong>
+            <p>Abrir Claude. Ativar Extended Thinking. Colar o resultado da pesquisa junto com prompt CLEAR. A IA usa APENAS a jurisprudencia que voce forneceu — nao inventa.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+            <strong>VERIFICAR tudo</strong>
+            <p>Clicar em cada link. Rodar frase de autochecagem. Revisar estrutura e argumentos antes de protocolar.</p>
+        </div>
+    </div>
+
+    <h3>Prompt do Fluxo Combinado (Passo 3)</h3>
+    <div>
+        <span class="copy-label">Colar no Claude com resultado da pesquisa</span>
+        <div class="copy-box">CONTEXTO: Sou advogado de escritorio full-service, atuo em <span class="var">[area]</span>.
+Pesquisei a jurisprudencia abaixo.
+<span class="var">[COLAR RESULTADO DA PESQUISA DO CHATGPT/PERPLEXITY]</span>
+
+LIMITE: Use APENAS a jurisprudencia que eu forneci acima.
+Nao invente citacoes adicionais. Estrutura replicavel.
+
+EXEMPLO: Estrutura: 1) Qualificacao das partes, 2) Sintese dos fatos,
+3) Preliminares, 4) Fundamentos juridicos com jurisprudencia
+pesquisada, 5) Pedidos.
+
+AUDIENCIA: <span class="var">[Juiz de vara civel/trabalhista/federal de Brasilia]</span>.
+
+ROLE: Advogado experiente em <span class="var">[area]</span>, linguagem tecnica e objetiva.
+
+FATOS DO CASO: <span class="var">[inserir situacao, pedidos e fatos relevantes]</span></div>
+    </div>
+
+    <h3>Outros Prompts do Dia a Dia</h3>
+
+    <div class="two-col">
+        <div class="card">
+            <h4>E-mail Executivo para Cliente</h4>
+            <div class="copy-box" style="font-size:0.8em;">Sou advogado de escritorio full-service, area de <span class="var">[especificar]</span>.
+Resultado de <span class="var">[audiencia/decisao/reuniao]</span>: <span class="var">[descrever]</span>.
+Redija e-mail executivo para <span class="var">[cliente]</span>.
+Max 3 paragrafos. Tom formal. Incluir: resultado,
+impacto, proximo passo recomendado.</div>
+        </div>
+        <div class="card">
+            <h4>Analise de Risco</h4>
+            <div class="copy-box" style="font-size:0.8em;">CONTEXTO: Cliente quer avaliar risco de <span class="var">[conduta/operacao]</span>.
+LIMITE: Cenarios com probabilidade, nao certezas.
+EXEMPLO: 1) Situacao, 2) Riscos com %, 3) Exposicao,
+4) Recomendacao.
+AUDIENCIA: <span class="var">[Diretor juridico / empresario]</span>. ROLE: Consultor juridico preventivo.</div>
+        </div>
+    </div>
+
+    <div class="two-col">
+        <div class="card">
+            <h4>Revisao de Peca (junior para senior)</h4>
+            <div class="copy-box" style="font-size:0.8em;">CONTEXTO: Junior redigiu esta <span class="var">[peca]</span>.
+LIMITE: Nao reescreva. Aponte problemas.
+EXEMPLO: 1) Pontos fortes, 2) Teses ausentes,
+3) Oportunidades perdidas, 4) Sugestoes.
+PECA: <span class="var">[colar peca]</span></div>
+        </div>
+        <div class="card">
+            <h4>Relatorio Mensal para Cliente</h4>
+            <div class="copy-box" style="font-size:0.8em;">CONTEXTO: Relatorio mensal. <span class="var">[X]</span> acoes ativas, <span class="var">[Y]</span> encerradas.
+LIMITE: Max 2 pag, linguagem executiva, foco em numeros.
+EXEMPLO: 1) Dashboard, 2) Resultados, 3) Exposicao,
+4) Tendencias, 5) Recomendacoes.
+AUDIENCIA: <span class="var">[Cliente / diretor juridico]</span>. DADOS: <span class="var">[numeros]</span></div>
+        </div>
+    </div>
+
+    <div class="footer">Apostila IA na Advocacia — INTEIA — p. 7</div>
+</div>
+
+<!-- ==================== PAGINA 8-9: PROMPTS DOS EXERCICIOS ==================== -->
+<div class="page">
+    <div class="page-header">
+        <div class="logo-sm">IA</div>
+        <div class="page-header-text">
+            <h2>Parte 3 — Prompts Prontos</h2>
+            <p>7. Prompts dos Exercicios — copie e use</p>
+        </div>
+    </div>
+
+    <div class="exercise-header">
+        <h3>Exercicio 1 — Primeiro Contato com IA</h3>
+        <p>Bloco 1 | 20 min | Individual | ChatGPT ou Claude</p>
+    </div>
+    <div>
+        <span class="copy-label">Prompt pronto — personalizar campos em [ ]</span>
+        <div class="copy-box">Sou advogado de escritorio full-service, atuo em <span class="var">[civil/trabalhista/consumidor/administrativo/tributario/comercial]</span>.
+O caso envolve: <span class="var">[descreva o pedido principal — ex: dano moral, revisao tributaria, penalidade administrativa]</span>.
+Fatos: <span class="var">[descreva em 3-5 linhas o que a parte contraria alega]</span>.
+
+Quais sao as melhores teses de defesa para este caso?
+Liste cada tese com fundamentacao legal.
+NAO cite jurisprudencia especifica — foque nas teses e argumentos.</div>
+    </div>
+
+    <div class="exercise-header">
+        <h3>Exercicio 2 — Pesquisa Jurisprudencial</h3>
+        <p>Bloco 2 | 15 min | Em duplas | ChatGPT Deep Research + Perplexity</p>
+    </div>
+    <div>
+        <span class="copy-label">Metade da sala usa ChatGPT, outra metade usa Perplexity</span>
+        <div class="copy-box">Pesquise na internet jurisprudencia recente (2024-2026) do <span class="var">[TJDFT / TRT-10 / TRF-1 / STJ / TST]</span> sobre
+<span class="var">[tema da sua area — ex: dano moral, revisao tributaria, horas extras]</span>.
+
+Traga APENAS decisoes com link verificavel para o site do tribunal.
+Para cada decisao: numero do processo, relator, data, ementa, link.
+Use modo de raciocinio estendido.</div>
+    </div>
+
+    <div class="exercise-header">
+        <h3>Exercicio 3 — Verificacao de Links</h3>
+        <p>Bloco 2 | 12 min | Em duplas | Navegador</p>
+    </div>
+    <div class="highlight-box">
+        <p><strong style="color:#d69e2e;">Instrucao:</strong> Clique em CADA link retornado pela IA no Exercicio 2. Anote: quantos links funcionam? Quantos levam para decisao errada? Quantos nao existem? Calcule o % de acerto. Compartilhe com a sala.</p>
+    </div>
+
+    <div class="exercise-header">
+        <h3>Exercicio 4 — Fluxo Combinado</h3>
+        <p>Bloco 3 | 23 min | Individual | ChatGPT + Claude</p>
+    </div>
+    <div>
+        <span class="copy-label">Passo 1 (8 min) — Pesquisar no ChatGPT Deep Research</span>
+        <div class="copy-box">Pesquise jurisprudencia do <span class="var">[TJDFT / TRT-10 / TRF-1 / STJ / TST]</span> sobre <span class="var">[tema do seu caso]</span>.
+Decisoes favoraveis a defesa, com link para tribunal.
+Use Deep Research.</div>
+    </div>
+    <div>
+        <span class="copy-label">Passo 2 (15 min) — Copiar resultado e colar no Claude com CLEAR</span>
+        <div class="copy-box">CONTEXTO: Sou advogado de escritorio full-service, atuo em <span class="var">[area]</span>. Pesquisei a jurisprudencia abaixo.
+<span class="var">[COLAR RESULTADO DA PESQUISA]</span>
+
+LIMITE: Use APENAS a jurisprudencia fornecida. Estrutura replicavel.
+EXEMPLO: 1) Qualificacao, 2) Sintese dos fatos, 3) Preliminares, 4) Fundamentos juridicos, 5) Pedidos.
+AUDIENCIA: <span class="var">[Juiz de vara civel/trabalhista/federal de Brasilia]</span>.
+ROLE: Advogado experiente em <span class="var">[area]</span>, linguagem tecnica e objetiva.
+FATOS: <span class="var">[inserir fatos]</span></div>
+    </div>
+
+    <div class="exercise-header">
+        <h3>Exercicio 4B — Crie SEU Prompt CLEAR</h3>
+        <p>Bloco 3 | 5 min | Individual | Papel ou digital</p>
+    </div>
+    <div class="highlight-box">
+        <p><strong style="color:#d69e2e;">Instrucao:</strong> Escreva um prompt CLEAR para a tarefa que voce MAIS faz no escritorio. Use a estrutura C-L-E-A-R. Depois: 2-3 voluntarios leem em voz alta. Instrutor ajusta ao vivo.</p>
+    </div>
+
+    <div class="footer">Apostila IA na Advocacia — INTEIA — p. 8</div>
+</div>
+
+<!-- PAGINA 9: MAIS EXERCICIOS -->
+<div class="page">
+    <div class="page-header">
+        <div class="logo-sm">IA</div>
+        <div class="page-header-text">
+            <h2>7. Prompts dos Exercicios (continuacao)</h2>
+            <p>Exercicios do Dia 2</p>
+        </div>
+    </div>
+
+    <div class="exercise-header">
+        <h3>Exercicio Comunicacao — E-mail Relampago</h3>
+        <p>Fim do Dia 1 | 5 min | Individual | Qualquer ferramenta</p>
+    </div>
+    <div>
+        <span class="copy-label">Redigir e-mail executivo em 5 minutos</span>
+        <div class="copy-box">Sou advogado de escritorio full-service, atuo em <span class="var">[civil/trabalhista/consumidor/administrativo/tributario/comercial]</span>.
+Resultado da audiencia/despacho de hoje: <span class="var">[procedente em parte / acordo / adiada / deferido / indeferido]</span>.
+Redija e-mail executivo para o cliente.
+Maximo 3 paragrafos. Tom formal-corporativo. Direto ao ponto.
+Incluir: resultado, impacto financeiro, proximo passo.</div>
+    </div>
+
+    <div class="exercise-header">
+        <h3>Exercicio 5 — Fluxo Completo de Defesa</h3>
+        <p>Dia 2, Bloco 4 | 47 min | Em duplas | Caso completo</p>
+    </div>
+    <div class="highlight-box">
+        <p><strong style="color:#d69e2e;">Escolha do caso:</strong> Cada dupla escolhe um caso da sua area:<br>
+        &bull; <strong>Caso A:</strong> Use um caso real do escritorio (anonimizado) &rarr; Contestacao/Defesa<br>
+        &bull; <strong>Caso B:</strong> Use o caso backup fornecido pelo instrutor &rarr; Peca de defesa<br>
+        &bull; <strong>Caso C:</strong> Mesmo caso, com condenacao &rarr; Recurso</p>
+    </div>
+    <p><strong>Passo 1 — Pesquisa (17 min):</strong> Protocolo completo. Deep Research ou Perplexity.</p>
+    <p><strong>Passo 2 — Minuta (18 min):</strong> CLEAR completo + fluxo combinado. Pesquisa alimenta o Claude.</p>
+    <p><strong>Passo 3 — Verificacao (12 min):</strong> Clicar links, autochecagem, revisar estrutura.</p>
+
+    <div class="exercise-header">
+        <h3>Exercicio 5B — Pensando em Escala</h3>
+        <p>Dia 2, Bloco 4 | 8 min | Em duplas</p>
+    </div>
+    <div>
+        <span class="copy-label">Transformar contestacao unica em template replicavel</span>
+        <div class="copy-box">Olhe a peca que voce gerou. Identifique:
+
+FIXO (nao muda entre casos): estrutura, teses, jurisprudencia, preliminares
+MUDA (varia): <span class="var">[NOME_PARTE]</span>, <span class="var">[PEDIDOS]</span>, <span class="var">[FATOS]</span>, <span class="var">[VALORES]</span>
+
+Reescreva o prompt CLEAR substituindo dados especificos por VARIAVEIS.
+Resultado: template replicavel para todo o acervo de casos similares.</div>
+    </div>
+
+    <div class="exercise-header">
+        <h3>Exercicio 6 — Anonimizacao</h3>
+        <p>Dia 2, Bloco 6 | 17 min | Individual</p>
+    </div>
+    <div class="highlight-box">
+        <p><strong style="color:#d69e2e;">Instrucao:</strong> Pegue um caso real do escritorio (ou use o caso backup). Anonimize TODOS os dados sensiveis. Envie para a IA. Compare o resultado com o caso original.</p>
+    </div>
+    <div class="anon-row">
+        <div class="anon-before">Banco do Brasil S.A.</div>
+        <div class="anon-arrow">&rarr;</div>
+        <div class="anon-after">Banco XYZ / Instituicao financeira</div>
+    </div>
+    <div class="anon-row">
+        <div class="anon-before">Joao Silva, CPF 012.345.678-90</div>
+        <div class="anon-arrow">&rarr;</div>
+        <div class="anon-after">Empregado A, analista</div>
+    </div>
+    <div class="anon-row">
+        <div class="anon-before">Proc. 0001234-56.2025.5.10.0001</div>
+        <div class="anon-arrow">&rarr;</div>
+        <div class="anon-after">Processo XXXXX</div>
+    </div>
+
+    <div class="exercise-header">
+        <h3>Exercicio 7 — Compromisso Individual</h3>
+        <p>Dia 2, Bloco 7 | 7 min | Individual | Papel</p>
+    </div>
+    <p>"Na segunda-feira, vou usar IA para: ___________"</p>
+
+    <div class="exercise-header">
+        <h3>Exercicio 8 — Plano de Implementacao do Escritorio</h3>
+        <p>Dia 2, Bloco 7 | 10 min | Coletivo | Quadro branco</p>
+    </div>
+    <p>1) Quem e o campeao de IA? | 2) Qual o 1o processo a automatizar? | 3) Como medir em 30 dias?</p>
+
+    <div class="footer">Apostila IA na Advocacia — INTEIA — p. 9</div>
+</div>
+
+<!-- ==================== PAGINAS 10-13: 12 CARTAS CLEAR ==================== -->
+<div class="page">
+    <div class="page-header">
+        <div class="logo-sm">IA</div>
+        <div class="page-header-text">
+            <h2>8. As 12 Cartas CLEAR — Biblioteca Completa</h2>
+            <p>Prompts prontos para copiar, personalizar e usar</p>
+        </div>
+    </div>
+
+    <h3>Categoria: Elaboracao de Pecas</h3>
+
+    <div class="card">
+        <h4><span class="clear-letter" style="width:24px;height:24px;line-height:24px;font-size:0.8em;border-radius:5px;">1</span> Contestacao / Defesa (universal)</h4>
+        <div class="copy-box" style="font-size:0.8em;">CONTEXTO: Sou advogado de escritorio full-service com 30+ anos. Atuo em <span class="var">[civil/trabalhista/consumidor/administrativo/tributario/comercial]</span>. Preciso de <span class="var">[contestacao / defesa]</span> para acao que pede <span class="var">[descrever pedidos]</span>.
+
+LIMITE: Nao cite jurisprudencia sem buscar na internet com link. Foque em teses consolidadas. Estrutura replicavel.
+
+EXEMPLO: 1) Qualificacao, 2) Sintese dos fatos, 3) Preliminares, 4) Fundamentos juridicos, 5) Pedidos, 6) Documentos.
+
+AUDIENCIA: Juiz de <span class="var">[vara civel/trabalhista/federal]</span> de Brasilia.
+ROLE: Advogado experiente em <span class="var">[area]</span>, linguagem tecnica e objetiva.
+FATOS DO CASO: <span class="var">[inserir]</span>
+
+AUTOCHECAGEM: Revise todas as citacoes. Sinalize duvidas com [VERIFICAR].</div>
+    </div>
+
+    <div class="card">
+        <h4><span class="clear-letter" style="width:24px;height:24px;line-height:24px;font-size:0.8em;border-radius:5px;">2</span> Recurso (Apelacao / Recurso Ordinario)</h4>
+        <div class="copy-box" style="font-size:0.8em;">CONTEXTO: Sou advogado de escritorio full-service, area <span class="var">[civel/trabalhista/tributario]</span>. Condenados em 1a instancia. Preciso recorrer de <span class="var">[descrever condenacao]</span>.
+
+LIMITE: Nao cite acordaos sem link verificavel. Foque nos fundamentos para reforma.
+EXEMPLO: 1) Tempestividade e preparo, 2) Sintese da sentenca, 3) Razoes de reforma por pedido, 4) Pedido de provimento.
+AUDIENCIA: <span class="var">[Desembargadores do TJDFT / TRT / TRF]</span>. ROLE: Advogado recursal experiente em <span class="var">[area]</span>.
+PONTOS A ATACAR: <span class="var">[fundamentos da sentenca]</span>
+
+AUTOCHECAGEM: Revise todas as citacoes. Sinalize duvidas com [VERIFICAR].</div>
+    </div>
+
+    <div class="card">
+        <h4><span class="clear-letter" style="width:24px;height:24px;line-height:24px;font-size:0.8em;border-radius:5px;">3</span> Defesa em Acao Civil Publica / Acao Coletiva</h4>
+        <div class="copy-box" style="font-size:0.8em;">CONTEXTO: Cliente e reu em ACP sobre <span class="var">[pratica — ex: trabalhista, ambiental, consumidor]</span>. Risco de obrigacao de fazer + dano moral coletivo.
+LIMITE: Nao cite jurisprudencia sem link. Foque em demonstrar regularidade.
+EXEMPLO: 1) Preliminares, 2) Impugnacao dos fatos, 3) Regularidade com documentos, 4) Ausencia de dano coletivo, 5) Pedidos.
+AUDIENCIA: <span class="var">[Juiz da vara do trabalho / civel / federal]</span>. ROLE: Advogado senior em litigios coletivos.
+FATOS: <span class="var">[resumo da ACP]</span></div>
+    </div>
+
+    <div class="card">
+        <h4><span class="clear-letter" style="width:24px;height:24px;line-height:24px;font-size:0.8em;border-radius:5px;">4</span> Proposta de Acordo</h4>
+        <div class="copy-box" style="font-size:0.8em;">CONTEXTO: Escritorio full-service representa <span class="var">[cliente]</span> em <span class="var">[tipo de acao]</span>. Cliente autorizou negociacao de acordo.
+LIMITE: Valores genericos (faixas). Linguagem que minimize admissao de responsabilidade.
+EXEMPLO: 1) Contextualizacao, 2) Proposta por faixa, 3) Pagamento, 4) Quitacao, 5) Prazo.
+AUDIENCIA: <span class="var">[Juiz e advogado da parte contraria]</span>. ROLE: Advogado negociador.
+PARAMETROS: <span class="var">[faixas de valor e perfil do caso]</span></div>
+    </div>
+
+    <div class="footer">Apostila IA na Advocacia — INTEIA — p. 10</div>
+</div>
+
+<!-- PAGINA 11: CARTAS 5-8 -->
+<div class="page">
+    <div class="page-header">
+        <div class="logo-sm">IA</div>
+        <div class="page-header-text">
+            <h2>8. As 12 Cartas CLEAR (continuacao)</h2>
+            <p>Categoria: Analise e Revisao</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h4><span class="clear-letter" style="width:24px;height:24px;line-height:24px;font-size:0.8em;border-radius:5px;">5</span> Analise de Risco para Cliente</h4>
+        <div class="copy-box" style="font-size:0.8em;">CONTEXTO: Cliente quer avaliar risco de <span class="var">[conduta / operacao / pratica — ex: trabalhista, tributaria, contratual]</span>.
+LIMITE: Nao afirme certeza. Cenarios com probabilidade. Considere volume e historico.
+EXEMPLO: 1) Situacao analisada, 2) Riscos por cenario com probabilidade, 3) Exposicao financeira, 4) Recomendacoes, 5) Mitigacao.
+AUDIENCIA: <span class="var">[Diretor juridico / empresario / gestor publico]</span>.
+ROLE: Consultor juridico preventivo de <span class="var">[area]</span>.
+SITUACAO: <span class="var">[descrever pratica e contexto]</span></div>
+    </div>
+
+    <div class="card">
+        <h4><span class="clear-letter" style="width:24px;height:24px;line-height:24px;font-size:0.8em;border-radius:5px;">6</span> Revisao de Peca (junior para senior)</h4>
+        <div class="copy-box" style="font-size:0.8em;">CONTEXTO: Advogado da equipe redigiu esta <span class="var">[contestacao / recurso / parecer]</span> para caso de <span class="var">[area]</span>.
+LIMITE: Nao reescreva tudo. Aponte problemas com sugestoes. Foco: teses fracas, fundamentos faltantes.
+EXEMPLO: 1) Pontos fortes, 2) Teses ausentes, 3) Problemas, 4) Oportunidades perdidas, 5) Sugestoes.
+AUDIENCIA: Advogado da equipe (para aprendizado). ROLE: Revisor senior, exigente mas construtivo.
+PECA: <span class="var">[colar peca]</span></div>
+    </div>
+
+    <div class="card">
+        <h4><span class="clear-letter" style="width:24px;height:24px;line-height:24px;font-size:0.8em;border-radius:5px;">7</span> Parecer Juridico para Cliente</h4>
+        <div class="copy-box" style="font-size:0.8em;">CONTEXTO: Cliente pergunta se pode <span class="var">[descrever conduta ou operacao — ex: alterar contrato, terceirizar, mudar regime tributario]</span>.
+LIMITE: Honesto sobre incertezas. Buscar jurisprudencia com link.
+EXEMPLO: 1) Consulta, 2) Fundamentacao, 3) Jurisprudencia (com links), 4) Analise, 5) Riscos, 6) Recomendacao.
+AUDIENCIA: <span class="var">[Diretor juridico / empresario / gestor]</span>. ROLE: Parecerista de <span class="var">[area]</span>.
+CONSULTA: <span class="var">[pergunta do cliente]</span>
+
+AUTOCHECAGEM: Revise todas as citacoes. Sinalize duvidas com [VERIFICAR].</div>
+    </div>
+
+    <div class="card">
+        <h4><span class="clear-letter" style="width:24px;height:24px;line-height:24px;font-size:0.8em;border-radius:5px;">8</span> Estrategia de Contencioso / Gestao de Acervo</h4>
+        <div class="copy-box" style="font-size:0.8em;">CONTEXTO: Cliente enfrenta volume significativo de <span class="var">[tipo de acao]</span> — <span class="var">[X]</span> acoes ativas.
+LIMITE: Nao sugira taticas antieticas. Custo-beneficio em escala. Avaliar: defender vs acordar.
+EXEMPLO: 1) Diagnostico, 2) Perfil das acoes, 3) Teses padronizadas, 4) Politica de acordo, 5) KPIs.
+AUDIENCIA: <span class="var">[Socios do escritorio / diretor juridico do cliente]</span>. ROLE: Advogado estrategista.
+DADOS: <span class="var">[perfil das acoes e resultados recentes]</span></div>
+    </div>
+
+    <div class="footer">Apostila IA na Advocacia — INTEIA — p. 11</div>
+</div>
+
+<!-- PAGINA 12: CARTAS 9-12 -->
+<div class="page">
+    <div class="page-header">
+        <div class="logo-sm">IA</div>
+        <div class="page-header-text">
+            <h2>8. As 12 Cartas CLEAR (continuacao)</h2>
+            <p>Categorias: Comunicacao e Produtividade</p>
+        </div>
+    </div>
+
+    <h3>Categoria: Comunicacao</h3>
+
+    <div class="card">
+        <h4><span class="clear-letter" style="width:24px;height:24px;line-height:24px;font-size:0.8em;border-radius:5px;">9</span> Relatorio Mensal para Cliente Corporativo</h4>
+        <div class="copy-box" style="font-size:0.8em;">CONTEXTO: Relatorio mensal do contencioso. <span class="var">[X]</span> acoes ativas, <span class="var">[Y]</span> encerradas, <span class="var">[Z]</span> novas.
+LIMITE: Max 2 paginas. Dados consolidados. Linguagem executiva.
+EXEMPLO: 1) Dashboard, 2) Resultados (ganhos/perdas/acordos), 3) Exposicao, 4) Tendencias, 5) Recomendacoes, 6) Proximos passos.
+AUDIENCIA: <span class="var">[Diretor juridico / cliente]</span>. ROLE: Advogado gestor de contencioso.
+DADOS: <span class="var">[numeros do mes]</span></div>
+    </div>
+
+    <div class="card">
+        <h4><span class="clear-letter" style="width:24px;height:24px;line-height:24px;font-size:0.8em;border-radius:5px;">10</span> E-mail Profissional para Cliente Corporativo</h4>
+        <div class="copy-box" style="font-size:0.8em;">CONTEXTO: E-mail para <span class="var">[destinatario]</span> sobre <span class="var">[resultado de audiencia / decisao / necessidade de documentos]</span>.
+LIMITE: Tom formal-corporativo. Max 3 paragrafos. Direto ao ponto. Sem juridiques.
+EXEMPLO: Saudacao, resultado/informacao principal em 1 frase, detalhamento, acao necessaria, despedida.
+AUDIENCIA: <span class="var">[gestor juridico / RH / diretor]</span>. ROLE: Advogado eficiente e claro.
+PONTOS: <span class="var">[listar]</span></div>
+    </div>
+
+    <h3>Categoria: Produtividade</h3>
+
+    <div class="card">
+        <h4><span class="clear-letter" style="width:24px;height:24px;line-height:24px;font-size:0.8em;border-radius:5px;">11</span> Resumo de Processo em Lote</h4>
+        <div class="copy-box" style="font-size:0.8em;">CONTEXTO: Assumi lote de <span class="var">[X]</span> processos de <span class="var">[area]</span>. Preciso entender cada um rapidamente.
+LIMITE: Foque em: partes, pedidos, fase, risco, acao recomendada.
+EXEMPLO: Tabela: 1) Processo, 2) Partes e pedidos, 3) Fase, 4) Risco (alto/medio/baixo), 5) Valor, 6) Prazo, 7) Recomendacao (defender/acordar/recorrer).
+AUDIENCIA: Eu e equipe, para gestao. ROLE: Assistente juridico de gestao de acervo.
+DOCUMENTOS: <span class="var">[colar iniciais ou resumo]</span></div>
+    </div>
+
+    <div class="card">
+        <h4><span class="clear-letter" style="width:24px;height:24px;line-height:24px;font-size:0.8em;border-radius:5px;">12</span> Checklist de Audiencia de Defesa</h4>
+        <div class="copy-box" style="font-size:0.8em;">CONTEXTO: Audiencia <span class="var">[instrucao/julgamento]</span> em acao contra banco/empresa. Reclamante pede <span class="var">[pedidos]</span>.
+LIMITE: Pratico. Foque no que posso esquecer. Padronizavel.
+EXEMPLO: 1) Documentos para levar, 2) Perguntas para testemunha da empresa, 3) Contraditas, 4) Pontos de defesa, 5) Objecoes provaveis, 6) Parametros de acordo.
+AUDIENCIA: Eu mesmo. ROLE: Advogado experiente em audiencias de defesa.
+DETALHES: <span class="var">[inserir]</span></div>
+    </div>
+
+    <div class="tip-box">
+        <strong>Como usar as cartas:</strong> Escolha a carta adequada a tarefa. Copie o prompt. Preencha os campos entre [ ]. Cole na ferramenta (preferencialmente Claude com Extended Thinking para producao, ChatGPT/Perplexity para pesquisa). As cartas de pesquisa (1, 2, 3, 7, 8) incluem AUTOCHECAGEM.
+    </div>
+
+    <div class="footer">Apostila IA na Advocacia — INTEIA — p. 12</div>
+</div>
+
+<!-- ==================== PAGINA 13 (ex-13): SEGURANCA ==================== -->
+<div class="page">
+    <div class="page-header">
+        <div class="logo-sm">IA</div>
+        <div class="page-header-text">
+            <h2>Parte 4 — Seguranca e Regulacao</h2>
+            <p>9. Protocolo de Seguranca — 5 Regras Inegociaveis</p>
+        </div>
+    </div>
+
+    <p>Casos reais que justificam cada regra: <strong>Samsung 2023</strong> — engenheiros colaram codigo proprietario no ChatGPT, empresa baniu a ferramenta. <strong>Mata vs Avianca 2023</strong> — advogado citou 6 casos inventados pela IA, foi sancionado. <strong>206 alucinacoes</strong> documentadas em tribunais. <strong>66 sancoes</strong> a advogados por uso inadequado de IA.</p>
+
+    <div class="rule-card">
+        <h4>Regra 1: Anonimizar SEMPRE</h4>
+        <p>Nunca enviar para IA: nome real, CPF, CNPJ, numero de processo, valores exatos.</p>
+        <div class="anon-row">
+            <div class="anon-before">Banco do Brasil S.A.</div>
+            <div class="anon-arrow">&rarr;</div>
+            <div class="anon-after">Banco XYZ</div>
+        </div>
+        <div class="anon-row">
+            <div class="anon-before">Joao Silva, CPF 012.345.678-90</div>
+            <div class="anon-arrow">&rarr;</div>
+            <div class="anon-after">Empregado A</div>
+        </div>
+        <div class="anon-row">
+            <div class="anon-before">Proc. 0001234-56.2025.5.10.0001</div>
+            <div class="anon-arrow">&rarr;</div>
+            <div class="anon-after">Processo XXXXX</div>
+        </div>
+        <div class="anon-row">
+            <div class="anon-before">CNPJ 00.000.000/0001-91, Ag. 1234</div>
+            <div class="anon-arrow">&rarr;</div>
+            <div class="anon-after">[remover completamente]</div>
+        </div>
+    </div>
+
+    <div class="rule-card">
+        <h4>Regra 2: Verificar TODA citacao</h4>
+        <p>Clicar no link. NAO apenas ler — <strong>CLICAR</strong>. Se o link nao abrir a decisao citada, DESCARTAR. Em contencioso de massa, um erro se multiplica por centenas.</p>
+    </div>
+
+    <div class="rule-card">
+        <h4>Regra 3: Revisar TUDO</h4>
+        <p>Output de IA e rascunho, NUNCA produto final. Em contencioso de massa: revisar amostra de 5 contestacoes antes de replicar para 200. Um erro multiplicado por 200 = desastre.</p>
+    </div>
+
+    <div class="rule-card">
+        <h4>Regra 4: Registrar uso</h4>
+        <p>Transparencia com tribunal quando exigido (CNJ 615/2025). Modelo de nota de rodape:</p>
+        <div class="copy-box" style="font-size:0.85em; font-style:italic;">Peca elaborada com auxilio de ferramenta de IA generativa, com revisao integral pelo advogado subscritor, nos termos da Resolucao CNJ 615/2025.</div>
+    </div>
+
+    <div class="rule-card">
+        <h4>Regra 5: Humano decide</h4>
+        <p>IA sugere, advogado assina. Exemplo: IA pode sugerir acordo de R$ 25.000. Mas so o advogado sabe que aquele juiz condena em R$ 60.000 naquela vara. Contexto humano > output de IA.</p>
+    </div>
+
+    <div class="footer">Apostila IA na Advocacia — INTEIA — p. 13</div>
+</div>
+
+<!-- ==================== PAGINA 14: REGULACAO ==================== -->
+<div class="page">
+    <div class="page-header">
+        <div class="logo-sm">IA</div>
+        <div class="page-header-text">
+            <h2>10. Regulacao: CNJ e OAB</h2>
+            <p>O que a regulacao diz sobre uso de IA na advocacia</p>
+        </div>
+    </div>
+
+    <div class="card" style="border-color:rgba(214,158,46,0.2);">
+        <h4 style="color:#d69e2e;">CNJ Resolucao 615/2025</h4>
+        <p><strong>O que e:</strong> Diretrizes para uso de inteligencia artificial no Poder Judiciario brasileiro.</p>
+        <p><strong>Pontos-chave para advogados:</strong></p>
+        <ul style="margin-left:16px; font-size:0.92em;">
+            <li>Obrigatorio declarar uso de IA quando o juizo exigir</li>
+            <li>O advogado e responsavel por todo conteudo gerado por IA</li>
+            <li>IA nao substitui a decisao humana</li>
+            <li>Transparencia e verificacao sao principios centrais</li>
+        </ul>
+        <p style="font-size:0.85em; color:#94a3b8; margin-top:8px;">Link: atos.cnj.jus.br/atos/detalhar/6001</p>
+    </div>
+
+    <div class="card" style="border-color:rgba(214,158,46,0.2);">
+        <h4 style="color:#d69e2e;">OAB Recomendacao 001/2024</h4>
+        <p><strong>O que e:</strong> Recomendacoes da Ordem para uso de IA generativa na advocacia.</p>
+        <p><strong>Pontos-chave:</strong></p>
+        <ul style="margin-left:16px; font-size:0.92em;">
+            <li>Advogado pode usar IA como ferramenta auxiliar</li>
+            <li>Revisao humana integral e obrigatoria</li>
+            <li>Dados do cliente devem ser protegidos (anonimizacao)</li>
+            <li>Responsabilidade profissional permanece com o advogado</li>
+        </ul>
+        <p style="font-size:0.85em; color:#94a3b8; margin-top:8px;">Link: oab.org.br/noticia/62704</p>
+    </div>
+
+    <h2>3 Perguntas que Voce Vai Receber</h2>
+
+    <div class="card">
+        <h4>"Posso usar IA sem declarar ao juiz?"</h4>
+        <p style="color:#94a3b8;">CNJ 615/2025: obrigatorio quando o juizo exigir. Na pratica: use, revise, seja transparente quando perguntado. Tenha sempre a nota de rodape pronta.</p>
+    </div>
+
+    <div class="card">
+        <h4>"Quanto custa?"</h4>
+        <p style="color:#94a3b8;">ChatGPT Plus: US$ 20/mes. Claude Pro: US$ 20/mes. Perplexity Pro: US$ 20/mes. <strong style="color:#d69e2e;">Invista R$ 100/mes, economize 20h/mes.</strong> Versoes gratuitas ja funcionam para comecar.</p>
+    </div>
+
+    <div class="card">
+        <h4>"E se o cliente descobrir que usei IA?"</h4>
+        <p style="color:#94a3b8;">Voce usa Google, calculadora, modelos de peca. IA e mais uma ferramenta. O que importa: <strong>qualidade do trabalho + verificacao humana</strong>. O cliente quer resultado, nao saber que ferramenta voce usou.</p>
+    </div>
+
+    <div class="footer">Apostila IA na Advocacia — INTEIA — p. 14</div>
+</div>
+
+<!-- ==================== PAGINA 15: ESCALA + IMPLEMENTACAO ==================== -->
+<div class="page">
+    <div class="page-header">
+        <div class="logo-sm">IA</div>
+        <div class="page-header-text">
+            <h2>Parte 5 — Escala e Implementacao</h2>
+            <p>11. Pensando em Escala | 12. Plano de Implementacao</p>
+        </div>
+    </div>
+
+    <h2>11. Pensando em Escala</h2>
+    <p>Voce nao faz 1 contestacao — faz 50, 200, 450. O segredo: separar o que e FIXO do que MUDA.</p>
+
+    <div class="two-col">
+        <div class="card" style="border-color:rgba(34,197,94,0.2);">
+            <h4 style="color:#86efac;">O que e FIXO (template)</h4>
+            <ul style="margin-left:16px; font-size:0.92em;">
+                <li>Estrutura da peca (qualificacao, preliminares, merito...)</li>
+                <li>Teses padrao de defesa</li>
+                <li>Jurisprudencia consolidada</li>
+                <li>Linguagem e tom profissional</li>
+                <li>Pedidos finais</li>
+            </ul>
+        </div>
+        <div class="card" style="border-color:rgba(214,158,46,0.2);">
+            <h4 style="color:#d69e2e;">O que MUDA (variaveis)</h4>
+            <ul style="margin-left:16px; font-size:0.92em;">
+                <li>[NOME_RECLAMANTE]</li>
+                <li>[PEDIDOS_ESPECIFICOS]</li>
+                <li>[FATOS_DO_CASO]</li>
+                <li>[VALORES]</li>
+                <li>[DOCUMENTOS_JUNTADOS]</li>
+            </ul>
+        </div>
+    </div>
+
+    <p><strong>Metodo:</strong> Crie 1 contestacao perfeita com CLEAR. Substitua dados por [VARIAVEIS]. Salve como template. Para cada novo caso: preencha as variaveis e rode. Revise amostra de 5 antes de replicar para 200.</p>
+
+    <h2>12. Plano de Implementacao do Escritorio</h2>
+
+    <div class="card" style="border-color:rgba(214,158,46,0.2);">
+        <h4 style="color:#d69e2e;">Quem e o Campeao de IA do escritorio?</h4>
+        <p style="color:#94a3b8;">A pessoa que lidera a adocao, tira duvidas, mantem o padrao de qualidade. Geralmente o mais entusiasmado do curso.</p>
+        <div class="commit-line"></div>
+    </div>
+
+    <div class="card" style="border-color:rgba(214,158,46,0.2);">
+        <h4 style="color:#d69e2e;">Qual o primeiro processo a automatizar com IA?</h4>
+        <p style="color:#94a3b8;">O mais repetitivo, que consome mais horas, que tem mais volume. Sugestao: contestacao padrao de horas extras.</p>
+        <div class="commit-line"></div>
+    </div>
+
+    <div class="card" style="border-color:rgba(214,158,46,0.2);">
+        <h4 style="color:#d69e2e;">Como medir resultado em 30 dias?</h4>
+        <p style="color:#94a3b8;">Tempo medio de producao ANTES vs DEPOIS. Pecas produzidas por semana. Taxa de revisao necessaria.</p>
+        <div class="commit-line"></div>
+    </div>
+
+    <div class="info-box">
+        <strong>Buddy System:</strong> Cada participante inseguro faz dupla com um avancado. Nas primeiras 2 semanas, o buddy ajuda nas primeiras tentativas reais via WhatsApp.
+    </div>
+
+    <div class="footer">Apostila IA na Advocacia — INTEIA — p. 15</div>
+</div>
+
+<!-- ==================== PAGINA 16: CHECKLIST + COMPROMISSO ==================== -->
+<div class="page">
+    <div class="page-header">
+        <div class="logo-sm">IA</div>
+        <div class="page-header-text">
+            <h2>13. Checklist Diario | 14. Recursos</h2>
+            <p>Referencia rapida para o dia a dia</p>
+        </div>
+    </div>
+
+    <h2>13. Checklist — Antes de Usar IA</h2>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin:10px 0;">
+        <div class="card" style="display:flex; align-items:center; gap:8px; padding:10px;">
+            <span style="color:#d69e2e; font-size:1.2em;">&#9744;</span> Dados anonimizados?
+        </div>
+        <div class="card" style="display:flex; align-items:center; gap:8px; padding:10px;">
+            <span style="color:#d69e2e; font-size:1.2em;">&#9744;</span> Busca web ativada?
+        </div>
+        <div class="card" style="display:flex; align-items:center; gap:8px; padding:10px;">
+            <span style="color:#d69e2e; font-size:1.2em;">&#9744;</span> Thinking mode ligado?
+        </div>
+        <div class="card" style="display:flex; align-items:center; gap:8px; padding:10px;">
+            <span style="color:#d69e2e; font-size:1.2em;">&#9744;</span> Prompt usa CLEAR?
+        </div>
+        <div class="card" style="display:flex; align-items:center; gap:8px; padding:10px;">
+            <span style="color:#d69e2e; font-size:1.2em;">&#9744;</span> Pedi links para citacoes?
+        </div>
+        <div class="card" style="display:flex; align-items:center; gap:8px; padding:10px;">
+            <span style="color:#d69e2e; font-size:1.2em;">&#9744;</span> Vou verificar CADA link?
+        </div>
+        <div class="card" style="display:flex; align-items:center; gap:8px; padding:10px;">
+            <span style="color:#d69e2e; font-size:1.2em;">&#9744;</span> Vou pedir autochecagem?
+        </div>
+        <div class="card" style="display:flex; align-items:center; gap:8px; padding:10px;">
+            <span style="color:#d69e2e; font-size:1.2em;">&#9744;</span> Vou revisar TUDO?
+        </div>
+    </div>
+
+    <h2>14. Recursos para Continuar Aprendendo</h2>
+
+    <table class="data-table">
+        <tr>
+            <th>Recurso</th>
+            <th>O que e</th>
+            <th>Onde</th>
+        </tr>
+        <tr>
+            <td><strong>AB2L</strong></td>
+            <td>Associacao de Lawtechs e Legaltechs</td>
+            <td>ab2l.org.br</td>
+        </tr>
+        <tr>
+            <td><strong>Podcast Direito 4.0</strong></td>
+            <td>Episodios sobre direito e tecnologia</td>
+            <td>Spotify</td>
+        </tr>
+        <tr>
+            <td><strong>FGV Regulacao da IA</strong></td>
+            <td>Curso online gratuito, 6.400+ alunos</td>
+            <td>educacao-executiva.fgv.br</td>
+        </tr>
+        <tr>
+            <td><strong>12 Cartas CLEAR</strong></td>
+            <td>Prompts do curso (versao digital)</td>
+            <td>igormorais123.github.io/curso-ia-paixao-cortes</td>
+        </tr>
+        <tr>
+            <td><strong>CNJ 615/2025</strong></td>
+            <td>Resolucao sobre IA no Judiciario</td>
+            <td>atos.cnj.jus.br/atos/detalhar/6001</td>
+        </tr>
+        <tr>
+            <td><strong>OAB Rec. 001/2024</strong></td>
+            <td>Recomendacao sobre IA na advocacia</td>
+            <td>oab.org.br/noticia/62704</td>
+        </tr>
+    </table>
+
+    <div style="border:3px solid #d69e2e; border-radius:14px; padding:25px; margin:20px 0; text-align:center;">
+        <h3 style="color:#d69e2e; margin-bottom:10px; font-size:1.3em;">Meu Compromisso</h3>
+        <p>Na segunda-feira, vou usar IA para:</p>
+        <div class="commit-line"></div>
+        <div class="commit-line"></div>
+        <div class="commit-line"></div>
+        <p style="margin-top: 18px; font-size: 0.9em; color: #64748b;">
+            Nome: _________________________________ Data: ___/___/2026
+        </p>
+    </div>
+
+    <div style="text-align:center; padding:20px; background:rgba(214,158,46,0.06); border-radius:12px; border:1px solid rgba(214,158,46,0.15);">
+        <p style="font-size: 1.15em; color: #d69e2e; font-weight: 600; font-style: italic;">
+            "Voce nao aprendeu uma ferramenta.<br>
+            Voce descobriu uma versao mais poderosa de voce."
+        </p>
+    </div>
+
+    <div class="footer">
+        <strong>Apostila IA na Advocacia</strong><br>
+        INTEIA — Instituto de Treinamento e Estudos em Inteligencia Artificial<br>
+        Curso IA na Advocacia — Paixao Cortes Advogados | Brasilia-DF<br>
+        Dr. Igor Morais Vasconcelos | igormorais123@gmail.com | (61) 98115-7120<br>
+        Fevereiro 2026 — v3.3
+    </div>
+</div>
+
+<button class="print-btn no-print" onclick="window.print()">Imprimir / Salvar como PDF</button>
+
+</body>
+</html>

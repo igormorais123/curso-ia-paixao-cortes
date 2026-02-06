@@ -33,11 +33,24 @@
 
 | Letra | Significado | Exemplo |
 |-------|-------------|---------|
-| **C** | Contexto | "Sou advogado de defesa de banco em contencioso de massa..." |
+| **C** | Contexto | "Sou advogado de escritorio full-service, atuo em [area]..." |
 | **L** | Limite | "Nao cite jurisprudencia sem link verificavel..." |
-| **E** | Exemplo | "Estrutura desejada: 1) Qualificacao, 2) Preliminares..." |
-| **A** | Audiencia | "Juiz do trabalho de vara de Brasilia" |
-| **R** | Role | "Advogado empresarial experiente em bancario" |
+| **E** | Exemplo | "Estrutura desejada: 1) Qualificacao, 2) Fatos, 3) Fundamentos..." |
+| **A** | Audiencia | "Juiz de [vara civel / trabalhista / federal] de Brasilia" |
+| **R** | Role | "Advogado experiente em [area], linguagem tecnica e objetiva" |
+
+---
+
+## Tribunais para Verificacao
+
+| Tribunal | Area | Link |
+|----------|------|------|
+| **TJDFT** | Civil, Consumidor | tjdft.jus.br/jurisprudencia |
+| **TRT-10** | Trabalhista (BSB) | trt10.jus.br/jurisprudencia |
+| **TRF-1** | Administrativo, Tributario | trf1.jus.br/jurisprudencia |
+| **TST** | Trabalhista (nacional) | jurisprudencia.tst.jus.br |
+| **STJ** | Civil, Consumidor (nacional) | scon.stj.jus.br |
+| **STF** | Constitucional | portal.stf.jus.br/jurisprudencia |
 
 ---
 
@@ -92,5 +105,5 @@ _____________________________________________
 
 ---
 
-*Curso IA na Advocacia — Paixao Cortes Advogados — 2026*
-*Material de apoio. Guarde esta folha.*
+*Curso IA na Advocacia v4.0 — Paixao Cortes Advogados — 2026*
+*Multi-area | 6 areas do direito | Material de apoio. Guarde esta folha.*

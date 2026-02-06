@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12 Cartas CLEAR | Curso IA Advocacia v3.1</title>
+    <title>12 Cartas CLEAR | Curso IA Advocacia v4.0</title>
     <style>
         * {
             margin: 0;
@@ -272,8 +272,8 @@
     <div class="container">
         <header>
             <h1>12 Cartas de Prompts Juridicos</h1>
-            <p class="subtitle">Framework CLEAR | Defesa Empresarial</p>
-            <span class="clear-badge">Curso IA Advocacia v3.1</span>
+            <p class="subtitle">Framework CLEAR | Multi-area (6 areas do direito)</p>
+            <span class="clear-badge">Curso IA Advocacia v4.0</span>
         </header>
 
         <div class="instructions">
@@ -302,7 +302,7 @@
         <div class="cards-grid" id="cardsGrid"></div>
 
         <footer>
-            <p>Curso IA na Advocacia | Paixao Cortes Advogados</p>
+            <p>Curso IA na Advocacia v4.0 | Paixao Cortes Advogados</p>
             <p>Protocolo: Busca + Link + Thinking + Checagem</p>
         </footer>
     </div>
@@ -312,194 +312,274 @@
             {
                 id: 1,
                 category: "elaboracao",
-                title: "Contestacao Trabalhista em Massa",
-                prompt: `CONTEXTO: Sou advogado de escritorio que defende grande banco em contencioso trabalhista de massa. Preciso de contestacao para reclamacao trabalhista que pede [horas extras / equiparacao / dano moral]. Volume: temos 300+ acoes similares.
+                title: "Peticao Inicial / Contestacao",
+                prompt: `CONTEXTO: Sou advogado de escritorio full-service com 30+ anos.
+Atuo em [civil / trabalhista / consumidor / administrativo / tributario / comercial].
+Preciso de [peticao inicial / contestacao / defesa] para acao que envolve
+[descrever pedidos ou acusacoes principais].
 
-LIMITE: Nao cite jurisprudencia especifica sem buscar na internet com link. Foque em teses de defesa consolidadas. Estrutura replicavel.
+LIMITE: Nao cite jurisprudencia especifica sem buscar na internet com
+link. Foque em teses consolidadas. Estrutura replicavel.
 
-EXEMPLO: Estrutura desejada: 1) Qualificacao da reclamada, 2) Sintese da inicial, 3) Preliminares, 4) Impugnacao ponto a ponto, 5) Merito (teses de defesa), 6) Pedidos, 7) Documentos.
+EXEMPLO: Estrutura desejada: 1) Qualificacao das partes,
+2) Sintese dos fatos, 3) Preliminares (se aplicavel),
+4) Fundamentos juridicos ponto a ponto, 5) Pedidos, 6) Documentos.
 
-AUDIENCIA: Juiz do trabalho de vara de Brasilia.
+AUDIENCIA: Juiz de [vara civel / vara do trabalho / vara federal /
+vara da fazenda publica] de [Brasilia / Sao Paulo / Goiania].
 
-ROLE: Advogado empresarial experiente em contencioso bancario de massa, linguagem tecnica, objetiva, sem excesso.
+ROLE: Advogado experiente em [area], linguagem tecnica, objetiva,
+sem excesso.
 
-FATOS DO CASO: [inserir pedidos da inicial e fatos a impugnar]`
+FATOS DO CASO: [inserir situacao, pedidos e fatos relevantes]
+
+AUTOCHECAGEM: Ao final, revise todas as citacoes. Confirme links
+e numeros de processo. Sinalize duvidas com [VERIFICAR].`
             },
             {
                 id: 2,
                 category: "elaboracao",
-                title: "Recurso Ordinario (Defesa)",
-                prompt: `CONTEXTO: Sou advogado da reclamada (banco/empresa de grande porte). Fomos condenados em primeira instancia. Preciso recorrer dos pedidos de [horas extras / equiparacao / dano moral].
+                title: "Recurso (Apelacao / Ordinario / Especial)",
+                prompt: `CONTEXTO: Sou advogado de escritorio full-service.
+Area: [civil / trabalhista / consumidor / administrativo / tributario / comercial].
+Fomos [condenados / tivemos pedido indeferido] em [primeira instancia / segunda instancia].
+Preciso de [apelacao / recurso ordinario / recurso especial / agravo].
 
-LIMITE: Nao cite acordaos sem buscar na internet com link verificavel. Para jurisprudencia: use Perplexity ou ChatGPT com Deep Research, sempre com link para tribunal. Foque nos fundamentos para reforma.
+LIMITE: Nao cite acordaos sem buscar na internet com link verificavel.
+Foque nos fundamentos para reforma da decisao.
 
-EXEMPLO: Estrutura: 1) Tempestividade e preparo, 2) Sintese da sentenca, 3) Razoes de reforma por pedido condenatorio, 4) Pedido de provimento total ou parcial.
+EXEMPLO: Estrutura: 1) Tempestividade e preparo, 2) Sintese da decisao
+recorrida, 3) Razoes de reforma por ponto, 4) Pedido de provimento.
 
-AUDIENCIA: Desembargadores do TRT.
+AUDIENCIA: [Desembargadores do TJDFT / TRT / TRF-1 / Ministros do STJ / TST].
 
-ROLE: Advogado recursal de contencioso empresarial, tecnico e preciso.
+ROLE: Advogado recursal experiente, tecnico e preciso.
 
-PONTOS A ATACAR: [inserir fundamentos da sentenca condenatoria]`
+PONTOS A ATACAR: [inserir fundamentos da decisao recorrida]
+
+AUTOCHECAGEM: Ao final, revise todas as citacoes. Confirme links
+e numeros de processo. Sinalize duvidas com [VERIFICAR].`
             },
             {
                 id: 3,
                 category: "elaboracao",
-                title: "Defesa em Acao Civil Publica",
-                prompt: `CONTEXTO: Empresa cliente (banco/aerea) e re em acao civil publica do MPT sobre [pratica trabalhista]. Risco de condenacao em obrigacao de fazer + dano moral coletivo.
+                title: "Parecer Juridico",
+                prompt: `CONTEXTO: Sou advogado de escritorio full-service, area de
+[civil / trabalhista / consumidor / administrativo / tributario / comercial].
+Cliente pergunta sobre [situacao juridica: viabilidade de acao,
+risco de conduta, interpretacao de norma, etc.].
 
-LIMITE: Nao cite jurisprudencia sem busca na internet com link. Foque em demonstrar regularidade das praticas empresariais.
+LIMITE: Seja honesto sobre incertezas. Nao prometa resultados.
+Considere jurisprudencia do [tribunal relevante] da regiao.
+Para citar jurisprudencia, buscar na internet com link.
 
-EXEMPLO: Estrutura: 1) Preliminares (legitimidade, interesse), 2) Impugnacao dos fatos, 3) Regularidade demonstrada com documentos, 4) Ausencia de dano coletivo, 5) Pedidos.
+EXEMPLO: Formato: 1) Consulta, 2) Fundamentacao legal,
+3) Jurisprudencia relevante (com links), 4) Analise do caso,
+5) Riscos quantificados, 6) Conclusao e recomendacao.
 
-AUDIENCIA: Juiz da vara do trabalho.
+AUDIENCIA: [Diretor juridico / cliente pessoa fisica / gestor publico].
 
-ROLE: Advogado empresarial senior em defesa de litigios coletivos.
+ROLE: Parecerista de [area], claro e objetivo.
 
-FATOS: [inserir resumo da ACP e praticas questionadas]`
+CONSULTA: [inserir pergunta do cliente]
+
+AUTOCHECAGEM: Ao final, revise todas as citacoes. Confirme links
+e numeros de processo. Sinalize duvidas com [VERIFICAR].`
             },
             {
                 id: 4,
                 category: "elaboracao",
-                title: "Acordo em Massa — Proposta Padronizada",
-                prompt: `CONTEXTO: Escritorio defende banco/empresa com 500+ acoes trabalhistas similares. Diretoria autorizou faixa de acordo. Preciso de proposta padronizada por faixa de pedido.
+                title: "Contrato / Minuta Contratual",
+                prompt: `CONTEXTO: Sou advogado de escritorio full-service.
+Area: [civil / comercial / trabalhista / administrativo].
+Preciso de [contrato / minuta / aditivo] para [tipo de relacao:
+prestacao de servicos, compra e venda, locacao, parceria, etc.].
 
-LIMITE: Valores genericos (faixas). Linguagem que minimize admissao de responsabilidade. Clausula de quitacao ampla.
+LIMITE: Inclua clausulas de protecao para [meu cliente].
+Considere legislacao vigente. Linguagem clara e precisa.
 
-EXEMPLO: Formato: 1) Contextualizacao (sem admissao de culpa), 2) Proposta por faixa de valor, 3) Forma de pagamento, 4) Clausula de quitacao, 5) Prazo de aceite.
+EXEMPLO: Estrutura: 1) Qualificacao das partes, 2) Objeto,
+3) Obrigacoes de cada parte, 4) Valor e forma de pagamento,
+5) Prazo e rescisao, 6) Penalidades, 7) Foro.
 
-AUDIENCIA: Juiz do trabalho e advogado do reclamante.
+AUDIENCIA: [Ambas as partes / apenas meu cliente para revisao].
 
-ROLE: Advogado negociador de contencioso de massa.
+ROLE: Advogado contratualista experiente em [area].
 
-PARAMETROS: [inserir faixas de valor autorizadas e perfil das acoes]`
+PARAMETROS: [inserir tipo de negocio, valores, prazos, partes]`
             },
             {
                 id: 5,
                 category: "analise",
-                title: "Analise de Risco para Empresa",
-                prompt: `CONTEXTO: Cliente corporativo (banco/aerea) quer avaliar risco de [pratica trabalhista ou politica interna]. Preciso mapear exposicao.
+                title: "Analise de Risco Juridico",
+                prompt: `CONTEXTO: Sou advogado de escritorio full-service.
+Area: [civil / trabalhista / consumidor / administrativo / tributario / comercial].
+Cliente quer avaliar risco de [conduta / operacao / litigo em andamento].
 
-LIMITE: Nao afirme certeza sobre decisoes judiciais. Apresente cenarios com probabilidade. Considere volume de acoes similares.
+LIMITE: Nao afirme certeza sobre decisoes judiciais. Apresente
+cenarios com probabilidade. Considere jurisprudencia recente.
 
-EXEMPLO: Formato: 1) Pratica analisada, 2) Riscos por cenario (condenacao total/parcial/improcedencia) com probabilidade, 3) Exposicao financeira estimada (unitaria e total do acervo), 4) Recomendacoes, 5) Alternativas de mitigacao.
+EXEMPLO: Formato: 1) Situacao analisada, 2) Riscos por cenario
+(favoravel / parcial / desfavoravel) com probabilidade estimada,
+3) Exposicao financeira, 4) Recomendacoes, 5) Alternativas de mitigacao.
 
-AUDIENCIA: Diretor juridico e RH da empresa, sem formacao juridica.
+AUDIENCIA: [Diretor juridico / empresario / gestor publico],
+com ou sem formacao juridica.
 
-ROLE: Consultor trabalhista preventivo de grandes empresas.
+ROLE: Consultor juridico preventivo de [area], objetivo e claro.
 
-SITUACAO: [inserir pratica e numero estimado de empregados afetados]`
+SITUACAO: [inserir pratica, operacao ou litigo a avaliar]`
             },
             {
                 id: 6,
                 category: "analise",
-                title: "Revisao de Peca de Defesa",
-                prompt: `CONTEXTO: Advogado junior do escritorio redigiu esta [contestacao/recurso] para caso de contencioso bancario. Preciso revisar antes de protocolar.
+                title: "Revisao de Peca",
+                prompt: `CONTEXTO: Advogado [junior / da equipe] redigiu esta
+[peticao / contestacao / recurso / parecer] para caso de [area].
+Preciso revisar antes de protocolar.
 
-LIMITE: Nao reescreva tudo. Aponte problemas especificos com sugestoes de correcao. Foco em: teses fracas, fundamentos faltantes, oportunidades de defesa nao exploradas.
+LIMITE: Nao reescreva tudo. Aponte problemas especificos com
+sugestoes de correcao. Foco em: argumentos fracos, fundamentos
+faltantes, oportunidades nao exploradas.
 
-EXEMPLO: Formato: 1) Pontos fortes, 2) Teses de defesa ausentes, 3) Problemas de fundamentacao, 4) Oportunidades perdidas, 5) Sugestoes linha a linha.
+EXEMPLO: Formato: 1) Pontos fortes, 2) Teses/argumentos ausentes,
+3) Problemas de fundamentacao, 4) Oportunidades perdidas,
+5) Sugestoes linha a linha.
 
-AUDIENCIA: Advogado junior, para aprendizado e melhoria.
+AUDIENCIA: Advogado da equipe, para aprendizado e melhoria.
 
-ROLE: Revisor senior de contencioso empresarial, exigente mas construtivo.
+ROLE: Revisor senior de [area], exigente mas construtivo.
 
-PECA: [colar peca de defesa]`
+PECA: [colar peca para revisao]`
             },
             {
                 id: 7,
                 category: "analise",
-                title: "Parecer para Cliente Corporativo",
-                prompt: `CONTEXTO: Banco/empresa cliente pergunta se pode [pratica trabalhista: alterar jornada, terceirizar setor, implementar banco de horas, etc.]. Preciso de parecer com analise de risco.
+                title: "Pesquisa Jurisprudencial Dirigida",
+                prompt: `CONTEXTO: Sou advogado de escritorio full-service, area de
+[civil / trabalhista / consumidor / administrativo / tributario / comercial].
+Preciso de jurisprudencia recente sobre [tema especifico].
 
-LIMITE: Seja honesto sobre incertezas. Nao prometa resultados. Considere jurisprudencia do TST e TRT da regiao. Para citar jurisprudencia, buscar na internet com link.
+LIMITE: Buscar na internet. APENAS decisoes com link verificavel
+para o site do tribunal. Incluir: numero do processo, relator,
+data, ementa resumida e link.
 
-EXEMPLO: Formato: 1) Consulta, 2) Fundamentacao legal, 3) Jurisprudencia relevante (com links), 4) Analise do caso, 5) Riscos quantificados, 6) Conclusao e recomendacao.
+EXEMPLO: Formato: tabela com colunas — Tribunal, Processo,
+Relator, Data, Ementa (2 linhas), Link.
 
-AUDIENCIA: Diretor juridico de grande empresa.
+AUDIENCIA: Eu mesmo, para fundamentar peca processual.
 
-ROLE: Parecerista trabalhista empresarial, claro e objetivo.
+ROLE: Pesquisador juridico preciso e criterioso.
 
-CONSULTA: [inserir pergunta do cliente corporativo]`
+PESQUISAR: [tema] no [TJDFT / TRT-10 / TRF-1 / STJ / TST / STF]
+Periodo: ultimos 2 anos.
+
+AUTOCHECAGEM: Ao final, revise todas as citacoes. Confirme links
+e numeros de processo. Sinalize duvidas com [VERIFICAR].`
             },
             {
                 id: 8,
                 category: "analise",
-                title: "Estrategia de Contencioso de Massa",
-                prompt: `CONTEXTO: Empresa cliente enfrenta onda de [tipo de acao] — 50 novas acoes por mes com pedidos similares. Preciso definir estrategia global.
+                title: "Estrategia Processual",
+                prompt: `CONTEXTO: Escritorio full-service, area de
+[civil / trabalhista / consumidor / administrativo / tributario / comercial].
+Temos volume significativo de [tipo de acao/processo] com
+perfil similar.
 
-LIMITE: Nao sugira taticas antieticas. Considere custo-beneficio em escala. Avaliar: defender tudo vs acordar por faixa.
+LIMITE: Nao sugira taticas antieticas. Considere custo-beneficio.
+Avaliar: defender tudo vs acordar vs propor solucao alternativa.
 
-EXEMPLO: Formato: 1) Diagnostico do acervo, 2) Perfil das acoes (pedidos recorrentes, valores medios), 3) Teses de defesa padronizadas, 4) Politica de acordo por faixa, 5) KPIs de acompanhamento.
+EXEMPLO: Formato: 1) Diagnostico, 2) Perfil dos casos
+(pedidos recorrentes, valores medios), 3) Teses padronizadas,
+4) Politica de acordo/negociacao, 5) KPIs de acompanhamento.
 
-AUDIENCIA: Socios do escritorio e diretor juridico do cliente.
+AUDIENCIA: Socios do escritorio e/ou diretor juridico do cliente.
 
-ROLE: Advogado estrategista de contencioso de massa.
+ROLE: Advogado estrategista de [area], visao de portfolio.
 
-DADOS: [inserir perfil das acoes e resultados recentes]`
+DADOS: [inserir perfil dos casos e resultados recentes]`
             },
             {
                 id: 9,
                 category: "comunicacao",
-                title: "Relatorio Mensal para Cliente Corporativo",
-                prompt: `CONTEXTO: Preciso enviar relatorio mensal do contencioso ao banco/empresa cliente. [X] acoes ativas, [Y] encerradas no mes, [Z] novas.
+                title: "Resumo para Cliente",
+                prompt: `CONTEXTO: Sou advogado de escritorio full-service, area de
+[civil / trabalhista / consumidor / administrativo / tributario / comercial].
+Preciso comunicar ao cliente [resultado / andamento / parecer].
 
-LIMITE: Maximo 2 paginas. Dados consolidados. Linguagem executiva. Foque em numeros, tendencias e recomendacoes.
+LIMITE: Maximo 1 pagina. Linguagem [executiva / acessivel a leigo].
+Foque em: fato principal, impacto, proximo passo.
 
-EXEMPLO: Formato: 1) Dashboard (acoes ativas/encerradas/novas), 2) Resultados do mes (ganhos/perdas/acordos), 3) Exposicao financeira, 4) Tendencias observadas, 5) Acoes recomendadas, 6) Proximos passos.
+EXEMPLO: Formato: 1) Resumo em 1 frase, 2) O que aconteceu,
+3) O que significa para o cliente, 4) Proximo passo,
+5) Prazo (se houver).
 
-AUDIENCIA: Diretor juridico de banco, sem tempo, quer numeros.
+AUDIENCIA: [Diretor juridico / empresario / pessoa fisica / gestor publico].
 
-ROLE: Advogado gestor de contencioso que reporta com clareza.
+ROLE: Advogado que comunica com clareza — sem juridiques desnecessario.
 
-DADOS: [inserir numeros do mes]`
+INFORMACOES: [inserir fatos, decisao, resultado ou andamento]`
             },
             {
                 id: 10,
                 category: "comunicacao",
-                title: "E-mail para Cliente Corporativo",
-                prompt: `CONTEXTO: Preciso enviar e-mail para [destinatario no banco/empresa] sobre [resultado de audiencia / decisao / necessidade de documentos].
+                title: "E-mail Profissional",
+                prompt: `CONTEXTO: Preciso enviar e-mail para [cliente / colega / tribunal / orgao]
+sobre [resultado / solicitacao / informacao / prazo].
 
-LIMITE: Tom formal-corporativo. Maximo 3 paragrafos. Direto ao ponto. Sem juridiques desnecessario.
+LIMITE: Tom [formal / semiformal]. Maximo 3 paragrafos. Direto ao ponto.
+Sem juridiques desnecessario.
 
-EXEMPLO: Estrutura: saudacao, resultado/informacao principal em 1 frase, detalhamento breve, acao necessaria do cliente, despedida.
+EXEMPLO: Estrutura: saudacao, informacao principal em 1 frase,
+detalhamento breve, acao necessaria, despedida.
 
-AUDIENCIA: [gestor juridico / RH / diretor] de grande empresa.
+AUDIENCIA: [destinatario e perfil — juridico ou leigo].
 
-ROLE: Advogado que se comunica com clareza e eficiencia corporativa.
+ROLE: Advogado que se comunica com clareza e eficiencia.
 
 PONTOS A INCLUIR: [listar]`
             },
             {
                 id: 11,
                 category: "produtividade",
-                title: "Resumo de Processo em Lote",
-                prompt: `CONTEXTO: Assumi lote de [X] processos trabalhistas contra banco/empresa. Preciso entender rapidamente cada um para definir estrategia.
+                title: "Resumo de Processo",
+                prompt: `CONTEXTO: Assumi [X] processos de [area]. Preciso entender
+rapidamente cada um para definir estrategia.
 
-LIMITE: Foque em: partes, pedidos principais, fase processual, risco (alto/medio/baixo), acao recomendada.
+LIMITE: Foque em: partes, pedidos principais, fase processual,
+risco (alto/medio/baixo), acao recomendada.
 
-EXEMPLO: Formato tabular: 1) N. processo, 2) Reclamante e pedidos, 3) Fase, 4) Risco, 5) Valor estimado, 6) Proximo prazo, 7) Recomendacao (defender/acordar/recorrer).
+EXEMPLO: Formato tabular: 1) Processo, 2) Partes e pedidos,
+3) Fase, 4) Risco, 5) Valor estimado, 6) Proximo prazo,
+7) Recomendacao (defender / acordar / recorrer / aguardar).
 
-AUDIENCIA: Eu mesmo e equipe, para gestao do acervo.
+AUDIENCIA: Eu mesmo e equipe, para gestao dos casos.
 
-ROLE: Assistente juridico de contencioso de massa, eficiente.
+ROLE: Assistente juridico eficiente e objetivo.
 
 DOCUMENTOS: [colar iniciais ou resumo de cada processo]`
             },
             {
                 id: 12,
                 category: "produtividade",
-                title: "Checklist de Audiencia de Defesa",
-                prompt: `CONTEXTO: Tenho audiencia [instrucao/julgamento] em processo trabalhista contra banco/empresa. Reclamante pede [pedidos].
+                title: "Checklist de Audiencia / Sessao",
+                prompt: `CONTEXTO: Tenho [audiencia / sessao de julgamento / reuniao de mediacao]
+em processo de [area]. [Descrever tipo e pedidos].
 
-LIMITE: Seja pratico. Foque no que posso esquecer. Considere que e contencioso de massa — padronizar para replicar.
+LIMITE: Seja pratico. Foque no que posso esquecer. Considere
+especificidades do [tribunal/orgao].
 
-EXEMPLO: Formato: 1) Documentos para levar (guias GFIP, controle de jornada, holerites), 2) Perguntas para testemunha da empresa, 3) Contraditas possiveis, 4) Pontos para destacar em defesa, 5) Objecoes provaveis do reclamante, 6) Parametros de acordo.
+EXEMPLO: Formato: 1) Documentos para levar, 2) Perguntas para
+testemunha/perito, 3) Pontos principais a destacar,
+4) Objecoes provaveis da outra parte, 5) Parametros de acordo
+(se aplicavel), 6) Prazos e providencias pos-audiencia.
 
-AUDIENCIA: Eu mesmo, como lembrete padronizado.
+AUDIENCIA: Eu mesmo, como lembrete organizado.
 
-ROLE: Advogado experiente em audiencias trabalhistas de defesa.
+ROLE: Advogado experiente em [audiencias civeis / trabalhistas /
+sessoes administrativas / sustentacoes orais].
 
-DETALHES DO CASO: [inserir]`
+DETALHES: [inserir caso, partes, pedidos, data]`
             }
         ];
 

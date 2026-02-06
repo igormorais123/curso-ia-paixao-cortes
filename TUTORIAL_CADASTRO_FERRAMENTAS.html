@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial: Como Criar Suas Contas de IA — Passo a Passo</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        @page { size: A4; margin: 12mm; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.7;
+            font-size: 12pt;
+        }
+
+        .page {
+            max-width: 210mm;
+            margin: 0 auto 20px;
+            padding: 30px 35px;
+            background: #111a35;
+            border-radius: 16px;
+            box-shadow: 0 18px 45px rgba(9,14,34,0.12);
+            page-break-after: always;
+        }
+        .page:last-of-type { page-break-after: avoid; }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(214,158,46,0.3);
+        }
+
+        .logo-badge {
+            width: 48px; height: 48px;
+            background: linear-gradient(135deg, #d69e2e, #b7791f);
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-weight: 800; font-size: 1.2em;
+            box-shadow: 0 0 20px rgba(214,158,46,0.25);
+            flex-shrink: 0;
+        }
+
+        .header-text h1 {
+            font-size: 1.4em;
+            color: #d69e2e;
+            font-weight: 700;
+        }
+
+        .header-text p {
+            font-size: 0.85em;
+            color: #94a3b8;
+        }
+
+        h2 {
+            font-size: 1.3em;
+            color: #d69e2e;
+            margin: 25px 0 12px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid rgba(214,158,46,0.2);
+        }
+
+        h3 {
+            font-size: 1.05em;
+            color: #f3d994;
+            margin: 16px 0 8px;
+        }
+
+        .intro-box {
+            background: rgba(214,158,46,0.08);
+            border: 1px solid rgba(214,158,46,0.2);
+            border-radius: 12px;
+            padding: 18px;
+            margin: 15px 0;
+        }
+
+        .intro-box p { color: #cbd5e1; }
+
+        .step {
+            display: flex;
+            gap: 14px;
+            margin: 12px 0;
+            padding: 14px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 12px;
+        }
+
+        .step-num {
+            width: 36px; height: 36px;
+            background: linear-gradient(135deg, #d69e2e, #b7791f);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-weight: 700; font-size: 0.95em;
+            flex-shrink: 0;
+        }
+
+        .step-content { flex: 1; }
+
+        .step-content strong {
+            color: #f3d994;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .step-content p {
+            color: #94a3b8;
+            font-size: 0.95em;
+        }
+
+        .url-box {
+            display: inline-block;
+            background: #0f172a;
+            border: 1px solid rgba(214,158,46,0.3);
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-family: 'Consolas', monospace;
+            color: #d69e2e;
+            font-size: 1em;
+            margin: 5px 0;
+            letter-spacing: 0.5px;
+        }
+
+        .tip-box {
+            background: rgba(34,197,94,0.08);
+            border-left: 4px solid #22c55e;
+            padding: 12px 16px;
+            border-radius: 0 10px 10px 0;
+            margin: 10px 0;
+            font-size: 0.9em;
+            color: #86efac;
+        }
+
+        .warning-box {
+            background: rgba(239,68,68,0.08);
+            border-left: 4px solid #ef4444;
+            padding: 12px 16px;
+            border-radius: 0 10px 10px 0;
+            margin: 10px 0;
+            font-size: 0.9em;
+            color: #fca5a5;
+        }
+
+        .tool-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 20px 0 10px;
+            padding: 12px 16px;
+            border-radius: 12px;
+        }
+
+        .tool-header.chatgpt { background: rgba(16,163,127,0.12); border: 1px solid rgba(16,163,127,0.25); }
+        .tool-header.claude { background: rgba(214,158,46,0.12); border: 1px solid rgba(214,158,46,0.25); }
+        .tool-header.perplexity { background: rgba(59,130,246,0.12); border: 1px solid rgba(59,130,246,0.25); }
+
+        .tool-header h2 { margin: 0; padding: 0; border: none; }
+        .tool-header.chatgpt h2 { color: #10a37f; }
+        .tool-header.claude h2 { color: #d69e2e; }
+        .tool-header.perplexity h2 { color: #3b82f6; }
+
+        .tool-icon {
+            width: 40px; height: 40px;
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; color: white; font-size: 0.8em;
+        }
+
+        .tool-icon.chatgpt { background: #10a37f; }
+        .tool-icon.claude { background: #d69e2e; }
+        .tool-icon.perplexity { background: #3b82f6; }
+
+        .footer {
+            text-align: center;
+            color: #475569;
+            font-size: 0.8em;
+            margin-top: 20px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .qr-inline {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .qr-inline img {
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
+            border: 2px solid rgba(214,158,46,0.3);
+        }
+
+        @media print {
+            body { background: white; color: #1a1a2e; }
+            .page { background: white; box-shadow: none; border: 1px solid #e5e7eb; }
+            .step { background: #f8fafc; border-color: #e5e7eb; }
+            .step-content p, .intro-box p { color: #475569; }
+            .tip-box { color: #166534; background: #f0fdf4; }
+            .warning-box { color: #991b1b; background: #fef2f2; }
+            .url-box { background: #f8fafc; color: #92400e; border-color: #d69e2e; }
+            .header-text p { color: #64748b; }
+            .tool-header.chatgpt { background: #f0fdf4; }
+            .tool-header.claude { background: #fffbeb; }
+            .tool-header.perplexity { background: #eff6ff; }
+            .no-print { display: none; }
+        }
+
+        .print-btn {
+            display: block; width: 220px; margin: 20px auto;
+            padding: 12px; background: #d69e2e; color: #0f172a;
+            border: none; border-radius: 10px; font-size: 1em;
+            cursor: pointer; font-weight: 600;
+        }
+        .print-btn:hover { background: #b7791f; }
+    </style>
+</head>
+<body>
+
+<!-- PAGINA 1: CAPA + CHATGPT -->
+<div class="page">
+    <div class="header">
+        <div class="logo-badge">IA</div>
+        <div class="header-text">
+            <h1>Como Criar Suas Contas de IA</h1>
+            <p>Passo a passo para iniciantes — Curso IA na Advocacia</p>
+        </div>
+    </div>
+
+    <div class="intro-box">
+        <p><strong style="color: #d69e2e;">Antes de tudo:</strong> Este tutorial ensina a criar conta em 3 ferramentas de inteligencia artificial que usaremos no curso. Siga cada passo com calma — leva menos de 10 minutos no total. Se tiver duvida, peca ajuda a um colega ou ao instrutor.</p>
+        <p style="margin-top:8px;"><strong style="color: #d69e2e;">Voce vai precisar de:</strong> Um celular ou computador com internet, e um e-mail que voce consiga acessar (para confirmar o cadastro).</p>
+    </div>
+
+    <!-- CHATGPT -->
+    <div class="tool-header chatgpt">
+        <div class="tool-icon chatgpt">GPT</div>
+        <h2>1. ChatGPT (da OpenAI)</h2>
+    </div>
+
+    <p style="color:#94a3b8; margin: 8px 0;">O ChatGPT e a ferramenta de IA mais conhecida do mundo. Vamos usar para pesquisar jurisprudencia e gerar rascunhos.</p>
+
+    <div class="qr-inline">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://chatgpt.com&color=10a37f" alt="QR ChatGPT">
+        <br><span class="url-box">chatgpt.com</span>
+    </div>
+
+    <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+            <strong>Abra o navegador do celular ou computador</strong>
+            <p>Chrome, Safari, Edge — qualquer um serve. Na barra de endereco (la em cima), digite: <strong>chatgpt.com</strong> e aperte Enter.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+            <strong>Clique em "Cadastre-se" (ou "Sign up")</strong>
+            <p>Vai aparecer uma tela com dois botoes. Clique no que diz <strong>"Cadastre-se"</strong> ou <strong>"Sign up"</strong>. Se aparecer so em ingles, nao se preocupe — siga os passos.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+            <strong>Escolha como quer se cadastrar</strong>
+            <p>Aparecerão opcoes. A mais facil: clique em <strong>"Continuar com Google"</strong>. Ai ele usa sua conta do Google (a mesma do Gmail) e pronto. Se nao tiver Google, clique em <strong>"E-mail"</strong>, digite seu e-mail e crie uma senha.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+            <strong>Confirme seu e-mail (se pediu)</strong>
+            <p>Se voce usou e-mail, a OpenAI vai enviar um e-mail de confirmacao. Abra seu e-mail, procure a mensagem da OpenAI e clique no link de confirmacao. Se usou Google, pule esta etapa.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-content">
+            <strong>Preencha seu nome e aceite os termos</strong>
+            <p>Coloque seu nome (pode ser so o primeiro nome). Aceite os termos clicando em <strong>"Continuar"</strong>.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-num">6</div>
+        <div class="step-content">
+            <strong>Pronto! Voce esta dentro do ChatGPT</strong>
+            <p>Vai aparecer uma tela com um campo para digitar embaixo. Isso e o ChatGPT! Pode fechar por enquanto — no curso vamos usar juntos.</p>
+        </div>
+    </div>
+
+    <div class="tip-box">
+        <strong>Dica:</strong> A versao gratuita ja funciona perfeitamente para o curso. Se quiser mais recursos, o plano Plus custa US$ 20/mes (cerca de R$ 100), mas NAO e obrigatorio.
+    </div>
+
+    <div class="footer">Tutorial Cadastro — INTEIA / Curso IA Advocacia — p. 1</div>
+</div>
+
+<!-- PAGINA 2: CLAUDE -->
+<div class="page">
+    <div class="header">
+        <div class="logo-badge">IA</div>
+        <div class="header-text">
+            <h1>Como Criar Suas Contas de IA</h1>
+            <p>Passo a passo para iniciantes — Curso IA na Advocacia</p>
+        </div>
+    </div>
+
+    <!-- CLAUDE -->
+    <div class="tool-header claude">
+        <div class="tool-icon claude">C</div>
+        <h2>2. Claude (da Anthropic)</h2>
+    </div>
+
+    <p style="color:#94a3b8; margin: 8px 0;">O Claude e excelente para analisar documentos longos e gerar pecas juridicas de alta qualidade. Vamos usar bastante no curso.</p>
+
+    <div class="qr-inline">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://claude.ai&color=d69e2e" alt="QR Claude">
+        <br><span class="url-box">claude.ai</span>
+    </div>
+
+    <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+            <strong>Abra o navegador e digite: claude.ai</strong>
+            <p>Na barra de endereco (la em cima), digite <strong>claude.ai</strong> e aperte Enter.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+            <strong>Clique em "Sign up" (Cadastrar)</strong>
+            <p>Na tela inicial, clique em <strong>"Sign up"</strong>. Caso o site esteja em ingles, nao se preocupe.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+            <strong>Escolha: Google ou E-mail</strong>
+            <p>Mesma logica do ChatGPT. O mais facil: <strong>"Continue with Google"</strong>. Se preferir e-mail, digite, crie senha e siga.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+            <strong>Verifique seu telefone</strong>
+            <p>O Claude pede verificacao por SMS. Digite seu numero de celular (com DDD, ex: 61 98115-7120). Voce vai receber um codigo por mensagem. Digite o codigo na tela.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-content">
+            <strong>Aceite os termos e pronto!</strong>
+            <p>Coloque seu nome, aceite os termos e clique em continuar. Vai aparecer a tela do Claude com campo para digitar.</p>
+        </div>
+    </div>
+
+    <div class="warning-box">
+        <strong>Atencao:</strong> O Claude pede numero de celular para verificacao. Isso e normal e seguro. Se nao receber o SMS, espere 1 minuto e clique em "Reenviar". Se mesmo assim nao chegar, tente com outro numero.
+    </div>
+
+    <div class="tip-box">
+        <strong>Dica:</strong> No curso, vamos usar uma funcao chamada <strong>"Extended Thinking"</strong> (pensamento estendido). Voce vai aprender a ativar durante o curso — nao se preocupe com isso agora, so crie a conta.
+    </div>
+
+    <!-- PERPLEXITY -->
+    <div class="tool-header perplexity">
+        <div class="tool-icon perplexity">P</div>
+        <h2>3. Perplexity</h2>
+    </div>
+
+    <p style="color:#94a3b8; margin: 8px 0;">O Perplexity e uma ferramenta de pesquisa com IA que ja busca na internet automaticamente e mostra as fontes. Otimo para jurisprudencia.</p>
+
+    <div class="qr-inline">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://perplexity.ai&color=3b82f6" alt="QR Perplexity">
+        <br><span class="url-box">perplexity.ai</span>
+    </div>
+
+    <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+            <strong>Abra o navegador e digite: perplexity.ai</strong>
+            <p>Na barra de endereco, digite <strong>perplexity.ai</strong> e aperte Enter.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+            <strong>Clique em "Sign up"</strong>
+            <p>Procure o botao de cadastro, geralmente no canto superior direito.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+            <strong>Cadastre com Google (mais facil) ou e-mail</strong>
+            <p>Mesma coisa: <strong>"Continue with Google"</strong> e a opcao mais rapida. Clique e pronto.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+            <strong>Pronto! Ja pode usar</strong>
+            <p>O Perplexity e o mais simples. Depois de logar, ja aparece o campo de pesquisa. Ele ja busca na internet automaticamente — nao precisa ativar nada.</p>
+        </div>
+    </div>
+
+    <div class="tip-box">
+        <strong>Dica:</strong> O Perplexity funciona muito bem sem pagar nada. E a melhor opcao para pesquisa rapida com fontes. Use quando precisar verificar se uma informacao e verdadeira.
+    </div>
+
+    <div class="footer">Tutorial Cadastro — INTEIA / Curso IA Advocacia — p. 2</div>
+</div>
+
+<!-- PAGINA 3: RESUMO + PROBLEMAS COMUNS -->
+<div class="page">
+    <div class="header">
+        <div class="logo-badge">IA</div>
+        <div class="header-text">
+            <h1>Resumo e Problemas Comuns</h1>
+            <p>Se algo der errado, olhe aqui</p>
+        </div>
+    </div>
+
+    <h2>Resumo: Suas 3 Contas</h2>
+
+    <div class="step">
+        <div class="step-num" style="background:#10a37f;">1</div>
+        <div class="step-content">
+            <strong style="color:#10a37f;">ChatGPT</strong>
+            <p>Site: <strong>chatgpt.com</strong> — Cadastro com Google ou e-mail — Versao gratuita funciona</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-num" style="background:#d69e2e;">2</div>
+        <div class="step-content">
+            <strong style="color:#d69e2e;">Claude</strong>
+            <p>Site: <strong>claude.ai</strong> — Cadastro com Google ou e-mail — Pede verificacao por SMS</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-num" style="background:#3b82f6;">3</div>
+        <div class="step-content">
+            <strong style="color:#3b82f6;">Perplexity</strong>
+            <p>Site: <strong>perplexity.ai</strong> — Cadastro com Google ou e-mail — O mais simples</p>
+        </div>
+    </div>
+
+    <h2>Problemas Comuns (e como resolver)</h2>
+
+    <div class="step">
+        <div class="step-num" style="background:#ef4444;">?</div>
+        <div class="step-content">
+            <strong>"Nao consigo acessar o site"</strong>
+            <p>Verifique se digitou o endereco correto (sem www, sem .com.br). Se estiver no Wi-Fi do escritorio, tente no 4G do celular — alguns firewalls bloqueiam sites de IA.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-num" style="background:#ef4444;">?</div>
+        <div class="step-content">
+            <strong>"Nao recebi o e-mail de confirmacao"</strong>
+            <p>Olhe na pasta de <strong>Spam / Lixo Eletronico</strong>. Se nao estiver la, espere 5 minutos e clique em "Reenviar". Se usar Gmail, procure na aba "Promocoes".</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-num" style="background:#ef4444;">?</div>
+        <div class="step-content">
+            <strong>"Nao recebi o SMS do Claude"</strong>
+            <p>Verifique se digitou o numero com DDD (ex: 61 99999-9999). Espere 1 minuto e clique em "Reenviar". Se continuar sem receber, tente outro numero de celular.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-num" style="background:#ef4444;">?</div>
+        <div class="step-content">
+            <strong>"O site esta em ingles"</strong>
+            <p>Normal! Os sites funcionam em ingles mas as IAs respondem em portugues. Voce pode digitar em portugues sem problema. Os botoes principais: "Sign up" = Cadastrar, "Log in" = Entrar, "Continue" = Continuar.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-num" style="background:#ef4444;">?</div>
+        <div class="step-content">
+            <strong>"Esqueci minha senha"</strong>
+            <p>Na tela de login, clique em <strong>"Esqueci minha senha"</strong> ou <strong>"Forgot password"</strong>. Vai chegar um e-mail para redefinir. Se usou Google para cadastrar, nao tem senha separada — use sempre "Continuar com Google".</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-num" style="background:#ef4444;">?</div>
+        <div class="step-content">
+            <strong>"Meu celular e antigo e o site nao carrega"</strong>
+            <p>Tente no computador. Se nao tiver, avise o instrutor — teremos computadores reserva no dia do curso.</p>
+        </div>
+    </div>
+
+    <div class="intro-box" style="margin-top: 20px;">
+        <p style="text-align:center;">
+            <strong style="color: #d69e2e; font-size: 1.1em;">Tudo pronto?</strong><br><br>
+            Se conseguiu criar as 3 contas: parabens! Voce ja tem tudo que precisa.<br>
+            Agora e so esperar o dia do curso. Nos vemos la!<br><br>
+            <strong style="color:#94a3b8;">Duvidas?</strong> Responda este e-mail ou ligue:<br>
+            <span style="color:#d69e2e; font-size:1.1em;">Dr. Igor Morais — (61) 98115-7120</span>
+        </p>
+    </div>
+
+    <div class="footer">
+        Tutorial Cadastro — INTEIA / Curso IA Advocacia<br>
+        Dr. Igor Morais Vasconcelos | Fevereiro 2026
+    </div>
+</div>
+
+<button class="print-btn no-print" onclick="window.print()">Imprimir / Salvar como PDF</button>
+
+</body>
+</html>

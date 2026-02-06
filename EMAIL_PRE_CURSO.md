@@ -10,7 +10,7 @@
 
 Prezados colegas,
 
-Na proxima [sexta-feira, dia X], teremos nosso curso pratico de **IA na Advocacia**. Para aproveitarmos ao maximo as 6 horas juntos, preciso que voces facam **3 coisas simples antes**:
+Nos dias [quinta 06/02 (15h-17h) e sexta 07/02 (10h-12h)], teremos nosso curso pratico de **IA na Advocacia**. Para aproveitarmos ao maximo as 4 horas juntos, preciso que voces facam **3 coisas simples antes**:
 
 ---
 
@@ -36,13 +36,20 @@ Na proxima [sexta-feira, dia X], teremos nosso curso pratico de **IA na Advocaci
 
 ---
 
-### O que trazer:
+### Formato do curso:
+
+- **Hibrido**: participantes presenciais (BSB/SP/GO) + online
+- **Dia 1**: [quinta], 15h-17h
+- **Dia 2**: [sexta], 10h-12h
+- **Link da videoconferencia** (para quem participar online): [INSERIR LINK]
+
+### O que ter em maos:
 
 - **Notebook** (preferencial) **ou celular** com bateria cheia
-- **Carregador** — teremos tomadas disponiveis
-- Se possivel, tenha no celular/notebook acesso ao **e-mail do escritorio** (vamos usar casos reais anonimizados)
+- **Carregador** — teremos tomadas disponiveis (presencial)
+- Se possivel, tenha acesso ao **e-mail do escritorio** (vamos usar casos reais anonimizados)
 
-### O que NAO precisa trazer:
+### O que NAO precisa:
 
 - Nao precisa saber nada de IA
 - Nao precisa ter experiencia previa
@@ -50,11 +57,18 @@ Na proxima [sexta-feira, dia X], teremos nosso curso pratico de **IA na Advocaci
 
 ---
 
-**Importante:** O curso e 100% pratico. Voces vao USAR as ferramentas, nao apenas ouvir sobre elas. Por isso as contas precisam estar criadas antes.
+### Materiais digitais (acesse quando quiser):
+
+- **12 Cartas CLEAR**: [INSERIR LINK pagina_12_cartas_v3.html]
+- **QR Codes de ferramentas**: [INSERIR LINK qrcodes_curso.html]
+
+---
+
+**Importante:** O curso e 100% pratico — voces vao USAR as ferramentas, nao apenas ouvir sobre elas. O curso cobrira exemplos praticos de **todas as 6 areas do escritorio** (Civil, Trabalhista, Consumidor, Administrativo, Tributario, Comercial). Por isso as contas precisam estar criadas antes.
 
 Se tiver qualquer dificuldade para criar as contas, me avise que ajudo.
 
-Nos vemos [sexta]!
+Nos vemos [quinta]!
 
 [Nome do instrutor]
 [Contato]

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folha de Prompts e QR Codes — Curso IA na Advocacia</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        @page { size: A4; margin: 10mm; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.5;
+            font-size: 10pt;
+        }
+
+        .page {
+            max-width: 210mm;
+            margin: 0 auto 20px;
+            padding: 22px 28px;
+            background: #111a35;
+            border-radius: 16px;
+            box-shadow: 0 18px 45px rgba(9,14,34,0.12);
+            page-break-after: always;
+        }
+        .page:last-of-type { page-break-after: avoid; }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(214,158,46,0.3);
+        }
+
+        .logo-badge {
+            width: 40px; height: 40px;
+            background: linear-gradient(135deg, #d69e2e, #b7791f);
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-weight: 800; font-size: 1em;
+            flex-shrink: 0;
+        }
+
+        .header-text h1 { font-size: 1.2em; color: #d69e2e; font-weight: 700; }
+        .header-text p { font-size: 0.78em; color: #94a3b8; }
+
+        h2 {
+            font-size: 1.1em; color: #d69e2e;
+            margin: 18px 0 8px;
+            padding-bottom: 4px;
+            border-bottom: 2px solid rgba(214,158,46,0.2);
+        }
+
+        h3 { font-size: 0.95em; color: #f3d994; margin: 12px 0 6px; }
+
+        /* QR CODES GRID */
+        .qr-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .qr-item {
+            text-align: center;
+            padding: 10px 6px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 10px;
+        }
+
+        .qr-item img {
+            width: 90px; height: 90px;
+            border-radius: 6px;
+            border: 2px solid rgba(214,158,46,0.2);
+        }
+
+        .qr-item .qr-label {
+            font-weight: 700; font-size: 0.85em;
+            color: #f3d994;
+            margin-top: 5px;
+        }
+
+        .qr-item .qr-url {
+            font-size: 0.7em; color: #94a3b8;
+            font-family: 'Consolas', monospace;
+            word-break: break-all;
+        }
+
+        .qr-item.essential { border-color: rgba(214,158,46,0.3); }
+        .qr-item.bonus { border-color: rgba(59,130,246,0.2); }
+        .qr-item.regulation { border-color: rgba(239,68,68,0.2); }
+        .qr-item.resource { border-color: rgba(34,197,94,0.2); }
+
+        .category-badge {
+            display: inline-block;
+            font-size: 0.65em; font-weight: 600;
+            padding: 2px 8px; border-radius: 6px;
+            color: white; margin-bottom: 6px;
+            text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .badge-tool { background: #d69e2e; }
+        .badge-reg { background: #ef4444; }
+        .badge-resource { background: #22c55e; }
+        .badge-site { background: #3b82f6; }
+
+        /* PROMPTS */
+        .prompt-block {
+            margin: 8px 0;
+            padding: 10px 14px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 10px;
+        }
+
+        .prompt-title {
+            display: flex; align-items: center; gap: 8px;
+            margin-bottom: 6px;
+        }
+
+        .prompt-num {
+            width: 22px; height: 22px;
+            background: linear-gradient(135deg, #d69e2e, #b7791f);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-weight: 700; font-size: 0.7em;
+            flex-shrink: 0;
+        }
+
+        .prompt-title strong { color: #f3d994; font-size: 0.9em; }
+
+        .prompt-use {
+            font-size: 0.75em; color: #94a3b8;
+            margin-bottom: 4px; font-style: italic;
+        }
+
+        .prompt-text {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-family: 'Consolas', monospace;
+            font-size: 0.82em;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            border: 1px solid rgba(214,158,46,0.15);
+        }
+
+        .prompt-text .var {
+            color: #d69e2e;
+            font-weight: 600;
+        }
+
+        .section-divider {
+            border: none;
+            border-top: 1px solid rgba(214,158,46,0.15);
+            margin: 12px 0;
+        }
+
+        .footer {
+            text-align: center;
+            color: #475569;
+            font-size: 0.72em;
+            margin-top: 14px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .tip {
+            background: rgba(34,197,94,0.08);
+            border-left: 3px solid #22c55e;
+            padding: 8px 12px;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.82em;
+            color: #86efac;
+            margin: 8px 0;
+        }
+
+        @media print {
+            body { background: white; color: #1a1a2e; font-size: 9pt; }
+            .page { background: white; box-shadow: none; border: 1px solid #e5e7eb; }
+            .prompt-text { background: #f8fafc; color: #1a1a2e; border-color: #d69e2e; }
+            .prompt-text .var { color: #92400e; }
+            .prompt-block { background: #fafafa; border-color: #e5e7eb; }
+            .qr-item { background: #fafafa; border-color: #e5e7eb; }
+            .qr-item .qr-label { color: #1a1a2e; }
+            .qr-item .qr-url { color: #64748b; }
+            .prompt-title strong { color: #92400e; }
+            .prompt-use { color: #64748b; }
+            .header-text p { color: #64748b; }
+            .tip { color: #166534; background: #f0fdf4; }
+            .no-print { display: none; }
+        }
+
+        .print-btn {
+            display: block; width: 220px; margin: 20px auto;
+            padding: 12px; background: #d69e2e; color: #0f172a;
+            border: none; border-radius: 10px; font-size: 1em;
+            cursor: pointer; font-weight: 600;
+        }
+        .print-btn:hover { background: #b7791f; }
+    </style>
+</head>
+<body>
+
+<!-- PAGINA 1: QR CODES + PROTOCOLO -->
+<div class="page">
+    <div class="header">
+        <div class="logo-badge">IA</div>
+        <div class="header-text">
+            <h1>QR Codes e Prompts do Curso</h1>
+            <p>Curso IA na Advocacia — Paixao Cortes Advogados — 2026</p>
+        </div>
+    </div>
+
+    <h2>Ferramentas — Escaneie e Acesse</h2>
+
+    <div class="qr-grid">
+        <div class="qr-item essential">
+            <span class="category-badge badge-tool">Essencial</span>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://chatgpt.com" alt="QR ChatGPT">
+            <div class="qr-label">ChatGPT</div>
+            <div class="qr-url">chatgpt.com</div>
+        </div>
+        <div class="qr-item essential">
+            <span class="category-badge badge-tool">Essencial</span>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://claude.ai" alt="QR Claude">
+            <div class="qr-label">Claude</div>
+            <div class="qr-url">claude.ai</div>
+        </div>
+        <div class="qr-item bonus">
+            <span class="category-badge badge-site">Bonus</span>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://perplexity.ai" alt="QR Perplexity">
+            <div class="qr-label">Perplexity</div>
+            <div class="qr-url">perplexity.ai</div>
+        </div>
+        <div class="qr-item bonus">
+            <span class="category-badge badge-site">Mencao</span>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://notebooklm.google.com" alt="QR NotebookLM">
+            <div class="qr-label">NotebookLM</div>
+            <div class="qr-url">notebooklm.google.com</div>
+        </div>
+    </div>
+
+    <h2>Regulacao e Recursos</h2>
+
+    <div class="qr-grid">
+        <div class="qr-item regulation">
+            <span class="category-badge badge-reg">Regulacao</span>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://atos.cnj.jus.br/atos/detalhar/6001" alt="QR CNJ">
+            <div class="qr-label">CNJ 615/2025</div>
+            <div class="qr-url">atos.cnj.jus.br</div>
+        </div>
+        <div class="qr-item regulation">
+            <span class="category-badge badge-reg">Regulacao</span>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://oab.org.br/noticia/62704" alt="QR OAB">
+            <div class="qr-label">OAB Rec. 001/2024</div>
+            <div class="qr-url">oab.org.br/noticia/62704</div>
+        </div>
+        <div class="qr-item resource">
+            <span class="category-badge badge-resource">Recurso</span>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://ab2l.org.br" alt="QR AB2L">
+            <div class="qr-label">AB2L</div>
+            <div class="qr-url">ab2l.org.br</div>
+        </div>
+        <div class="qr-item resource">
+            <span class="category-badge badge-resource">Recurso</span>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://educacao-executiva.fgv.br/cursos/online/curta-media-duracao-online/regulacao-da-inteligencia-artificial" alt="QR FGV">
+            <div class="qr-label">FGV — Curso IA</div>
+            <div class="qr-url">educacao-executiva.fgv.br</div>
+        </div>
+    </div>
+
+    <div class="qr-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 50%; margin: 10px auto;">
+        <div class="qr-item resource">
+            <span class="category-badge badge-resource">Podcast</span>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://open.spotify.com/show/5Q0rJimaM6ao4NWoyuMIve" alt="QR Podcast">
+            <div class="qr-label">Direito 4.0</div>
+            <div class="qr-url">Spotify</div>
+        </div>
+        <div class="qr-item resource">
+            <span class="category-badge badge-site">Materiais</span>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://igormorais123.github.io/curso-ia-paixao-cortes/" alt="QR Site">
+            <div class="qr-label">Site do Curso</div>
+            <div class="qr-url">igormorais123.github.io/curso-ia-paixao-cortes</div>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <h2>Protocolo de Pesquisa (4 Passos)</h2>
+
+    <div class="prompt-block">
+        <div class="prompt-text"><strong style="color:#d69e2e;">1. BUSCAR NA INTERNET</strong> — Sempre ativar busca web
+<strong style="color:#d69e2e;">2. EXIGIR LINK</strong> — Sem link = nao existe
+<strong style="color:#d69e2e;">3. USAR THINKING MODE</strong> — Raciocinio estendido ativado
+<strong style="color:#d69e2e;">4. PEDIR AUTOCHECAGEM</strong> — Usar a frase abaixo</div>
+    </div>
+
+    <div class="prompt-block">
+        <div class="prompt-title">
+            <div class="prompt-num">!</div>
+            <strong>Frase de Autochecagem (copiar e colar SEMPRE)</strong>
+        </div>
+        <div class="prompt-text">Agora revise todas as citacoes acima. Confirme que cada link funciona e cada numero de processo esta correto. Se tiver duvida sobre algum, sinalize com [VERIFICAR].</div>
+    </div>
+
+    <div class="tip">Imprima esta folha e deixe ao lado do computador. Use o protocolo em TODA pesquisa com IA.</div>
+
+    <div class="footer">Folha de Prompts e QR Codes — INTEIA / Curso IA Advocacia — p. 1/4</div>
+</div>
+
+<!-- PAGINA 2: PROMPTS DOS EXERCICIOS -->
+<div class="page">
+    <div class="header">
+        <div class="logo-badge">IA</div>
+        <div class="header-text">
+            <h1>Prompts dos Exercicios</h1>
+            <p>Copie e cole — substitua os campos entre [ ]</p>
+        </div>
+    </div>
+
+    <div class="prompt-block">
+        <div class="prompt-title">
+            <div class="prompt-num">1</div>
+            <strong>Exercicio 1 — Primeiro Contato (Bloco 1)</strong>
+        </div>
+        <div class="prompt-use">Analise de teses de defesa — primeiro uso da IA no curso</div>
+        <div class="prompt-text">Sou advogado de escritorio full-service, atuo em <span class="var">[civil/trabalhista/consumidor/administrativo/tributario/comercial]</span>.
+O caso envolve: <span class="var">[descreva o pedido principal — ex: dano moral, revisao tributaria, penalidade administrativa]</span>.
+Fatos: <span class="var">[descreva em 3-5 linhas o que a parte contraria alega]</span>.
+
+Quais sao as melhores teses de defesa para este caso?
+Liste cada tese com fundamentacao legal.
+NAO cite jurisprudencia especifica — foque nas teses e argumentos.</div>
+    </div>
+
+    <div class="prompt-block">
+        <div class="prompt-title">
+            <div class="prompt-num">2</div>
+            <strong>Exercicio 2 — Pesquisa Jurisprudencial (Bloco 2)</strong>
+        </div>
+        <div class="prompt-use">Pesquisar no ChatGPT com Deep Research OU no Perplexity</div>
+        <div class="prompt-text">Pesquise na internet jurisprudencia recente (2024-2026) sobre <span class="var">[tema da sua area — ex: dano moral, revisao tributaria, penalidade administrativa]</span>.
+
+Traga APENAS decisoes com link verificavel para o site do tribunal.
+Para cada decisao, inclua:
+- Numero do processo
+- Relator
+- Data do julgamento
+- Ementa resumida
+- Link direto para o acordao
+
+Use modo de raciocinio estendido.</div>
+    </div>
+
+    <div class="prompt-block">
+        <div class="prompt-title">
+            <div class="prompt-num">3</div>
+            <strong>Exercicio 4 — Fluxo Combinado, Passo 2 (Bloco 3)</strong>
+        </div>
+        <div class="prompt-use">Colar no Claude com Extended Thinking — usar resultado da pesquisa do Passo 1</div>
+        <div class="prompt-text">CONTEXTO: Sou advogado de escritorio full-service, atuo em <span class="var">[area]</span>.
+Pesquisei a jurisprudencia abaixo.
+<span class="var">[COLAR RESULTADO DA PESQUISA]</span>
+
+LIMITE: Use APENAS a jurisprudencia que eu forneci acima.
+Nao invente citacoes adicionais. Estrutura replicavel.
+
+EXEMPLO: Estrutura: 1) Qualificacao, 2) Sintese da inicial,
+3) Preliminares, 4) Impugnacao ponto a ponto, 5) Merito com
+jurisprudencia pesquisada, 6) Pedidos.
+
+AUDIENCIA: <span class="var">[Juiz / Desembargador / Tribunal — ex: Juiz da 3a Vara Civel de Brasilia]</span>.
+
+ROLE: Advogado experiente em <span class="var">[area]</span>, linguagem tecnica e objetiva.
+
+FATOS DO CASO: <span class="var">[inserir pedidos da inicial e fatos a impugnar]</span></div>
+    </div>
+
+    <div class="footer">Folha de Prompts e QR Codes — INTEIA / Curso IA Advocacia — p. 2/4</div>
+</div>
+
+<!-- PAGINA 3: MAIS PROMPTS -->
+<div class="page">
+    <div class="header">
+        <div class="logo-badge">IA</div>
+        <div class="header-text">
+            <h1>Prompts dos Exercicios (cont.)</h1>
+            <p>Copie e cole — substitua os campos entre [ ]</p>
+        </div>
+    </div>
+
+    <div class="prompt-block">
+        <div class="prompt-title">
+            <div class="prompt-num">4</div>
+            <strong>Exercicio Comunicacao — E-mail Relampago (Dia 1)</strong>
+        </div>
+        <div class="prompt-use">Redigir e-mail executivo para cliente corporativo em 5 minutos</div>
+        <div class="prompt-text">Sou advogado de escritorio full-service, atuo em <span class="var">[civil/trabalhista/consumidor/administrativo/tributario/comercial]</span>.
+Resultado da audiencia/despacho de hoje: <span class="var">[procedente em parte / acordo / adiada / deferido / indeferido]</span>.
+Redija e-mail executivo para o cliente.
+Maximo 3 paragrafos. Tom formal-corporativo. Direto ao ponto.
+Incluir: resultado, impacto financeiro, proximo passo.</div>
+    </div>
+
+    <div class="prompt-block">
+        <div class="prompt-title">
+            <div class="prompt-num">5</div>
+            <strong>Exercicio 5 — Fluxo Completo de Defesa (Dia 2)</strong>
+        </div>
+        <div class="prompt-use">Caso completo em dupla — Pesquisa + Minuta + Verificacao (47 min)</div>
+        <div class="prompt-text"><strong style="color:#d69e2e;">PASSO 1 — PESQUISA (17 min):</strong>
+Pesquise jurisprudencia do <span class="var">[tribunal — ex: STJ, TST, TRF, TJDFT]</span> sobre <span class="var">[tema do caso escolhido]</span>.
+Decisoes favoraveis a defesa, com link para tribunal.
+Use Deep Research (ChatGPT) ou Perplexity.
+
+<strong style="color:#d69e2e;">PASSO 2 — MINUTA (18 min):</strong>
+Usar prompt CLEAR completo (Exercicio 4) + resultado da pesquisa.
+Colar tudo no Claude com Extended Thinking.
+
+<strong style="color:#d69e2e;">PASSO 3 — VERIFICACAO (12 min):</strong>
+Clicar em cada link. Rodar frase de autochecagem.
+Revisar estrutura e argumentos.</div>
+    </div>
+
+    <div class="prompt-block">
+        <div class="prompt-title">
+            <div class="prompt-num">6</div>
+            <strong>Exercicio 5B — Pensando em Escala</strong>
+        </div>
+        <div class="prompt-use">Transformar peca unica em template replicavel</div>
+        <div class="prompt-text">Olhe o parecer juridico que voce acabou de gerar. Identifique:
+
+O que e FIXO (nao muda entre casos):
+- Estrutura, teses padrao, jurisprudencia consolidada, preliminares
+
+O que MUDA (varia por caso):
+- <span class="var">[NOME_PARTE_CONTRARIA]</span>
+- <span class="var">[PEDIDOS_ESPECIFICOS]</span>
+- <span class="var">[FATOS_DO_CASO]</span>
+- <span class="var">[VALORES]</span>
+- <span class="var">[DOCUMENTOS_JUNTADOS]</span>
+
+Reescreva o prompt CLEAR substituindo dados especificos por VARIAVEIS.
+Resultado: template replicavel para todo o acervo.</div>
+    </div>
+
+    <div class="prompt-block">
+        <div class="prompt-title">
+            <div class="prompt-num">7</div>
+            <strong>Exercicio 6 — Anonimizacao (Bloco 6)</strong>
+        </div>
+        <div class="prompt-use">Modelo de anonimizacao antes de enviar para IA</div>
+        <div class="prompt-text"><strong style="color:#ef4444;">ANTES (NAO enviar):</strong>
+"Banco do Brasil S.A." / "Joao Silva, CPF 012.345.678-90" / Proc. 0001234-56
+
+<strong style="color:#22c55e;">DEPOIS (enviar para IA):</strong>
+"Instituicao financeira de grande porte" / "Empregado A" / Processo XXXXX
+
+<strong style="color:#d69e2e;">Regra:</strong> Nomes ficticios, CPF removido, CNPJ removido,
+valores aproximados, processo mascarado.</div>
+    </div>
+
+    <div class="footer">Folha de Prompts e QR Codes — INTEIA / Curso IA Advocacia — p. 3/4</div>
+</div>
+
+<!-- PAGINA 4: PROMPTS EXTRAS + NOTA RODAPE + FRAMEWORK -->
+<div class="page">
+    <div class="header">
+        <div class="logo-badge">IA</div>
+        <div class="header-text">
+            <h1>Framework CLEAR + Prompts Extras</h1>
+            <p>Referencia rapida para uso no dia a dia</p>
+        </div>
+    </div>
+
+    <h2>Framework CLEAR</h2>
+
+    <div class="prompt-block" style="padding: 14px 16px;">
+        <table style="width:100%; border-collapse:collapse; font-size:0.9em;">
+            <tr>
+                <td style="padding:5px 8px; border-bottom:1px solid rgba(214,158,46,0.15);"><strong style="color:#d69e2e; font-size:1.1em;">C</strong></td>
+                <td style="padding:5px 8px; border-bottom:1px solid rgba(214,158,46,0.15);"><strong>Contexto</strong></td>
+                <td style="padding:5px 8px; border-bottom:1px solid rgba(214,158,46,0.15); color:#94a3b8;">"Sou advogado de escritorio full-service, atuo em [area]..."</td>
+            </tr>
+            <tr>
+                <td style="padding:5px 8px; border-bottom:1px solid rgba(214,158,46,0.15);"><strong style="color:#d69e2e; font-size:1.1em;">L</strong></td>
+                <td style="padding:5px 8px; border-bottom:1px solid rgba(214,158,46,0.15);"><strong>Limite</strong></td>
+                <td style="padding:5px 8px; border-bottom:1px solid rgba(214,158,46,0.15); color:#94a3b8;">"Nao cite sem link verificavel. Estrutura replicavel."</td>
+            </tr>
+            <tr>
+                <td style="padding:5px 8px; border-bottom:1px solid rgba(214,158,46,0.15);"><strong style="color:#d69e2e; font-size:1.1em;">E</strong></td>
+                <td style="padding:5px 8px; border-bottom:1px solid rgba(214,158,46,0.15);"><strong>Exemplo</strong></td>
+                <td style="padding:5px 8px; border-bottom:1px solid rgba(214,158,46,0.15); color:#94a3b8;">"Estrutura: 1) Qualificacao, 2) Preliminares, 3) Merito..."</td>
+            </tr>
+            <tr>
+                <td style="padding:5px 8px; border-bottom:1px solid rgba(214,158,46,0.15);"><strong style="color:#d69e2e; font-size:1.1em;">A</strong></td>
+                <td style="padding:5px 8px; border-bottom:1px solid rgba(214,158,46,0.15);"><strong>Audiencia</strong></td>
+                <td style="padding:5px 8px; border-bottom:1px solid rgba(214,158,46,0.15); color:#94a3b8;">"Juiz / Desembargador / Tribunal da area"</td>
+            </tr>
+            <tr>
+                <td style="padding:5px 8px;"><strong style="color:#d69e2e; font-size:1.1em;">R</strong></td>
+                <td style="padding:5px 8px;"><strong>Role</strong></td>
+                <td style="padding:5px 8px; color:#94a3b8;">"Advogado experiente em [area], linguagem tecnica e objetiva"</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>Prompts Extras (Dia a Dia)</h2>
+
+    <div class="prompt-block">
+        <div class="prompt-title">
+            <div class="prompt-num">A</div>
+            <strong>Analise de Risco para Cliente</strong>
+        </div>
+        <div class="prompt-text">CONTEXTO: Cliente corporativo quer avaliar risco de <span class="var">[pratica]</span>.
+LIMITE: Cenarios com probabilidade, nao certezas. Volume: <span class="var">[X]</span> acoes.
+EXEMPLO: 1) Pratica, 2) Riscos por cenario com %, 3) Exposicao total, 4) Recomendacao.
+AUDIENCIA: Diretor juridico sem formacao juridica.
+ROLE: Consultor juridico preventivo em <span class="var">[area]</span>.</div>
+    </div>
+
+    <div class="prompt-block">
+        <div class="prompt-title">
+            <div class="prompt-num">B</div>
+            <strong>Revisao de Peca (Junior para Senior)</strong>
+        </div>
+        <div class="prompt-text">CONTEXTO: Advogado da equipe redigiu esta <span class="var">[peca]</span> para caso de <span class="var">[area]</span>.
+LIMITE: Nao reescreva. Aponte problemas e sugira correcoes.
+EXEMPLO: 1) Pontos fortes, 2) Teses ausentes, 3) Problemas, 4) Sugestoes.
+AUDIENCIA: Junior, para aprendizado. ROLE: Revisor senior.
+PECA: <span class="var">[colar peca]</span></div>
+    </div>
+
+    <div class="prompt-block">
+        <div class="prompt-title">
+            <div class="prompt-num">C</div>
+            <strong>Relatorio Mensal para Cliente</strong>
+        </div>
+        <div class="prompt-text">CONTEXTO: Relatorio mensal. <span class="var">[X]</span> acoes ativas, <span class="var">[Y]</span> encerradas, <span class="var">[Z]</span> novas.
+LIMITE: Max 2 pag, linguagem executiva, foco em numeros.
+EXEMPLO: 1) Dashboard, 2) Resultados, 3) Exposicao, 4) Tendencias, 5) Recomendacoes.
+AUDIENCIA: Diretor juridico / cliente. ROLE: Advogado gestor de contencioso.
+DADOS: <span class="var">[numeros do mes]</span></div>
+    </div>
+
+    <hr class="section-divider">
+
+    <h2>Nota de Rodape para Pecas (modelo pronto)</h2>
+
+    <div class="prompt-block">
+        <div class="prompt-text" style="font-style:italic;">Peca elaborada com auxilio de ferramenta de IA generativa, com revisao integral pelo advogado subscritor, nos termos da Resolucao CNJ 615/2025.</div>
+    </div>
+
+    <h2>5 Regras de Seguranca (inegociaveis)</h2>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:6px; font-size:0.88em;">
+        <div style="padding:6px 10px; background:rgba(239,68,68,0.08); border-radius:6px; border-left:3px solid #ef4444;">
+            <strong style="color:#fca5a5;">1.</strong> Anonimizar SEMPRE
+        </div>
+        <div style="padding:6px 10px; background:rgba(239,68,68,0.08); border-radius:6px; border-left:3px solid #ef4444;">
+            <strong style="color:#fca5a5;">2.</strong> Verificar TODA citacao (CLICAR)
+        </div>
+        <div style="padding:6px 10px; background:rgba(239,68,68,0.08); border-radius:6px; border-left:3px solid #ef4444;">
+            <strong style="color:#fca5a5;">3.</strong> Revisar TUDO (rascunho, nao final)
+        </div>
+        <div style="padding:6px 10px; background:rgba(239,68,68,0.08); border-radius:6px; border-left:3px solid #ef4444;">
+            <strong style="color:#fca5a5;">4.</strong> Registrar uso (CNJ 615/2025)
+        </div>
+        <div style="padding:6px 10px; background:rgba(239,68,68,0.08); border-radius:6px; border-left:3px solid #ef4444; grid-column: span 2; text-align:center;">
+            <strong style="color:#fca5a5;">5.</strong> Humano decide — IA sugere, advogado assina
+        </div>
+    </div>
+
+    <div class="footer">
+        Folha de Prompts e QR Codes — INTEIA / Curso IA Advocacia — p. 4/4<br>
+        Dr. Igor Morais Vasconcelos | Fevereiro 2026
+    </div>
+</div>
+
+<button class="print-btn no-print" onclick="window.print()">Imprimir / Salvar como PDF</button>
+
+</body>
+</html>
