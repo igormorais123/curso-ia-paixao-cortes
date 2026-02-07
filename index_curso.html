@@ -3,194 +3,420 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso IA na Advocacia — INTEIA | Central de Materiais</title>
+    <title>Hub do Curso — IA na Advocacia | INTEIA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
             background: #0f172a;
             min-height: 100vh;
             color: #e2e8f0;
-            padding: 40px 20px;
+            padding: 30px 20px;
         }
-        .container { max-width: 800px; margin: 0 auto; }
+        .container { max-width: 860px; margin: 0 auto; }
 
+        /* HERO */
+        .hero {
+            text-align: center;
+            margin-bottom: 36px;
+        }
         .logo-badge {
-            width: 70px; height: 70px;
+            width: 72px; height: 72px;
             background: linear-gradient(135deg, #d69e2e, #b7791f);
             border-radius: 18px;
             display: flex; align-items: center; justify-content: center;
             color: white; font-weight: 800; font-size: 1.8em;
-            margin: 0 auto 20px;
-            box-shadow: 0 0 40px -10px rgba(214,158,46,0.4);
+            margin: 0 auto 18px;
+            box-shadow: 0 0 50px -10px rgba(214,158,46,0.35);
         }
-
-        h1 {
-            text-align: center;
-            font-size: 2rem;
+        .hero h1 {
+            font-size: 2.1rem;
+            font-weight: 800;
+            color: #f8fafc;
+            letter-spacing: -0.02em;
             margin-bottom: 6px;
-            color: #e2e8f0;
         }
-        .subtitle {
-            text-align: center;
+        .hero .subtitle {
             color: #94a3b8;
-            margin-bottom: 10px;
-            font-size: 0.95em;
+            font-size: 1em;
+            margin-bottom: 6px;
         }
-        .org {
-            text-align: center;
+        .hero .org {
             color: #d69e2e;
             font-weight: 600;
-            font-size: 0.85em;
-            margin-bottom: 35px;
+            font-size: 0.88em;
+        }
+        .hero .badge-hub {
+            display: inline-block;
+            margin-top: 14px;
+            padding: 5px 16px;
+            background: rgba(214,158,46,0.12);
+            border: 1px solid rgba(214,158,46,0.25);
+            border-radius: 20px;
+            font-size: 0.78em;
+            font-weight: 600;
+            color: #d69e2e;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
+        /* SECTIONS */
         .section-title {
             color: #d69e2e;
-            font-size: 0.9em;
+            font-size: 0.82em;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            margin: 30px 0 12px;
-            padding-bottom: 6px;
-            border-bottom: 2px solid rgba(214,158,46,0.2);
+            margin: 34px 0 14px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid rgba(214,158,46,0.18);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section-icon {
+            font-size: 1.1em;
         }
 
+        /* CARDS */
         .card {
             background: #111a35;
-            border: 1px solid rgba(214,158,46,0.12);
+            border: 1px solid rgba(214,158,46,0.10);
             border-radius: 14px;
-            padding: 22px 25px;
-            margin-bottom: 14px;
-            transition: all 0.3s;
+            padding: 20px 24px;
+            margin-bottom: 12px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
         }
         .card:hover {
-            border-color: rgba(214,158,46,0.3);
+            border-color: rgba(214,158,46,0.28);
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(9,14,34,0.3);
+            box-shadow: 0 10px 30px rgba(9,14,34,0.25);
+        }
+        .card-icon {
+            width: 44px; height: 44px;
+            background: rgba(214,158,46,0.08);
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.3em;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .card-content {
+            flex: 1;
         }
         .card h2 {
             color: #f3d994;
-            margin-bottom: 8px;
-            font-size: 1.15rem;
+            margin-bottom: 6px;
+            font-size: 1.08rem;
+            font-weight: 700;
         }
         .card p {
             color: #94a3b8;
-            margin-bottom: 14px;
-            line-height: 1.6;
-            font-size: 0.92em;
+            margin-bottom: 12px;
+            line-height: 1.55;
+            font-size: 0.88em;
         }
-        .card a {
-            display: inline-block;
+        .card-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
             background: linear-gradient(135deg, #d69e2e, #b7791f);
             color: white;
             text-decoration: none;
-            padding: 9px 22px;
+            padding: 8px 20px;
             border-radius: 10px;
             font-weight: 600;
-            font-size: 0.9em;
+            font-size: 0.85em;
             transition: all 0.3s;
         }
-        .card a:hover {
-            transform: scale(1.04);
-            box-shadow: 0 4px 12px rgba(214,158,46,0.3);
+        .btn-primary:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 14px rgba(214,158,46,0.3);
         }
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(59,130,246,0.12);
+            color: #93c5fd;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.85em;
+            border: 1px solid rgba(59,130,246,0.2);
+            transition: all 0.3s;
+        }
+        .btn-download:hover {
+            background: rgba(59,130,246,0.2);
+            border-color: rgba(59,130,246,0.4);
+        }
+
+        /* STATUS BADGES */
         .status {
             display: inline-block;
-            padding: 2px 10px;
+            padding: 2px 9px;
             border-radius: 8px;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 600;
-            margin-left: 8px;
+            margin-left: 6px;
             vertical-align: middle;
+            letter-spacing: 0.3px;
         }
         .status-ok { background: rgba(34,197,94,0.15); color: #86efac; }
         .status-new { background: rgba(214,158,46,0.15); color: #d69e2e; }
         .status-print { background: rgba(59,130,246,0.15); color: #93c5fd; }
+        .status-download { background: rgba(168,85,247,0.15); color: #c4b5fd; }
 
+        /* ARCHIVE */
         .card.archive {
             opacity: 0.4;
-            border-color: rgba(255,255,255,0.05);
+            border-color: rgba(255,255,255,0.04);
         }
-        .card.archive a {
+        .card.archive .btn-primary {
             background: #475569;
         }
 
+        /* FOOTER */
         .version {
             text-align: center;
             color: #475569;
-            margin-top: 35px;
-            font-size: 0.82rem;
-            line-height: 1.8;
+            margin-top: 40px;
+            font-size: 0.8rem;
+            line-height: 1.9;
+        }
+        .footer-link {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-link:hover { color: #d69e2e; }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            .card { flex-direction: column; gap: 10px; }
+            .card-icon { width: 36px; height: 36px; font-size: 1.1em; }
+            .hero h1 { font-size: 1.6rem; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo-badge">IA</div>
-        <h1>Curso IA na Advocacia</h1>
-        <p class="subtitle">Paixao Cortes Advogados | Central de Materiais</p>
-        <p class="org">INTEIA — Instituto de Treinamento e Estudos em Inteligencia Artificial</p>
 
-        <div class="section-title">Material do Curso</div>
+        <!-- HERO -->
+        <div class="hero">
+            <div class="logo-badge">IA</div>
+            <h1>Curso IA na Advocacia</h1>
+            <p class="subtitle">Paixao Cortes Advogados | Central de Materiais</p>
+            <p class="org">INTEIA — Instituto de Treinamento e Estudos em Inteligencia Artificial</p>
+            <div class="badge-hub">Hub do Curso</div>
+        </div>
 
-        <div class="card">
-            <h2>Apostila Completa <span class="status status-new">Novo</span> <span class="status status-print">Imprimir</span></h2>
-            <p>16 paginas com todo o conteudo: fundamentos, 3 ferramentas, protocolo de pesquisa, framework CLEAR, fluxo combinado, todos os prompts dos exercicios, 12 cartas CLEAR, seguranca, regulacao, escala e implementacao.</p>
-            <a href="APOSTILA_CURSO_IA_ADVOCACIA.html">Abrir Apostila</a>
+        <!-- ============================================ -->
+        <!-- FERRAMENTAS DO CURSO -->
+        <!-- ============================================ -->
+        <div class="section-title">
+            <span class="section-icon">&#9889;</span> Ferramentas do Curso
         </div>
 
         <div class="card">
-            <h2>Folha de Prompts e QR Codes <span class="status status-new">Novo</span> <span class="status status-print">Imprimir</span></h2>
-            <p>4 paginas A4 para imprimir: QR codes de todas as ferramentas e recursos, prompts dos exercicios prontos para copiar, framework CLEAR de referencia rapida, 5 regras de seguranca.</p>
-            <a href="FOLHA_PROMPTS_QR_CODES.html">Abrir Folha</a>
+            <div class="card-icon">&#127183;</div>
+            <div class="card-content">
+                <h2>12 Cartas CLEAR <span class="status status-ok">v5.0</span></h2>
+                <p>Prompts estruturados para todas as areas do escritorio usando framework CLEAR. 4 categorias: Elaboracao de Pecas, Analise e Revisao, Comunicacao, Produtividade. Clique para sortear e copiar.</p>
+                <div class="card-actions">
+                    <a href="pagina_12_cartas_v3.html" class="btn-primary">Acessar Cartas</a>
+                </div>
+            </div>
         </div>
 
         <div class="card">
-            <h2>12 Cartas CLEAR <span class="status status-ok">v5.0</span></h2>
-            <p>Prompts estruturados para todas as areas do escritorio usando framework CLEAR. 4 categorias: Elaboracao de Pecas, Analise e Revisao, Comunicacao, Produtividade.</p>
-            <a href="pagina_12_cartas_v3.html">Acessar Cartas</a>
+            <div class="card-icon">&#128246;</div>
+            <div class="card-content">
+                <h2>QR Codes do Curso <span class="status status-ok">v5.0</span></h2>
+                <p>QR codes com links clicaveis: ferramentas (ChatGPT, Claude, Perplexity, NotebookLM), regulacao (CNJ, OAB), recursos (AB2L, FGV, Podcast). Escaneie ou clique.</p>
+                <div class="card-actions">
+                    <a href="qrcodes_curso.html" class="btn-primary">Ver QR Codes</a>
+                </div>
+            </div>
         </div>
 
         <div class="card">
-            <h2>QR Codes do Curso <span class="status status-ok">v5.0</span></h2>
-            <p>QR codes com links clicaveis: ferramentas (ChatGPT, Claude, Perplexity, NotebookLM), regulacao (CNJ, OAB), recursos (AB2L, FGV, Podcast).</p>
-            <a href="qrcodes_curso.html">Ver QR Codes</a>
+            <div class="card-icon">&#128214;</div>
+            <div class="card-content">
+                <h2>Apostila Completa <span class="status status-new">Novo</span> <span class="status status-print">Imprimir</span></h2>
+                <p>16 paginas com todo o conteudo: fundamentos, 3 ferramentas, protocolo de pesquisa, framework CLEAR, fluxo combinado, todos os prompts dos exercicios, 12 cartas CLEAR, seguranca, regulacao, escala e implementacao.</p>
+                <div class="card-actions">
+                    <a href="APOSTILA_CURSO_IA_ADVOCACIA.html" class="btn-primary">Abrir Apostila</a>
+                </div>
+            </div>
         </div>
 
         <div class="card">
-            <h2>Panorama: IA no Direito (Nov/2025 - Fev/2026) <span class="status status-new">Novo</span></h2>
-            <p>Atualizacao complementar: regulacao brasileira (CNJ 615/2025, PL 2.338), IA agentica, estatisticas de mercado, riscos reais (taxa de erro Stanford), ferramentas brasileiras e tendencias 2026.</p>
-            <a href="ATUALIZACAO_IA_DIREITO_NOV2025_FEV2026.html">Abrir Panorama</a>
+            <div class="card-icon">&#128196;</div>
+            <div class="card-content">
+                <h2>Folha de Prompts e QR Codes <span class="status status-new">Novo</span> <span class="status status-print">Imprimir</span></h2>
+                <p>4 paginas A4 para imprimir: QR codes de todas as ferramentas e recursos, prompts dos exercicios prontos para copiar, framework CLEAR de referencia rapida, 5 regras de seguranca.</p>
+                <div class="card-actions">
+                    <a href="FOLHA_PROMPTS_QR_CODES.html" class="btn-primary">Abrir Folha</a>
+                </div>
+            </div>
         </div>
 
-        <div class="section-title">Material Pos-Curso</div>
+        <!-- ============================================ -->
+        <!-- MATERIAL DE APOIO -->
+        <!-- ============================================ -->
+        <div class="section-title">
+            <span class="section-icon">&#128218;</span> Material de Apoio
+        </div>
 
         <div class="card">
-            <h2>Manual Rapido de IA para o Escritorio <span class="status status-new">Novo</span> <span class="status status-print">Imprimir</span></h2>
-            <p>8 paginas pos-curso: protocolo de pesquisa, ferramentas, framework CLEAR com prompt universal, biblioteca de 5 prompts, seguranca, onde clicar, escala, checklist e compromisso.</p>
-            <a href="MANUAL_RAPIDO_IA_ESCRITORIO.html">Abrir Manual</a>
+            <div class="card-icon">&#127757;</div>
+            <div class="card-content">
+                <h2>Panorama: IA no Direito (Nov/2025 - Fev/2026) <span class="status status-new">Novo</span></h2>
+                <p>Atualizacao complementar: regulacao brasileira (CNJ 615/2025, PL 2.338), IA agentica, estatisticas de mercado, riscos reais (taxa de erro Stanford), ferramentas brasileiras e tendencias 2026.</p>
+                <div class="card-actions">
+                    <a href="ATUALIZACAO_IA_DIREITO_NOV2025_FEV2026.html" class="btn-primary">Abrir Panorama</a>
+                </div>
+            </div>
         </div>
 
         <div class="card">
-            <h2>Tutorial: Cadastro nas Ferramentas <span class="status status-new">Novo</span> <span class="status status-print">Imprimir</span></h2>
-            <p>Passo a passo para iniciantes: como criar conta no ChatGPT, Claude e Perplexity. Com capturas de tela e dicas de configuracao.</p>
-            <a href="TUTORIAL_CADASTRO_FERRAMENTAS.html">Abrir Tutorial</a>
+            <div class="card-icon">&#128187;</div>
+            <div class="card-content">
+                <h2>Tutorial: Cadastro nas Ferramentas <span class="status status-new">Novo</span> <span class="status status-print">Imprimir</span></h2>
+                <p>Passo a passo para iniciantes: como criar conta no ChatGPT, Claude e Perplexity. Com capturas de tela e dicas de configuracao.</p>
+                <div class="card-actions">
+                    <a href="TUTORIAL_CADASTRO_FERRAMENTAS.html" class="btn-primary">Abrir Tutorial</a>
+                </div>
+            </div>
         </div>
 
-        <div class="section-title">Arquivo</div>
+        <!-- ============================================ -->
+        <!-- DOCUMENTOS PARA DOWNLOAD -->
+        <!-- ============================================ -->
+        <div class="section-title">
+            <span class="section-icon">&#128229;</span> Documentos para Download
+        </div>
+
+        <div class="card">
+            <div class="card-icon">&#128209;</div>
+            <div class="card-content">
+                <h2>Inteligencia Artificial em Escritorios de Advocacia <span class="status status-download">DOCX</span></h2>
+                <p>Material completo de 31 paginas: fundamentos de IA, aplicacoes praticas no direito, ferramentas, seguranca, regulacao e implementacao em escritorios.</p>
+                <div class="card-actions">
+                    <a href="Claude 31p INTELIG%C3%8ANCIA ARTIFICIAL EM ESCRIT%C3%93RIOS DE ADVOCACIA.docx" class="btn-download" download>&#11015; Baixar DOCX (31p)</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">&#127758;</div>
+            <div class="card-content">
+                <h2>IA Generativa em Escritorios: Uso Global e Guia Pratico <span class="status status-download">DOCX</span></h2>
+                <p>Panorama do uso de IA generativa em escritorios de advocacia no mundo. Dados, estatisticas e guia pratico de implementacao.</p>
+                <div class="card-actions">
+                    <a href="IA Generativa em Escrit%C3%B3rios de Advocacia_ Uso Global e Guia Pr%C3%A1tico.docx" class="btn-download" download>&#11015; Baixar DOCX</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">&#129302;</div>
+            <div class="card-content">
+                <h2>O que uma IA pode fazer <span class="status status-download">DOCX</span></h2>
+                <p>Catalogo completo de capacidades: o que a inteligencia artificial pode (e nao pode) fazer por escritorios de advocacia hoje.</p>
+                <div class="card-actions">
+                    <a href="O que uma IA pode fazer.docx" class="btn-download" download>&#11015; Baixar DOCX</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">&#128202;</div>
+            <div class="card-content">
+                <h2>Pesquisa Jurimetrica — Paixao Cortes (2019-2024) <span class="status status-download">DOCX</span></h2>
+                <p>Estudo jurimetrico do escritorio Paixao Cortes Advogados em Brasilia, cobrindo o periodo 2019-2024. Dados, tendencias e analises.</p>
+                <div class="card-actions">
+                    <a href="Pesquisa Jurim%C3%A9trica %E2%80%93 Paix%C3%A3o C%C3%B4rtes Advogados (Bras%C3%ADlia%2C 2019-2024).docx" class="btn-download" download>&#11015; Baixar DOCX</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">&#128242;</div>
+            <div class="card-content">
+                <h2>Apresentacao do Curso v6 <span class="status status-download">PPTX</span></h2>
+                <p>Slides da apresentacao usada no curso. Versao mais recente com todos os conceitos e exercicios.</p>
+                <div class="card-actions">
+                    <a href="APRESENTACAO_CURSO_IA_ADVOCACIA_v6.pptx" class="btn-download" download>&#11015; Baixar PowerPoint</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- POS-CURSO -->
+        <!-- ============================================ -->
+        <div class="section-title">
+            <span class="section-icon">&#127891;</span> Pos-Curso
+        </div>
+
+        <div class="card">
+            <div class="card-icon">&#128221;</div>
+            <div class="card-content">
+                <h2>Manual Rapido de IA para o Escritorio <span class="status status-new">Novo</span> <span class="status status-print">Imprimir</span></h2>
+                <p>8 paginas pos-curso: protocolo de pesquisa, ferramentas, framework CLEAR com prompt universal, biblioteca de 5 prompts, seguranca, onde clicar, escala, checklist e compromisso.</p>
+                <div class="card-actions">
+                    <a href="MANUAL_RAPIDO_IA_ESCRITORIO.html" class="btn-primary">Abrir Manual</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">&#128172;</div>
+            <div class="card-content">
+                <h2>Formulario de Feedback <span class="status status-new">Novo</span></h2>
+                <p>Avalie o curso: nota geral, relevancia pratica, fases do protocolo, ferramentas que pretende usar, comentarios e sugestoes. Suas respostas sao confidenciais.</p>
+                <div class="card-actions">
+                    <a href="FORMULARIO_FEEDBACK_CURSO.html" class="btn-primary">Dar Feedback</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- ARQUIVO -->
+        <!-- ============================================ -->
+        <div class="section-title">
+            <span class="section-icon">&#128451;</span> Arquivo
+        </div>
 
         <div class="card archive">
-            <h2>Jogo de Desafios <span class="status" style="background:rgba(100,116,139,0.2);color:#64748b;">Substituido</span></h2>
-            <p>50 cartas de desafios praticos — substituido pelas 12 cartas CLEAR. Mantido como arquivo.</p>
-            <a href="pagina_desafio_ia.html">Ver Arquivo</a>
+            <div class="card-icon">&#127922;</div>
+            <div class="card-content">
+                <h2>Jogo de Desafios <span class="status" style="background:rgba(100,116,139,0.2);color:#64748b;">Substituido</span></h2>
+                <p>50 cartas de desafios praticos — substituido pelas 12 cartas CLEAR (mais focado e pratico). Mantido como arquivo.</p>
+                <div class="card-actions">
+                    <a href="pagina_desafio_ia.html" class="btn-primary">Ver Arquivo</a>
+                </div>
+            </div>
         </div>
 
+        <!-- FOOTER -->
         <p class="version">
             INTEIA — Curso IA na Advocacia — v5.0<br>
-            Dr. Igor Morais Vasconcelos | Fevereiro 2026
+            Dr. Igor Morais Vasconcelos | Fevereiro 2026<br>
+            <a href="https://inteia.com.br" target="_blank" class="footer-link">inteia.com.br</a>
         </p>
     </div>
-<div style="text-align:center;padding:15px 10px;margin-top:20px;opacity:0.5;font-size:0.75rem;font-family:Segoe UI,system-ui,sans-serif;"><a href="https://inteia.com.br" target="_blank" style="color:#94a3b8;text-decoration:none;">INTEIA | inteia.com.br</a></div>
 </body>
 </html>
