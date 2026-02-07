@@ -26,7 +26,7 @@
 
         .header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .header h1 {
@@ -43,11 +43,214 @@
             font-size: 0.95rem;
         }
 
+        /* === PROGRESSO GERAL === */
+        .progress-section {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 16px 18px;
+            margin-bottom: 20px;
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .progress-header h3 {
+            font-size: 0.85rem;
+            color: #d69e2e;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .progress-header span {
+            font-size: 0.95rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .progress-bar-outer {
+            width: 100%;
+            height: 10px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+
+        .progress-bar-inner {
+            height: 100%;
+            background: linear-gradient(90deg, #d69e2e 0%, #f6e05e 100%);
+            border-radius: 5px;
+            transition: width 0.5s ease;
+            width: 0%;
+        }
+
+        .progress-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .progress-cat {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.7rem;
+            color: #a0a0a0;
+            padding: 3px 8px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.04);
+        }
+
+        .progress-cat .prog-bar-mini {
+            width: 40px;
+            height: 4px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress-cat .prog-bar-mini-fill {
+            height: 100%;
+            border-radius: 2px;
+            transition: width 0.5s ease;
+            width: 0%;
+        }
+
+        .progress-cat.pesquisa .prog-bar-mini-fill { background: #3B82F6; }
+        .progress-cat.pecas .prog-bar-mini-fill { background: #22C55E; }
+        .progress-cat.analise .prog-bar-mini-fill { background: #F97316; }
+        .progress-cat.comunicacao .prog-bar-mini-fill { background: #A855F7; }
+        .progress-cat.automacao .prog-bar-mini-fill { background: #EF4444; }
+
+        /* === CONQUISTAS === */
+        .conquistas-section {
+            display: none;
+            margin-bottom: 20px;
+        }
+
+        .conquistas-section.show {
+            display: block;
+        }
+
+        .conquistas-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .conquista-badge {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.72rem;
+            font-weight: bold;
+            text-align: center;
+            border: 1px solid;
+            animation: pulseConquista 2s ease infinite;
+        }
+
+        .conquista-badge.pesquisa { background: rgba(59,130,246,0.25); border-color: #3B82F6; color: #93bbfd; }
+        .conquista-badge.pecas { background: rgba(34,197,94,0.25); border-color: #22C55E; color: #86efac; }
+        .conquista-badge.analise { background: rgba(249,115,22,0.25); border-color: #F97316; color: #fdba74; }
+        .conquista-badge.comunicacao { background: rgba(168,85,247,0.25); border-color: #A855F7; color: #d8b4fe; }
+        .conquista-badge.automacao { background: rgba(239,68,68,0.25); border-color: #EF4444; color: #fca5a5; }
+
+        @keyframes pulseConquista {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(214,158,46,0.3); }
+            50% { box-shadow: 0 0 12px 2px rgba(214,158,46,0.15); }
+        }
+
+        /* === FILTROS === */
+        .filter-section {
+            margin-bottom: 16px;
+        }
+
+        .filter-label {
+            font-size: 0.75rem;
+            color: #a0a0a0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.05);
+            color: #a0a0a0;
+            transition: all 0.25s ease;
+        }
+
+        .filter-btn:hover {
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+        }
+
+        .filter-btn.active {
+            background: rgba(214,158,46,0.2);
+            border-color: #d69e2e;
+            color: #d69e2e;
+            font-weight: bold;
+        }
+
+        .filter-btn.active.pesquisa { background: rgba(59,130,246,0.2); border-color: #3B82F6; color: #3B82F6; }
+        .filter-btn.active.pecas { background: rgba(34,197,94,0.2); border-color: #22C55E; color: #22C55E; }
+        .filter-btn.active.analise { background: rgba(249,115,22,0.2); border-color: #F97316; color: #F97316; }
+        .filter-btn.active.comunicacao { background: rgba(168,85,247,0.2); border-color: #A855F7; color: #A855F7; }
+        .filter-btn.active.automacao { background: rgba(239,68,68,0.2); border-color: #EF4444; color: #EF4444; }
+
+        /* === MODO DE TEMPO === */
+        .time-mode-section {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .time-btn {
+            padding: 8px 18px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.05);
+            color: #a0a0a0;
+            transition: all 0.25s ease;
+        }
+
+        .time-btn:hover {
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+        }
+
+        .time-btn.active {
+            background: rgba(214,158,46,0.2);
+            border-color: #d69e2e;
+            color: #d69e2e;
+            font-weight: bold;
+        }
+
         .card-deck {
             display: flex;
             justify-content: center;
             gap: 8px;
-            margin-bottom: 30px;
+            margin-bottom: 16px;
             flex-wrap: wrap;
         }
 
@@ -162,9 +365,42 @@
             color: #EF4444;
         }
 
+        /* === BADGE HABILIDADE === */
+        .habilidade-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+            background: rgba(214,158,46,0.15);
+            border: 1px solid rgba(214,158,46,0.4);
+            color: #d69e2e;
+        }
+
+        /* === BADGE CONCLUIDO === */
+        .done-stamp {
+            display: none;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: rgba(34,197,94,0.2);
+            border: 1px solid #22C55E;
+            color: #22C55E;
+            margin-left: 8px;
+        }
+
+        .done-stamp.show {
+            display: inline-block;
+        }
+
         .card-title {
             font-size: 1.4rem;
-            margin-bottom: 20px;
+            margin-bottom: 6px;
             font-weight: bold;
         }
 
@@ -211,7 +447,7 @@
 
         .btn {
             flex: 1;
-            min-width: 140px;
+            min-width: 120px;
             padding: 12px 20px;
             border: none;
             border-radius: 10px;
@@ -229,6 +465,18 @@
             background: rgba(255, 255, 255, 0.1);
             color: #fff;
             border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #22C55E 0%, #16a34a 100%);
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .btn-success:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            transform: none !important;
         }
 
         .btn:hover {
@@ -296,7 +544,8 @@
             background: #1e1e30;
             border-radius: 20px;
             padding: 30px;
-            max-width: 400px;
+            max-width: 440px;
+            width: 90%;
             text-align: center;
         }
 
@@ -309,6 +558,48 @@
             color: #a0a0a0;
             margin-bottom: 20px;
         }
+
+        /* === LICAO APRENDIDA === */
+        .licao-box {
+            background: rgba(214,158,46,0.1);
+            border: 1px solid rgba(214,158,46,0.35);
+            border-radius: 12px;
+            padding: 14px 16px;
+            margin: 16px 0;
+            text-align: left;
+        }
+
+        .licao-box h4 {
+            color: #d69e2e;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .licao-box p {
+            color: #e0e0e0 !important;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        /* === RESET PROGRESSO === */
+        .reset-link {
+            display: block;
+            text-align: center;
+            margin-top: 12px;
+            font-size: 0.7rem;
+            color: #505060;
+            cursor: pointer;
+            text-decoration: underline;
+            border: none;
+            background: none;
+        }
+
+        .reset-link:hover {
+            color: #EF4444;
+        }
     </style>
 </head>
 <body>
@@ -318,6 +609,50 @@
             <p>Cada advogado recebe uma missao diferente para resolver usando ferramentas de IA</p>
         </div>
 
+        <!-- PROGRESSO GERAL -->
+        <div class="progress-section">
+            <div class="progress-header">
+                <h3>&#127891; Progresso</h3>
+                <span id="progressCount">0/50 desafios</span>
+            </div>
+            <div class="progress-bar-outer">
+                <div class="progress-bar-inner" id="progressBar"></div>
+            </div>
+            <div class="progress-categories">
+                <div class="progress-cat pesquisa">
+                    <span>Pesquisa</span>
+                    <div class="prog-bar-mini"><div class="prog-bar-mini-fill" id="prog-pesquisa"></div></div>
+                    <span id="prog-pesquisa-count">0/10</span>
+                </div>
+                <div class="progress-cat pecas">
+                    <span>Pecas</span>
+                    <div class="prog-bar-mini"><div class="prog-bar-mini-fill" id="prog-pecas"></div></div>
+                    <span id="prog-pecas-count">0/15</span>
+                </div>
+                <div class="progress-cat analise">
+                    <span>Analise</span>
+                    <div class="prog-bar-mini"><div class="prog-bar-mini-fill" id="prog-analise"></div></div>
+                    <span id="prog-analise-count">0/10</span>
+                </div>
+                <div class="progress-cat comunicacao">
+                    <span>Comunic.</span>
+                    <div class="prog-bar-mini"><div class="prog-bar-mini-fill" id="prog-comunicacao"></div></div>
+                    <span id="prog-comunicacao-count">0/7</span>
+                </div>
+                <div class="progress-cat automacao">
+                    <span>Autom.</span>
+                    <div class="prog-bar-mini"><div class="prog-bar-mini-fill" id="prog-automacao"></div></div>
+                    <span id="prog-automacao-count">0/8</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONQUISTAS -->
+        <div class="conquistas-section" id="conquistasSection">
+            <div class="conquistas-grid" id="conquistasGrid"></div>
+        </div>
+
+        <!-- CATEGORIAS -->
         <div class="card-deck">
             <div class="category-badge pesquisa">
                 <span>Pesquisa</span>
@@ -341,15 +676,39 @@
             </div>
         </div>
 
+        <!-- FILTROS -->
+        <div class="filter-section">
+            <span class="filter-label">Filtrar por categoria</span>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-cat="todas" onclick="setFiltro('todas', this)">Todas</button>
+                <button class="filter-btn" data-cat="pesquisa" onclick="setFiltro('pesquisa', this)">Pesquisa</button>
+                <button class="filter-btn" data-cat="pecas" onclick="setFiltro('pecas', this)">Pecas</button>
+                <button class="filter-btn" data-cat="analise" onclick="setFiltro('analise', this)">Analise</button>
+                <button class="filter-btn" data-cat="comunicacao" onclick="setFiltro('comunicacao', this)">Comunicacao</button>
+                <button class="filter-btn" data-cat="automacao" onclick="setFiltro('automacao', this)">Automacao</button>
+            </div>
+        </div>
+
+        <!-- MODO DE TEMPO -->
+        <div class="time-mode-section">
+            <button class="time-btn" data-time="600" onclick="setModoTempo(600, this)">&#9889; Rapido (10 min)</button>
+            <button class="time-btn active" data-time="1800" onclick="setModoTempo(1800, this)">&#128218; Completo (30 min)</button>
+        </div>
+
         <button class="sort-button" id="sortButton" onclick="sortearCarta()">
             SORTEAR CARTA
         </button>
 
         <div class="card" id="cardDisplay">
             <div class="card-header">
-                <span class="card-number" id="cardNumber">#1</span>
+                <div>
+                    <span class="card-number" id="cardNumber">#1</span>
+                    <span class="done-stamp" id="doneStamp">&#10003; Concluido</span>
+                </div>
                 <span class="timer" id="timer">30:00</span>
             </div>
+
+            <div class="habilidade-badge" id="cardHabilidade">Prompt Engineering</div>
 
             <h2 class="card-title" id="cardTitle">Titulo da Carta</h2>
 
@@ -387,6 +746,9 @@
                 <button class="btn btn-primary" id="startButton" onclick="iniciarDesafio()">
                     Iniciar Desafio
                 </button>
+                <button class="btn btn-success" id="completeButton" onclick="concluirDesafio()" disabled>
+                    &#10003; Conclui!
+                </button>
                 <button class="btn btn-secondary" onclick="sortearCarta()">
                     Sortear Outra
                 </button>
@@ -397,18 +759,35 @@
             <p>Curso IA na Advocacia | Paixao Cortes Advogados</p>
             <p>Instrutor: Igor Morais</p>
         </div>
+
+        <button class="reset-link" onclick="resetarProgresso()">Resetar progresso</button>
     </div>
 
+    <!-- MODAL CONCLUSAO -->
     <div class="modal" id="completionModal">
         <div class="modal-content">
-            <h2>Desafio Concluido!</h2>
+            <h2>&#127942; Desafio Concluido!</h2>
             <p>Parabens! Agora prepare-se para apresentar em 2 minutos:</p>
             <ul style="text-align: left; color: #e0e0e0; margin-bottom: 20px;">
                 <li>Qual foi seu desafio</li>
                 <li>Qual ferramenta usou</li>
                 <li>O resultado obtido</li>
             </ul>
+            <div class="licao-box" id="licaoBox">
+                <h4>&#128161; Licao Aprendida</h4>
+                <p id="licaoTexto">Licao aparece aqui.</p>
+            </div>
             <button class="btn btn-primary" onclick="fecharModal()">Entendi</button>
+        </div>
+    </div>
+
+    <!-- MODAL CONQUISTA -->
+    <div class="modal" id="conquistaModal">
+        <div class="modal-content">
+            <h2 style="color: #d69e2e;">&#127942; Conquista Desbloqueada!</h2>
+            <p id="conquistaTexto" style="font-size: 1.1rem; color: #f6e05e;"></p>
+            <p style="color: #a0a0a0; font-size: 0.85rem;">Voce completou todos os desafios dessa categoria.</p>
+            <button class="btn btn-primary" onclick="fecharConquistaModal()">Continuar</button>
         </div>
     </div>
 
@@ -423,7 +802,9 @@
                 missao: "Voce esta montando a fundamentacao de uma peticao inicial sobre dano moral em relacao de consumo.",
                 desafio: "Use o Perplexity para encontrar 5 decisoes recentes (2024-2025) do TJDFT sobre dano moral em relacao de consumo. Liste: numero do processo, relator, valor da condenacao e tese principal.",
                 ferramenta: "Perplexity",
-                dica: "Use termos especificos: 'TJDFT dano moral consumidor 2024 2025 indenizacao'"
+                dica: "Use termos especificos: 'TJDFT dano moral consumidor 2024 2025 indenizacao'",
+                habilidade: "Pesquisa Juridica",
+                licao: "IA busca melhor com termos especificos. Quanto mais contexto juridico voce fornecer (tribunal, periodo, tema), mais precisos serao os resultados."
             },
             {
                 id: 2,
@@ -432,7 +813,9 @@
                 missao: "Voce recebeu um acordao de 20 paginas do TRF1 e precisa explicar rapidamente ao cliente o resultado.",
                 desafio: "Cole um acordao longo e peca ao Claude para resumir em exatamente 5 pontos-chave: partes, pedido, argumentos do recorrente, argumentos do recorrido, decisao e fundamento.",
                 ferramenta: "Claude",
-                dica: "Use o prompt: 'Resuma este acordao em exatamente 5 pontos-chave, sendo objetivo e tecnico...'"
+                dica: "Use o prompt: 'Resuma este acordao em exatamente 5 pontos-chave, sendo objetivo e tecnico...'",
+                habilidade: "Prompt Engineering",
+                licao: "Pedir formato estruturado (5 pontos, tabela, lista) forca a IA a ser objetiva e evita respostas genericas e prolixas."
             },
             {
                 id: 3,
@@ -441,7 +824,9 @@
                 missao: "Voce quer entender como a jurisprudencia sobre honorarios advocaticios evoluiu nos ultimos anos.",
                 desafio: "Suba 5-10 acordaos sobre honorarios no NotebookLM e peca uma analise de tendencia: o que mudou? Quais argumentos estao ganhando forca?",
                 ferramenta: "NotebookLM",
-                dica: "Se nao tiver acordaos, use o ChatGPT para simular resumos de decisoes ficticias para o exercicio."
+                dica: "Se nao tiver acordaos, use o ChatGPT para simular resumos de decisoes ficticias para o exercicio.",
+                habilidade: "Analise Critica",
+                licao: "Ferramentas como NotebookLM sao ideais para analisar multiplos documentos simultaneamente. Subir documentos reais gera insights que perguntas soltas nao conseguem."
             },
             {
                 id: 4,
@@ -450,7 +835,9 @@
                 missao: "Voce esta avaliando se vale a pena ajuizar uma acao em Brasilia ou na Justica Federal.",
                 desafio: "Peca ao ChatGPT para comparar as posicoes do TJDFT e do TRF1 sobre prescricao em acoes de cobranca contra a Fazenda Publica.",
                 ferramenta: "ChatGPT",
-                dica: "Especifique: 'Compare TJDFT vs TRF1 sobre prescricao quinquenal vs decenal em acoes contra a Fazenda Publica'"
+                dica: "Especifique: 'Compare TJDFT vs TRF1 sobre prescricao quinquenal vs decenal em acoes contra a Fazenda Publica'",
+                habilidade: "Pesquisa Juridica",
+                licao: "IA consegue mapear divergencias entre tribunais rapidamente, mas SEMPRE confira as posicoes citadas nos sites oficiais dos tribunais."
             },
             {
                 id: 5,
@@ -459,7 +846,9 @@
                 missao: "O cliente quer saber se pode cobrar honorarios em execucao mesmo tendo sucumbido em parte.",
                 desafio: "Use o Perplexity para verificar se existe sumula vinculante, sumula do STJ/STF ou tese de recurso repetitivo sobre honorarios em sucumbencia reciproca.",
                 ferramenta: "Perplexity",
-                dica: "Pesquise: 'sumula STJ STF honorarios sucumbencia reciproca fazenda publica'"
+                dica: "Pesquise: 'sumula STJ STF honorarios sucumbencia reciproca fazenda publica'",
+                habilidade: "Verificacao de Fontes",
+                licao: "Sempre verifique se sumulas e teses citadas pela IA realmente existem. Confira no site oficial do tribunal antes de usar em peticao."
             },
             {
                 id: 6,
@@ -468,7 +857,9 @@
                 missao: "Voce vai sustentar oralmente e quer conhecer o perfil do relator.",
                 desafio: "Pesquise informacoes sobre um desembargador especifico: areas de atuacao, posicoes conhecidas, decisoes marcantes. Monte um 'perfil decisorio'.",
                 ferramenta: "Perplexity + NotebookLM",
-                dica: "Combine Perplexity (para buscar noticias) com NotebookLM (para analisar acordaos do relator)."
+                dica: "Combine Perplexity (para buscar noticias) com NotebookLM (para analisar acordaos do relator).",
+                habilidade: "Pesquisa Juridica",
+                licao: "Dividir pesquisa e producao entre ferramentas da o melhor resultado. Cada ferramenta tem um ponto forte diferente."
             },
             {
                 id: 7,
@@ -477,7 +868,9 @@
                 missao: "Voce precisa atualizar um modelo de peticao que usa o CPC e quer saber se houve mudancas recentes.",
                 desafio: "Use o Perplexity para listar todas as alteracoes no CPC nos ultimos 2 anos. Inclua: lei que alterou, artigos modificados e impacto pratico.",
                 ferramenta: "Perplexity",
-                dica: "Pesquise: 'alteracoes CPC 2024 2025 2026 lei modificacao'"
+                dica: "Pesquise: 'alteracoes CPC 2024 2025 2026 lei modificacao'",
+                habilidade: "Verificacao de Fontes",
+                licao: "Perplexity com modo de busca e ideal para informacoes atualizadas porque cita fontes com links. Sempre clique nos links para confirmar."
             },
             {
                 id: 8,
@@ -486,7 +879,9 @@
                 missao: "Voce esta escrevendo um parecer e precisa citar doutrina sobre responsabilidade civil por IA.",
                 desafio: "Pesquise os principais autores brasileiros e estrangeiros sobre responsabilidade civil e inteligencia artificial. Liste: autor, obra, posicao principal.",
                 ferramenta: "ChatGPT + Perplexity",
-                dica: "Use ChatGPT para overview e Perplexity para verificar se as obras realmente existem."
+                dica: "Use ChatGPT para overview e Perplexity para verificar se as obras realmente existem.",
+                habilidade: "Verificacao de Fontes",
+                licao: "Sempre verifique CADA referencia bibliografica. IA frequentemente inventa nomes de livros e autores que parecem reais mas nao existem."
             },
             {
                 id: 9,
@@ -495,7 +890,9 @@
                 missao: "Saiu um novo repetitivo do STJ sobre um tema do seu escritorio e voce precisa explicar aos colegas.",
                 desafio: "Cole o inteiro teor de um recurso repetitivo e peca ao Claude para: explicar a tese fixada, listar casos afetados, identificar impactos praticos.",
                 ferramenta: "Claude",
-                dica: "Peca para o Claude ser didatico e usar linguagem simples."
+                dica: "Peca para o Claude ser didatico e usar linguagem simples.",
+                habilidade: "Prompt Engineering",
+                licao: "Pedir para a IA ser 'didatica' e 'usar linguagem simples' transforma explicacoes tecnicas em comunicacao acessivel para qualquer publico."
             },
             {
                 id: 10,
@@ -504,7 +901,9 @@
                 missao: "Voce vai interpor um REsp e precisa garantir que nao vai ter problema de admissibilidade.",
                 desafio: "Peca ao ChatGPT para criar um checklist completo de admissibilidade de REsp com base na jurisprudencia atual do STJ.",
                 ferramenta: "ChatGPT",
-                dica: "Peca para incluir as sumulas 7, 83, 211 e outras relevantes."
+                dica: "Peca para incluir as sumulas 7, 83, 211 e outras relevantes.",
+                habilidade: "Pesquisa Juridica",
+                licao: "Checklists gerados por IA sao excelentes pontos de partida, mas devem ser validados e personalizados para cada caso concreto."
             },
 
             // ELABORACAO DE PECAS (11-25)
@@ -515,7 +914,9 @@
                 missao: "Voce recebeu uma acao de cobranca indevida. O cliente e consumidor sendo cobrado por servico nao contratado.",
                 desafio: "Use o Claude para gerar a estrutura completa de uma contestacao: qualificacao, sintese dos fatos, preliminares, merito com 3 argumentos principais, pedidos.",
                 ferramenta: "Claude",
-                dica: "Forneca contexto: 'Cliente consumidor, acao de cobranca de R$ 5.000 por servico de telefonia nunca contratado.'"
+                dica: "Forneca contexto: 'Cliente consumidor, acao de cobranca de R$ 5.000 por servico de telefonia nunca contratado.'",
+                habilidade: "Framework CLEAR",
+                licao: "Framework CLEAR transforma prompt generico em prompt profissional. Contexto + Limitacoes + Exemplos + Audiencia + Role = resultado superior."
             },
             {
                 id: 12,
@@ -524,7 +925,9 @@
                 missao: "Funcionario foi contratado como PJ mas trabalhava como CLT (subordinacao, horario fixo, exclusividade).",
                 desafio: "Estruture uma peticao inicial de reclamacao trabalhista pedindo reconhecimento de vinculo. Inclua: causa de pedir, pedidos (vinculo, FGTS, 13o, ferias), valor da causa.",
                 ferramenta: "ChatGPT",
-                dica: "Use o framework CLEAR e especifique que e para a Vara do Trabalho de Brasilia."
+                dica: "Use o framework CLEAR e especifique que e para a Vara do Trabalho de Brasilia.",
+                habilidade: "Framework CLEAR",
+                licao: "Ao pedir peca processual, sempre informe: jurisdicao, tipo de procedimento e partes envolvidas. A IA precisa desse contexto para acertar o formato."
             },
             {
                 id: 13,
@@ -533,7 +936,9 @@
                 missao: "Cliente perdeu no Juizado Especial uma acao contra companhia aerea por cancelamento de voo.",
                 desafio: "Elabore as razoes do recurso inominado apontando: erro na valoracao da prova, inobservancia do CDC, pedido de reforma com majoracao do dano moral.",
                 ferramenta: "Claude",
-                dica: "Lembre que no JEC nao cabe recurso sobre fatos, so sobre direito."
+                dica: "Lembre que no JEC nao cabe recurso sobre fatos, so sobre direito.",
+                habilidade: "Analise Critica",
+                licao: "A IA pode confundir regras de diferentes procedimentos. Sempre informe as limitacoes processuais (ex: JEC so aceita materia de direito em recurso)."
             },
             {
                 id: 14,
@@ -542,7 +947,9 @@
                 missao: "Juiz negou tutela de urgencia para suspender protesto de titulo que o cliente alega ser indevido.",
                 desafio: "Estruture agravo de instrumento demonstrando: cabimento (art. 1.015), fumus boni iuris, periculum in mora, pedido de efeito suspensivo.",
                 ferramenta: "ChatGPT",
-                dica: "Enfatize a irreversibilidade do dano (nome protestado afeta credito)."
+                dica: "Enfatize a irreversibilidade do dano (nome protestado afeta credito).",
+                habilidade: "Prompt Engineering",
+                licao: "Quanto mais especifico o cenario fatual, melhor a peca gerada. Detalhes como valores, datas e consequencias praticas elevam a qualidade do resultado."
             },
             {
                 id: 15,
@@ -551,7 +958,9 @@
                 missao: "A sentenca nao analisou um dos pedidos (honorarios) e tem uma contradicao no dispositivo.",
                 desafio: "Elabore embargos de declaracao apontando: omissao sobre honorarios, contradicao especifica, efeitos infringentes. Fundamente no CPC.",
                 ferramenta: "Claude",
-                dica: "Cite os artigos 1.022 e 1.023 do CPC e demonstre o prequestionamento."
+                dica: "Cite os artigos 1.022 e 1.023 do CPC e demonstre o prequestionamento.",
+                habilidade: "Pesquisa Juridica",
+                licao: "Pedir que a IA cite artigos especificos e fundamente cada argumento garante pecas mais robustas e prontas para uso real."
             },
             {
                 id: 16,
@@ -560,7 +969,9 @@
                 missao: "Voce tem 5 minutos para sustentar oralmente em um agravo de instrumento na Turma Recursal.",
                 desafio: "Crie um roteiro de sustentacao oral de 3-5 minutos com: saudacao, contexto em 30s, 3 argumentos principais, pedido final. Inclua frases de transicao.",
                 ferramenta: "ChatGPT",
-                dica: "Peca para o ChatGPT sugerir tecnicas de persuasao para sustentacao oral."
+                dica: "Peca para o ChatGPT sugerir tecnicas de persuasao para sustentacao oral.",
+                habilidade: "Comunicacao",
+                licao: "IA pode ajudar a estruturar apresentacoes orais com tecnicas de retorica. O roteiro e o ponto de partida - pratique em voz alta."
             },
             {
                 id: 17,
@@ -569,7 +980,9 @@
                 missao: "Cliente empresa quer saber se pode demitir funcionario que postou criticas a empresa no LinkedIn.",
                 desafio: "Elabore parecer juridico analisando: liberdade de expressao vs dever de lealdade, jurisprudencia do TST, recomendacao fundamentada.",
                 ferramenta: "Claude",
-                dica: "Peca para o Claude citar casos reais (depois verifique se existem)."
+                dica: "Peca para o Claude citar casos reais (depois verifique se existem).",
+                habilidade: "Verificacao de Fontes",
+                licao: "Em pareceres, a IA tende a inventar jurisprudencia para sustentar a conclusao. Verifique CADA caso citado antes de entregar ao cliente."
             },
             {
                 id: 18,
@@ -578,7 +991,9 @@
                 missao: "Escritorio vai contratar um consultor de TI para implementar sistema de gestao.",
                 desafio: "Gere modelo de contrato de prestacao de servicos com: objeto, obrigacoes, prazo, valor, confidencialidade, propriedade intelectual, rescisao, foro.",
                 ferramenta: "ChatGPT",
-                dica: "Peca clausulas especificas de protecao de dados (LGPD)."
+                dica: "Peca clausulas especificas de protecao de dados (LGPD).",
+                habilidade: "Prompt Engineering",
+                licao: "Contratos exigem clausulas especificas do setor. Sempre indique a legislacao aplicavel (LGPD, CDC, CC) para que a IA inclua protecoes relevantes."
             },
             {
                 id: 19,
@@ -587,7 +1002,9 @@
                 missao: "Cliente locador quer notificar inquilino inadimplente ha 3 meses antes de ajuizar despejo.",
                 desafio: "Elabore notificacao extrajudicial com: identificacao das partes, descricao da inadimplencia, prazo para regularizacao, consequencias do nao pagamento.",
                 ferramenta: "Claude",
-                dica: "Mencione a Lei do Inquilinato e as condicoes para purga da mora."
+                dica: "Mencione a Lei do Inquilinato e as condicoes para purga da mora.",
+                habilidade: "Framework CLEAR",
+                licao: "Notificacoes extrajudiciais exigem tom firme mas respeitoso. Instrua a IA sobre o tom desejado alem do conteudo tecnico."
             },
             {
                 id: 20,
@@ -596,7 +1013,9 @@
                 missao: "Reu contestou acao de cobranca alegando que o contrato e nulo por vicio de consentimento.",
                 desafio: "Elabore impugnacao refutando a alegacao de nulidade. Aborde: presuncao de validade, ausencia de prova do vicio, preclusao, ma-fe processual.",
                 ferramenta: "ChatGPT",
-                dica: "Estruture como replica ponto a ponto aos argumentos da contestacao."
+                dica: "Estruture como replica ponto a ponto aos argumentos da contestacao.",
+                habilidade: "Analise Critica",
+                licao: "Pedir resposta 'ponto a ponto' forca a IA a enfrentar cada argumento adversario, sem pular nenhum. Tecnica essencial para replicas."
             },
             {
                 id: 21,
@@ -605,7 +1024,9 @@
                 missao: "Processo criminal esta na fase de alegacoes finais. Cliente e acusado de estelionato.",
                 desafio: "Estruture alegacoes finais defensivas: sintese acusatoria, fragilidade probatoria, ausencia de dolo, teses subsidiarias, pedido de absolvicao.",
                 ferramenta: "Claude",
-                dica: "Lembre de abordar in dubio pro reo e presuncao de inocencia."
+                dica: "Lembre de abordar in dubio pro reo e presuncao de inocencia.",
+                habilidade: "Prompt Engineering",
+                licao: "Em pecas criminais, instrua a IA sobre principios constitucionais aplicaveis (presuncao de inocencia, in dubio pro reo) para fundamentacao mais solida."
             },
             {
                 id: 22,
@@ -614,7 +1035,9 @@
                 missao: "Sentenca condenou reu a pagar R$ 50.000 + honorarios de 10%. Transitou em julgado ha 30 dias.",
                 desafio: "Estruture peticao de cumprimento de sentenca com: demonstrativo de debito atualizado, pedido de intimacao, requerimento de penhora, honorarios.",
                 ferramenta: "ChatGPT",
-                dica: "Inclua a multa de 10% do art. 523 do CPC em caso de nao pagamento voluntario."
+                dica: "Inclua a multa de 10% do art. 523 do CPC em caso de nao pagamento voluntario.",
+                habilidade: "Pesquisa Juridica",
+                licao: "Para pecas com calculos, forneca todos os valores e datas. A IA pode montar demonstrativos, mas confira a aritmetica manualmente."
             },
             {
                 id: 23,
@@ -623,7 +1046,9 @@
                 missao: "Reclamante perdeu pedido de horas extras porque juiz entendeu que cargo era de confianca.",
                 desafio: "Elabore razoes de RO demonstrando: que nao havia real poder de gestao, que diferenca salarial era inferior a 40%, jurisprudencia do TST.",
                 ferramenta: "Claude",
-                dica: "Aborde o art. 62, II da CLT e os requisitos para cargo de confianca."
+                dica: "Aborde o art. 62, II da CLT e os requisitos para cargo de confianca.",
+                habilidade: "Analise Critica",
+                licao: "Quando a IA cita artigos de lei, confira a redacao atual. Artigos da CLT sao frequentemente reformados e a IA pode usar versao desatualizada."
             },
             {
                 id: 24,
@@ -632,7 +1057,9 @@
                 missao: "Cliente foi executado por divida que ja estava prescrita quando ajuizada a execucao.",
                 desafio: "Elabore excecao de pre-executividade alegando prescricao. Aborde: cabimento da excecao, demonstracao da prescricao, pedido de extincao, honorarios.",
                 ferramenta: "ChatGPT",
-                dica: "Cite a Sumula 393 do STJ sobre cabimento da excecao."
+                dica: "Cite a Sumula 393 do STJ sobre cabimento da excecao.",
+                habilidade: "Verificacao de Fontes",
+                licao: "Sumulas citadas pela IA precisam ser conferidas. Verifique numero, tribunal e se ainda esta vigente antes de usar na peca."
             },
             {
                 id: 25,
@@ -641,7 +1068,9 @@
                 missao: "Cliente foi preso preventivamente em crime sem violencia, tem residencia fixa e trabalho comprovado.",
                 desafio: "Estruture ordem de HC alegando: ausencia dos requisitos do art. 312 CPP, possibilidade de medidas cautelares alternativas, desproporcionalidade.",
                 ferramenta: "Claude",
-                dica: "Cite jurisprudencia do STF sobre prisao preventiva em crimes sem violencia."
+                dica: "Cite jurisprudencia do STF sobre prisao preventiva em crimes sem violencia.",
+                habilidade: "Framework CLEAR",
+                licao: "Em pecas urgentes como HC, o prompt deve incluir: gravidade, perfil do cliente e contexto fatual detalhado para gerar argumentacao persuasiva."
             },
 
             // ANALISE E REVISAO (26-35)
@@ -652,7 +1081,9 @@
                 missao: "Cliente vai assinar contrato de franquia de R$ 500 mil e quer sua analise.",
                 desafio: "Analise um contrato e liste: 5 clausulas de risco para o franqueado, 3 clausulas faltantes, sugestoes de alteracao.",
                 ferramenta: "Claude",
-                dica: "Peca para o Claude avaliar sob a otica da Lei de Franquias e do CDC."
+                dica: "Peca para o Claude avaliar sob a otica da Lei de Franquias e do CDC.",
+                habilidade: "Analise Critica",
+                licao: "A IA pode analisar contratos longos em segundos, mas o advogado deve validar se os riscos apontados sao relevantes para o caso especifico."
             },
             {
                 id: 27,
@@ -661,7 +1092,9 @@
                 missao: "Cliente assinou contrato de financiamento e acha que tem coisas erradas.",
                 desafio: "Analise um contrato de adesao e identifique todas as clausulas potencialmente abusivas com base no CDC. Liste: clausula, artigo violado, consequencia.",
                 ferramenta: "ChatGPT",
-                dica: "Foque nos arts. 51 e 52 do CDC."
+                dica: "Foque nos arts. 51 e 52 do CDC.",
+                habilidade: "Analise Critica",
+                licao: "Pedir formato 'clausula + artigo + consequencia' gera tabelas organizadas que podem ser usadas diretamente em peticoes."
             },
             {
                 id: 28,
@@ -670,7 +1103,9 @@
                 missao: "Cliente quer saber se vale a pena processar o banco por cobranca indevida de R$ 2.000.",
                 desafio: "Faca analise de risco: probabilidade de exito, custos processuais, tempo estimado, valor esperado de condenacao, recomendacao final.",
                 ferramenta: "Claude",
-                dica: "Peca ao Claude para ser objetivo e considerar custos ocultos (tempo, estresse)."
+                dica: "Peca ao Claude para ser objetivo e considerar custos ocultos (tempo, estresse).",
+                habilidade: "Analise Critica",
+                licao: "Analise de risco e uma das melhores aplicacoes da IA na advocacia. Forneca dados reais de custas e honorarios para resultado preciso."
             },
             {
                 id: 29,
@@ -679,7 +1114,9 @@
                 missao: "Escritorio vai assessorar compra de empresa de medio porte.",
                 desafio: "Crie checklist completo de due diligence juridica cobrindo: trabalhista, tributario, civel, regulatorio, contratos, PI, ambiental.",
                 ferramenta: "ChatGPT",
-                dica: "Organize por area e inclua documentos a solicitar."
+                dica: "Organize por area e inclua documentos a solicitar.",
+                habilidade: "Automacao",
+                licao: "Checklists e templates padronizados economizam horas de trabalho. Salve os melhores como modelos reutilizaveis no seu escritorio."
             },
             {
                 id: 30,
@@ -688,7 +1125,9 @@
                 missao: "Reu em acao trabalhista fez 2 propostas de acordo e voce precisa comparar para o cliente.",
                 desafio: "Compare duas propostas analisando: valor total, forma de pagamento, renuncias exigidas, riscos de cada opcao. Faca recomendacao.",
                 ferramenta: "Claude",
-                dica: "Considere valor do dinheiro no tempo e risco de execucao."
+                dica: "Considere valor do dinheiro no tempo e risco de execucao.",
+                habilidade: "Analise Critica",
+                licao: "A IA e excelente para comparar opcoes de forma estruturada. Pedir analise em formato de tabela facilita a tomada de decisao do cliente."
             },
             {
                 id: 31,
@@ -697,7 +1136,9 @@
                 missao: "Voce precisa citar precedente em peticao mas o acordao tem 40 paginas de votos.",
                 desafio: "Analise um acordao e extraia: ratio decidendi (vinculante), obiter dictum (acessorio), como citar corretamente em peticao.",
                 ferramenta: "ChatGPT",
-                dica: "Peca ao ChatGPT para diferenciar claramente o que e vinculante do que e acessorio."
+                dica: "Peca ao ChatGPT para diferenciar claramente o que e vinculante do que e acessorio.",
+                habilidade: "Analise Critica",
+                licao: "Distinguir ratio decidendi de obiter dictum e fundamental para usar precedentes corretamente. A IA ajuda a identificar, mas o advogado decide."
             },
             {
                 id: 32,
@@ -706,7 +1147,9 @@
                 missao: "Cliente foi condenado e quer saber se ha nulidade para anular o processo.",
                 desafio: "Analise um processo identificando possiveis nulidades: absolutas, relativas, prejuizo demonstravel, momento para alegacao.",
                 ferramenta: "Claude",
-                dica: "Considere nulidades de citacao, cerceamento de defesa, suspeicao."
+                dica: "Considere nulidades de citacao, cerceamento de defesa, suspeicao.",
+                habilidade: "Pesquisa Juridica",
+                licao: "Ao pedir analise de nulidades, forneca o historico processual completo. Sem contexto, a IA lista possibilidades genericas em vez de identificar problemas reais."
             },
             {
                 id: 33,
@@ -715,7 +1158,9 @@
                 missao: "Voce vai propor acao de indenizacao por erro medico e precisa mapear as provas.",
                 desafio: "Liste todas as provas necessarias para demonstrar: conduta culposa, dano, nexo causal. Inclua: tipo de prova, como obter, momento de producao.",
                 ferramenta: "ChatGPT",
-                dica: "Considere prontuario, pericia, testemunhas, documentos."
+                dica: "Considere prontuario, pericia, testemunhas, documentos.",
+                habilidade: "Analise Critica",
+                licao: "Mapeamento de provas e uma etapa estrategica. A IA ajuda a nao esquecer nenhuma prova possivel, mas a estrategia de producao e do advogado."
             },
             {
                 id: 34,
@@ -724,7 +1169,9 @@
                 missao: "Processo tem 5 anos de tramitacao e voce precisa organizar os fatos para sustentacao.",
                 desafio: "Monte uma timeline completa do caso com: datas, eventos principais, decisoes, recursos, prazos. Organize de forma visual.",
                 ferramenta: "Claude",
-                dica: "Inclua marcos importantes: distribuicao, citacao, audiencias, sentenca, recursos."
+                dica: "Inclua marcos importantes: distribuicao, citacao, audiencias, sentenca, recursos.",
+                habilidade: "Prompt Engineering",
+                licao: "Pedir 'formato timeline' ou 'linha do tempo' para a IA organiza informacoes cronologicamente, facilitando apresentacoes e sustentacoes orais."
             },
             {
                 id: 35,
@@ -733,7 +1180,9 @@
                 missao: "Cliente descobriu erro em contrato assinado ha 4 anos e quer anular.",
                 desafio: "Analise prazos de prescricao e decadencia aplicaveis. Considere: natureza da acao, termo inicial, causas de suspensao/interrupcao, prazo restante.",
                 ferramenta: "ChatGPT",
-                dica: "Diferencie prescricao (pretensao) de decadencia (direito potestativo)."
+                dica: "Diferencie prescricao (pretensao) de decadencia (direito potestativo).",
+                habilidade: "Pesquisa Juridica",
+                licao: "IA confunde prescricao e decadencia com frequencia. Sempre valide o fundamento legal (CC, CDC, CTN) e o termo inicial do prazo."
             },
 
             // COMUNICACAO (36-42)
@@ -744,7 +1193,9 @@
                 missao: "Saiu sentenca parcialmente procedente e voce precisa explicar ao cliente leigo.",
                 desafio: "Escreva e-mail explicando: o que foi pedido, o que foi ganho, o que foi perdido, proximos passos, o que o cliente precisa fazer. Use linguagem simples.",
                 ferramenta: "ChatGPT",
-                dica: "Evite juridiques. Imagine que esta explicando para sua avo."
+                dica: "Evite juridiques. Imagine que esta explicando para sua avo.",
+                habilidade: "Comunicacao",
+                licao: "O melhor prompt para comunicacao com leigos: 'Explique como se estivesse falando com alguem que nunca viu um processo judicial.'"
             },
             {
                 id: 37,
@@ -753,7 +1204,9 @@
                 missao: "Diretor juridico de empresa cliente quer resumo de todos os processos da empresa.",
                 desafio: "Crie modelo de relatorio executivo de 1 pagina com: processos ativos por tipo, valores envolvidos, riscos principais, proximas acoes, recomendacoes.",
                 ferramenta: "Claude",
-                dica: "Use bullet points e seja direto. Executivos tem pouco tempo."
+                dica: "Use bullet points e seja direto. Executivos tem pouco tempo.",
+                habilidade: "Comunicacao",
+                licao: "Definir a audiencia no prompt (executivo, leigo, juiz) muda completamente o tom e profundidade da resposta. Sempre especifique para quem e."
             },
             {
                 id: 38,
@@ -762,7 +1215,9 @@
                 missao: "Cliente ansioso liga toda semana com as mesmas perguntas sobre o processo.",
                 desafio: "Crie FAQ (perguntas frequentes) com 10 perguntas: quanto tempo demora, quais as chances, o que pode dar errado, quando terei noticias, posso desistir, etc.",
                 ferramenta: "ChatGPT",
-                dica: "Use perguntas que o cliente realmente faz, nao perguntas tecnicas."
+                dica: "Use perguntas que o cliente realmente faz, nao perguntas tecnicas.",
+                habilidade: "Comunicacao",
+                licao: "FAQs gerados por IA economizam dezenas de horas com ligacoes repetitivas. Personalize para cada tipo de processo do escritorio."
             },
             {
                 id: 39,
@@ -771,7 +1226,9 @@
                 missao: "Voce representa o autor e quer convencer o reu a aceitar acordo.",
                 desafio: "Elabore proposta de acordo que: reconheca pontos do reu, mostre beneficios do acordo, apresente riscos de nao aceitar, defina termos claros.",
                 ferramenta: "Claude",
-                dica: "Use tecnica de negociacao baseada em interesses, nao posicoes."
+                dica: "Use tecnica de negociacao baseada em interesses, nao posicoes.",
+                habilidade: "Comunicacao",
+                licao: "IA pode aplicar tecnicas de negociacao (Harvard, BATNA) na redacao de propostas. Instrua sobre a tecnica desejada no prompt."
             },
             {
                 id: 40,
@@ -780,7 +1237,9 @@
                 missao: "Saiu sumula nova do STJ que muda como o escritorio deve tratar casos de determinada area.",
                 desafio: "Escreva comunicado interno para a equipe explicando: o que mudou, impacto nos processos em andamento, novas diretrizes, acoes imediatas.",
                 ferramenta: "ChatGPT",
-                dica: "Seja claro e inclua 'call to action' especifico."
+                dica: "Seja claro e inclua 'call to action' especifico.",
+                habilidade: "Comunicacao",
+                licao: "Comunicados internos precisam de 'call to action' claro. Instrua a IA: 'termine com acoes concretas que cada advogado deve tomar.'"
             },
             {
                 id: 41,
@@ -789,7 +1248,9 @@
                 missao: "Voce vai se reunir com cliente importante e precisa preparar o socio que nunca viu o caso.",
                 desafio: "Prepare briefing de 1 pagina com: quem e o cliente, historico do caso, situacao atual, pontos sensiveis, objetivo da reuniao, possiveis perguntas dificeis.",
                 ferramenta: "Claude",
-                dica: "Inclua uma secao 'nao mencionar' para temas delicados."
+                dica: "Inclua uma secao 'nao mencionar' para temas delicados.",
+                habilidade: "Comunicacao",
+                licao: "Briefings com secao 'nao mencionar' e 'perguntas dificeis' previnem situacoes constrangedoras em reunioes. A IA antecipa cenarios que voce pode esquecer."
             },
             {
                 id: 42,
@@ -798,7 +1259,9 @@
                 missao: "Escritorio quer enviar newsletter mensal com novidades juridicas para clientes.",
                 desafio: "Escreva artigo curto (300-500 palavras) sobre uma novidade legal recente. Deve ser: relevante para empresas, didatico, com call-to-action sutil.",
                 ferramenta: "ChatGPT",
-                dica: "Termine com: 'Se tiver duvidas sobre como isso afeta sua empresa, estamos a disposicao.'"
+                dica: "Termine com: 'Se tiver duvidas sobre como isso afeta sua empresa, estamos a disposicao.'",
+                habilidade: "Comunicacao",
+                licao: "Newsletters juridicas sao marketing de conteudo. Peca a IA para escrever em tom 'informativo mas acessivel' e nunca puramente tecnico."
             },
 
             // AUTOMACAO E FERRAMENTAS (43-50)
@@ -809,7 +1272,9 @@
                 missao: "Voce quer um assistente de IA especializado na area de atuacao do escritorio.",
                 desafio: "Configure um GPT personalizado (My GPTs) com: nome, descricao, instrucoes especificas, conhecimento base, exemplos de uso.",
                 ferramenta: "ChatGPT",
-                dica: "Nas instrucoes, inclua limitacoes: 'nunca invente jurisprudencia', 'sempre cite fontes'."
+                dica: "Nas instrucoes, inclua limitacoes: 'nunca invente jurisprudencia', 'sempre cite fontes'.",
+                habilidade: "Automacao",
+                licao: "GPTs personalizados sao como estagiarios virtuais treinados. Investir tempo nas instrucoes iniciais economiza centenas de horas depois."
             },
             {
                 id: 44,
@@ -818,7 +1283,9 @@
                 missao: "Voce tem um caso grande com muitos documentos e quer organizar no Claude.",
                 desafio: "Configure um Projeto no Claude com: nome do caso, instrucoes customizadas, arquivos relevantes, prompts salvos para tarefas frequentes.",
                 ferramenta: "Claude",
-                dica: "Nas instrucoes do projeto, inclua contexto do caso e estilo de escrita desejado."
+                dica: "Nas instrucoes do projeto, inclua contexto do caso e estilo de escrita desejado.",
+                habilidade: "Automacao",
+                licao: "Projetos no Claude permitem contexto persistente. Suba documentos do caso e crie instrucoes especificas para ter um assistente dedicado."
             },
             {
                 id: 45,
@@ -827,7 +1294,9 @@
                 missao: "Voce precisa dominar a jurisprudencia de um tema para uma tese inovadora.",
                 desafio: "Crie um notebook no NotebookLM com: 5-10 documentos sobre um tema, teste as funcionalidades (resumo, FAQ, busca), gere um briefing.",
                 ferramenta: "NotebookLM",
-                dica: "Suba PDFs de acordaos, artigos, ou use textos copiados."
+                dica: "Suba PDFs de acordaos, artigos, ou use textos copiados.",
+                habilidade: "Automacao",
+                licao: "NotebookLM transforma documentos em base de conhecimento pesquisavel. Ideal para dominar um tema antes de audiencia ou sustentacao."
             },
             {
                 id: 46,
@@ -836,7 +1305,9 @@
                 missao: "Cliente perguntou algo que voce nao sabe e precisa responder com fontes confiaveis.",
                 desafio: "Faca pesquisa completa usando Perplexity. Documente: pergunta feita, fontes retornadas, verificacao das fontes, resposta final com citacoes.",
                 ferramenta: "Perplexity",
-                dica: "Use o modo 'Academic' ou 'Pro' se disponivel para fontes mais confiaveis."
+                dica: "Use o modo 'Academic' ou 'Pro' se disponivel para fontes mais confiaveis.",
+                habilidade: "Verificacao de Fontes",
+                licao: "Perplexity e a ferramenta mais confiavel para pesquisa com fontes porque cita e linka as referencias. Mas mesmo assim, clique e confira cada link."
             },
             {
                 id: 47,
@@ -845,7 +1316,9 @@
                 missao: "Voce gravou reuniao com cliente e precisa registrar os principais pontos.",
                 desafio: "Use o Gemini para: transcrever audio de reuniao (se tiver), ou processar ata longa e extrair: decisoes tomadas, acoes pendentes, responsaveis, prazos.",
                 ferramenta: "Gemini",
-                dica: "Se nao tiver audio, use um texto longo de reuniao ficticia."
+                dica: "Se nao tiver audio, use um texto longo de reuniao ficticia.",
+                habilidade: "Automacao",
+                licao: "Gravar reunioes (com consentimento) e transcrever com IA cria registros completos automaticamente. Economiza anotacoes manuais e evita esquecimentos."
             },
             {
                 id: 48,
@@ -854,7 +1327,9 @@
                 missao: "Escritorio quer uma pagina simples para clientes enviarem documentos iniciais.",
                 desafio: "Use o Lovable para criar landing page com: breve descricao do escritorio, formulario de contato, campos para descrever o caso, design profissional.",
                 ferramenta: "Lovable",
-                dica: "Descreva em linguagem simples: 'Crie uma pagina para escritorio de advocacia com formulario de intake...'"
+                dica: "Descreva em linguagem simples: 'Crie uma pagina para escritorio de advocacia com formulario de intake...'",
+                habilidade: "Automacao",
+                licao: "Ferramentas no-code como Lovable permitem advogados criarem paginas web profissionais sem programar. A IA gera o codigo automaticamente."
             },
             {
                 id: 49,
@@ -863,7 +1338,9 @@
                 missao: "Voce quer padronizar o uso de IA no escritorio com prompts prontos.",
                 desafio: "Crie biblioteca com 5 prompts otimizados para: resumo de decisao, rascunho de peticao, analise de contrato, pesquisa jurisprudencial, e-mail ao cliente.",
                 ferramenta: "Qualquer",
-                dica: "Use o framework CLEAR em cada prompt e teste antes de salvar."
+                dica: "Use o framework CLEAR em cada prompt e teste antes de salvar.",
+                habilidade: "Prompt Engineering",
+                licao: "Uma biblioteca de prompts padronizada garante qualidade consistente no escritorio. Teste cada prompt pelo menos 3 vezes antes de adotar como padrao."
             },
             {
                 id: 50,
@@ -872,24 +1349,179 @@
                 missao: "Voce quer ver como funciona o Claude Code, a ferramenta de programacao da Anthropic.",
                 desafio: "Instale o Claude Code (npm install -g @anthropic-ai/claude-code), veja o avatar dele na pagina inicial, de um 'oi' e peca: 'organize minha pasta Downloads'. So isso.",
                 ferramenta: "Claude Code",
-                dica: "Precisa ter Node.js instalado. Se nao tiver, apenas pesquise sobre o Claude Code."
+                dica: "Precisa ter Node.js instalado. Se nao tiver, apenas pesquise sobre o Claude Code.",
+                habilidade: "Automacao",
+                licao: "Claude Code e IA que programa para voce. Advogados podem usar para automatizar tarefas repetitivas sem saber programar."
             }
         ];
 
+        // --- ESTADO ---
         let cartaAtual = null;
         let timerInterval = null;
-        let tempoRestante = 1800; // 30 minutos em segundos
+        let tempoBase = 1800; // 30 min padrao
+        let tempoRestante = 1800;
+        let filtroAtivo = 'todas';
+        let desafioIniciado = false;
 
+        // --- LOCAL STORAGE ---
+        const STORAGE_KEY = 'desafio_ia_progresso';
+
+        function carregarProgresso() {
+            try {
+                var dados = localStorage.getItem(STORAGE_KEY);
+                if (dados) return JSON.parse(dados);
+            } catch(e) {}
+            return {};
+        }
+
+        function salvarProgresso(progresso) {
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(progresso));
+            } catch(e) {}
+        }
+
+        function marcarConcluido(id) {
+            var progresso = carregarProgresso();
+            progresso[id] = true;
+            salvarProgresso(progresso);
+        }
+
+        function isConcluido(id) {
+            var progresso = carregarProgresso();
+            return !!progresso[id];
+        }
+
+        // --- CONTAGENS ---
+        const catTotais = { pesquisa: 10, pecas: 15, analise: 10, comunicacao: 7, automacao: 8 };
+        const catNomes = { pesquisa: 'Pesquisa', pecas: 'Pecas', analise: 'Analise', comunicacao: 'Comunicacao', automacao: 'Automacao' };
+
+        function contarConcluidosPorCategoria() {
+            var progresso = carregarProgresso();
+            var contagem = { pesquisa: 0, pecas: 0, analise: 0, comunicacao: 0, automacao: 0 };
+            for (var i = 0; i < cartas.length; i++) {
+                if (progresso[cartas[i].id]) {
+                    contagem[cartas[i].categoria]++;
+                }
+            }
+            return contagem;
+        }
+
+        function atualizarUI() {
+            var progresso = carregarProgresso();
+            var contagem = contarConcluidosPorCategoria();
+            var total = 0;
+            for (var cat in contagem) total += contagem[cat];
+
+            // Progresso geral
+            document.getElementById('progressCount').textContent = total + '/50 desafios';
+            document.getElementById('progressBar').style.width = ((total / 50) * 100) + '%';
+
+            // Progresso por categoria
+            for (var cat in catTotais) {
+                var pct = (contagem[cat] / catTotais[cat]) * 100;
+                var barEl = document.getElementById('prog-' + cat);
+                var countEl = document.getElementById('prog-' + cat + '-count');
+                if (barEl) barEl.style.width = pct + '%';
+                if (countEl) countEl.textContent = contagem[cat] + '/' + catTotais[cat];
+            }
+
+            // Conquistas
+            var conquistasGrid = document.getElementById('conquistasGrid');
+            var conquistasSection = document.getElementById('conquistasSection');
+            conquistasGrid.innerHTML = '';
+            var temConquista = false;
+
+            for (var cat in catTotais) {
+                if (contagem[cat] >= catTotais[cat]) {
+                    temConquista = true;
+                    var badge = document.createElement('div');
+                    badge.className = 'conquista-badge ' + cat;
+                    badge.textContent = '&#127942; ' + catNomes[cat] + ' Completa!';
+                    badge.innerHTML = '&#127942; ' + catNomes[cat] + ' Completa!';
+                    conquistasGrid.appendChild(badge);
+                }
+            }
+
+            if (temConquista) {
+                conquistasSection.classList.add('show');
+            } else {
+                conquistasSection.classList.remove('show');
+            }
+
+            // Atualizar badge "concluido" na carta atual
+            if (cartaAtual) {
+                var doneStamp = document.getElementById('doneStamp');
+                var completeBtn = document.getElementById('completeButton');
+                if (isConcluido(cartaAtual.id)) {
+                    doneStamp.classList.add('show');
+                    completeBtn.disabled = true;
+                    completeBtn.textContent = '\u2713 Concluido';
+                } else {
+                    doneStamp.classList.remove('show');
+                    completeBtn.textContent = '\u2713 Conclui!';
+                }
+            }
+        }
+
+        // --- FILTRO ---
+        function setFiltro(cat, btn) {
+            filtroAtivo = cat;
+            var botoes = document.querySelectorAll('.filter-btn');
+            for (var i = 0; i < botoes.length; i++) {
+                botoes[i].classList.remove('active');
+                botoes[i].classList.remove(botoes[i].getAttribute('data-cat'));
+            }
+            btn.classList.add('active');
+            if (cat !== 'todas') btn.classList.add(cat);
+        }
+
+        // --- MODO DE TEMPO ---
+        function setModoTempo(segundos, btn) {
+            tempoBase = segundos;
+            var botoes = document.querySelectorAll('.time-btn');
+            for (var i = 0; i < botoes.length; i++) {
+                botoes[i].classList.remove('active');
+            }
+            btn.classList.add('active');
+
+            // Se nao tem desafio rodando, atualizar display
+            if (!timerInterval && !desafioIniciado) {
+                tempoRestante = tempoBase;
+                var m = Math.floor(tempoRestante / 60);
+                var s = tempoRestante % 60;
+                document.getElementById('timer').textContent =
+                    String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+            }
+        }
+
+        // --- SORTEAR ---
         function sortearCarta() {
-            const button = document.getElementById('sortButton');
+            var button = document.getElementById('sortButton');
             button.classList.add('sorting');
 
-            setTimeout(() => {
+            setTimeout(function() {
                 button.classList.remove('sorting');
 
+                // Filtrar cartas pela categoria ativa
+                var cartasDisponiveis = cartas;
+                if (filtroAtivo !== 'todas') {
+                    cartasDisponiveis = cartas.filter(function(c) { return c.categoria === filtroAtivo; });
+                }
+
+                if (cartasDisponiveis.length === 0) {
+                    cartasDisponiveis = cartas;
+                }
+
                 // Sortear carta aleatoria
-                const indice = Math.floor(Math.random() * cartas.length);
-                cartaAtual = cartas[indice];
+                var indice = Math.floor(Math.random() * cartasDisponiveis.length);
+                cartaAtual = cartasDisponiveis[indice];
+
+                // Reset estado
+                desafioIniciado = false;
+                if (timerInterval) {
+                    clearInterval(timerInterval);
+                    timerInterval = null;
+                }
 
                 // Exibir carta
                 exibirCarta(cartaAtual);
@@ -897,13 +1529,15 @@
         }
 
         function exibirCarta(carta) {
-            const cardDisplay = document.getElementById('cardDisplay');
-            const cardNumber = document.getElementById('cardNumber');
-            const cardTitle = document.getElementById('cardTitle');
-            const cardMission = document.getElementById('cardMission');
-            const cardChallenge = document.getElementById('cardChallenge');
-            const cardTool = document.getElementById('cardTool');
-            const cardTip = document.getElementById('cardTip');
+            var cardDisplay = document.getElementById('cardDisplay');
+            var cardNumber = document.getElementById('cardNumber');
+            var cardTitle = document.getElementById('cardTitle');
+            var cardMission = document.getElementById('cardMission');
+            var cardChallenge = document.getElementById('cardChallenge');
+            var cardTool = document.getElementById('cardTool');
+            var cardTip = document.getElementById('cardTip');
+            var cardHabilidade = document.getElementById('cardHabilidade');
+            var completeBtn = document.getElementById('completeButton');
 
             // Remover classes de categoria anteriores
             cardDisplay.className = 'card show ' + carta.categoria;
@@ -915,15 +1549,28 @@
             cardChallenge.textContent = carta.desafio;
             cardTool.textContent = carta.ferramenta;
             cardTip.textContent = 'Dica: ' + carta.dica;
+            cardHabilidade.textContent = carta.habilidade;
 
             // Resetar timer
-            tempoRestante = 1800;
-            document.getElementById('timer').textContent = '30:00';
+            tempoRestante = tempoBase;
+            var m = Math.floor(tempoRestante / 60);
+            var s = tempoRestante % 60;
+            document.getElementById('timer').textContent =
+                String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
             document.getElementById('timer').className = 'timer';
             document.getElementById('startButton').textContent = 'Iniciar Desafio';
 
+            // Botao concluir
+            if (isConcluido(carta.id)) {
+                completeBtn.disabled = true;
+                completeBtn.textContent = '\u2713 Concluido';
+            } else {
+                completeBtn.disabled = true; // Habilita apos iniciar
+                completeBtn.textContent = '\u2713 Conclui!';
+            }
+
             // Mostrar framework CLEAR se a dica menciona
-            const clearFramework = document.getElementById('clearFramework');
+            var clearFramework = document.getElementById('clearFramework');
             if (carta.dica.toLowerCase().includes('clear')) {
                 clearFramework.classList.add('show');
             } else {
@@ -935,27 +1582,37 @@
                 clearInterval(timerInterval);
                 timerInterval = null;
             }
+
+            desafioIniciado = false;
+            atualizarUI();
         }
 
         function iniciarDesafio() {
-            const startButton = document.getElementById('startButton');
+            var startButton = document.getElementById('startButton');
+            var completeBtn = document.getElementById('completeButton');
 
             if (timerInterval) {
-                // Parar timer
+                // Pausar timer
                 clearInterval(timerInterval);
                 timerInterval = null;
                 startButton.textContent = 'Continuar';
                 return;
             }
 
+            desafioIniciado = true;
             startButton.textContent = 'Pausar';
 
-            timerInterval = setInterval(() => {
+            // Habilitar botao concluir (se nao ja concluido)
+            if (cartaAtual && !isConcluido(cartaAtual.id)) {
+                completeBtn.disabled = false;
+            }
+
+            timerInterval = setInterval(function() {
                 tempoRestante--;
 
-                const minutos = Math.floor(tempoRestante / 60);
-                const segundos = tempoRestante % 60;
-                const timerElement = document.getElementById('timer');
+                var minutos = Math.floor(tempoRestante / 60);
+                var segundos = tempoRestante % 60;
+                var timerElement = document.getElementById('timer');
 
                 timerElement.textContent =
                     String(minutos).padStart(2, '0') + ':' +
@@ -973,14 +1630,84 @@
                 if (tempoRestante <= 0) {
                     clearInterval(timerInterval);
                     timerInterval = null;
-                    document.getElementById('completionModal').classList.add('show');
+                    mostrarConclusao();
                 }
             }, 1000);
         }
 
+        // --- CONCLUIR DESAFIO ---
+        function concluirDesafio() {
+            if (!cartaAtual) return;
+            if (isConcluido(cartaAtual.id)) return;
+
+            // Parar timer
+            if (timerInterval) {
+                clearInterval(timerInterval);
+                timerInterval = null;
+            }
+
+            // Marcar como concluido
+            marcarConcluido(cartaAtual.id);
+
+            // Mostrar modal de conclusao com licao
+            mostrarConclusao();
+
+            // Verificar conquista
+            verificarConquista(cartaAtual.categoria);
+        }
+
+        function mostrarConclusao() {
+            if (!cartaAtual) return;
+
+            // Se nao estava marcado, marcar agora
+            if (!isConcluido(cartaAtual.id)) {
+                marcarConcluido(cartaAtual.id);
+            }
+
+            // Atualizar licao
+            document.getElementById('licaoTexto').textContent = cartaAtual.licao;
+
+            // Mostrar modal
+            document.getElementById('completionModal').classList.add('show');
+
+            atualizarUI();
+        }
+
+        function verificarConquista(categoria) {
+            var contagem = contarConcluidosPorCategoria();
+            if (contagem[categoria] >= catTotais[categoria]) {
+                // Mostrar modal de conquista apos fechar o modal principal
+                setTimeout(function() {
+                    document.getElementById('conquistaTexto').textContent =
+                        catNomes[categoria] + ' - Todos os ' + catTotais[categoria] + ' desafios concluidos!';
+                    document.getElementById('conquistaModal').classList.add('show');
+                }, 500);
+            }
+        }
+
         function fecharModal() {
             document.getElementById('completionModal').classList.remove('show');
+            atualizarUI();
         }
+
+        function fecharConquistaModal() {
+            document.getElementById('conquistaModal').classList.remove('show');
+            atualizarUI();
+        }
+
+        // --- RESETAR PROGRESSO ---
+        function resetarProgresso() {
+            if (confirm('Tem certeza que deseja resetar todo o progresso? Esta acao nao pode ser desfeita.')) {
+                try {
+                    localStorage.removeItem(STORAGE_KEY);
+                } catch(e) {}
+                desafioIniciado = false;
+                atualizarUI();
+            }
+        }
+
+        // Inicializar
+        atualizarUI();
     </script>
 <a href="index_curso.html" style="display:block;text-align:center;margin:30px auto;color:#94a3b8;font-size:0.9em;text-decoration:none;padding:10px 24px;border:1px solid rgba(148,163,184,0.3);border-radius:10px;max-width:260px;transition:all 0.3s;" onmouseover="this.style.color='#d69e2e';this.style.borderColor='#d69e2e'" onmouseout="this.style.color='#94a3b8';this.style.borderColor='rgba(148,163,184,0.3)'">&larr; Central de Materiais</a>
 <div style="text-align:center;padding:15px 10px;margin-top:20px;opacity:0.5;font-size:0.75rem;font-family:Segoe UI,system-ui,sans-serif;"><a href="https://inteia.com.br" target="_blank" style="color:#94a3b8;text-decoration:none;">INTEIA | inteia.com.br</a></div>
