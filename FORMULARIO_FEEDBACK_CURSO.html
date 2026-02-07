@@ -598,11 +598,28 @@
             });
         });
 
+        // API de feedback no backend inteia.com.br
+        const FEEDBACK_API_URL = 'https://inteia.com.br/api/feedback-curso';
+
         function coletarRespostas() {
             const respostas = {};
             let respondidas = 0;
 
-            // Ratings
+            // Timestamp
+            respostas.timestamp = new Date().toISOString();
+
+            // Selects (identificacao)
+            document.querySelectorAll('select').forEach(s => {
+                if (s.value) {
+                    respostas[s.id] = s.value;
+                }
+            });
+
+            // Nome
+            const nome = document.getElementById('nome').value.trim();
+            if (nome) respostas.nome = nome;
+
+            // Ratings e radios
             document.querySelectorAll('input[type="radio"]:checked').forEach(r => {
                 respostas[r.name] = r.value;
                 respondidas++;
@@ -614,36 +631,56 @@
                 ferramentas.push(c.value);
             });
             if (ferramentas.length > 0) {
-                respostas.ferramentas = ferramentas;
+                respostas.ferramentas = ferramentas.join(', ');
                 respondidas++;
             }
 
             // Texts
-            document.querySelectorAll('textarea').forEach(t => {
+            const camposTexto = ['gostou', 'mudaria', 'receio'];
+            document.querySelectorAll('textarea').forEach((t, i) => {
                 if (t.value.trim()) {
-                    const label = t.closest('.question').querySelector('label').textContent.trim();
-                    respostas[label] = t.value.trim();
+                    respostas[camposTexto[i] || 'texto_' + i] = t.value.trim();
                     respondidas++;
                 }
             });
-
-            // Selects
-            document.querySelectorAll('select').forEach(s => {
-                if (s.value) {
-                    respostas[s.id] = s.value;
-                }
-            });
-
-            // Nome
-            const nome = document.getElementById('nome').value.trim();
-            if (nome) respostas.nome = nome;
 
             if (respondidas < 3) {
                 alert('Por favor, responda pelo menos 3 perguntas antes de enviar.');
                 return;
             }
 
-            // Show summary
+            // Desabilitar botao
+            const btn = document.querySelector('.submit-btn');
+            const textoOriginal = btn.textContent;
+            btn.textContent = 'ENVIANDO...';
+            btn.disabled = true;
+            btn.style.opacity = '0.6';
+
+            // Enviar para API inteia.com.br
+            fetch(FEEDBACK_API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(respostas)
+            }).then(r => r.json()).then(data => {
+                if (data.status === 'ok') {
+                    mostrarSucesso(respostas, respondidas, false);
+                } else {
+                    mostrarSucesso(respostas, respondidas, true);
+                }
+            }).catch(() => {
+                mostrarSucesso(respostas, respondidas, true);
+            });
+        }
+
+        function mostrarSucesso(respostas, respondidas, offline) {
+            const btn = document.querySelector('.submit-btn');
+            btn.textContent = 'ENVIADO';
+            btn.style.background = '#28a745';
+
+            const msg = offline
+                ? '<p class="note" style="color:#dc3545;">Modo offline — copie as respostas e envie manualmente ao organizador.</p>'
+                : '<p class="note" style="color:#28a745;">Respostas salvas automaticamente na planilha do curso.</p>';
+
             const resumo = JSON.stringify(respostas, null, 2);
             const win = window.open('', '_blank');
             win.document.write(`
@@ -662,18 +699,16 @@
                     <strong>Obrigado pelo seu feedback!</strong><br>
                     ${respondidas} perguntas respondidas.
                 </div>
+                ${msg}
                 <p>Resumo das respostas:</p>
                 <pre>${resumo}</pre>
                 <p>
                     <button onclick="navigator.clipboard.writeText(document.querySelector('pre').textContent).then(() => alert('Copiado!'))">Copiar respostas</button>
                     <button onclick="window.print()">Imprimir</button>
                 </p>
-                <p class="note">Envie este resumo para o organizador do curso ou entregue a versao impressa.</p>
                 <div style="text-align:center;padding:15px 10px;margin-top:20px;opacity:0.5;font-size:0.75rem;font-family:Segoe UI,system-ui,sans-serif;"><a href="https://inteia.com.br" target="_blank" style="color:#94a3b8;text-decoration:none;">INTEIA | inteia.com.br</a></div>
 </body></html>
             `);
-
-            alert('Feedback registrado! Obrigado pela participacao.');
         }
     </script>
 <div style="text-align:center;padding:15px 10px;margin-top:20px;opacity:0.5;font-size:0.75rem;font-family:Segoe UI,system-ui,sans-serif;"><a href="https://inteia.com.br" target="_blank" style="color:#94a3b8;text-decoration:none;">INTEIA | inteia.com.br</a></div>
