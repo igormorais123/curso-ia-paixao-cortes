@@ -203,6 +203,32 @@
         }
         .footer-link:hover { color: #d69e2e; }
 
+        /* BACK NAV */
+        .back-nav {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .back-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.88em;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 10px;
+            border: 1px solid rgba(148,163,184,0.15);
+            transition: all 0.3s;
+        }
+        .back-nav a:hover {
+            color: #d69e2e;
+            border-color: rgba(214,158,46,0.3);
+            background: rgba(214,158,46,0.06);
+        }
+        .back-nav .arrow { font-size: 1.1em; }
+
         /* RESPONSIVE */
         @media (max-width: 600px) {
             .card { flex-direction: column; gap: 10px; }
@@ -213,6 +239,13 @@
 </head>
 <body>
     <div class="container">
+
+        <!-- BACK NAVIGATION -->
+        <div class="back-nav">
+            <a href="https://inteia.com.br">
+                <span class="arrow">&#8592;</span> Voltar para inteia.com.br
+            </a>
+        </div>
 
         <!-- HERO -->
         <div class="hero">
